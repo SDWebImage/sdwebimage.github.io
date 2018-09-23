@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SDWebImagePrefetcherDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Protocol/SDWebImagePrefetcherDelegate" class="dashAnchor"></a>
+    <a title="SDWebImagePrefetcherDelegate Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SDWebImage Docs</a> (70% documented)</p>
+        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SDWebImage Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SDWebImagePrefetcherDelegate Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../howtouse.html">HowToUse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../manualinstallation.html">ManualInstallation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../sdwebimage-40-migration-guide.html">SDWebImage-4.0-Migration-guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Categories/MKAnnotationView(WebCache).html">MKAnnotationView(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSButton(WebCache).html">NSButton(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSData(ImageContentType).html">NSData(ImageContentType)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSImage(ForceDecode).html">NSImage(ForceDecode)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSImage(GIF).html">NSImage(GIF)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSImage(MultiFormat).html">NSImage(MultiFormat)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSImage(WebCache).html">NSImage(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSImageView(WebCache).html">NSImageView(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSView(WebCache).html">NSView(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSView(WebCacheOperation).html">NSView(WebCacheOperation)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)SDAnimatedImageRep">SDAnimatedImageRep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageCache.html">SDImageCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageCacheConfig.html">SDImageCacheConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageCoderHelper.html">SDWebImageCoderHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageCodersManager.html">SDWebImageCodersManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageDownloadToken.html">SDWebImageDownloadToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageDownloader.html">SDWebImageDownloader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageFrame.html">SDWebImageFrame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageGIFCoder.html">SDWebImageGIFCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageImageIOCoder.html">SDWebImageImageIOCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageManager.html">SDWebImageManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImagePrefetcher.html">SDWebImagePrefetcher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageTransition.html">SDWebImageTransition</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageCoderScaleDownLargeImagesKey">SDWebImageCoderScaleDownLargeImagesKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageDownloadFinishNotification">SDWebImageDownloadFinishNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageDownloadReceiveResponseNotification">SDWebImageDownloadReceiveResponseNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageDownloadStartNotification">SDWebImageDownloadStartNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageDownloadStopNotification">SDWebImageDownloadStopNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageErrorDomain">SDWebImageErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageExternalCustomManagerKey">SDWebImageExternalCustomManagerKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageInternalSetImageGroupKey">SDWebImageInternalSetImageGroupKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageProgressUnitCountUnknown">SDWebImageProgressUnitCountUnknown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@WebImageVersionNumber">WebImageVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@WebImageVersionString">WebImageVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SDImageCacheConfigExpireType.html">SDImageCacheConfigExpireType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDImageCacheOptions.html">SDImageCacheOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDImageCacheType.html">SDImageCacheType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDImageFormat.html">SDImageFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDWebImageAnimationOptions.html">SDWebImageAnimationOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDWebImageDownloaderExecutionOrder.html">SDWebImageDownloaderExecutionOrder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDWebImageDownloaderOptions.html">SDWebImageDownloaderOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageCoder.html">SDWebImageCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageDownloaderOperationInterface.html">SDWebImageDownloaderOperationInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageManagerDelegate.html">SDWebImageManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageOperation.html">SDWebImageOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImagePrefetcherDelegate.html">SDWebImagePrefetcherDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageProgressiveCoder.html">SDWebImageProgressiveCoder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDImageCache.h@T@SDCacheQueryCompletedBlock">SDCacheQueryCompletedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageDownloader.h@T@SDHTTPHeadersDictionary">SDHTTPHeadersDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageDownloader.h@T@SDHTTPHeadersMutableDictionary">SDHTTPHeadersMutableDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDInternalCompletionBlock">SDInternalCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:UIView+WebCache.h@T@SDSetImageBlock">SDSetImageBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDWebImageCacheKeyFilterBlock">SDWebImageCacheKeyFilterBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDWebImageCacheSerializerBlock">SDWebImageCacheSerializerBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDImageCache.h@T@SDWebImageCalculateSizeBlock">SDWebImageCalculateSizeBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDImageCache.h@T@SDWebImageCheckCacheCompletionBlock">SDWebImageCheckCacheCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderCompletedBlock">SDWebImageDownloaderCompletedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderHeadersFilterBlock">SDWebImageDownloaderHeadersFilterBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderProgressBlock">SDWebImageDownloaderProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageCompat.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImagePrefetcher.h@T@SDWebImagePrefetcherCompletionBlock">SDWebImagePrefetcherCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImagePrefetcher.h@T@SDWebImagePrefetcherProgressBlock">SDWebImagePrefetcherProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionAnimationsBlock">SDWebImageTransitionAnimationsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionCompletionBlock">SDWebImageTransitionCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionPreparesBlock">SDWebImageTransitionPreparesBlock</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDCGColorSpaceGetDeviceRGB">SDCGColorSpaceGetDeviceRGB</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDCGImageRefContainsAlpha">SDCGImageRefContainsAlpha</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDScaledImageForKey">SDScaledImageForKey</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SDWebImagePrefetcherDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDWebImagePrefetcherDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span>
+
+<span class="k">@optional</span>
+
+<span class="cm">/**
+ * Called when an image was prefetched.
+ *
+ * @param imagePrefetcher The current image prefetcher
+ * @param imageURL        The image url that was prefetched
+ * @param finishedCount   The total number of images that were prefetched (successful or not)
+ * @param totalCount      The total number of images that were to be prefetched
+ */</span>
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">imagePrefetcher</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDWebImagePrefetcher.html">SDWebImagePrefetcher</a></span> <span class="o">*</span><span class="p">)</span><span class="n">imagePrefetcher</span> <span class="n">didPrefetchURL</span><span class="o">:</span><span class="p">(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="n">imageURL</span> <span class="n">finishedCount</span><span class="o">:</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="n">finishedCount</span> <span class="n">totalCount</span><span class="o">:</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="n">totalCount</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Called when all images are prefetched.
+ * @param imagePrefetcher The current image prefetcher
+ * @param totalCount      The total number of images that were prefetched (whether successful or not)
+ * @param skippedCount    The total number of images that were skipped
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">imagePrefetcher</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDWebImagePrefetcher.html">SDWebImagePrefetcher</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">imagePrefetcher</span> <span class="nf">didFinishWithTotalCount</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">totalCount</span> <span class="nf">skippedCount</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">skippedCount</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SDWebImagePrefetcherDelegate(im)imagePrefetcher:didPrefetchURL:finishedCount:totalCount:"></a>
+                    <a name="//apple_ref/objc/Method/-imagePrefetcher:didPrefetchURL:finishedCount:totalCount:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDWebImagePrefetcherDelegate(im)imagePrefetcher:didPrefetchURL:finishedCount:totalCount:">-imagePrefetcher:didPrefetchURL:finishedCount:totalCount:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called when an image was prefetched.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">imagePrefetcher</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDWebImagePrefetcher.html">SDWebImagePrefetcher</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">imagePrefetcher</span>
+         <span class="nf">didPrefetchURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">imageURL</span>
+          <span class="nf">finishedCount</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">finishedCount</span>
+             <span class="nf">totalCount</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">totalCount</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">imagePrefetcher</span><span class="p">(</span><span class="n">_</span> <span class="nv">imagePrefetcher</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDWebImagePrefetcher.html">SDWebImagePrefetcher</a></span><span class="p">,</span> <span class="n">didPrefetchURL</span> <span class="nv">imageURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="nv">finishedCount</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="nv">totalCount</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imagePrefetcher</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The current image prefetcher</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image url that was prefetched</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>finishedCount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The total number of images that were prefetched (successful or not)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>totalCount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The total number of images that were to be prefetched</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImagePrefetcher.h#L26">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SDWebImagePrefetcherDelegate(im)imagePrefetcher:didFinishWithTotalCount:skippedCount:"></a>
+                    <a name="//apple_ref/objc/Method/-imagePrefetcher:didFinishWithTotalCount:skippedCount:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDWebImagePrefetcherDelegate(im)imagePrefetcher:didFinishWithTotalCount:skippedCount:">-imagePrefetcher:didFinishWithTotalCount:skippedCount:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called when all images are prefetched.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">imagePrefetcher</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDWebImagePrefetcher.html">SDWebImagePrefetcher</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">imagePrefetcher</span>
+    <span class="nf">didFinishWithTotalCount</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">totalCount</span>
+               <span class="nf">skippedCount</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">skippedCount</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">imagePrefetcher</span><span class="p">(</span><span class="n">_</span> <span class="nv">imagePrefetcher</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDWebImagePrefetcher.html">SDWebImagePrefetcher</a></span><span class="p">,</span> <span class="n">didFinishWithTotalCount</span> <span class="nv">totalCount</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="nv">skippedCount</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imagePrefetcher</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The current image prefetcher</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>totalCount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The total number of images that were prefetched (whether successful or not)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>skippedCount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The total number of images that were skipped</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImagePrefetcher.h#L34">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/rs/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2018-09-23)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

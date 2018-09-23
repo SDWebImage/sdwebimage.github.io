@@ -1,0 +1,670 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/NSButton+WebCache.h",
+      "line": 15,
+      "symbol": "NSButton(WebCache)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/NSData+ImageContentType.h",
+      "line": 13,
+      "symbol": "SDImageFormat",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/NSData+ImageContentType.h",
+      "line": 13,
+      "symbol": "SDImageFormat",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/NSData+ImageContentType.h",
+      "line": 14,
+      "symbol": "SDImageFormat.SDImageFormatUndefined",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/NSData+ImageContentType.h",
+      "line": 15,
+      "symbol": "SDImageFormat.SDImageFormatJPEG",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/NSData+ImageContentType.h",
+      "line": 16,
+      "symbol": "SDImageFormat.SDImageFormatPNG",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/NSData+ImageContentType.h",
+      "line": 17,
+      "symbol": "SDImageFormat.SDImageFormatGIF",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/NSData+ImageContentType.h",
+      "line": 18,
+      "symbol": "SDImageFormat.SDImageFormatTIFF",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/NSData+ImageContentType.h",
+      "line": 19,
+      "symbol": "SDImageFormat.SDImageFormatWebP",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/NSData+ImageContentType.h",
+      "line": 20,
+      "symbol": "SDImageFormat.SDImageFormatHEIC",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/NSData+ImageContentType.h",
+      "line": 23,
+      "symbol": "NSData(ImageContentType)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/NSImage+WebCache.h",
+      "line": 15,
+      "symbol": "NSImage(WebCache)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/NSImage+WebCache.h",
+      "line": 17,
+      "symbol": "NSImage(WebCache).-CGImage",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/NSImage+WebCache.h",
+      "line": 18,
+      "symbol": "NSImage(WebCache).-images",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/NSImage+WebCache.h",
+      "line": 19,
+      "symbol": "NSImage(WebCache).-isGIF",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDAnimatedImageRep.h",
+      "line": 16,
+      "symbol": "SDAnimatedImageRep",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDImageCache.h",
+      "line": 13,
+      "symbol": "SDImageCacheType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDImageCache.h",
+      "line": 13,
+      "symbol": "SDImageCacheType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDImageCache.h",
+      "line": 28,
+      "symbol": "SDImageCacheOptions",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDImageCache.h",
+      "line": 28,
+      "symbol": "SDImageCacheOptions",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDImageCache.h",
+      "line": 44,
+      "symbol": "SDCacheQueryCompletedBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDImageCache.h",
+      "line": 46,
+      "symbol": "SDWebImageCheckCacheCompletionBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDImageCache.h",
+      "line": 48,
+      "symbol": "SDWebImageCalculateSizeBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDImageCache.h",
+      "line": 101,
+      "symbol": "SDImageCache.-makeDiskCachePath:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDImageCacheConfig.h",
+      "line": 12,
+      "symbol": "SDImageCacheConfigExpireType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDImageCacheConfig.h",
+      "line": 12,
+      "symbol": "SDImageCacheConfigExpireType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDImageCacheConfig.h",
+      "line": 23,
+      "symbol": "SDImageCacheConfig",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageCoderHelper.h",
+      "line": 13,
+      "symbol": "SDWebImageCoderHelper",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageCompat.h",
+      "line": 90,
+      "symbol": "SDScaledImageForKey",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageCompat.h",
+      "line": 92,
+      "symbol": "SDWebImageNoParamsBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageCompat.h",
+      "line": 94,
+      "symbol": "SDWebImageErrorDomain",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloader.h",
+      "line": 13,
+      "symbol": "SDWebImageDownloaderOptions",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloader.h",
+      "line": 13,
+      "symbol": "SDWebImageDownloaderOptions",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloader.h",
+      "line": 65,
+      "symbol": "SDWebImageDownloaderExecutionOrder",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloader.h",
+      "line": 65,
+      "symbol": "SDWebImageDownloaderExecutionOrder",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloader.h",
+      "line": 77,
+      "symbol": "SDWebImageDownloadStartNotification",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloader.h",
+      "line": 78,
+      "symbol": "SDWebImageDownloadStopNotification",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloader.h",
+      "line": 80,
+      "symbol": "SDWebImageDownloaderProgressBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloader.h",
+      "line": 82,
+      "symbol": "SDWebImageDownloaderCompletedBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloader.h",
+      "line": 84,
+      "symbol": "SDHTTPHeadersDictionary",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloader.h",
+      "line": 85,
+      "symbol": "SDHTTPHeadersMutableDictionary",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloader.h",
+      "line": 87,
+      "symbol": "SDWebImageDownloaderHeadersFilterBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
+      "line": 13,
+      "symbol": "SDWebImageDownloadStartNotification",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
+      "line": 14,
+      "symbol": "SDWebImageDownloadReceiveResponseNotification",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
+      "line": 15,
+      "symbol": "SDWebImageDownloadStopNotification",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
+      "line": 16,
+      "symbol": "SDWebImageDownloadFinishNotification",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
+      "line": 26,
+      "symbol": "SDWebImageDownloaderOperationInterface.-initWithRequest:inSession:options:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
+      "line": 30,
+      "symbol": "SDWebImageDownloaderOperationInterface.-addHandlersForProgress:completed:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
+      "line": 33,
+      "symbol": "SDWebImageDownloaderOperationInterface.-shouldDecompressImages",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
+      "line": 34,
+      "symbol": "SDWebImageDownloaderOperationInterface.-setShouldDecompressImages:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
+      "line": 36,
+      "symbol": "SDWebImageDownloaderOperationInterface.-credential",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
+      "line": 37,
+      "symbol": "SDWebImageDownloaderOperationInterface.-setCredential:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
+      "line": 39,
+      "symbol": "SDWebImageDownloaderOperationInterface.-cancel:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
+      "line": 44,
+      "symbol": "SDWebImageDownloaderOperation",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
+      "line": 57,
+      "symbol": "SDWebImageDownloaderOperation.shouldDecompressImages",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageFrame.h",
+      "line": 12,
+      "symbol": "SDWebImageFrame",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageGIFCoder.h",
+      "line": 21,
+      "symbol": "SDWebImageGIFCoder.+sharedCoder",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageImageIOCoder.h",
+      "line": 28,
+      "symbol": "SDWebImageImageIOCoder.+sharedCoder",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageManager.h",
+      "line": 14,
+      "symbol": "SDWebImageOptions",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageManager.h",
+      "line": 14,
+      "symbol": "SDWebImageOptions",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageManager.h",
+      "line": 121,
+      "symbol": "SDExternalCompletionBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageManager.h",
+      "line": 123,
+      "symbol": "SDInternalCompletionBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageManager.h",
+      "line": 125,
+      "symbol": "SDWebImageCacheKeyFilterBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageManager.h",
+      "line": 127,
+      "symbol": "SDWebImageCacheSerializerBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageManager.h",
+      "line": 132,
+      "symbol": "SDWebImageManagerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageManager.h",
+      "line": 194,
+      "symbol": "SDWebImageManager.delegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageManager.h",
+      "line": 196,
+      "symbol": "SDWebImageManager.imageCache",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageManager.h",
+      "line": 197,
+      "symbol": "SDWebImageManager.imageDownloader",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageOperation.h",
+      "line": 11,
+      "symbol": "SDWebImageOperation",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageOperation.h",
+      "line": 13,
+      "symbol": "SDWebImageOperation.-cancel",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImagePrefetcher.h",
+      "line": 14,
+      "symbol": "SDWebImagePrefetcherDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImagePrefetcher.h",
+      "line": 38,
+      "symbol": "SDWebImagePrefetcherProgressBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImagePrefetcher.h",
+      "line": 39,
+      "symbol": "SDWebImagePrefetcherCompletionBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImagePrefetcher.h",
+      "line": 66,
+      "symbol": "SDWebImagePrefetcher.delegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageTransition.h",
+      "line": 22,
+      "symbol": "SDWebImageAnimationOptions",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageTransition.h",
+      "line": 22,
+      "symbol": "SDWebImageAnimationOptions",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageTransition.h",
+      "line": 23,
+      "symbol": "SDWebImageAnimationOptions.SDWebImageAnimationOptionAllowsImplicitAnimation",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageTransition.h",
+      "line": 27,
+      "symbol": "SDWebImageTransitionPreparesBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageTransition.h",
+      "line": 28,
+      "symbol": "SDWebImageTransitionAnimationsBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageTransition.h",
+      "line": 29,
+      "symbol": "SDWebImageTransitionCompletionBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageTransition.h",
+      "line": 31,
+      "symbol": "SDWebImageTransition",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/SDWebImageTransition.h",
+      "line": 68,
+      "symbol": "SDWebImageTransition(Conveniences)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/UIImage+ForceDecode.h",
+      "line": 11,
+      "symbol": "NSImage(ForceDecode)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/UIImage+ForceDecode.h",
+      "line": 13,
+      "symbol": "NSImage(ForceDecode).+decodedImageWithImage:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/UIImage+ForceDecode.h",
+      "line": 15,
+      "symbol": "NSImage(ForceDecode).+decodedAndScaledDownImageWithImage:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/UIImage+GIF.h",
+      "line": 12,
+      "symbol": "NSImage(GIF)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/UIImage+MultiFormat.h",
+      "line": 12,
+      "symbol": "NSImage(MultiFormat)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/UIImage+MultiFormat.h",
+      "line": 33,
+      "symbol": "NSImage(MultiFormat).+sd_imageWithData:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/UIImage+MultiFormat.h",
+      "line": 34,
+      "symbol": "NSImage(MultiFormat).-sd_imageData",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/UIImage+MultiFormat.h",
+      "line": 35,
+      "symbol": "NSImage(MultiFormat).-sd_imageDataAsFormat:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/UIView+WebCache.h",
+      "line": 26,
+      "symbol": "SDSetImageBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/UIView+WebCache.h",
+      "line": 28,
+      "symbol": "NSView(WebCache)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/SDWebImage/UIView+WebCacheOperation.h",
+      "line": 14,
+      "symbol": "NSView(WebCacheOperation)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/WebImage/SDWebImage.h",
+      "line": 17,
+      "symbol": "WebImageVersionNumber",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bogdan/Github/SDWebImage/WebImage/SDWebImage.h",
+      "line": 20,
+      "symbol": "WebImageVersionString",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/bogdan/Github/SDWebImage"
+}

@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Type Definitions  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Section/Type Definitions" class="dashAnchor"></a>
+    <a title="Type Definitions  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SDWebImage Docs</a> (70% documented)</p>
+        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">SDWebImage Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Type Definitions  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="howtouse.html">HowToUse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="manualinstallation.html">ManualInstallation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="sdwebimage-40-migration-guide.html">SDWebImage-4.0-Migration-guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Categories/MKAnnotationView(WebCache).html">MKAnnotationView(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/NSButton(WebCache).html">NSButton(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/NSData(ImageContentType).html">NSData(ImageContentType)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/NSImage(ForceDecode).html">NSImage(ForceDecode)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/NSImage(GIF).html">NSImage(GIF)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/NSImage(MultiFormat).html">NSImage(MultiFormat)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/NSImage(WebCache).html">NSImage(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/NSImageView(WebCache).html">NSImageView(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/NSView(WebCache).html">NSView(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/NSView(WebCacheOperation).html">NSView(WebCacheOperation)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes.html#/c:objc(cs)SDAnimatedImageRep">SDAnimatedImageRep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageCache.html">SDImageCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageCacheConfig.html">SDImageCacheConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageCoderHelper.html">SDWebImageCoderHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageCodersManager.html">SDWebImageCodersManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageDownloadToken.html">SDWebImageDownloadToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageDownloader.html">SDWebImageDownloader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageFrame.html">SDWebImageFrame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageGIFCoder.html">SDWebImageGIFCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageImageIOCoder.html">SDWebImageImageIOCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageManager.html">SDWebImageManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImagePrefetcher.html">SDWebImagePrefetcher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageTransition.html">SDWebImageTransition</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageCoderScaleDownLargeImagesKey">SDWebImageCoderScaleDownLargeImagesKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageDownloadFinishNotification">SDWebImageDownloadFinishNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageDownloadReceiveResponseNotification">SDWebImageDownloadReceiveResponseNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageDownloadStartNotification">SDWebImageDownloadStartNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageDownloadStopNotification">SDWebImageDownloadStopNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageErrorDomain">SDWebImageErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageExternalCustomManagerKey">SDWebImageExternalCustomManagerKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageInternalSetImageGroupKey">SDWebImageInternalSetImageGroupKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageProgressUnitCountUnknown">SDWebImageProgressUnitCountUnknown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@WebImageVersionNumber">WebImageVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@WebImageVersionString">WebImageVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/SDImageCacheConfigExpireType.html">SDImageCacheConfigExpireType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SDImageCacheOptions.html">SDImageCacheOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SDImageCacheType.html">SDImageCacheType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SDImageFormat.html">SDImageFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SDWebImageAnimationOptions.html">SDWebImageAnimationOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SDWebImageDownloaderExecutionOrder.html">SDWebImageDownloaderExecutionOrder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SDWebImageDownloaderOptions.html">SDWebImageDownloaderOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SDWebImageOptions.html">SDWebImageOptions</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/SDWebImageCoder.html">SDWebImageCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDWebImageDownloaderOperationInterface.html">SDWebImageDownloaderOperationInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDWebImageManagerDelegate.html">SDWebImageManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDWebImageOperation.html">SDWebImageOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDWebImagePrefetcherDelegate.html">SDWebImagePrefetcherDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDWebImageProgressiveCoder.html">SDWebImageProgressiveCoder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDImageCache.h@T@SDCacheQueryCompletedBlock">SDCacheQueryCompletedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDWebImageDownloader.h@T@SDHTTPHeadersDictionary">SDHTTPHeadersDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDWebImageDownloader.h@T@SDHTTPHeadersMutableDictionary">SDHTTPHeadersMutableDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDWebImageManager.h@T@SDInternalCompletionBlock">SDInternalCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:UIView+WebCache.h@T@SDSetImageBlock">SDSetImageBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDWebImageManager.h@T@SDWebImageCacheKeyFilterBlock">SDWebImageCacheKeyFilterBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDWebImageManager.h@T@SDWebImageCacheSerializerBlock">SDWebImageCacheSerializerBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDImageCache.h@T@SDWebImageCalculateSizeBlock">SDWebImageCalculateSizeBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDImageCache.h@T@SDWebImageCheckCacheCompletionBlock">SDWebImageCheckCacheCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderCompletedBlock">SDWebImageDownloaderCompletedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderHeadersFilterBlock">SDWebImageDownloaderHeadersFilterBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderProgressBlock">SDWebImageDownloaderProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDWebImageCompat.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDWebImagePrefetcher.h@T@SDWebImagePrefetcherCompletionBlock">SDWebImagePrefetcherCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDWebImagePrefetcher.h@T@SDWebImagePrefetcherProgressBlock">SDWebImagePrefetcherProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionAnimationsBlock">SDWebImageTransitionAnimationsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionCompletionBlock">SDWebImageTransitionCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionPreparesBlock">SDWebImageTransitionPreparesBlock</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDCGColorSpaceGetDeviceRGB">SDCGColorSpaceGetDeviceRGB</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDCGImageRefContainsAlpha">SDCGImageRefContainsAlpha</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDScaledImageForKey">SDScaledImageForKey</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Type Definitions</h1>
+            <p>The following type definitions are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDImageCache.h@T@SDCacheQueryCompletedBlock"></a>
+                    <a name="//apple_ref/objc/Type/SDCacheQueryCompletedBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDImageCache.h@T@SDCacheQueryCompletedBlock">SDCacheQueryCompletedBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDCacheQueryCompletedBlock</span><span class="p">)(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">image</span><span class="p">,</span> <span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">data</span><span class="p">,</span> <span class="n"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span> <span class="n">cacheType</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDCacheQueryCompletedBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">NSImage</span><span class="p">?,</span> <span class="kt">Data</span><span class="p">?,</span> <span class="kt"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDImageCache.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDImageCache.h@T@SDWebImageCheckCacheCompletionBlock"></a>
+                    <a name="//apple_ref/objc/Type/SDWebImageCheckCacheCompletionBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDImageCache.h@T@SDWebImageCheckCacheCompletionBlock">SDWebImageCheckCacheCompletionBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDWebImageCheckCacheCompletionBlock</span><span class="p">)(</span><span class="n">BOOL</span> <span class="n">isInCache</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageCheckCacheCompletionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDImageCache.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDImageCache.h@T@SDWebImageCalculateSizeBlock"></a>
+                    <a name="//apple_ref/objc/Type/SDWebImageCalculateSizeBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDImageCache.h@T@SDWebImageCalculateSizeBlock">SDWebImageCalculateSizeBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDWebImageCalculateSizeBlock</span><span class="p">)(</span><span class="n">NSUInteger</span> <span class="n">fileCount</span><span class="p">,</span> <span class="n">NSUInteger</span> <span class="n">totalSize</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageCalculateSizeBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">UInt</span><span class="p">,</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDImageCache.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDWebImageCompat.h@T@SDWebImageNoParamsBlock"></a>
+                    <a name="//apple_ref/objc/Type/SDWebImageNoParamsBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDWebImageCompat.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDWebImageNoParamsBlock</span><span class="p">)(</span><span class="kt">void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageNoParamsBlock</span> <span class="o">=</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImageCompat.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDWebImageDownloader.h@T@SDWebImageDownloaderProgressBlock"></a>
+                    <a name="//apple_ref/objc/Type/SDWebImageDownloaderProgressBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderProgressBlock">SDWebImageDownloaderProgressBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDWebImageDownloaderProgressBlock</span><span class="p">)(</span><span class="n">NSInteger</span> <span class="n">receivedSize</span><span class="p">,</span> <span class="n">NSInteger</span> <span class="n">expectedSize</span><span class="p">,</span> <span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">targetURL</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageDownloaderProgressBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">URL</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImageDownloader.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDWebImageDownloader.h@T@SDWebImageDownloaderCompletedBlock"></a>
+                    <a name="//apple_ref/objc/Type/SDWebImageDownloaderCompletedBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderCompletedBlock">SDWebImageDownloaderCompletedBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDWebImageDownloaderCompletedBlock</span><span class="p">)(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">image</span><span class="p">,</span> <span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">data</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">error</span><span class="p">,</span> <span class="n">BOOL</span> <span class="n">finished</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageDownloaderCompletedBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">NSImage</span><span class="p">?,</span> <span class="kt">Data</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?,</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImageDownloader.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDWebImageDownloader.h@T@SDHTTPHeadersDictionary"></a>
+                    <a name="//apple_ref/objc/Type/SDHTTPHeadersDictionary" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDWebImageDownloader.h@T@SDHTTPHeadersDictionary">SDHTTPHeadersDictionary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*&gt;</span> <span class="n">SDHTTPHeadersDictionary</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImageDownloader.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDWebImageDownloader.h@T@SDHTTPHeadersMutableDictionary"></a>
+                    <a name="//apple_ref/objc/Type/SDHTTPHeadersMutableDictionary" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDWebImageDownloader.h@T@SDHTTPHeadersMutableDictionary">SDHTTPHeadersMutableDictionary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSMutableDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*&gt;</span> <span class="n">SDHTTPHeadersMutableDictionary</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImageDownloader.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDWebImageDownloader.h@T@SDWebImageDownloaderHeadersFilterBlock"></a>
+                    <a name="//apple_ref/objc/Type/SDWebImageDownloaderHeadersFilterBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderHeadersFilterBlock">SDWebImageDownloaderHeadersFilterBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n"><a href="Type Definitions.html#/c:SDWebImageDownloader.h@T@SDHTTPHeadersDictionary">SDHTTPHeadersDictionary</a></span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="p">(</span><span class="o">^</span><span class="n">SDWebImageDownloaderHeadersFilterBlock</span><span class="p">)(</span><span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">url</span><span class="p">,</span> <span class="n"><a href="Type Definitions.html#/c:SDWebImageDownloader.h@T@SDHTTPHeadersDictionary">SDHTTPHeadersDictionary</a></span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">headers</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageDownloaderHeadersFilterBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">URL</span><span class="p">?,</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImageDownloader.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDWebImageManager.h@T@SDExternalCompletionBlock"></a>
+                    <a name="//apple_ref/objc/Type/SDExternalCompletionBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDExternalCompletionBlock</span><span class="p">)(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">image</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">error</span><span class="p">,</span> <span class="n"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span> <span class="n">cacheType</span><span class="p">,</span> <span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">imageURL</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDExternalCompletionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">NSImage</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?,</span> <span class="kt"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">,</span> <span class="kt">URL</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImageManager.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDWebImageManager.h@T@SDInternalCompletionBlock"></a>
+                    <a name="//apple_ref/objc/Type/SDInternalCompletionBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDWebImageManager.h@T@SDInternalCompletionBlock">SDInternalCompletionBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDInternalCompletionBlock</span><span class="p">)(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">image</span><span class="p">,</span> <span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">data</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">error</span><span class="p">,</span> <span class="n"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span> <span class="n">cacheType</span><span class="p">,</span> <span class="n">BOOL</span> <span class="n">finished</span><span class="p">,</span> <span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">imageURL</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDInternalCompletionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">NSImage</span><span class="p">?,</span> <span class="kt">Data</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?,</span> <span class="kt"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">,</span> <span class="kt">Bool</span><span class="p">,</span> <span class="kt">URL</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImageManager.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDWebImageManager.h@T@SDWebImageCacheKeyFilterBlock"></a>
+                    <a name="//apple_ref/objc/Type/SDWebImageCacheKeyFilterBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDWebImageManager.h@T@SDWebImageCacheKeyFilterBlock">SDWebImageCacheKeyFilterBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSString</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">(</span><span class="o">^</span><span class="n">SDWebImageCacheKeyFilterBlock</span><span class="p">)(</span><span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">url</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageCacheKeyFilterBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">URL</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImageManager.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDWebImageManager.h@T@SDWebImageCacheSerializerBlock"></a>
+                    <a name="//apple_ref/objc/Type/SDWebImageCacheSerializerBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDWebImageManager.h@T@SDWebImageCacheSerializerBlock">SDWebImageCacheSerializerBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">(</span><span class="o">^</span><span class="n">SDWebImageCacheSerializerBlock</span><span class="p">)(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">image</span><span class="p">,</span> <span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">data</span><span class="p">,</span> <span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">imageURL</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageCacheSerializerBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">NSImage</span><span class="p">,</span> <span class="kt">Data</span><span class="p">?,</span> <span class="kt">URL</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImageManager.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDWebImagePrefetcher.h@T@SDWebImagePrefetcherProgressBlock"></a>
+                    <a name="//apple_ref/objc/Type/SDWebImagePrefetcherProgressBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDWebImagePrefetcher.h@T@SDWebImagePrefetcherProgressBlock">SDWebImagePrefetcherProgressBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDWebImagePrefetcherProgressBlock</span><span class="p">)(</span><span class="n">NSUInteger</span> <span class="n">noOfFinishedUrls</span><span class="p">,</span> <span class="n">NSUInteger</span> <span class="n">noOfTotalUrls</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImagePrefetcherProgressBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">UInt</span><span class="p">,</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImagePrefetcher.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDWebImagePrefetcher.h@T@SDWebImagePrefetcherCompletionBlock"></a>
+                    <a name="//apple_ref/objc/Type/SDWebImagePrefetcherCompletionBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDWebImagePrefetcher.h@T@SDWebImagePrefetcherCompletionBlock">SDWebImagePrefetcherCompletionBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDWebImagePrefetcherCompletionBlock</span><span class="p">)(</span><span class="n">NSUInteger</span> <span class="n">noOfFinishedUrls</span><span class="p">,</span> <span class="n">NSUInteger</span> <span class="n">noOfSkippedUrls</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImagePrefetcherCompletionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">UInt</span><span class="p">,</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImagePrefetcher.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDWebImageTransition.h@T@SDWebImageTransitionPreparesBlock"></a>
+                    <a name="//apple_ref/objc/Type/SDWebImageTransitionPreparesBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDWebImageTransition.h@T@SDWebImageTransitionPreparesBlock">SDWebImageTransitionPreparesBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">SDWebImageTransitionPreparesBlock</span><span class="p">)(</span><span class="n">__kindof</span> <span class="n">UIView</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">view</span><span class="p">,</span> <span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">image</span><span class="p">,</span> <span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">imageData</span><span class="p">,</span> <span class="n"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span> <span class="n">cacheType</span><span class="p">,</span> <span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">imageURL</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageTransitionPreparesBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">NSView</span><span class="p">,</span> <span class="kt">NSImage</span><span class="p">?,</span> <span class="kt">Data</span><span class="p">?,</span> <span class="kt"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">,</span> <span class="kt">URL</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImageTransition.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDWebImageTransition.h@T@SDWebImageTransitionAnimationsBlock"></a>
+                    <a name="//apple_ref/objc/Type/SDWebImageTransitionAnimationsBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDWebImageTransition.h@T@SDWebImageTransitionAnimationsBlock">SDWebImageTransitionAnimationsBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">SDWebImageTransitionAnimationsBlock</span><span class="p">)(</span><span class="n">__kindof</span> <span class="n">UIView</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">view</span><span class="p">,</span> <span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">image</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageTransitionAnimationsBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">NSView</span><span class="p">,</span> <span class="kt">NSImage</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImageTransition.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDWebImageTransition.h@T@SDWebImageTransitionCompletionBlock"></a>
+                    <a name="//apple_ref/objc/Type/SDWebImageTransitionCompletionBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDWebImageTransition.h@T@SDWebImageTransitionCompletionBlock">SDWebImageTransitionCompletionBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">SDWebImageTransitionCompletionBlock</span><span class="p">)(</span><span class="n">BOOL</span> <span class="n">finished</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageTransitionCompletionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImageTransition.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:UIView+WebCache.h@T@SDSetImageBlock"></a>
+                    <a name="//apple_ref/objc/Type/SDSetImageBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:UIView+WebCache.h@T@SDSetImageBlock">SDSetImageBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDSetImageBlock</span><span class="p">)(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">image</span><span class="p">,</span> <span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">imageData</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDSetImageBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">NSImage</span><span class="p">?,</span> <span class="kt">Data</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/UIView+WebCache.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/rs/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2018-09-23)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

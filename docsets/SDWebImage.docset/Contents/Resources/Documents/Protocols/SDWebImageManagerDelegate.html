@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SDWebImageManagerDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Protocol/SDWebImageManagerDelegate" class="dashAnchor"></a>
+    <a title="SDWebImageManagerDelegate Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SDWebImage Docs</a> (70% documented)</p>
+        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SDWebImage Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SDWebImageManagerDelegate Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../howtouse.html">HowToUse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../manualinstallation.html">ManualInstallation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../sdwebimage-40-migration-guide.html">SDWebImage-4.0-Migration-guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Categories/MKAnnotationView(WebCache).html">MKAnnotationView(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSButton(WebCache).html">NSButton(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSData(ImageContentType).html">NSData(ImageContentType)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSImage(ForceDecode).html">NSImage(ForceDecode)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSImage(GIF).html">NSImage(GIF)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSImage(MultiFormat).html">NSImage(MultiFormat)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSImage(WebCache).html">NSImage(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSImageView(WebCache).html">NSImageView(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSView(WebCache).html">NSView(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSView(WebCacheOperation).html">NSView(WebCacheOperation)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)SDAnimatedImageRep">SDAnimatedImageRep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageCache.html">SDImageCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageCacheConfig.html">SDImageCacheConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageCoderHelper.html">SDWebImageCoderHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageCodersManager.html">SDWebImageCodersManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageDownloadToken.html">SDWebImageDownloadToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageDownloader.html">SDWebImageDownloader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageFrame.html">SDWebImageFrame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageGIFCoder.html">SDWebImageGIFCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageImageIOCoder.html">SDWebImageImageIOCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageManager.html">SDWebImageManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImagePrefetcher.html">SDWebImagePrefetcher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageTransition.html">SDWebImageTransition</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageCoderScaleDownLargeImagesKey">SDWebImageCoderScaleDownLargeImagesKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageDownloadFinishNotification">SDWebImageDownloadFinishNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageDownloadReceiveResponseNotification">SDWebImageDownloadReceiveResponseNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageDownloadStartNotification">SDWebImageDownloadStartNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageDownloadStopNotification">SDWebImageDownloadStopNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageErrorDomain">SDWebImageErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageExternalCustomManagerKey">SDWebImageExternalCustomManagerKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageInternalSetImageGroupKey">SDWebImageInternalSetImageGroupKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageProgressUnitCountUnknown">SDWebImageProgressUnitCountUnknown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@WebImageVersionNumber">WebImageVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@WebImageVersionString">WebImageVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SDImageCacheConfigExpireType.html">SDImageCacheConfigExpireType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDImageCacheOptions.html">SDImageCacheOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDImageCacheType.html">SDImageCacheType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDImageFormat.html">SDImageFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDWebImageAnimationOptions.html">SDWebImageAnimationOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDWebImageDownloaderExecutionOrder.html">SDWebImageDownloaderExecutionOrder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDWebImageDownloaderOptions.html">SDWebImageDownloaderOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageCoder.html">SDWebImageCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageDownloaderOperationInterface.html">SDWebImageDownloaderOperationInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageManagerDelegate.html">SDWebImageManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageOperation.html">SDWebImageOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImagePrefetcherDelegate.html">SDWebImagePrefetcherDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageProgressiveCoder.html">SDWebImageProgressiveCoder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDImageCache.h@T@SDCacheQueryCompletedBlock">SDCacheQueryCompletedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageDownloader.h@T@SDHTTPHeadersDictionary">SDHTTPHeadersDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageDownloader.h@T@SDHTTPHeadersMutableDictionary">SDHTTPHeadersMutableDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDInternalCompletionBlock">SDInternalCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:UIView+WebCache.h@T@SDSetImageBlock">SDSetImageBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDWebImageCacheKeyFilterBlock">SDWebImageCacheKeyFilterBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDWebImageCacheSerializerBlock">SDWebImageCacheSerializerBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDImageCache.h@T@SDWebImageCalculateSizeBlock">SDWebImageCalculateSizeBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDImageCache.h@T@SDWebImageCheckCacheCompletionBlock">SDWebImageCheckCacheCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderCompletedBlock">SDWebImageDownloaderCompletedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderHeadersFilterBlock">SDWebImageDownloaderHeadersFilterBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderProgressBlock">SDWebImageDownloaderProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageCompat.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImagePrefetcher.h@T@SDWebImagePrefetcherCompletionBlock">SDWebImagePrefetcherCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImagePrefetcher.h@T@SDWebImagePrefetcherProgressBlock">SDWebImagePrefetcherProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionAnimationsBlock">SDWebImageTransitionAnimationsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionCompletionBlock">SDWebImageTransitionCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionPreparesBlock">SDWebImageTransitionPreparesBlock</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDCGColorSpaceGetDeviceRGB">SDCGColorSpaceGetDeviceRGB</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDCGImageRefContainsAlpha">SDCGImageRefContainsAlpha</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDScaledImageForKey">SDScaledImageForKey</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SDWebImageManagerDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDWebImageManagerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span>
+
+<span class="k">@optional</span>
+
+<span class="cm">/**
+ * Controls which image should be downloaded when the image is not found in the cache.
+ *
+ * @param imageManager The current `SDWebImageManager`
+ * @param imageURL     The url of the image to be downloaded
+ *
+ * @return Return NO to prevent the downloading of the image on cache misses. If not implemented, YES is implied.
+ */</span>
+<span class="o">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">imageManager</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDWebImageManager.html">SDWebImageManager</a></span> <span class="o">*</span><span class="p">)</span><span class="n">imageManager</span> <span class="n">shouldDownloadImageForURL</span><span class="o">:</span><span class="p">(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="n">imageURL</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Controls the complicated logic to mark as failed URLs when download error occur.
+ * If the delegate implement this method, we will not use the built-in way to mark URL as failed based on error code;
+ @param imageManager The current `SDWebImageManager`
+ @param imageURL The url of the image
+ @param error The download error for the url
+ @return Whether to block this url or not. Return YES to mark this URL as failed.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">imageManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDWebImageManager.html">SDWebImageManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">imageManager</span> <span class="nf">shouldBlockFailedURL</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">imageURL</span> <span class="nf">withError</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Allows to transform the image immediately after it has been downloaded and just before to cache it on disk and memory.
+ * NOTE: This method is called from a global queue in order to not to block the main thread.
+ *
+ * @param imageManager The current `SDWebImageManager`
+ * @param image        The image to transform
+ * @param imageURL     The url of the image to transform
+ *
+ * @return The transformed image object.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nf">imageManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDWebImageManager.html">SDWebImageManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">imageManager</span> <span class="nf">transformDownloadedImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">image</span> <span class="nf">withURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">imageURL</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SDWebImageManagerDelegate(im)imageManager:shouldDownloadImageForURL:"></a>
+                    <a name="//apple_ref/objc/Method/-imageManager:shouldDownloadImageForURL:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDWebImageManagerDelegate(im)imageManager:shouldDownloadImageForURL:">-imageManager:shouldDownloadImageForURL:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Controls which image should be downloaded when the image is not found in the cache.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">imageManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDWebImageManager.html">SDWebImageManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">imageManager</span>
+    <span class="nf">shouldDownloadImageForURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">imageURL</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">imageManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">imageManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDWebImageManager.html">SDWebImageManager</a></span><span class="p">,</span> <span class="n">shouldDownloadImageFor</span> <span class="nv">imageURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The current <code><a href="../Classes/SDWebImageManager.html">SDWebImageManager</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The url of the image to be downloaded</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Return NO to prevent the downloading of the image on cache misses. If not implemented, YES is implied.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImageManager.h#L144">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SDWebImageManagerDelegate(im)imageManager:shouldBlockFailedURL:withError:"></a>
+                    <a name="//apple_ref/objc/Method/-imageManager:shouldBlockFailedURL:withError:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDWebImageManagerDelegate(im)imageManager:shouldBlockFailedURL:withError:">-imageManager:shouldBlockFailedURL:withError:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+<ul>
+<li>Controls the complicated logic to mark as failed URLs when download error occur.</li>
+<li>If the delegate implement this method, we will not use the built-in way to mark URL as failed based on error code;</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">imageManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDWebImageManager.html">SDWebImageManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">imageManager</span>
+    <span class="nf">shouldBlockFailedURL</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">imageURL</span>
+               <span class="nf">withError</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">imageManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">imageManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDWebImageManager.html">SDWebImageManager</a></span><span class="p">,</span> <span class="n">shouldBlockFailedURL</span> <span class="nv">imageURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="n">withError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The current <code><a href="../Classes/SDWebImageManager.html">SDWebImageManager</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The url of the image</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The download error for the url</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Whether to block this url or not. Return YES to mark this URL as failed.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImageManager.h#L154">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SDWebImageManagerDelegate(im)imageManager:transformDownloadedImage:withURL:"></a>
+                    <a name="//apple_ref/objc/Method/-imageManager:transformDownloadedImage:withURL:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDWebImageManagerDelegate(im)imageManager:transformDownloadedImage:withURL:">-imageManager:transformDownloadedImage:withURL:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allows to transform the image immediately after it has been downloaded and just before to cache it on disk and memory.
+ NOTE: This method is called from a global queue in order to not to block the main thread.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSImage</span> <span class="o">*</span><span class="p">)</span><span class="nf">imageManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDWebImageManager.html">SDWebImageManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">imageManager</span>
+          <span class="nf">transformDownloadedImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">image</span>
+                           <span class="nf">withURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">imageURL</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">imageManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">imageManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDWebImageManager.html">SDWebImageManager</a></span><span class="p">,</span> <span class="n">transformDownloadedImage</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">NSImage</span><span class="p">?,</span> <span class="n">with</span> <span class="nv">imageURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">NSImage</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The current <code><a href="../Classes/SDWebImageManager.html">SDWebImageManager</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image to transform</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The url of the image to transform</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The transformed image object.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rs/SDWebImage/tree/4.4.2/SDWebImage/SDWebImageManager.h#L166">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/rs/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2018-09-23)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
