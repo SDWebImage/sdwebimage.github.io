@@ -920,27 +920,13 @@
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloader.h",
       "line": 88,
-      "symbol": "SDWebImageDownloadStartNotification",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloader.h",
-      "line": 89,
-      "symbol": "SDWebImageDownloadStopNotification",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloader.h",
-      "line": 91,
       "symbol": "SDWebImageDownloaderProgressBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloader.h",
-      "line": 92,
+      "line": 89,
       "symbol": "SDWebImageDownloaderCompletedBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"

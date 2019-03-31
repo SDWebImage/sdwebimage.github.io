@@ -1,13 +1,6 @@
 {
   "warnings": [
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/NSButton+WebCache.h",
-      "line": 15,
-      "symbol": "NSButton(WebCache)",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/NSData+ImageContentType.h",
       "line": 18,
       "symbol": "SDImageFormatUndefined",
@@ -71,13 +64,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/NSImage+Compatibility.h",
-      "line": 15,
-      "symbol": "NSImage(Compatibility)",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDAnimatedImage.h",
       "line": 62,
       "symbol": "SDAnimatedImage",
@@ -93,8 +79,8 @@
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDAnimatedImage.h",
-      "line": 70,
-      "symbol": "SDAnimatedImage.+imageNamed:inBundle:",
+      "line": 68,
+      "symbol": "SDAnimatedImage.+imageNamed:inBundle:compatibleWithTraitCollection:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
@@ -159,13 +145,6 @@
       "line": 102,
       "symbol": "SDAnimatedImage.allFramesLoaded",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDAnimatedImageRep.h",
-      "line": 17,
-      "symbol": "SDAnimatedImageRep",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
@@ -1171,7 +1150,7 @@
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageIndicator.h",
-      "line": 53,
+      "line": 51,
       "symbol": "SDWebImageActivityIndicator.indicatorView",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
@@ -1192,7 +1171,7 @@
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageIndicator.h",
-      "line": 82,
+      "line": 80,
       "symbol": "SDWebImageProgressIndicator.indicatorView",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
@@ -1283,23 +1262,9 @@
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageTransition.h",
-      "line": 22,
-      "symbol": "SDWebImageAnimationOptions",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageTransition.h",
-      "line": 22,
+      "line": 20,
       "symbol": "SDWebImageAnimationOptions",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageTransition.h",
-      "line": 23,
-      "symbol": "SDWebImageAnimationOptions.SDWebImageAnimationOptionAllowsImplicitAnimation",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
@@ -1340,35 +1305,35 @@
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/UIImage+ForceDecode.h",
       "line": 11,
-      "symbol": "NSImage(ForceDecode)",
+      "symbol": "UIImage(ForceDecode)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/UIImage+GIF.h",
       "line": 13,
-      "symbol": "NSImage(GIF)",
+      "symbol": "UIImage(GIF)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/UIImage+MemoryCacheCost.h",
       "line": 11,
-      "symbol": "NSImage(MemoryCacheCost)",
+      "symbol": "UIImage(MemoryCacheCost)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/UIImage+Metadata.h",
       "line": 12,
-      "symbol": "NSImage(Metadata)",
+      "symbol": "UIImage(Metadata)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/UIImage+MultiFormat.h",
       "line": 12,
-      "symbol": "NSImage(MultiFormat)",
+      "symbol": "UIImage(MultiFormat)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },
@@ -1409,51 +1374,9 @@
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/UIImage+Transform.h",
-      "line": 20,
-      "symbol": "SDRectCorner",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/UIImage+Transform.h",
-      "line": 20,
+      "line": 18,
       "symbol": "SDRectCorner",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/UIImage+Transform.h",
-      "line": 21,
-      "symbol": "SDRectCorner.SDRectCornerTopLeft",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/UIImage+Transform.h",
-      "line": 22,
-      "symbol": "SDRectCorner.SDRectCornerTopRight",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/UIImage+Transform.h",
-      "line": 23,
-      "symbol": "SDRectCorner.SDRectCornerBottomLeft",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/UIImage+Transform.h",
-      "line": 24,
-      "symbol": "SDRectCorner.SDRectCornerBottomRight",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/UIImage+Transform.h",
-      "line": 25,
-      "symbol": "SDRectCorner.SDRectCornerAllCorners",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
@@ -1466,14 +1389,14 @@
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/UIView+WebCache.h",
       "line": 22,
-      "symbol": "NSView(WebCache)",
+      "symbol": "UIView(WebCache)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/UIView+WebCacheOperation.h",
       "line": 14,
-      "symbol": "NSView(WebCacheOperation)",
+      "symbol": "UIView(WebCacheOperation)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },

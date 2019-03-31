@@ -14,7 +14,7 @@
     <a title="SDAnimatedImageView Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (65% documented)</p>
+        <p><a href="../index.html">SDWebImage Docs</a> (67% documented)</p>
         <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -49,40 +49,40 @@
             <a href="../Categories.html">Categories</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Categories/NSButton(WebCache).html">NSButton(WebCache)</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Categories/NSData(ImageContentType).html">NSData(ImageContentType)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Categories/NSImage(Compatibility).html">NSImage(Compatibility)</a>
+                <a href="../Categories/UIButton(WebCache).html">UIButton(WebCache)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Categories/NSImage(ForceDecode).html">NSImage(ForceDecode)</a>
+                <a href="../Categories/UIImage(ForceDecode).html">UIImage(ForceDecode)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Categories/NSImage(GIF).html">NSImage(GIF)</a>
+                <a href="../Categories/UIImage(GIF).html">UIImage(GIF)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Categories/NSImage(MemoryCacheCost).html">NSImage(MemoryCacheCost)</a>
+                <a href="../Categories/UIImage(MemoryCacheCost).html">UIImage(MemoryCacheCost)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Categories/NSImage(Metadata).html">NSImage(Metadata)</a>
+                <a href="../Categories/UIImage(Metadata).html">UIImage(Metadata)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Categories/NSImage(MultiFormat).html">NSImage(MultiFormat)</a>
+                <a href="../Categories/UIImage(MultiFormat).html">UIImage(MultiFormat)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Categories/NSImage(Transform).html">NSImage(Transform)</a>
+                <a href="../Categories/UIImage(Transform).html">UIImage(Transform)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Categories/NSImageView(WebCache).html">NSImageView(WebCache)</a>
+                <a href="../Categories/UIImageView(HighlightedWebCache).html">UIImageView(HighlightedWebCache)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Categories/NSView(WebCache).html">NSView(WebCache)</a>
+                <a href="../Categories/UIImageView(WebCache).html">UIImageView(WebCache)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Categories/NSView(WebCacheOperation).html">NSView(WebCacheOperation)</a>
+                <a href="../Categories/UIView(WebCache).html">UIView(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/UIView(WebCacheOperation).html">UIView(WebCacheOperation)</a>
               </li>
             </ul>
           </li>
@@ -91,9 +91,6 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/SDAnimatedImage.html">SDAnimatedImage</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes.html#/c:objc(cs)SDAnimatedImageRep">SDAnimatedImageRep</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/SDAnimatedImageView.html">SDAnimatedImageView</a>
@@ -325,12 +322,6 @@
                 <a href="../Enums/SDImageScaleMode.html">SDImageScaleMode</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/SDRectCorner.html">SDRectCorner</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/SDWebImageAnimationOptions.html">SDWebImageAnimationOptions</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/SDWebImageDownloaderExecutionOrder.html">SDWebImageDownloaderExecutionOrder</a>
               </li>
               <li class="nav-group-task">
@@ -446,7 +437,13 @@
                 <a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDInternalCompletionBlock">SDInternalCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:UIImage+Transform.h@T@SDRectCorner">SDRectCorner</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Type Definitions.html#/c:UIView+WebCache.h@T@SDSetImageBlock">SDSetImageBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageAnimationOptions">SDWebImageAnimationOptions</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Type Definitions.html#/c:SDWebImageCacheKeyFilter.h@T@SDWebImageCacheKeyFilterBlock">SDWebImageCacheKeyFilterBlock</a>
@@ -541,7 +538,7 @@
             <h1>SDAnimatedImageView</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDAnimatedImageView</span> <span class="p">:</span> <span class="nc">NSImageView</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDAnimatedImageView</span> <span class="p">:</span> <span class="nc">UIImageView</span></code></pre>
 
                 </div>
               </div>
@@ -574,12 +571,12 @@ For AppKit: use <code>-setAnimates:</code> to control animating, <code>animates<
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSImage</span> <span class="o">*</span><span class="n">currentFrame</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIImage</span> <span class="o">*</span><span class="n">currentFrame</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">currentFrame</span><span class="p">:</span> <span class="kt">NSImage</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">currentFrame</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -816,6 +813,42 @@ Default is YES. Set to NO to only render the static poster for incremental anima
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDAnimatedImageView(py)runLoopMode"></a>
+                    <a name="//apple_ref/objc/Property/runLoopMode" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(py)runLoopMode">runLoopMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can specify a runloop mode to let it rendering.
+Default is NSRunLoopCommonModes on multi-core iOS device, NSDefaultRunLoopMode on single-core iOS device</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSRunLoopMode</span> <span class="n">runLoopMode</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">runLoopMode</span><span class="p">:</span> <span class="kt">RunLoop</span><span class="o">.</span><span class="kt">Mode</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDAnimatedImageView.h#L66">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -911,12 +944,12 @@ Default is YES. Set to NO to only render the static poster for incremental anima
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sd_setImageWithURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
-          <span class="nf">placeholderImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">placeholder</span><span class="p">;</span></code></pre>
+          <span class="nf">placeholderImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">placeholder</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">__sd_setImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="n">placeholderImage</span> <span class="nv">placeholder</span><span class="p">:</span> <span class="kt">NSImage</span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">__sd_setImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="n">placeholderImage</span> <span class="nv">placeholder</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -980,13 +1013,13 @@ Default is YES. Set to NO to only render the static poster for incremental anima
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sd_setImageWithURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
-          <span class="nf">placeholderImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">placeholder</span>
+          <span class="nf">placeholderImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">placeholder</span>
                    <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span><span class="p">)</span><span class="nv">options</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">__sd_setImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="n">placeholderImage</span> <span class="nv">placeholder</span><span class="p">:</span> <span class="kt">NSImage</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span> <span class="o">=</span> <span class="p">[])</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">__sd_setImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="n">placeholderImage</span> <span class="nv">placeholder</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span> <span class="o">=</span> <span class="p">[])</span></code></pre>
 
                         </div>
                       </div>
@@ -1062,14 +1095,14 @@ Default is YES. Set to NO to only render the static poster for incremental anima
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sd_setImageWithURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
-          <span class="nf">placeholderImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">placeholder</span>
+          <span class="nf">placeholderImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">placeholder</span>
                    <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span><span class="p">)</span><span class="nv">options</span>
                    <span class="nf">context</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">context</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sd_setImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="n">placeholderImage</span> <span class="nv">placeholder</span><span class="p">:</span> <span class="kt">NSImage</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">context</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Type Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContextOption">SDWebImageContextOption</a></span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sd_setImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="n">placeholderImage</span> <span class="nv">placeholder</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">context</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Type Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContextOption">SDWebImageContextOption</a></span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span></code></pre>
 
                         </div>
                       </div>
@@ -1230,13 +1263,13 @@ Default is YES. Set to NO to only render the static poster for incremental anima
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sd_setImageWithURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
-          <span class="nf">placeholderImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">placeholder</span>
+          <span class="nf">placeholderImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">placeholder</span>
                  <span class="nf">completed</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a></span><span class="p">)</span><span class="nv">completedBlock</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">__sd_setImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="n">placeholderImage</span> <span class="nv">placeholder</span><span class="p">:</span> <span class="kt">NSImage</span><span class="p">?,</span> <span class="n">completed</span> <span class="nv">completedBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">__sd_setImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="n">placeholderImage</span> <span class="nv">placeholder</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="n">completed</span> <span class="nv">completedBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1316,14 +1349,14 @@ Default is YES. Set to NO to only render the static poster for incremental anima
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sd_setImageWithURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
-          <span class="nf">placeholderImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">placeholder</span>
+          <span class="nf">placeholderImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">placeholder</span>
                    <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span><span class="p">)</span><span class="nv">options</span>
                  <span class="nf">completed</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a></span><span class="p">)</span><span class="nv">completedBlock</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sd_setImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="n">placeholderImage</span> <span class="nv">placeholder</span><span class="p">:</span> <span class="kt">NSImage</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span> <span class="o">=</span> <span class="p">[],</span> <span class="n">completed</span> <span class="nv">completedBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sd_setImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="n">placeholderImage</span> <span class="nv">placeholder</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span> <span class="o">=</span> <span class="p">[],</span> <span class="n">completed</span> <span class="nv">completedBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1415,7 +1448,7 @@ Default is YES. Set to NO to only render the static poster for incremental anima
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sd_setImageWithURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
-          <span class="nf">placeholderImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">placeholder</span>
+          <span class="nf">placeholderImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">placeholder</span>
                    <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span><span class="p">)</span><span class="nv">options</span>
                   <span class="nf">progress</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderProgressBlock">SDImageLoaderProgressBlock</a></span><span class="p">)</span><span class="nv">progressBlock</span>
                  <span class="nf">completed</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a></span><span class="p">)</span><span class="nv">completedBlock</span><span class="p">;</span></code></pre>
@@ -1423,7 +1456,7 @@ Default is YES. Set to NO to only render the static poster for incremental anima
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sd_setImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="n">placeholderImage</span> <span class="nv">placeholder</span><span class="p">:</span> <span class="kt">NSImage</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span> <span class="o">=</span> <span class="p">[],</span> <span class="n">progress</span> <span class="nv">progressBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderProgressBlock">SDImageLoaderProgressBlock</a></span><span class="p">?,</span> <span class="n">completed</span> <span class="nv">completedBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sd_setImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="n">placeholderImage</span> <span class="nv">placeholder</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span> <span class="o">=</span> <span class="p">[],</span> <span class="n">progress</span> <span class="nv">progressBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderProgressBlock">SDImageLoaderProgressBlock</a></span><span class="p">?,</span> <span class="n">completed</span> <span class="nv">completedBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1528,7 +1561,7 @@ Default is YES. Set to NO to only render the static poster for incremental anima
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sd_setImageWithURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
-          <span class="nf">placeholderImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">placeholder</span>
+          <span class="nf">placeholderImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">placeholder</span>
                    <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span><span class="p">)</span><span class="nv">options</span>
                    <span class="nf">context</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">context</span>
                   <span class="nf">progress</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderProgressBlock">SDImageLoaderProgressBlock</a></span><span class="p">)</span><span class="nv">progressBlock</span>
@@ -1537,7 +1570,7 @@ Default is YES. Set to NO to only render the static poster for incremental anima
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sd_setImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="n">placeholderImage</span> <span class="nv">placeholder</span><span class="p">:</span> <span class="kt">NSImage</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">context</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Type Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContextOption">SDWebImageContextOption</a></span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="n">progress</span> <span class="nv">progressBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderProgressBlock">SDImageLoaderProgressBlock</a></span><span class="p">?,</span> <span class="n">completed</span> <span class="nv">completedBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sd_setImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="n">placeholderImage</span> <span class="nv">placeholder</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">context</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Type Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContextOption">SDWebImageContextOption</a></span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="n">progress</span> <span class="nv">progressBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderProgressBlock">SDImageLoaderProgressBlock</a></span><span class="p">?,</span> <span class="n">completed</span> <span class="nv">completedBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
