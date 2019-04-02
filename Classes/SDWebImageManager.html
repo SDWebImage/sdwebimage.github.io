@@ -550,22 +550,18 @@
 <li>a UIView.
 *</li>
 <li>Here is a simple example of how to use SDWebImageManager:
-*</li>
-<li>@code</li>
-</ul>
-
-<p>SDWebImageManager *manager = [SDWebImageManager sharedManager];
+*
+<code>
+SDWebImageManager *manager = [SDWebImageManager sharedManager];
 [manager loadImageWithURL:imageURL
-                  options:0
-                 progress:nil
-                completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-                    if (image) {
-                        // do something with image
-                    }
-                }];</p>
-
-<ul>
-<li>@endcode</li>
+              options:0
+             progress:nil
+            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                if (image) {
+                    // do something with image
+                }
+            }];
+</code></li>
 </ul>
 
           </section>
@@ -603,7 +599,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageManager.h#L97">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L95">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -638,7 +634,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageManager.h#L102">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L100">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -673,7 +669,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageManager.h#L107">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L105">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -715,7 +711,7 @@ Defaults to nil, which means no transform is applied.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageManager.h#L114">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L112">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -739,13 +735,13 @@ Defaults to nil, which means no transform is applied.</p>
 *</li>
 <li>The following example sets a filter in the application delegate that will remove any query-string from the</li>
 <li>URL before to use it as a cache key:
-*</li>
-<li>@code
+*
+<code>
 SDWebImageManager.sharedManager.cacheKeyFilter =[SDWebImageCacheKeyFilter cacheKeyFilterWithBlock:^NSString * _Nullable(NSURL * _Nonnull url) {
 url = [[NSURL alloc] initWithScheme:url.scheme host:url.host path:url.path];
 return [url absoluteString];
-}];</li>
-<li>@endcode</li>
+}];
+</code></li>
 </ul>
 
                       </div>
@@ -764,7 +760,7 @@ return [url absoluteString];
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageManager.h#L129">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L127">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -787,8 +783,8 @@ return [url absoluteString];
 <li>The cache serializer is used to convert the decoded image, the source downloaded data, to the actual data used for storing to the disk cache. If you return nil, means to generate the data from the image instance, see <code><a href="../Classes/SDImageCache.html">SDImageCache</a></code>.</li>
 <li>For example, if you are using WebP images and facing the slow decoding time issue when later retriving from disk cache again. You can try to encode the decoded image to JPEG/PNG format to disk cache instead of source downloaded data.</li>
 <li>- note: The <code>image</code> arg is nonnull, but when you also provide a image transformer and the image is transformed, the <code>data</code> arg may be nil, take attention to this case.</li>
-<li>- note: This method is called from a global queue in order to not to block the main thread.</li>
-<li>@code
+<li>- note: This method is called from a global queue in order to not to block the main thread.
+<code>
 SDWebImageManager.sharedManager.cacheSerializer = [SDWebImageCacheSerializer cacheSerializerWithBlock:^NSData * _Nullable(UIImage * _Nonnull image, NSData * _Nullable data, NSURL * _Nullable imageURL) {
 SDImageFormat format = [NSData sd_imageFormatForImageData:data];
 switch (format) {
@@ -797,8 +793,8 @@ switch (format) {
     default:
         return data;
 }
-}];</li>
-<li>@endcode</li>
+}];
+</code></li>
 <li>The default value is nil. Means we just store the source downloaded data to disk cache.</li>
 </ul>
 
@@ -818,7 +814,7 @@ switch (format) {
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageManager.h#L149">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L147">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -853,7 +849,7 @@ switch (format) {
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageManager.h#L154">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L152">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -890,7 +886,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDImageCache.html#/c:objc
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageManager.h#L160">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L158">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -927,7 +923,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageManager.h#L166">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L164">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -962,7 +958,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageManager.h#L171">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L169">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1002,7 +998,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         <p>new instance of <code>SDWebImageManager</code> with specified cache and loader.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageManager.h#L177">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L175">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1115,7 +1111,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         <p>Returns an instance of SDWebImageCombinedOperation, which you can cancel the loading process.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageManager.h#L204-L207">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L202-L205">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1227,7 +1223,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         <p>Returns an instance of SDWebImageCombinedOperation, which you can cancel the loading process.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageManager.h#L221-L225">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L219-L223">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1262,7 +1258,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageManager.h#L230">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L228">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1297,7 +1293,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageManager.h#L235">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L233">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1307,7 +1303,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-03-31)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

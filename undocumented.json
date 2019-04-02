@@ -899,13 +899,41 @@
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloader.h",
       "line": 88,
+      "symbol": "SDWebImageDownloadStartNotification",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloader.h",
+      "line": 89,
+      "symbol": "SDWebImageDownloadReceiveResponseNotification",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloader.h",
+      "line": 90,
+      "symbol": "SDWebImageDownloadStopNotification",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloader.h",
+      "line": 91,
+      "symbol": "SDWebImageDownloadFinishNotification",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloader.h",
+      "line": 93,
       "symbol": "SDWebImageDownloaderProgressBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloader.h",
-      "line": 89,
+      "line": 94,
       "symbol": "SDWebImageDownloaderCompletedBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
@@ -933,98 +961,70 @@
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
-      "line": 13,
-      "symbol": "SDWebImageDownloadStartNotification",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
-      "line": 14,
-      "symbol": "SDWebImageDownloadReceiveResponseNotification",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
-      "line": 15,
-      "symbol": "SDWebImageDownloadStopNotification",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
-      "line": 16,
-      "symbol": "SDWebImageDownloadFinishNotification",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
-      "line": 27,
+      "line": 20,
       "symbol": "SDWebImageDownloaderOperation.-initWithRequest:inSession:options:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
-      "line": 31,
+      "line": 24,
       "symbol": "SDWebImageDownloaderOperation.-initWithRequest:inSession:options:context:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
-      "line": 36,
+      "line": 29,
       "symbol": "SDWebImageDownloaderOperation.-addHandlersForProgress:completed:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
-      "line": 39,
+      "line": 32,
       "symbol": "SDWebImageDownloaderOperation.-cancel:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
-      "line": 41,
+      "line": 34,
       "symbol": "SDWebImageDownloaderOperation.request",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
-      "line": 42,
+      "line": 35,
       "symbol": "SDWebImageDownloaderOperation.response",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
-      "line": 45,
+      "line": 38,
       "symbol": "SDWebImageDownloaderOperation.dataTask",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
-      "line": 46,
+      "line": 39,
       "symbol": "SDWebImageDownloaderOperation.credential",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
-      "line": 47,
+      "line": 40,
       "symbol": "SDWebImageDownloaderOperation.minimumProgressInterval",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h",
-      "line": 52,
+      "line": 45,
       "symbol": "SDWebImageDownloaderOperation",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"

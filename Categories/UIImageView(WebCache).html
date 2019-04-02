@@ -546,37 +546,28 @@
 <ul>
 <li>Integrates SDWebImage async downloading and caching of remote images with UIImageView.
 *</li>
-<li>Usage with a UITableViewCell sub-class:
-*</li>
-<li>@code</li>
-</ul>
-<h1 id='import-sdwebimage-uiimageview-webcache-h' class='heading'>import <SDWebImage/UIImageView+WebCache.h></h1>
+<li><p>Usage with a UITableViewCell sub-class:
+*</p>
+<pre class="highlight objective_c"><code><span class="cp">#import &lt;SDWebImage/UIImageView+WebCache.h&gt;
+</span><span class="k">-</span> <span class="p">(</span><span class="n">UITableViewCell</span> <span class="o">*</span><span class="p">)</span><span class="nf">tableView</span><span class="p">:(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">cellForRowAtIndexPath</span><span class="p">:(</span><span class="n">NSIndexPath</span> <span class="o">*</span><span class="p">)</span><span class="nv">indexPath</span>
+<span class="p">{</span>
+<span class="k">static</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">MyIdentifier</span> <span class="o">=</span> <span class="s">@"MyIdentifier"</span><span class="p">;</span>
 
-<p>&hellip;</p>
+<span class="n">UITableViewCell</span> <span class="o">*</span><span class="n">cell</span> <span class="o">=</span> <span class="p">[</span><span class="n">tableView</span> <span class="nf">dequeueReusableCellWithIdentifier</span><span class="p">:</span><span class="n">MyIdentifier</span><span class="p">];</span>
 
-<ul>
-<li><p>(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-static NSString *MyIdentifier = @<q>MyIdentifier</q>;</p>
+<span class="k">if</span> <span class="p">(</span><span class="n">cell</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cell</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UITableViewCell</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithStyle</span><span class="p">:</span><span class="n">UITableViewCellStyleDefault</span> <span class="nf">reuseIdentifier</span><span class="p">:</span><span class="n">MyIdentifier</span><span class="p">];</span>
+<span class="p">}</span>
 
-<p>UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];</p>
+<span class="c1">// Here we use the provided sd_setImageWithURL:placeholderImage: method to load the web image</span>
+<span class="c1">// Ensure you use a placeholder image otherwise cells will be initialized with no image</span>
+<span class="p">[</span><span class="n">cell</span><span class="p">.</span><span class="n">imageView</span> <span class="nf">sd_setImageWithURL</span><span class="p">:[</span><span class="n">NSURL</span> <span class="nf">URLWithString</span><span class="p">:</span><span class="s">@"http://example.com/image.jpg"</span><span class="p">]</span>
+                  <span class="nf">placeholderImage</span><span class="p">:[</span><span class="n">UIImage</span> <span class="nf">imageNamed</span><span class="p">:</span><span class="s">@"placeholder"</span><span class="p">]];</span>
 
-<p>if (cell == nil) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
-}</p>
-
-<p>// Here we use the provided sd_setImageWithURL:placeholderImage: method to load the web image
-// Ensure you use a placeholder image otherwise cells will be initialized with no image
-[cell.imageView sd_setImageWithURL:[NSURL URLWithString:@<q>http://example.com/image.jpg</q>]
-                  placeholderImage:[UIImage imageNamed:@<q>placeholder</q>]];</p>
-
-<p>cell.textLabel.text = @<q>My Text</q>;
-return cell;
-}</p>
-
-<ul>
-<li>@endcode</li>
-</ul></li>
+<span class="n">cell</span><span class="p">.</span><span class="n">textLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">@"My Text"</span><span class="p">;</span>
+<span class="k">return</span> <span class="n">cell</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></li>
 </ul>
 
           </section>
@@ -634,7 +625,7 @@ return cell;
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/UIImageView+WebCache.h#L53">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIImageView+WebCache.h#L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -708,7 +699,7 @@ return cell;
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/UIImageView+WebCache.h#L64-L65">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIImageView+WebCache.h#L59-L60">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -790,7 +781,7 @@ return cell;
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/UIImageView+WebCache.h#L76-L78">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIImageView+WebCache.h#L71-L73">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -885,7 +876,7 @@ return cell;
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/UIImageView+WebCache.h#L90-L93">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIImageView+WebCache.h#L85-L88">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -958,7 +949,7 @@ return cell;
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/UIImageView+WebCache.h#L107-L108">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIImageView+WebCache.h#L102-L103">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1044,7 +1035,7 @@ return cell;
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/UIImageView+WebCache.h#L123-L125">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIImageView+WebCache.h#L118-L120">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1143,7 +1134,7 @@ return cell;
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/UIImageView+WebCache.h#L141-L144">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIImageView+WebCache.h#L136-L139">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1256,7 +1247,7 @@ return cell;
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/UIImageView+WebCache.h#L162-L166">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIImageView+WebCache.h#L157-L161">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1382,7 +1373,7 @@ return cell;
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/UIImageView+WebCache.h#L185-L190">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIImageView+WebCache.h#L180-L185">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1392,7 +1383,7 @@ return cell;
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-03-31)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

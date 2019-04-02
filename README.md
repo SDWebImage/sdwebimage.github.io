@@ -24,6 +24,7 @@ jazzy \
   --module-version 5.0.0 \
   --umbrella-header WebImage/SDWebImage.h \
   --documentation=Docs/\*.md \
+  --undocumented-text "" \
   --module SDWebImage \
   --framework-root . \
   --sdk iphonesimulator \

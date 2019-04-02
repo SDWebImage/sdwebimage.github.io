@@ -20,13 +20,16 @@ jazzy \
   --objc \
   --author SDWebImage \
   --github_url https://github.com/rs/SDWebImage \
-  --github-file-prefix https://github.com/rs/SDWebImage/tree/4.4.2 \
-  --module-version 4.4.2 \
+  --github-file-prefix https://github.com/rs/SDWebImage/tree/5.0.0 \
+  --module-version 5.0.0 \
   --umbrella-header WebImage/SDWebImage.h \
   --documentation=Docs/\*.md \
   --module SDWebImage \
   --framework-root . \
+  --sdk iphonesimulator \
   --output ../sdwebimage.github.io
 ```
 
 (assuming SDWebImage and sdwebimage.github.io live in the same folder)
+
+

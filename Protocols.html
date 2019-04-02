@@ -573,7 +573,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDAnimatedImage.h#L16-L60">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDAnimatedImage.h#L16-L60">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -595,8 +595,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                         <a href="Protocols/SDDiskCache.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -698,7 +697,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDDiskCache.h#L13-L98">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDDiskCache.h#L13-L98">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -740,7 +739,7 @@ However, if your own cache implementation contains more advanced feature beyond 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDImageCacheDefine.h#L60-L124">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCacheDefine.h#L60-L124">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -793,7 +792,7 @@ These methods are all required to implement.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDImageCoder.h#L56-L106">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCoder.h#L56-L106">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -846,7 +845,7 @@ These methods are all required to implement.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDImageCoder.h#L114-L151">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCoder.h#L114-L151">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -893,7 +892,7 @@ These methods are all required to implement.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDImageCoder.h#L157-L198">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCoder.h#L157-L198">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -940,7 +939,7 @@ These methods are all required to implement.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDImageCoder.h#L204-L218">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCoder.h#L204-L218">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -969,8 +968,7 @@ These methods are all required to implement.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                         <a href="Protocols/SDImageLoader.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1005,6 +1003,18 @@ These methods are all required to implement.</p>
                                                <span class="nf">progress</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="Type Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderProgressBlock">SDImageLoaderProgressBlock</a></span><span class="p">)</span><span class="nv">progressBlock</span>
                                               <span class="nf">completed</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="Type Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderCompletedBlock">SDImageLoaderCompletedBlock</a></span><span class="p">)</span><span class="nv">completedBlock</span><span class="p">;</span>
 
+
+<span class="cm">/**
+ Whether the error from image loader should be marked indded un-recoverable or not.
+ If this return YES, failed URL which does not using `SDWebImageRetryFailed` will be blocked into black list. Else not.
+
+ @param url The URL represent the image. Note this may not be a HTTP URL
+ @param error The URL's loading error, from previous `requestImageWithURL:options:context:progress:completed:` completedBlock's error.
+ @return Whether to block this url or not. Return YES to mark this URL as failed.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">shouldBlockFailedURLWithURL</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
+                              <span class="nf">error</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+
 <span class="k">@end</span></code></pre>
 
                         </div>
@@ -1015,7 +1025,7 @@ These methods are all required to implement.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDImageLoader.h#L60-L88">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageLoader.h#L60-L100">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1061,7 +1071,7 @@ You can provide transformer to cache and manager (Through the <code>transformer<
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDImageTransformer.h#L27-L46">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageTransformer.h#L27-L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1083,8 +1093,7 @@ You can provide transformer to cache and manager (Through the <code>transformer<
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                         <a href="Protocols/SDMemoryCache.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1154,7 +1163,7 @@ You can provide transformer to cache and manager (Through the <code>transformer<
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDMemoryCache.h#L13-L66">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDMemoryCache.h#L13-L66">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1176,8 +1185,7 @@ You can provide transformer to cache and manager (Through the <code>transformer<
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                         <a href="Protocols/SDWebImageCacheKeyFilter.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1198,7 +1206,7 @@ You can provide transformer to cache and manager (Through the <code>transformer<
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageCacheKeyFilter.h#L15-L19">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageCacheKeyFilter.h#L15-L19">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1220,8 +1228,7 @@ You can provide transformer to cache and manager (Through the <code>transformer<
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                         <a href="Protocols/SDWebImageCacheSerializer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1242,7 +1249,7 @@ You can provide transformer to cache and manager (Through the <code>transformer<
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageCacheSerializer.h#L15-L19">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageCacheSerializer.h#L15-L19">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1289,7 +1296,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageDownloaderOperation.h#L25-L49">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderOperation.h#L18-L42">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1311,8 +1318,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                         <a href="Protocols/SDWebImageDownloaderRequestModifier.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1333,7 +1339,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageDownloaderRequestModifier.h#L15-L19">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderRequestModifier.h#L15-L19">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1355,8 +1361,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                         <a href="Protocols/SDWebImageIndicator.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1399,7 +1404,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageIndicator.h#L15-L41">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageIndicator.h#L15-L41">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1421,8 +1426,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                         <a href="Protocols/SDWebImageManagerDelegate.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1463,7 +1467,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageManager.h#L44-L68">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L44-L68">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1485,8 +1489,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                         <a href="Protocols/SDWebImageOperation.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1507,7 +1510,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImageOperation.h#L11-L15">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageOperation.h#L11-L15">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1529,8 +1532,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                         <a href="Protocols/SDWebImagePrefetcherDelegate.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1569,7 +1571,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.x/SDWebImage/SDWebImagePrefetcher.h#L28-L50">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImagePrefetcher.h#L28-L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1579,7 +1581,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-03-31)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
