@@ -14,8 +14,8 @@
     <a title="SDAnimatedImage Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p><a href="../index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -538,53 +538,12 @@
             <h1>SDAnimatedImage</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="../Protocols/SDAnimatedImage.html">SDAnimatedImage</a></span> <span class="p">:</span> <span class="nc">UIImage</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/SDAnimatedImage.html">SDAnimatedImage</a></span><span class="o">&gt;</span>
-
-<span class="c1">// This class override these methods from UIImage(NSImage), and it supports NSSecureCoding.</span>
-<span class="c1">// You should use these methods to create a new animated image. Use other methods just call super instead.</span>
-<span class="o">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">imageNamed</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">name</span><span class="p">;</span> <span class="c1">// Cache in memory, no Asset Catalog support</span>
-<span class="cp">#if __has_include(&lt;UIKit/UITraitCollection.h&gt;)
-</span><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">imageNamed</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">name</span> <span class="nf">inBundle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSBundle</span> <span class="o">*</span><span class="p">)</span><span class="nv">bundle</span> <span class="nf">compatibleWithTraitCollection</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UITraitCollection</span> <span class="o">*</span><span class="p">)</span><span class="nv">traitCollection</span><span class="p">;</span> <span class="c1">// Cache in memory, no Asset Catalog support</span>
-<span class="cp">#else
-</span><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">imageNamed</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">name</span> <span class="nf">inBundle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSBundle</span> <span class="o">*</span><span class="p">)</span><span class="nv">bundle</span><span class="p">;</span> <span class="c1">// Cache in memory, no Asset Catalog support</span>
-<span class="cp">#endif
-</span><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">imageWithContentsOfFile</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">path</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">imageWithData</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">imageWithData</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span> <span class="nf">scale</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">scale</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithContentsOfFile</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">path</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithData</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithData</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span> <span class="nf">scale</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">scale</span><span class="p">;</span>
-
-<span class="cm">/**
- Current animated image format.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Type Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></span> <span class="n">animatedImageFormat</span><span class="p">;</span>
-
-<span class="cm">/**
- Current animated image data, you can use this instead of CGImage to create another instance.
- If the current image is not animated image, this value is nil.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSData</span> <span class="o">*</span><span class="n">animatedImageData</span><span class="p">;</span>
-
-<span class="cm">/**
- The scale factor of the image.
- 
- @note For UIKit, this just call super instead.
- @note For AppKit, `NSImage` can contains multiple image representations with different scales. However, this class does not do that from the design. We processs the scale like UIKit. This wil actually be calculated from image size and pixel size.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">scale</span><span class="p">;</span>
-
-<span class="c1">// By default, animated image frames are returned by decoding just in time without keeping into memory. But you can choose to preload them into memory as well, See the decsription in `SDAnimatedImage` protocol.</span>
-<span class="c1">// After preloaded, there is no huge difference on performance between this and UIImage's `animatedImageWithImages:duration:`. But UIImage's animation have some issues such like blanking and pausing during segue when using in `UIImageView`. It's recommend to use only if need.</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">preloadAllFrames</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">unloadAllFrames</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isAllFramesLoaded</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">allFramesLoaded</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="../Protocols/SDAnimatedImage.html">SDAnimatedImage</a></span> <span class="p">:</span> <span class="nc">UIImage</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/SDAnimatedImage.html">SDAnimatedImage</a></span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>The image class which supports animating on <code><a href="../Classes/SDAnimatedImageView.html">SDAnimatedImageView</a></code>. You can also use it on normal UIImageView/NSImageView.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -618,7 +577,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -652,7 +611,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -681,7 +640,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -710,7 +669,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -739,7 +698,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -773,7 +732,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -807,7 +766,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -841,7 +800,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -876,7 +835,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDAnimatedImage.h#L82">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDAnimatedImage.h#L85">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -912,7 +871,7 @@ If the current image is not animated image, this value is nil.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDAnimatedImage.h#L88">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDAnimatedImage.h#L91">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -957,7 +916,7 @@ If the current image is not animated image, this value is nil.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDAnimatedImage.h#L96">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDAnimatedImage.h#L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -991,7 +950,7 @@ If the current image is not animated image, this value is nil.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1025,7 +984,7 @@ If the current image is not animated image, this value is nil.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1059,7 +1018,7 @@ If the current image is not animated image, this value is nil.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDAnimatedImage.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1069,8 +1028,8 @@ If the current image is not animated image, this value is nil.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

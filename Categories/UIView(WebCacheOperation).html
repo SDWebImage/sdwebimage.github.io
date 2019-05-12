@@ -14,8 +14,8 @@
     <a title="UIView(WebCacheOperation) Category Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p><a href="../index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -538,43 +538,13 @@
             <h1>UIView(WebCacheOperation)</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIView</span> <span class="p">(</span><span class="nl">WebCacheOperation</span><span class="p">)</span>
-
-<span class="cm">/**
- *  Get the image load operation for key
- *
- *  @param key key for identifying the operations
- *  @return the image load operation
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageOperation.html">SDWebImageOperation</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nf">sd_imageLoadOperationForKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span>
-
-<span class="cm">/**
- *  Set the image load operation (storage in a UIView based weak map table)
- *
- *  @param operation the operation
- *  @param key       key for storing the operation
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sd_setImageLoadOperation</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageOperation.html">SDWebImageOperation</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">operation</span> <span class="nf">forKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span>
-
-<span class="cm">/**
- *  Cancel all operations for the current UIView and key
- *
- *  @param key key for identifying the operations
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sd_cancelImageLoadOperationWithKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span>
-
-<span class="cm">/**
- *  Just remove the operations corresponding to the current UIView and key without cancelling them
- *
- *  @param key key for identifying the operations
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sd_removeImageLoadOperationWithKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIView</span> <span class="p">(</span><span class="nl">WebCacheOperation</span><span class="p">)</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>These methods are used to support canceling for UIView image loading, it&rsquo;s designed to be used internal but not external.
+All the stored operations are weak, so it will be dalloced after image loading finished. If you need to store operations, use your own class to keep a strong reference for them.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -633,7 +603,7 @@
                         <p>the image load operation</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIView+WebCacheOperation.h#L22">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIView+WebCacheOperation.h#L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -700,7 +670,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIView+WebCacheOperation.h#L30">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIView+WebCacheOperation.h#L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -754,7 +724,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIView+WebCacheOperation.h#L37">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIView+WebCacheOperation.h#L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -808,7 +778,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIView+WebCacheOperation.h#L44">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIView+WebCacheOperation.h#L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -818,8 +788,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

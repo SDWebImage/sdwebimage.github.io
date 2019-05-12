@@ -14,8 +14,8 @@
     <a title="SDWebImageDownloaderOperation Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p><a href="../index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -538,109 +538,13 @@
             <h1>SDWebImageDownloaderOperation</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="../Protocols/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a></span> <span class="p">:</span> <span class="nc">NSOperation</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a></span><span class="o">&gt;</span>
-
-<span class="cm">/**
- * The request used by the operation's task.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURLRequest</span> <span class="o">*</span><span class="n">request</span><span class="p">;</span>
-
-<span class="cm">/**
- * The response returned by the operation's task.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURLResponse</span> <span class="o">*</span><span class="n">response</span><span class="p">;</span>
-
-<span class="cm">/**
- * The operation's task
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURLSessionTask</span> <span class="o">*</span><span class="n">dataTask</span><span class="p">;</span>
-
-<span class="cm">/**
- * The credential used for authentication challenges in `-URLSession:task:didReceiveChallenge:completionHandler:`.
- *
- * This will be overridden by any shared credentials that exist for the username or password of the request URL, if present.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURLCredential</span> <span class="o">*</span><span class="n">credential</span><span class="p">;</span>
-
-<span class="cm">/**
- * The minimum interval about progress percent during network downloading. Which means the next progress callback and current progress callback's progress percent difference should be larger or equal to this value. However, the final finish download progress callback does not get effected.
- * The value should be 0.0-1.0.
- * @note If you're using progressive decoding feature, this will also effect the image refresh rate.
- * @note This value may enhance the performance if you don't want progress callback too frequently.
- * Defaults to 0, which means each time we receive the new data from URLSession, we callback the progressBlock immediately.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">double</span> <span class="n">minimumProgressInterval</span><span class="p">;</span>
-
-<span class="cm">/**
- * The options for the receiver.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Enums/SDWebImageDownloaderOptions.html">SDWebImageDownloaderOptions</a></span> <span class="n">options</span><span class="p">;</span>
-
-<span class="cm">/**
- * The context for the receiver.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Type Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></span> <span class="o">*</span><span class="n">context</span><span class="p">;</span>
-
-<span class="cm">/**
- *  Initializes a `SDWebImageDownloaderOperation` object
- *
- *  @see SDWebImageDownloaderOperation
- *
- *  @param request        the URL request
- *  @param session        the URL session in which this operation will run
- *  @param options        downloader options
- *
- *  @return the initialized instance
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithRequest</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURLRequest</span> <span class="o">*</span><span class="p">)</span><span class="nv">request</span>
-                              <span class="nf">inSession</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURLSession</span> <span class="o">*</span><span class="p">)</span><span class="nv">session</span>
-                                <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="../Enums/SDWebImageDownloaderOptions.html">SDWebImageDownloaderOptions</a></span><span class="p">)</span><span class="nv">options</span><span class="p">;</span>
-
-<span class="cm">/**
- *  Initializes a `SDWebImageDownloaderOperation` object
- *
- *  @see SDWebImageDownloaderOperation
- *
- *  @param request        the URL request
- *  @param session        the URL session in which this operation will run
- *  @param options        downloader options
- *  @param context        A context contains different options to perform specify changes or processes, see `SDWebImageContextOption`. This hold the extra objects which `options` enum can not hold.
- *
- *  @return the initialized instance
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithRequest</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURLRequest</span> <span class="o">*</span><span class="p">)</span><span class="nv">request</span>
-                              <span class="nf">inSession</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURLSession</span> <span class="o">*</span><span class="p">)</span><span class="nv">session</span>
-                                <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="../Enums/SDWebImageDownloaderOptions.html">SDWebImageDownloaderOptions</a></span><span class="p">)</span><span class="nv">options</span>
-                                <span class="nf">context</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">context</span> <span class="n">NS_DESIGNATED_INITIALIZER</span><span class="p">;</span>
-
-<span class="cm">/**
- *  Adds handlers for progress and completion. Returns a tokent that can be passed to -cancel: to cancel this set of
- *  callbacks.
- *
- *  @param progressBlock  the block executed when a new chunk of data arrives.
- *                        @note the progress block is executed on a background queue
- *  @param completedBlock the block executed when the download is done.
- *                        @note the completed block is executed on the main queue for success. If errors are found, there is a chance the block will be executed on a background queue
- *
- *  @return the token to use to cancel this set of handlers
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">id</span><span class="p">)</span><span class="nf">addHandlersForProgress</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderProgressBlock">SDWebImageDownloaderProgressBlock</a></span><span class="p">)</span><span class="nv">progressBlock</span>
-                            <span class="nf">completed</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderCompletedBlock">SDWebImageDownloaderCompletedBlock</a></span><span class="p">)</span><span class="nv">completedBlock</span><span class="p">;</span>
-
-<span class="cm">/**
- *  Cancels a set of callbacks. Once all callbacks are canceled, the operation is cancelled.
- *
- *  @param token the token representing a set of callbacks to cancel
- *
- *  @return YES if the operation was stopped because this was the last token to be canceled. NO otherwise.
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">cancel</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">id</span><span class="p">)</span><span class="nv">token</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="../Protocols/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a></span>
+    <span class="p">:</span> <span class="nc">NSOperation</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a></span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>The download operation class for SDWebImageDownloader.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -675,7 +579,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderOperation.h#L50">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderOperation.h#L53">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -710,7 +614,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderOperation.h#L55">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderOperation.h#L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -745,7 +649,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderOperation.h#L60">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderOperation.h#L63">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -782,7 +686,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderOperation.h#L67">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderOperation.h#L70">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -829,7 +733,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderOperation.h#L76">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderOperation.h#L79">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -864,7 +768,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderOperation.h#L81">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderOperation.h#L84">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -899,7 +803,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderOperation.h#L86">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderOperation.h#L89">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -988,7 +892,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         <p>the initialized instance</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderOperation.h#L99-L101">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderOperation.h#L102-L104">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1090,7 +994,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         <p>the initialized instance</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderOperation.h#L115-L118">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderOperation.h#L118-L121">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1167,7 +1071,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         <p>the token to use to cancel this set of handlers</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderOperation.h#L131-L132">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderOperation.h#L134-L135">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1225,7 +1129,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         <p>YES if the operation was stopped because this was the last token to be canceled. NO otherwise.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderOperation.h#L141">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderOperation.h#L144">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1235,8 +1139,8 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

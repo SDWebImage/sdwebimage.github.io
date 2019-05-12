@@ -13,8 +13,8 @@
     <a title="ManualInstallation  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p><a href="index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -535,42 +535,141 @@
         <section>
           <section class="section">
             
-            <h3 id='installation-by-cloning-the-repository' class='heading'>Installation by cloning the repository</h3>
+            <h2 id='manual-installation-guide' class='heading'>Manual Installation Guide</h2>
+<h3 id='build-sdwebimage-as-framework-or-static-library' class='heading'>Build SDWebImage as Framework or Static Library</h3>
 
-<p>In order to gain access to all the files from the repository, you should clone it.</p>
-<pre class="highlight plaintext"><code>git clone --recursive https://github.com/SDWebImage/SDWebImage.git
+<p>For most user, to use SDWebImage, just need to build SDWebImage source code into a framework or static library.</p>
+
+<p>For framework, you can choose to use Dynamic Framework (Link during runtime) or Static Framework (Link to the main executable file like Static Library).</p>
+
+<p>It&rsquo;s strongly recommended to use Framework instead of Static Library. Framework can bundle resource and header files together, and have module map for clang module. Which make it easy to use.</p>
+
+<p>And more importantly, Swift can only import the Objective-C code by using modular framework, or using the Bridging Header. (Bridging header contains its own disadvantage but this is beyond the topic).</p>
+<h4 id='clone-the-repository' class='heading'>Clone the repository:</h4>
+<pre class="highlight plaintext"><code>git clone https://github.com/SDWebImage/SDWebImage.git
 </code></pre>
 
-<p>&hellip; TO BE CHECKED AND DESCRIBED IN DETAIL</p>
-<h3 id='add-dependencies' class='heading'>Add dependencies</h3>
+<p>Then open the <code>SDWebImage.xcodeproj</code>.</p>
+<h4 id='select-the-build-scheme-you-need' class='heading'>Select the Build Scheme you need</h4>
 
 <ul>
-<li>In you application project app’s target settings, find the <q>Build Phases</q> section and open the <q>Link Binary With Libraries</q> block:</li>
-<li>Click the <q>+</q> button again and select the <q>ImageIO.framework</q>, this is needed by the progressive download feature:</li>
+<li><code>SDWebImage</code> for dynamic framework. You can also change the <code>Mach-O Type</code> to <code>Static Library</code> to build static framework in <code>Build Settings</code>.</li>
+<li><code>SDWebImage Static</code> for static library.</li>
+<li><code>SDWebImageMapKit</code> for MapKit sub component only.</li>
 </ul>
-<h3 id='add-linker-flag' class='heading'>Add Linker Flag</h3>
+<h4 id='select-build-platform-you-need' class='heading'>Select Build Platform you need</h4>
 
-<p>Open the <q>Build Settings</q> tab, in the <q>Linking</q> section, locate the <q>Other Linker Flags</q> setting and add the <q>-ObjC</q> flag:</p>
+<ul>
+<li><code>My Mac</code> for macOS platform.</li>
+<li><code>Generic iOS Device</code> for iOS platform.</li>
+<li><code>Generic tvOS Device</code> for tvOS platform.</li>
+<li><code>Generic watchOS Device</code> for watchOS platform.</li>
+<li>Simulator Device for Simulator platform.</li>
+</ul>
+<h4 id='prepare-for-archive' class='heading'>Prepare for archive</h4>
 
-<p><img src="https://user-images.githubusercontent.com/6919743/30030628-be2daf6a-91c0-11e7-8b5c-e0ac92d16b80.png" alt="Other Linker Flags"></p>
+<p>If you want to build framework for Real Device, don&rsquo;t try to click <code>Build</code> (Command + R). Because by default it will use the <code>DEBUG</code> configuration, which is not suitable for production. It&rsquo;s mostly used for Simulator.</p>
 
-<p>Alternatively, if this causes compilation problems with frameworks that extend optional libraries, such as Parse,  RestKit or opencv2, instead of the -ObjC flag use:</p>
-<pre class="highlight plaintext"><code>-force_load SDWebImage.framework/Versions/Current/SDWebImage
+<p>Instead, you can use <code>Archive</code>. But before we click the button, you need some prepare in the <code>Build Settings</code>.</p>
+
+<p>Change the <code>Skip Install</code> to <code>NO</code>. Or the archived product will not contains any framework.</p>
+
+<p>You can do this by modify the xcconfig file <code>Module-Shared.xcconfig</code>. Or you can change it using Xcode GUI.</p>
+<pre class="highlight plaintext"><code>SKIP_INSTALL = NO
+</code></pre>
+<h4 id='build-the-framework-or-static-library' class='heading'>Build the Framework or Static Library</h4>
+
+<p>Now, you can click the <code>Archive</code> button (<code>Product -&gt; Archive</code>). After the build success. Xcode will pop-up the Organizer window.</p>
+
+<p>Click <code>Distribute Content</code>. Then ensure the <code>Built Products</code> is selected. Click <code>Next</code> and select a build folder your want to export. Click <code>Export</code>.</p>
+
+<p>You can find a <code>SDWebImage.framework</code>, or <code>libSDWebImage.a</code> and the Headers Files inside the build folder.</p>
+
+<p><img src="https://user-images.githubusercontent.com/6919743/55800822-2bd83880-5b07-11e9-8d72-0d57a848aaf4.png" alt=""></p>
+<h5 id='note-for-universal-fat-framework' class='heading'>Note for Universal (Fat) Framework</h5>
+
+<p>If you need to build Universal Framework (for Simulator and Real Device). You need some command line to combine the framework.</p>
+
+<p>For example, if you already built two frameworks, <code>iOS/SDWebImage.framework</code> for iOS Real Device, <code>Simulator/SDWebImage.framework</code> for Simulator.</p>
+<pre class="highlight plaintext"><code>mkdir Universal/
+cp -R iOS/SDWebImage.framework Universal/SDWebImage.framework
+lipo -create Simulator/SDWebImage.framework/SDWebImage iOS/SDWebImage.framework/SDWebImage -output Universal/SDWebImage.framework/SDWebImage
 </code></pre>
 
-<p>If you&rsquo;re using Cocoa Pods and have any frameworks that extend optional libraries, such as Parsen RestKit or opencv2, instead of the -ObjC flag use:</p>
-<pre class="highlight plaintext"><code>-force_load $(TARGET_BUILD_DIR)/libPods.a
+<p>For Static Library, just do the same thing.</p>
+<pre class="highlight plaintext"><code>mkdir Universal/
+lipo -create Simulator/libSDWebImage.a iOS/libSDWebImage.a -output Universal/libSDWebImage.a
+</code></pre>
+<h4 id='link-the-framework-or-static-library-to-your-project' class='heading'>Link the Framework or Static Library to your project</h4>
+
+<p>Under your Project folder. You can create a <code>Vendor</code> folder to place the Framework or Static Library.</p>
+<h5 id='for-framework-dynamic-or-static' class='heading'>For Framework (Dynamic or Static)</h5>
+
+<p>For Framework (Dynamic or Static), the Headers are inside the framework. Just copy the <code>SDWebImage.framework</code> into the <code>Vendor</code> folder.</p>
+
+<p>If your project is App project and using Dynamic Framework. You need to click <code>Embedded Binaries</code>. Select <code>Add Other...</code> and select the <code>SDWebImage.framework</code>. Xcode automatically add it into the <code>Linked Frameworks and Libraries</code> as well.</p>
+
+<p>If not (Framework project or using Static Framework). Click
+click <code>Linked Frameworks and Libraries</code>. Select <code>Add Other...</code> and select the <code>SDWebImage.framework</code>.</p>
+
+<p>Then all things done if you use Framework.</p>
+
+<p><img src="https://user-images.githubusercontent.com/6919743/55804348-af495800-5b0e-11e9-828c-70711ea5fdca.png" alt=""></p>
+<h5 id='for-static-library' class='heading'>For Static Library</h5>
+
+<p>For Static Library, you need copy both the <code>libSDWebImage.a</code> as well as the Headers into the <code>Vendor</code> folder.</p>
+
+<p><img src="https://user-images.githubusercontent.com/6919743/55804133-4e218480-5b0e-11e9-86ac-f17aabf6e0c5.png" alt=""></p>
+
+<p>Open your application Xcode Project, click <code>Linked Frameworks and Libraries</code>. Select <code>Add Other...</code> and select the <code>libSDWebImage.a</code>.</p>
+
+<p>After link, you need to specify the Header Search Path for headers. Check Build Settings&rsquo;s <code>Header Search Path</code>, add the Header Search Path, where there must be a <code>SDWebImage</code> parent directory of <code>SDWebImage.h</code> this umbrella header file.</p>
+
+<p>The example above can using the following path.</p>
+<pre class="highlight plaintext"><code>$(SRCROOT)/Vendor
 </code></pre>
 
-<p>and this:</p>
-<pre class="highlight plaintext"><code>$(inherited)
+<p>Then all things done if you use Static Library.</p>
+<h4 id='reference' class='heading'>Reference</h4>
+
+<p><a href="https://developer.apple.com/library/archive/technotes/tn2435/_index.html">Technical Note TN2435 - Embedding Frameworks In An App</a></p>
+<h3 id='using-sdwebimage-as-sub-xcode-project' class='heading'>Using SDWebImage as Sub Xcode Project</h3>
+
+<p>You can also embed SDWebImage as a Sub Xcode Project using in your Xcode Project/Workspace. This can be used for some specify environment which does not support external dependency manager.</p>
+<h4 id='clone-the-repository-as-submodule' class='heading'>Clone the repository as submodule</h4>
+
+<p>To embed the Sub Xcode Project, you can simply add SDWebImage entire project using Git Submodule. </p>
+<pre class="highlight plaintext"><code>cd Vendor/
+git submodule add https://github.com/SDWebImage/SDWebImage.git
 </code></pre>
+
+<p>Note: If your project don&rsquo;t using Git Submodule, just copy the entire repo of SDWebImage to that Vendor folder, and you can add to your own Version Control tools.</p>
+
+<p>However, using Git Submodule can make it easy to upgrade framework version and reduce Git repo size.</p>
+<h4 id='add-code-sdwebimage-xcodeproj-code-into-your-workspace-project' class='heading'>Add <code>SDWebImage.xcodeproj</code> into your Workspace/Project</h4>
+
+<p>Just drag the <code>SDWebImage.xcodeproj</code> you cloned, into your Xcode Workspace/Project &lsquo;s Project Navigator.</p>
+
+<p>For Xcode Workspace, you can put it the same level of your App Project.</p>
+
+<p>For Xcode Project, you can put it inside your App Project.</p>
+
+<p><img src="https://user-images.githubusercontent.com/6919743/55799669-802de900-5b04-11e9-84c0-08d4d9452549.png" alt=""></p>
+<h4 id='link-to-your-app-framework-target' class='heading'>Link to your App/Framework Target</h4>
+
+<p>To use SDWebImage, you should link the <code>SDWebImage</code> target.</p>
+
+<p>Go to your App/Framework target&rsquo;s <code>General</code> page. Then click <code>Lined Frameworks and Libraries</code>, and add the <code>SDWebImage.framework</code> or <code>libSDWebImage.a</code> (Depends on your use case).</p>
+
+<p>Then all things done.</p>
+
+<p><img src="https://user-images.githubusercontent.com/6919743/55799628-68eefb80-5b04-11e9-8f0b-4b7818c5d1fd.png" alt=""></p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

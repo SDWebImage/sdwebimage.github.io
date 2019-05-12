@@ -14,8 +14,8 @@
     <a title="SDImageCachesManager Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p><a href="../index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -538,69 +538,12 @@
             <h1>SDImageCachesManager</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageCachesManager</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="../Classes/SDImageCache.html">SDImageCache</a></span><span class="o">&gt;</span>
-
-<span class="cm">/**
- Returns the global shared caches manager instance. By default we will set [`SDImageCache.sharedImageCache`] into the caches array.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">class</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">SDImageCachesManager</span> <span class="o">*</span><span class="n">sharedManager</span><span class="p">;</span>
-
-<span class="c1">// These are op policy for cache manager.</span>
-
-<span class="cm">/**
- Operation policy for query op.
- Defaults to `Serial`, means query all caches serially (one completion called then next begin) until one cache query success (`image` != nil).
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="../Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="n">queryOperationPolicy</span><span class="p">;</span>
-
-<span class="cm">/**
- Operation policy for store op.
- Defaults to `HighestOnly`, means store to the highest priority cache only.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="../Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="n">storeOperationPolicy</span><span class="p">;</span>
-
-<span class="cm">/**
- Operation policy for remove op.
- Defaults to `Concurrent`, means remove all caches concurrently.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="../Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="n">removeOperationPolicy</span><span class="p">;</span>
-
-<span class="cm">/**
- Operation policy for contains op.
- Defaults to `Serial`, means check all caches serially (one completion called then next begin) until one cache check success (`containsCacheType` != None).
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="../Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="n">containsOperationPolicy</span><span class="p">;</span>
-
-<span class="cm">/**
- Operation policy for clear op.
- Defaults to `Concurrent`, means clear all caches concurrently.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="../Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="n">clearOperationPolicy</span><span class="p">;</span>
-
-<span class="cm">/**
- All caches in caches manager. The caches array is a priority queue, which means the later added cache will have the highest priority
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDImageCache.html">SDImageCache</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">caches</span><span class="p">;</span>
-
-<span class="cm">/**
- Add a new cache to the end of caches array. Which has the highest priority.
- 
- @param cache cache
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addCache</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDImageCache.html">SDImageCache</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">cache</span><span class="p">;</span>
-
-<span class="cm">/**
- Remove a cache in the caches array.
- 
- @param cache cache
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeCache</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDImageCache.html">SDImageCache</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">cache</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageCachesManager</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="../Classes/SDImageCache.html">SDImageCache</a></span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>A caches manager to manage multiple caches.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -636,7 +579,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCachesManager.h#L24">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCachesManager.h#L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -673,7 +616,7 @@ Defaults to <code>Serial</code>, means query all caches serially (one completion
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCachesManager.h#L32">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCachesManager.h#L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -710,7 +653,7 @@ Defaults to <code>HighestOnly</code>, means store to the highest priority cache 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCachesManager.h#L38">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCachesManager.h#L42">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -747,7 +690,7 @@ Defaults to <code>Concurrent</code>, means remove all caches concurrently.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCachesManager.h#L44">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCachesManager.h#L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -784,7 +727,7 @@ Defaults to <code>Serial</code>, means check all caches serially (one completion
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCachesManager.h#L50">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCachesManager.h#L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -821,7 +764,7 @@ Defaults to <code>Concurrent</code>, means clear all caches concurrently.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCachesManager.h#L56">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCachesManager.h#L60">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -857,7 +800,7 @@ Defaults to <code>Concurrent</code>, means clear all caches concurrently.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCachesManager.h#L61">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCachesManager.h#L65">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -911,7 +854,7 @@ Defaults to <code>Concurrent</code>, means clear all caches concurrently.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCachesManager.h#L68">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCachesManager.h#L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -965,7 +908,7 @@ Defaults to <code>Concurrent</code>, means clear all caches concurrently.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCachesManager.h#L75">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCachesManager.h#L79">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -975,8 +918,8 @@ Defaults to <code>Concurrent</code>, means clear all caches concurrently.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

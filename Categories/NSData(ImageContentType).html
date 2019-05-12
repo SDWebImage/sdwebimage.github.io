@@ -14,8 +14,8 @@
     <a title="NSData(ImageContentType) Category Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p><a href="../index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -538,38 +538,12 @@
             <h1>NSData(ImageContentType)</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NSData</span> <span class="p">(</span><span class="nl">ImageContentType</span><span class="p">)</span>
-
-<span class="cm">/**
- *  Return image format
- *
- *  @param data the input image data
- *
- *  @return the image format as `SDImageFormat` (enum)
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n"><a href="../Type Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></span><span class="p">)</span><span class="nf">sd_imageFormatForImageData</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span><span class="p">;</span>
-
-<span class="cm">/**
- *  Convert SDImageFormat to UTType
- *
- *  @param format Format as SDImageFormat
- *  @return The UTType as CFStringRef
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">CFStringRef</span><span class="p">)</span><span class="nf">sd_UTTypeFromImageFormat</span><span class="p">:(</span><span class="n"><a href="../Type Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></span><span class="p">)</span><span class="nv">format</span> <span class="n">CF_RETURNS_NOT_RETAINED</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">sd_UTType</span><span class="p">(</span><span class="n">from</span><span class="o">:</span><span class="p">));</span>
-
-<span class="cm">/**
- *  Convert UTTyppe to SDImageFormat
- *
- *  @param uttype The UTType as CFStringRef
- *  @return The Format as SDImageFormat
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n"><a href="../Type Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></span><span class="p">)</span><span class="nf">sd_imageFormatFromUTType</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">CFStringRef</span><span class="p">)</span><span class="nv">uttype</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NSData</span> <span class="p">(</span><span class="nl">ImageContentType</span><span class="p">)</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>NSData category about the image content type and UTI.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -627,7 +601,7 @@
                         <p>the image format as <code><a href="../Type Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></code> (enum)</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/NSData+ImageContentType.h#L36">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/NSData+ImageContentType.h#L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -685,7 +659,7 @@
                         <p>The UTType as CFStringRef</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/NSData+ImageContentType.h#L44">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/NSData+ImageContentType.h#L47">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -743,7 +717,7 @@
                         <p>The Format as SDImageFormat</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/NSData+ImageContentType.h#L52">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/NSData+ImageContentType.h#L55">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -753,8 +727,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

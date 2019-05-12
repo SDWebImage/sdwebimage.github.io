@@ -14,8 +14,8 @@
     <a title="UIView(WebCache) Category Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p><a href="../index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -538,87 +538,12 @@
             <h1>UIView(WebCache)</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIView</span> <span class="p">(</span><span class="nl">WebCache</span><span class="p">)</span>
-
-<span class="cm">/**
- * Get the current image URL.
- *
- * @note Note that because of the limitations of categories this property can get out of sync if you use setImage: directly.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">sd_imageURL</span><span class="p">;</span>
-
-<span class="cm">/**
- * The current image loading progress associated to the view. The unit count is the received size and excepted size of download.
- * The `totalUnitCount` and `completedUnitCount` will be reset to 0 after a new image loading start (change from current queue). And they will be set to `SDWebImageProgressUnitCountUnknown` if the progressBlock not been called but the image loading success to mark the progress finished (change from main queue).
- * @note You can use Key-Value Observing on the progress, but you should take care that the change to progress is from a background queue during download(the same as progressBlock). If you want to using KVO and update the UI, make sure to dispatch on the main queue. And it's recommand to use some KVO libs like KVOController because it's more safe and easy to use.
- * @note The getter will create a progress instance if the value is nil. You can also set a custom progress instance and let it been updated during image loading
- * @note Note that because of the limitations of categories this property can get out of sync if you update the progress directly.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">null_resettable</span><span class="p">)</span> <span class="n">NSProgress</span> <span class="o">*</span><span class="n">sd_imageProgress</span><span class="p">;</span>
-
-<span class="cm">/**
- * Set the imageView `image` with an `url` and optionally a placeholder image.
- *
- * The download is asynchronous and cached.
- *
- * @param url            The url for the image.
- * @param placeholder    The image to be set initially, until the image request finishes.
- * @param options        The options to use when downloading the image. @see SDWebImageOptions for the possible values.
- * @param context        A context contains different options to perform specify changes or processes, see `SDWebImageContextOption`. This hold the extra objects which `options` enum can not hold.
- * @param setImageBlock  Block used for custom set image code. If not provide, use the built-in set image code (supports `UIImageView/NSImageView` and `UIButton/NSButton` currently)
- * @param progressBlock  A block called while image is downloading
- *                       @note the progress block is executed on a background queue
- * @param completedBlock A block called when operation has been completed.
- *   This block has no return value and takes the requested UIImage as first parameter and the NSData representation as second parameter.
- *   In case of error the image parameter is nil and the third parameter may contain an NSError.
- *
- *   The forth parameter is an `SDImageCacheType` enum indicating if the image was retrieved from the local cache
- *   or from the memory cache or from the network.
- *
- *   The fith parameter normally is always YES. However, if you provide SDWebImageAvoidAutoSetImage with SDWebImageProgressiveLoad options to enable progressive downloading and set the image yourself. This block is thus called repeatedly with a partial image. When image is fully downloaded, the
- *   block is called a last time with the full image and the last parameter set to YES.
- *
- *   The last parameter is the original image URL
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sd_internalSetImageWithURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
-                  <span class="nf">placeholderImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">placeholder</span>
-                           <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span><span class="p">)</span><span class="nv">options</span>
-                           <span class="nf">context</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">context</span>
-                     <span class="nf">setImageBlock</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:UIView+WebCache.h@T@SDSetImageBlock">SDSetImageBlock</a></span><span class="p">)</span><span class="nv">setImageBlock</span>
-                          <span class="nf">progress</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderProgressBlock">SDImageLoaderProgressBlock</a></span><span class="p">)</span><span class="nv">progressBlock</span>
-                         <span class="nf">completed</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:SDWebImageManager.h@T@SDInternalCompletionBlock">SDInternalCompletionBlock</a></span><span class="p">)</span><span class="nv">completedBlock</span><span class="p">;</span>
-
-<span class="cm">/**
- * Cancel the current image load
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">sd_cancelCurrentImageLoad</span><span class="p">;</span>
-
-<span class="cp">#if SD_UIKIT || SD_MAC
-</span>
-<span class="cp">#pragma mark - Image Transition
-</span>
-<span class="cm">/**
- The image transition when image load finished. See `SDWebImageTransition`.
- If you specify nil, do not do transition. Defautls to nil.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/SDWebImageTransition.html">SDWebImageTransition</a></span> <span class="o">*</span><span class="n">sd_imageTransition</span><span class="p">;</span>
-
-<span class="cp">#pragma mark - Image Indicator
-</span>
-<span class="cm">/**
- The image indicator during the image loading. If you do not need indicator, specify nil. Defaults to nil
- The setter will remove the old indicator view and add new indicator view to current view's subview.
- @note Because this is UI related, you should access only from the main queue.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageIndicator.html">SDWebImageIndicator</a></span><span class="o">&gt;</span> <span class="n">sd_imageIndicator</span><span class="p">;</span>
-
-<span class="cp">#endif
-</span>
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIView</span> <span class="p">(</span><span class="nl">WebCache</span><span class="p">)</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>Integrates SDWebImage async downloading and caching of remote images with UIView subclass.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -658,7 +583,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIView+WebCache.h#L29">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIView+WebCache.h#L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -710,7 +635,7 @@ The <code>totalUnitCount</code> and <code>completedUnitCount</code> will be rese
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIView+WebCache.h#L38">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIView+WebCache.h#L41">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -857,7 +782,7 @@ In case of error the image parameter is nil and the third parameter may contain 
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIView+WebCache.h#L64-L70">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIView+WebCache.h#L67-L73">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -892,7 +817,7 @@ In case of error the image parameter is nil and the third parameter may contain 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIView+WebCache.h#L75">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIView+WebCache.h#L78">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -940,7 +865,7 @@ If you specify nil, do not do transition. Defautls to nil.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIView+WebCache.h#L85">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIView+WebCache.h#L88">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -993,7 +918,7 @@ The setter will remove the old indicator view and add new indicator view to curr
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIView+WebCache.h#L94">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIView+WebCache.h#L97">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1003,8 +928,8 @@ The setter will remove the old indicator view and add new indicator view to curr
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

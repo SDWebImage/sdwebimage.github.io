@@ -14,8 +14,8 @@
     <a title="SDDiskCache Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p><a href="../index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -538,29 +538,12 @@
             <h1>SDDiskCache</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="../Protocols/SDDiskCache.html">SDDiskCache</a></span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/SDDiskCache.html">SDDiskCache</a></span><span class="o">&gt;</span>
-
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="../Classes/SDImageCacheConfig.html">SDImageCacheConfig</a></span> <span class="o">*</span><span class="n">config</span><span class="p">;</span>
-
-<span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
-
-<span class="cm">/**
- Move the cache directory from old location to new location, the old location will be removed after finish.
- If the old location does not exist, does nothing.
- If the new location does not exist, only do a movement of directory.
- If the new location does exist, will move and merge the files from old location.
- If the new location does exist, but is not a directory, will remove it and do a movement of directory.
-
- @param srcPath old location of cache directory
- @param dstPath new location of cache directory
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">moveCacheDirectoryFromPath</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">srcPath</span> <span class="nf">toPath</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">dstPath</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="../Protocols/SDDiskCache.html">SDDiskCache</a></span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/SDDiskCache.html">SDDiskCache</a></span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>The built-in disk cache.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -578,13 +561,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Cache Config object - storing all kind of settings.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="../Classes/SDImageCacheConfig.html">SDImageCacheConfig</a></span> <span class="o">*</span><span class="n">config</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="../Classes/SDImageCacheConfig.html">SDImageCacheConfig</a></span> <span class="o">*</span><span class="n">config</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -594,7 +578,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDDiskCache.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDDiskCache.h#L109">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -627,7 +611,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDDiskCache.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDDiskCache.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -698,7 +682,7 @@ If the new location does exist, but is not a directory, will remove it and do a 
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDDiskCache.h#L117">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDDiskCache.h#L123">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -708,8 +692,8 @@ If the new location does exist, but is not a directory, will remove it and do a 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

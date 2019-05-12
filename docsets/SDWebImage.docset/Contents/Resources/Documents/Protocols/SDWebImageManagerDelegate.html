@@ -14,8 +14,8 @@
     <a title="SDWebImageManagerDelegate Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p><a href="../index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -538,35 +538,12 @@
             <h1>SDWebImageManagerDelegate</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDWebImageManagerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span>
-
-<span class="k">@optional</span>
-
-<span class="cm">/**
- * Controls which image should be downloaded when the image is not found in the cache.
- *
- * @param imageManager The current `SDWebImageManager`
- * @param imageURL     The url of the image to be downloaded
- *
- * @return Return NO to prevent the downloading of the image on cache misses. If not implemented, YES is implied.
- */</span>
-<span class="o">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">imageManager</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDWebImageManager.html">SDWebImageManager</a></span> <span class="o">*</span><span class="p">)</span><span class="n">imageManager</span> <span class="n">shouldDownloadImageForURL</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="n">imageURL</span><span class="p">;</span>
-
-<span class="cm">/**
- * Controls the complicated logic to mark as failed URLs when download error occur.
- * If the delegate implement this method, we will not use the built-in way to mark URL as failed based on error code;
- @param imageManager The current `SDWebImageManager`
- @param imageURL The url of the image
- @param error The download error for the url
- @return Whether to block this url or not. Return YES to mark this URL as failed.
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">imageManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDWebImageManager.html">SDWebImageManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">imageManager</span> <span class="nf">shouldBlockFailedURL</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">imageURL</span> <span class="nf">withError</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDWebImageManagerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>The manager delegate protocol.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -637,7 +614,7 @@
                         <p>Return NO to prevent the downloading of the image on cache misses. If not implemented, YES is implied.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L56">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageManager.h#L61">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -725,7 +702,7 @@
                         <p>Whether to block this url or not. Return YES to mark this URL as failed.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L66">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageManager.h#L71">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -735,8 +712,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

@@ -14,8 +14,8 @@
     <a title="SDWebImageIndicator Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p><a href="../index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -538,37 +538,13 @@
             <h1>SDWebImageIndicator</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDWebImageIndicator</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span>
-
-<span class="err">@required</span>
-<span class="cm">/**
- The view associate to the indicator.
-
- @return The indicator view
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">UIView</span> <span class="o">*</span><span class="n">indicatorView</span><span class="p">;</span>
-<span class="cm">/**
- Start the animating for indicator.
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">startAnimatingIndicator</span><span class="p">;</span>
-<span class="cm">/**
- Stop the animating for indicator.
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stopAnimatingIndicator</span><span class="p">;</span>
-
-<span class="k">@optional</span>
-<span class="cm">/**
- Update the loading progress (0-1.0) for indicator. Optional
- 
- @param progress The progress, value between 0 and 1.0
- */</span>
-<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">updateIndicatorProgress</span><span class="o">:</span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">progress</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDWebImageIndicator</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>A protocol to custom the indicator during the image loading.
+All of these methods are called from main queue.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -608,7 +584,7 @@
                         <p>The indicator view</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageIndicator.h#L23">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageIndicator.h#L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -643,7 +619,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageIndicator.h#L27">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageIndicator.h#L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -678,7 +654,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageIndicator.h#L31">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageIndicator.h#L35">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -732,7 +708,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageIndicator.h#L39">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageIndicator.h#L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -742,8 +718,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

@@ -14,8 +14,8 @@
     <a title="SDWebImageDownloaderOptions Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p><a href="../index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -538,80 +538,12 @@
             <h1>SDWebImageDownloaderOptions</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="n">NS_OPTIONS</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">SDWebImageDownloaderOptions</span><span class="p">)</span> <span class="p">{</span>
-    <span class="cm">/**
-     * Put the download in the low queue priority and task priority.
-     */</span>
-    <span class="n">SDWebImageDownloaderLowPriority</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * This flag enables progressive download, the image is displayed progressively during download as a browser would do.
-     */</span>
-    <span class="n">SDWebImageDownloaderProgressiveLoad</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">,</span>
-
-    <span class="cm">/**
-     * By default, request prevent the use of NSURLCache. With this flag, NSURLCache
-     * is used with default policies.
-     */</span>
-    <span class="n">SDWebImageDownloaderUseNSURLCache</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span><span class="p">,</span>
-
-    <span class="cm">/**
-     * Call completion block with nil image/imageData if the image was read from NSURLCache
-     * And the error code is `SDWebImageErrorCacheNotModified`
-     * This flag should be combined with `SDWebImageDownloaderUseNSURLCache`.
-     */</span>
-    <span class="n">SDWebImageDownloaderIgnoreCachedResponse</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * In iOS 4+, continue the download of the image if the app goes to background. This is achieved by asking the system for
-     * extra time in background to let the request finish. If the background task expires the operation will be cancelled.
-     */</span>
-    <span class="n">SDWebImageDownloaderContinueInBackground</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">,</span>
-
-    <span class="cm">/**
-     * Handles cookies stored in NSHTTPCookieStore by setting 
-     * NSMutableURLRequest.HTTPShouldHandleCookies = YES;
-     */</span>
-    <span class="n">SDWebImageDownloaderHandleCookies</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">5</span><span class="p">,</span>
-
-    <span class="cm">/**
-     * Enable to allow untrusted SSL certificates.
-     * Useful for testing purposes. Use with caution in production.
-     */</span>
-    <span class="n">SDWebImageDownloaderAllowInvalidSSLCertificates</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">6</span><span class="p">,</span>
-
-    <span class="cm">/**
-     * Put the download in the high queue priority and task priority.
-     */</span>
-    <span class="n">SDWebImageDownloaderHighPriority</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, images are decoded respecting their original size. On iOS, this flag will scale down the
-     * images to a size compatible with the constrained memory of devices.
-     * This flag take no effect if `SDWebImageDownloaderAvoidDecodeImage` is set. And it will be ignored if `SDWebImageDownloaderProgressiveLoad` is set.
-     */</span>
-    <span class="n">SDWebImageDownloaderScaleDownLargeImages</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, we will decode the image in the background during cache query and download from the network. This can help to improve performance because when rendering image on the screen, it need to be firstly decoded. But this happen on the main queue by Core Animation.
-     * However, this process may increase the memory usage as well. If you are experiencing a issue due to excessive memory consumption, This flag can prevent decode the image.
-     */</span>
-    <span class="n">SDWebImageDownloaderAvoidDecodeImage</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">9</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, we decode the animated image. This flag can force decode the first frame only and produece the static image.
-     */</span>
-    <span class="n">SDWebImageDownloaderDecodeFirstFrameOnly</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">10</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, for `SDAnimatedImage`, we decode the animated image frame during rendering to reduce memory usage. This flag actually trigger `preloadAllAnimatedImageFrames = YES` after image load from network
-     */</span>
-    <span class="n">SDWebImageDownloaderPreloadAllFrames</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">11</span>
-<span class="p">}</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">SDWebImageDownloaderOptions</span> <span class="p">{}</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>Downloader options</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -646,7 +578,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloader.h#L21">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloader.h#L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -681,7 +613,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloader.h#L26">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloader.h#L27">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -717,7 +649,7 @@ is used with default policies.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloader.h#L32">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloader.h#L33">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -754,7 +686,7 @@ This flag should be combined with <code><a href="../Enums/SDWebImageDownloaderOp
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloader.h#L39">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloader.h#L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -790,7 +722,7 @@ extra time in background to let the request finish. If the background task expir
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloader.h#L45">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloader.h#L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -826,7 +758,7 @@ NSMutableURLRequest.HTTPShouldHandleCookies = YES;</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloader.h#L51">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloader.h#L52">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -862,7 +794,7 @@ Useful for testing purposes. Use with caution in production.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloader.h#L57">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloader.h#L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -897,7 +829,7 @@ Useful for testing purposes. Use with caution in production.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloader.h#L62">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloader.h#L63">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -934,7 +866,7 @@ This flag take no effect if <code><a href="../Enums/SDWebImageDownloaderOptions.
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloader.h#L69">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloader.h#L70">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -970,7 +902,7 @@ However, this process may increase the memory usage as well. If you are experien
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloader.h#L75">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloader.h#L76">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1005,7 +937,7 @@ However, this process may increase the memory usage as well. If you are experien
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloader.h#L80">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloader.h#L81">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1040,7 +972,7 @@ However, this process may increase the memory usage as well. If you are experien
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloader.h#L85">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloader.h#L86">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1050,8 +982,8 @@ However, this process may increase the memory usage as well. If you are experien
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

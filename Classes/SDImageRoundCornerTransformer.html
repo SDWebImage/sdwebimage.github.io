@@ -14,8 +14,8 @@
     <a title="SDImageRoundCornerTransformer Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p><a href="../index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -538,21 +538,12 @@
             <h1>SDImageRoundCornerTransformer</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageRoundCornerTransformer</span><span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span>
-
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">cornerRadius</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Type Definitions.html#/c:UIImage+Transform.h@T@SDRectCorner">SDRectCorner</a></span> <span class="n">corners</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">borderWidth</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">borderColor</span><span class="p">;</span>
-
-<span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">transformerWithRadius</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">cornerRadius</span> <span class="nf">corners</span><span class="p">:(</span><span class="n"><a href="../Type Definitions.html#/c:UIImage+Transform.h@T@SDRectCorner">SDRectCorner</a></span><span class="p">)</span><span class="nv">corners</span> <span class="nf">borderWidth</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">borderWidth</span> <span class="nf">borderColor</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIColor</span> <span class="o">*</span><span class="p">)</span><span class="nv">borderColor</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageRoundCornerTransformer</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>Image round corner transformer</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -570,13 +561,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>The radius of each corner oval. Values larger than half the
+rectangle&rsquo;s width or height are clamped appropriately to
+half the width or height.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">cornerRadius</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">cornerRadius</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -586,7 +580,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageTransformer.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageTransformer.h#L80">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -604,13 +598,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>A bitmask value that identifies the corners that you want
+rounded. You can use this parameter to round only a subset
+of the corners of the rectangle.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Type Definitions.html#/c:UIImage+Transform.h@T@SDRectCorner">SDRectCorner</a></span> <span class="n">corners</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Type Definitions.html#/c:UIImage+Transform.h@T@SDRectCorner">SDRectCorner</a></span> <span class="n">corners</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -620,7 +617,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageTransformer.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageTransformer.h#L87">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -638,13 +635,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>The inset border line width. Values larger than half the rectangle&rsquo;s
+width or height are clamped appropriately to half the width
+or height.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">borderWidth</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">borderWidth</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -654,7 +654,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageTransformer.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageTransformer.h#L94">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -672,13 +672,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>The border stroke color. nil means clear color.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">borderColor</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">borderColor</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -688,7 +689,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageTransformer.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageTransformer.h#L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -721,7 +722,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageTransformer.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageTransformer.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -755,7 +756,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageTransformer.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageTransformer.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -765,8 +766,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

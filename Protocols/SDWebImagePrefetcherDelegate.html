@@ -14,8 +14,8 @@
     <a title="SDWebImagePrefetcherDelegate Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p><a href="../index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -538,33 +538,12 @@
             <h1>SDWebImagePrefetcherDelegate</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDWebImagePrefetcherDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span>
-
-<span class="k">@optional</span>
-
-<span class="cm">/**
- * Called when an image was prefetched. Which means it's called when one URL from any of prefetching finished.
- *
- * @param imagePrefetcher The current image prefetcher
- * @param imageURL        The image url that was prefetched
- * @param finishedCount   The total number of images that were prefetched (successful or not)
- * @param totalCount      The total number of images that were to be prefetched
- */</span>
-<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">imagePrefetcher</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDWebImagePrefetcher.html">SDWebImagePrefetcher</a></span> <span class="o">*</span><span class="p">)</span><span class="n">imagePrefetcher</span> <span class="n">didPrefetchURL</span><span class="o">:</span><span class="p">(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="n">imageURL</span> <span class="n">finishedCount</span><span class="o">:</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="n">finishedCount</span> <span class="n">totalCount</span><span class="o">:</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="n">totalCount</span><span class="p">;</span>
-
-<span class="cm">/**
- * Called when all images are prefetched. Which means it's called when all URLs from all of prefetching finished.
- * @param imagePrefetcher The current image prefetcher
- * @param totalCount      The total number of images that were prefetched (whether successful or not)
- * @param skippedCount    The total number of images that were skipped
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">imagePrefetcher</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDWebImagePrefetcher.html">SDWebImagePrefetcher</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">imagePrefetcher</span> <span class="nf">didFinishWithTotalCount</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">totalCount</span> <span class="nf">skippedCount</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">skippedCount</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDWebImagePrefetcherDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>The prefetcher delegate protocol</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -657,7 +636,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImagePrefetcher.h#L40">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImagePrefetcher.h#L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -737,7 +716,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImagePrefetcher.h#L48">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImagePrefetcher.h#L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -747,8 +726,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

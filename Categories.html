@@ -14,8 +14,8 @@
     <a title="Categories  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p><a href="index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -555,46 +555,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>NSData category about the image content type and UTI.</p>
+
                         <a href="Categories/NSData(ImageContentType).html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NSData</span> <span class="p">(</span><span class="nl">ImageContentType</span><span class="p">)</span>
-
-<span class="cm">/**
- *  Return image format
- *
- *  @param data the input image data
- *
- *  @return the image format as `SDImageFormat` (enum)
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n"><a href="Type Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></span><span class="p">)</span><span class="nf">sd_imageFormatForImageData</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span><span class="p">;</span>
-
-<span class="cm">/**
- *  Convert SDImageFormat to UTType
- *
- *  @param format Format as SDImageFormat
- *  @return The UTType as CFStringRef
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">CFStringRef</span><span class="p">)</span><span class="nf">sd_UTTypeFromImageFormat</span><span class="p">:(</span><span class="n"><a href="Type Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></span><span class="p">)</span><span class="nv">format</span> <span class="n">CF_RETURNS_NOT_RETAINED</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">sd_UTType</span><span class="p">(</span><span class="n">from</span><span class="o">:</span><span class="p">));</span>
-
-<span class="cm">/**
- *  Convert UTTyppe to SDImageFormat
- *
- *  @param uttype The UTType as CFStringRef
- *  @return The Format as SDImageFormat
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n"><a href="Type Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></span><span class="p">)</span><span class="nf">sd_imageFormatFromUTType</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">CFStringRef</span><span class="p">)</span><span class="nv">uttype</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NSData</span> <span class="p">(</span><span class="nl">ImageContentType</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/NSData+ImageContentType.h#L27-L54">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/NSData+ImageContentType.h#L30-L57">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -616,7 +590,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Integrates SDWebImage async downloading and caching of remote images with UIButtonView.</p>
+                        <p>Integrates SDWebImage async downloading and caching of remote images with UIButton.</p>
 
                         <a href="Categories/UIButton(WebCache).html" class="slightly-smaller">See more</a>
                       </div>
@@ -629,7 +603,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIButton+WebCache.h#L18-L385">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIButton+WebCache.h#L18-L385">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -651,51 +625,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>UIImage category about force decode feature (avoid Image/IO&rsquo;s lazy decoding during rendering behavior).</p>
+
                         <a href="Categories/UIImage(ForceDecode).html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIImage</span> <span class="p">(</span><span class="nl">ForceDecode</span><span class="p">)</span>
-
-<span class="cm">/**
- A bool value indicating whether the image has already been decoded. This can help to avoid extra force decode.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">sd_isDecoded</span><span class="p">;</span>
-
-<span class="cm">/**
- Decode the provided image. This is useful if you want to force decode the image before rendering to improve performance.
-
- @param image The image to be decoded
- @return The decoded image
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nf">sd_decodedImageWithImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">image</span><span class="p">;</span>
-
-<span class="cm">/**
- Decode and scale down the provided image
-
- @param image The image to be decoded
- @return The decoded and scaled down image
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nf">sd_decodedAndScaledDownImageWithImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">image</span><span class="p">;</span>
-
-<span class="cm">/**
- Decode and scale down the provided image with limit bytes
- 
- @param image The image to be decoded
- @param bytes The limit bytes size. Provide 0 to use the build-in limit.
- @return The decoded and scaled down image
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nf">sd_decodedAndScaledDownImageWithImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">image</span> <span class="nf">limitBytes</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">bytes</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIImage</span> <span class="p">(</span><span class="nl">ForceDecode</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIImage+ForceDecode.h#L11-L43">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIImage+ForceDecode.h#L14-L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -717,30 +660,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>This category is just use as a convenience method. For more detail control, use methods in <code>UIImage+MultiFormat.h</code> or directlly use <code><a href="Protocols/SDImageCoder.html">SDImageCoder</a></code>.</p>
+
                         <a href="Categories/UIImage(GIF).html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIImage</span> <span class="p">(</span><span class="nl">GIF</span><span class="p">)</span>
-
-<span class="cm">/**
- Creates an animated UIImage from an NSData.
- This will create animated image if the data is Animated GIF. And will create a static image is the data is Static GIF.
-
- @param data The GIF data
- @return The created image
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nf">sd_imageWithGIFData</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIImage</span> <span class="p">(</span><span class="nl">GIF</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIImage+GIF.h#L13-L24">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIImage+GIF.h#L15-L26">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -762,32 +695,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>UIImage category for memory cache cost.</p>
+
                         <a href="Categories/UIImage(MemoryCacheCost).html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIImage</span> <span class="p">(</span><span class="nl">MemoryCacheCost</span><span class="p">)</span>
-
-<span class="cm">/**
- The memory cache cost for specify image used by image cache. The cost function is the bytes size held in memory.
- If you set some associated object to `UIImage`, you can set the custom value to indicate the memory cost.
- 
- For `UIImage`, this method return the single frame bytes size when `image.images` is nil for static image. Retuen full frame bytes size when `image.images` is not nil for animated image.
- For `NSImage`, this method return the single frame bytes size because `NSImage` does not store all frames in memory.
- @note Note that because of the limitations of category this property can get out of sync if you create another instance with CGImage or other methods.
- @note For custom animated class conforms to `SDAnimatedImage`, you can override this getter method in your subclass to return a more proper value instead, which representing the current frame's total bytes.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">sd_memoryCost</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIImage</span> <span class="p">(</span><span class="nl">MemoryCacheCost</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIImage+MemoryCacheCost.h#L11-L24">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIImage+MemoryCacheCost.h#L14-L27">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -809,53 +730,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>UIImage category for image metadata, including animation, loop count, format, incremental, etc.</p>
+
                         <a href="Categories/UIImage(Metadata).html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIImage</span> <span class="p">(</span><span class="nl">Metadata</span><span class="p">)</span>
-
-<span class="cm">/**
- * UIKit:
- * For static image format, this value is always 0.
- * For animated image format, 0 means infinite looping.
- * Note that because of the limitations of categories this property can get out of sync if you create another instance with CGImage or other methods.
- * AppKit:
- * NSImage currently only support animated via GIF imageRep unlike UIImage.
- * The getter of this property will get the loop count from GIF imageRep
- * The setter of this property will set the loop count from GIF imageRep
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">sd_imageLoopCount</span><span class="p">;</span>
-
-<span class="cm">/**
- * UIKit:
- * Check the `images` array property
- * AppKit:
- * NSImage currently only support animated via GIF imageRep unlike UIImage. It will check the imageRep's frame count.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">sd_isAnimated</span><span class="p">;</span>
-
-<span class="cm">/**
- * The image format represent the original compressed image data format.
- * If you don't manually specify a format, this information is retrieve from CGImage using `CGImageGetUTType`, which may return nil for non-CG based image. At this time it will return `SDImageFormatUndefined` as default value.
- * @note Note that because of the limitations of categories this property can get out of sync if you create another instance with CGImage or other methods.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Type Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></span> <span class="n">sd_imageFormat</span><span class="p">;</span>
-
-<span class="cm">/**
- A bool value indicating whether the image is during incremental decoding and may not contains full pixels.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">sd_isIncremental</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIImage</span> <span class="p">(</span><span class="nl">Metadata</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIImage+Metadata.h#L12-L46">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIImage+Metadata.h#L15-L49">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -877,83 +765,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>UIImage category for convenient image format decoding/encoding.</p>
+
                         <a href="Categories/UIImage(MultiFormat).html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIImage</span> <span class="p">(</span><span class="nl">MultiFormat</span><span class="p">)</span>
-<span class="cp">#pragma mark - Decode
-</span><span class="cm">/**
- Create and decode a image with the specify image data
-
- @param data The image data
- @return The created image
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nf">sd_imageWithData</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span><span class="p">;</span>
-
-<span class="cm">/**
- Create and decode a image with the specify image data and scale
- 
- @param data The image data
- @param scale The image scale factor. Should be greater than or equal to 1.0.
- @return The created image
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nf">sd_imageWithData</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span> <span class="nf">scale</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">scale</span><span class="p">;</span>
-
-<span class="cm">/**
- Create and decode a image with the specify image data and scale, allow specify animate/static control
- 
- @param data The image data
- @param scale The image scale factor. Should be greater than or equal to 1.0.
- @param firstFrameOnly Even if the image data is animated image format, decode the first frame only as static image.
- @return The created image
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nf">sd_imageWithData</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span> <span class="nf">scale</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">scale</span> <span class="nf">firstFrameOnly</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">firstFrameOnly</span><span class="p">;</span>
-
-<span class="cp">#pragma mark - Encode
-</span><span class="cm">/**
- Encode the current image to the data, the image format is unspecified
-
- @return The encoded data. If can't encode, return nil
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="n">sd_imageData</span><span class="p">;</span>
-
-<span class="cm">/**
- Encode the current image to data with the specify image format
-
- @param imageFormat The specify image format
- @return The encoded data. If can't encode, return nil
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nf">sd_imageDataAsFormat</span><span class="p">:(</span><span class="n"><a href="Type Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></span><span class="p">)</span><span class="nv">imageFormat</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">sd_imageData</span><span class="p">(</span><span class="n">as</span><span class="o">:</span><span class="p">));</span>
-
-<span class="cm">/**
- Encode the current image to data with the specify image format and compression quality
-
- @param imageFormat The specify image format
- @param compressionQuality The quality of the resulting image data. Value between 0.0-1.0. Some coders may not support compression quality.
- @return The encoded data. If can't encode, return nil
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nf">sd_imageDataAsFormat</span><span class="p">:(</span><span class="n"><a href="Type Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></span><span class="p">)</span><span class="nv">imageFormat</span> <span class="nf">compressionQuality</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">compressionQuality</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">sd_imageData</span><span class="p">(</span><span class="n">as</span><span class="o">:</span><span class="n">compressionQuality</span><span class="o">:</span><span class="p">));</span>
-
-<span class="cm">/**
- Encode the current image to data with the specify image format and compression quality, allow specify animate/static control
- 
- @param imageFormat The specify image format
- @param compressionQuality The quality of the resulting image data. Value between 0.0-1.0. Some coders may not support compression quality.
- @param firstFrameOnly Even if the image is animated image, encode the first frame only as static image.
- @return The encoded data. If can't encode, return nil
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nf">sd_imageDataAsFormat</span><span class="p">:(</span><span class="n"><a href="Type Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></span><span class="p">)</span><span class="nv">imageFormat</span> <span class="nf">compressionQuality</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">compressionQuality</span> <span class="nf">firstFrameOnly</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">firstFrameOnly</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">sd_imageData</span><span class="p">(</span><span class="n">as</span><span class="o">:</span><span class="n">compressionQuality</span><span class="o">:</span><span class="n">firstFrameOnly</span><span class="o">:</span><span class="p">));</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIImage</span> <span class="p">(</span><span class="nl">MultiFormat</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIImage+MultiFormat.h#L12-L76">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIImage+MultiFormat.h#L15-L79">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -989,7 +814,7 @@ Image process is based on Core Graphics and vImage.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIImage+Transform.h#L33-L146">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIImage+Transform.h#L33-L146">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1024,7 +849,7 @@ Image process is based on Core Graphics and vImage.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIImageView+HighlightedWebCache.h#L18-L127">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIImageView+HighlightedWebCache.h#L18-L127">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1046,33 +871,7 @@ Image process is based on Core Graphics and vImage.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
-<ul>
-<li>Integrates SDWebImage async downloading and caching of remote images with UIImageView.
-*</li>
-<li><p>Usage with a UITableViewCell sub-class:
-*</p>
-<pre class="highlight objective_c"><code><span class="cp">#import &lt;SDWebImage/UIImageView+WebCache.h&gt;
-</span><span class="k">-</span> <span class="p">(</span><span class="n">UITableViewCell</span> <span class="o">*</span><span class="p">)</span><span class="nf">tableView</span><span class="p">:(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">cellForRowAtIndexPath</span><span class="p">:(</span><span class="n">NSIndexPath</span> <span class="o">*</span><span class="p">)</span><span class="nv">indexPath</span>
-<span class="p">{</span>
-<span class="k">static</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">MyIdentifier</span> <span class="o">=</span> <span class="s">@"MyIdentifier"</span><span class="p">;</span>
-
-<span class="n">UITableViewCell</span> <span class="o">*</span><span class="n">cell</span> <span class="o">=</span> <span class="p">[</span><span class="n">tableView</span> <span class="nf">dequeueReusableCellWithIdentifier</span><span class="p">:</span><span class="n">MyIdentifier</span><span class="p">];</span>
-
-<span class="k">if</span> <span class="p">(</span><span class="n">cell</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">cell</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UITableViewCell</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithStyle</span><span class="p">:</span><span class="n">UITableViewCellStyleDefault</span> <span class="nf">reuseIdentifier</span><span class="p">:</span><span class="n">MyIdentifier</span><span class="p">];</span>
-<span class="p">}</span>
-
-<span class="c1">// Here we use the provided sd_setImageWithURL:placeholderImage: method to load the web image</span>
-<span class="c1">// Ensure you use a placeholder image otherwise cells will be initialized with no image</span>
-<span class="p">[</span><span class="n">cell</span><span class="p">.</span><span class="n">imageView</span> <span class="nf">sd_setImageWithURL</span><span class="p">:[</span><span class="n">NSURL</span> <span class="nf">URLWithString</span><span class="p">:</span><span class="s">@"http://example.com/image.jpg"</span><span class="p">]</span>
-                  <span class="nf">placeholderImage</span><span class="p">:[</span><span class="n">UIImage</span> <span class="nf">imageNamed</span><span class="p">:</span><span class="s">@"placeholder"</span><span class="p">]];</span>
-
-<span class="n">cell</span><span class="p">.</span><span class="n">textLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">@"My Text"</span><span class="p">;</span>
-<span class="k">return</span> <span class="n">cell</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></li>
-</ul>
+                        <p>Integrates SDWebImage async downloading and caching of remote images with UIImageView.</p>
 
                         <a href="Categories/UIImageView(WebCache).html" class="slightly-smaller">See more</a>
                       </div>
@@ -1085,7 +884,7 @@ Image process is based on Core Graphics and vImage.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIImageView+WebCache.h#L39-L187">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIImageView+WebCache.h#L46-L194">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1107,95 +906,20 @@ Image process is based on Core Graphics and vImage.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Integrates SDWebImage async downloading and caching of remote images with UIView subclass.</p>
+
                         <a href="Categories/UIView(WebCache).html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIView</span> <span class="p">(</span><span class="nl">WebCache</span><span class="p">)</span>
-
-<span class="cm">/**
- * Get the current image URL.
- *
- * @note Note that because of the limitations of categories this property can get out of sync if you use setImage: directly.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">sd_imageURL</span><span class="p">;</span>
-
-<span class="cm">/**
- * The current image loading progress associated to the view. The unit count is the received size and excepted size of download.
- * The `totalUnitCount` and `completedUnitCount` will be reset to 0 after a new image loading start (change from current queue). And they will be set to `SDWebImageProgressUnitCountUnknown` if the progressBlock not been called but the image loading success to mark the progress finished (change from main queue).
- * @note You can use Key-Value Observing on the progress, but you should take care that the change to progress is from a background queue during download(the same as progressBlock). If you want to using KVO and update the UI, make sure to dispatch on the main queue. And it's recommand to use some KVO libs like KVOController because it's more safe and easy to use.
- * @note The getter will create a progress instance if the value is nil. You can also set a custom progress instance and let it been updated during image loading
- * @note Note that because of the limitations of categories this property can get out of sync if you update the progress directly.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">null_resettable</span><span class="p">)</span> <span class="n">NSProgress</span> <span class="o">*</span><span class="n">sd_imageProgress</span><span class="p">;</span>
-
-<span class="cm">/**
- * Set the imageView `image` with an `url` and optionally a placeholder image.
- *
- * The download is asynchronous and cached.
- *
- * @param url            The url for the image.
- * @param placeholder    The image to be set initially, until the image request finishes.
- * @param options        The options to use when downloading the image. @see SDWebImageOptions for the possible values.
- * @param context        A context contains different options to perform specify changes or processes, see `SDWebImageContextOption`. This hold the extra objects which `options` enum can not hold.
- * @param setImageBlock  Block used for custom set image code. If not provide, use the built-in set image code (supports `UIImageView/NSImageView` and `UIButton/NSButton` currently)
- * @param progressBlock  A block called while image is downloading
- *                       @note the progress block is executed on a background queue
- * @param completedBlock A block called when operation has been completed.
- *   This block has no return value and takes the requested UIImage as first parameter and the NSData representation as second parameter.
- *   In case of error the image parameter is nil and the third parameter may contain an NSError.
- *
- *   The forth parameter is an `SDImageCacheType` enum indicating if the image was retrieved from the local cache
- *   or from the memory cache or from the network.
- *
- *   The fith parameter normally is always YES. However, if you provide SDWebImageAvoidAutoSetImage with SDWebImageProgressiveLoad options to enable progressive downloading and set the image yourself. This block is thus called repeatedly with a partial image. When image is fully downloaded, the
- *   block is called a last time with the full image and the last parameter set to YES.
- *
- *   The last parameter is the original image URL
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sd_internalSetImageWithURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
-                  <span class="nf">placeholderImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">placeholder</span>
-                           <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="Enums/SDWebImageOptions.html">SDWebImageOptions</a></span><span class="p">)</span><span class="nv">options</span>
-                           <span class="nf">context</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="Type Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">context</span>
-                     <span class="nf">setImageBlock</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="Type Definitions.html#/c:UIView+WebCache.h@T@SDSetImageBlock">SDSetImageBlock</a></span><span class="p">)</span><span class="nv">setImageBlock</span>
-                          <span class="nf">progress</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="Type Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderProgressBlock">SDImageLoaderProgressBlock</a></span><span class="p">)</span><span class="nv">progressBlock</span>
-                         <span class="nf">completed</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="Type Definitions.html#/c:SDWebImageManager.h@T@SDInternalCompletionBlock">SDInternalCompletionBlock</a></span><span class="p">)</span><span class="nv">completedBlock</span><span class="p">;</span>
-
-<span class="cm">/**
- * Cancel the current image load
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">sd_cancelCurrentImageLoad</span><span class="p">;</span>
-
-<span class="cp">#if SD_UIKIT || SD_MAC
-</span>
-<span class="cp">#pragma mark - Image Transition
-</span>
-<span class="cm">/**
- The image transition when image load finished. See `SDWebImageTransition`.
- If you specify nil, do not do transition. Defautls to nil.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="Classes/SDWebImageTransition.html">SDWebImageTransition</a></span> <span class="o">*</span><span class="n">sd_imageTransition</span><span class="p">;</span>
-
-<span class="cp">#pragma mark - Image Indicator
-</span>
-<span class="cm">/**
- The image indicator during the image loading. If you do not need indicator, specify nil. Defaults to nil
- The setter will remove the old indicator view and add new indicator view to current view's subview.
- @note Because this is UI related, you should access only from the main queue.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageIndicator.html">SDWebImageIndicator</a></span><span class="o">&gt;</span> <span class="n">sd_imageIndicator</span><span class="p">;</span>
-
-<span class="cp">#endif
-</span>
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIView</span> <span class="p">(</span><span class="nl">WebCache</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIView+WebCache.h#L22-L98">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIView+WebCache.h#L25-L101">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1217,51 +941,21 @@ Image process is based on Core Graphics and vImage.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>These methods are used to support canceling for UIView image loading, it&rsquo;s designed to be used internal but not external.
+All the stored operations are weak, so it will be dalloced after image loading finished. If you need to store operations, use your own class to keep a strong reference for them.</p>
+
                         <a href="Categories/UIView(WebCacheOperation).html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIView</span> <span class="p">(</span><span class="nl">WebCacheOperation</span><span class="p">)</span>
-
-<span class="cm">/**
- *  Get the image load operation for key
- *
- *  @param key key for identifying the operations
- *  @return the image load operation
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageOperation.html">SDWebImageOperation</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nf">sd_imageLoadOperationForKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span>
-
-<span class="cm">/**
- *  Set the image load operation (storage in a UIView based weak map table)
- *
- *  @param operation the operation
- *  @param key       key for storing the operation
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sd_setImageLoadOperation</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageOperation.html">SDWebImageOperation</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">operation</span> <span class="nf">forKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span>
-
-<span class="cm">/**
- *  Cancel all operations for the current UIView and key
- *
- *  @param key key for identifying the operations
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sd_cancelImageLoadOperationWithKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span>
-
-<span class="cm">/**
- *  Just remove the operations corresponding to the current UIView and key without cancelling them
- *
- *  @param key key for identifying the operations
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sd_removeImageLoadOperationWithKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIView</span> <span class="p">(</span><span class="nl">WebCacheOperation</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIView+WebCacheOperation.h#L14-L46">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIView+WebCacheOperation.h#L16-L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1271,8 +965,8 @@ Image process is based on Core Graphics and vImage.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

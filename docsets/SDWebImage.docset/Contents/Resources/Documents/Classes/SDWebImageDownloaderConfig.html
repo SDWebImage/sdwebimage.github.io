@@ -14,8 +14,8 @@
     <a title="SDWebImageDownloaderConfig Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p><a href="../index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -538,80 +538,17 @@
             <h1>SDWebImageDownloaderConfig</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDWebImageDownloaderConfig</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span>
-
-<span class="cm">/**
- Gets the default downloader config used for shared instance or initialization when it does not provide any downloader config. Such as `SDWebImageDownloader.sharedDownloader`.
- @note You can modify the property on default downloader config, which can be used for later created downloader instance. The already created downloader instance does not get affected.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">class</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">SDWebImageDownloaderConfig</span> <span class="o">*</span><span class="n">defaultDownloaderConfig</span><span class="p">;</span>
-
-<span class="cm">/**
- * The maximum number of concurrent downloads.
- * Defaults to 6.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">maxConcurrentDownloads</span><span class="p">;</span>
-
-<span class="cm">/**
- * The timeout value (in seconds) for each download operation.
- * Defaults to 15.0.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSTimeInterval</span> <span class="n">downloadTimeout</span><span class="p">;</span>
-
-<span class="cm">/**
- * The minimum interval about progress percent during network downloading. Which means the next progress callback and current progress callback's progress percent difference should be larger or equal to this value. However, the final finish download progress callback does not get effected.
- * The value should be 0.0-1.0.
- * @note If you're using progressive decoding feature, this will also effect the image refresh rate.
- * @note This value may enhance the performance if you don't want progress callback too frequently.
- * Defaults to 0, which means each time we receive the new data from URLSession, we callback the progressBlock immediately.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="kt">double</span> <span class="n">minimumProgressInterval</span><span class="p">;</span>
-
-<span class="cm">/**
- * The custom session configuration in use by NSURLSession. If you don't provide one, we will use `defaultSessionConfiguration` instead.
- * Defatuls to nil.
- * @note This property does not support dynamic changes, means it's immutable after the downloader instance initialized.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURLSessionConfiguration</span> <span class="o">*</span><span class="n">sessionConfiguration</span><span class="p">;</span>
-
-<span class="cm">/**
- * Gets/Sets a subclass of `SDWebImageDownloaderOperation` as the default
- * `NSOperation` to be used each time SDWebImage constructs a request
- * operation to download an image.
- * Defaults to nil.
- * @note Passing `NSOperation&lt;SDWebImageDownloaderOperation&gt;` to set as default. Passing `nil` will revert to `SDWebImageDownloaderOperation`.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">Class</span> <span class="n">operationClass</span><span class="p">;</span>
-
-<span class="cm">/**
- * Changes download operations execution order.
- * Defaults to `SDWebImageDownloaderFIFOExecutionOrder`.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="../Enums/SDWebImageDownloaderExecutionOrder.html">SDWebImageDownloaderExecutionOrder</a></span> <span class="n">executionOrder</span><span class="p">;</span>
-
-<span class="cm">/**
- * Set the default URL credential to be set for request operations.
- * Defaults to nil.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURLCredential</span> <span class="o">*</span><span class="n">urlCredential</span><span class="p">;</span>
-
-<span class="cm">/**
- * Set username using for HTTP Basic authentication.
- * Defaults to nil.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">username</span><span class="p">;</span>
-
-<span class="cm">/**
- * Set password using for HTTP Basic authentication.
- * Defautls to nil.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">password</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDWebImageDownloaderConfig</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>The class contains all the config for image downloader</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This class conform to NSCopying, make sure to add the property in <code>copyWithZone:</code> as well.
+
+</div>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -652,7 +589,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderConfig.h#L30">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderConfig.h#L35">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -688,7 +625,7 @@ Defaults to 6.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderConfig.h#L36">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderConfig.h#L41">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -724,7 +661,7 @@ Defaults to 15.0.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderConfig.h#L42">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderConfig.h#L47">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -771,7 +708,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderConfig.h#L51">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderConfig.h#L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -813,7 +750,7 @@ Defatuls to nil.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderConfig.h#L58">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderConfig.h#L63">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -856,7 +793,7 @@ Defaults to nil.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderConfig.h#L67">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderConfig.h#L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -893,7 +830,7 @@ Defaults to <code>SDWebImageDownloaderFIFOExecutionOrder</code>.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderConfig.h#L73">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderConfig.h#L78">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -929,7 +866,7 @@ Defaults to nil.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderConfig.h#L79">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderConfig.h#L84">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -965,7 +902,7 @@ Defaults to nil.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderConfig.h#L85">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderConfig.h#L90">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1001,7 +938,7 @@ Defautls to nil.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderConfig.h#L91">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderConfig.h#L96">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1011,8 +948,8 @@ Defautls to nil.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

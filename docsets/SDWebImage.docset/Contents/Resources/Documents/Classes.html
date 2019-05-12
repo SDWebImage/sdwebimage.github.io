@@ -14,8 +14,8 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p><a href="index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -555,56 +555,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>The image class which supports animating on <code><a href="Classes/SDAnimatedImageView.html">SDAnimatedImageView</a></code>. You can also use it on normal UIImageView/NSImageView.</p>
+
                         <a href="Classes/SDAnimatedImage.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="Protocols/SDAnimatedImage.html">SDAnimatedImage</a></span> <span class="p">:</span> <span class="nc">UIImage</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDAnimatedImage.html">SDAnimatedImage</a></span><span class="o">&gt;</span>
-
-<span class="c1">// This class override these methods from UIImage(NSImage), and it supports NSSecureCoding.</span>
-<span class="c1">// You should use these methods to create a new animated image. Use other methods just call super instead.</span>
-<span class="o">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">imageNamed</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">name</span><span class="p">;</span> <span class="c1">// Cache in memory, no Asset Catalog support</span>
-<span class="cp">#if __has_include(&lt;UIKit/UITraitCollection.h&gt;)
-</span><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">imageNamed</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">name</span> <span class="nf">inBundle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSBundle</span> <span class="o">*</span><span class="p">)</span><span class="nv">bundle</span> <span class="nf">compatibleWithTraitCollection</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UITraitCollection</span> <span class="o">*</span><span class="p">)</span><span class="nv">traitCollection</span><span class="p">;</span> <span class="c1">// Cache in memory, no Asset Catalog support</span>
-<span class="cp">#else
-</span><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">imageNamed</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">name</span> <span class="nf">inBundle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSBundle</span> <span class="o">*</span><span class="p">)</span><span class="nv">bundle</span><span class="p">;</span> <span class="c1">// Cache in memory, no Asset Catalog support</span>
-<span class="cp">#endif
-</span><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">imageWithContentsOfFile</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">path</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">imageWithData</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">imageWithData</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span> <span class="nf">scale</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">scale</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithContentsOfFile</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">path</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithData</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithData</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span> <span class="nf">scale</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">scale</span><span class="p">;</span>
-
-<span class="cm">/**
- Current animated image format.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="Type Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></span> <span class="n">animatedImageFormat</span><span class="p">;</span>
-
-<span class="cm">/**
- Current animated image data, you can use this instead of CGImage to create another instance.
- If the current image is not animated image, this value is nil.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSData</span> <span class="o">*</span><span class="n">animatedImageData</span><span class="p">;</span>
-
-<span class="cm">/**
- The scale factor of the image.
- 
- @note For UIKit, this just call super instead.
- @note For AppKit, `NSImage` can contains multiple image representations with different scales. However, this class does not do that from the design. We processs the scale like UIKit. This wil actually be calculated from image size and pixel size.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">scale</span><span class="p">;</span>
-
-<span class="c1">// By default, animated image frames are returned by decoding just in time without keeping into memory. But you can choose to preload them into memory as well, See the decsription in `SDAnimatedImage` protocol.</span>
-<span class="c1">// After preloaded, there is no huge difference on performance between this and UIImage's `animatedImageWithImages:duration:`. But UIImage's animation have some issues such like blanking and pausing during segue when using in `UIImageView`. It's recommend to use only if need.</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">preloadAllFrames</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">unloadAllFrames</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isAllFramesLoaded</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">allFramesLoaded</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="Protocols/SDAnimatedImage.html">SDAnimatedImage</a></span> <span class="p">:</span> <span class="nc">UIImage</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDAnimatedImage.html">SDAnimatedImage</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -614,7 +573,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDAnimatedImage.h#L62-L104">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDAnimatedImage.h#L65-L107">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -657,7 +616,7 @@ For AppKit: use <code>-setAnimates:</code> to control animating, <code>animates<
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDAnimatedImageView.h#L21-L68">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDAnimatedImageView.h#L21-L68">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -679,32 +638,15 @@ For AppKit: use <code>-setAnimates:</code> to control animating, <code>animates<
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>The built-in disk cache.</p>
+
                         <a href="Classes/SDDiskCache.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="Protocols/SDDiskCache.html">SDDiskCache</a></span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDDiskCache.html">SDDiskCache</a></span><span class="o">&gt;</span>
-
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="Classes/SDImageCacheConfig.html">SDImageCacheConfig</a></span> <span class="o">*</span><span class="n">config</span><span class="p">;</span>
-
-<span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
-
-<span class="cm">/**
- Move the cache directory from old location to new location, the old location will be removed after finish.
- If the old location does not exist, does nothing.
- If the new location does not exist, only do a movement of directory.
- If the new location does exist, will move and merge the files from old location.
- If the new location does exist, but is not a directory, will remove it and do a movement of directory.
-
- @param srcPath old location of cache directory
- @param dstPath new location of cache directory
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">moveCacheDirectoryFromPath</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">srcPath</span> <span class="nf">toPath</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">dstPath</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="Protocols/SDDiskCache.html">SDDiskCache</a></span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDDiskCache.html">SDDiskCache</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -714,7 +656,7 @@ For AppKit: use <code>-setAnimates:</code> to control animating, <code>animates<
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDDiskCache.h#L101-L119">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDDiskCache.h#L105-L125">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -755,7 +697,7 @@ For AppKit: use <code>-setAnimates:</code> to control animating, <code>animates<
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageAPNGCoder.h#L15-L19">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageAPNGCoder.h#L15-L19">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -796,7 +738,7 @@ asynchronous so it doesn’t add unnecessary latency to the UI.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCache.h#L53-L338">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCache.h#L54-L339">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -818,115 +760,20 @@ asynchronous so it doesn’t add unnecessary latency to the UI.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>The class contains all the config for image cache</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This class conform to NSCopying, make sure to add the property in <code>copyWithZone:</code> as well.
+
+</div>
+
                         <a href="Classes/SDImageCacheConfig.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageCacheConfig</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span>
-
-<span class="cm">/**
- Gets the default cache config used for shared instance or initialization when it does not provide any cache config. Such as `SDImageCache.sharedImageCache`.
- @note You can modify the property on default cache config, which can be used for later created cache instance. The already created cache instance does not get affected.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">class</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">SDImageCacheConfig</span> <span class="o">*</span><span class="n">defaultCacheConfig</span><span class="p">;</span>
-
-<span class="cm">/**
- * Whether or not to disable iCloud backup
- * Defaults to YES.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">shouldDisableiCloud</span><span class="p">;</span>
-
-<span class="cm">/**
- * Whether or not to use memory cache
- * @note When the memory cache is disabled, the weak memory cache will also be disabled.
- * Defaults to YES.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">shouldCacheImagesInMemory</span><span class="p">;</span>
-
-<span class="cm">/*
- * The option to control weak memory cache for images. When enable, `SDImageCache`'s memory cache will use a weak maptable to store the image at the same time when it stored to memory, and get removed at the same time.
- * However when memory warning is triggered, since the weak maptable does not hold a strong reference to image instance, even when the memory cache itself is purged, some images which are held strongly by UIImageViews or other live instances can be recovered again, to avoid later re-query from disk cache or network. This may be helpful for the case, for example, when app enter background and memory is purged, cause cell flashing after re-enter foreground.
- * Defautls to YES. You can change this option dynamically.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">shouldUseWeakMemoryCache</span><span class="p">;</span>
-
-<span class="cm">/**
- * Whether or not to remove the expired disk data when application entering the background. (Not works for macOS)
- * Defaults to YES.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">shouldRemoveExpiredDataWhenEnterBackground</span><span class="p">;</span>
-
-<span class="cm">/**
- * The reading options while reading cache from disk.
- * Defaults to 0. You can set this to `NSDataReadingMappedIfSafe` to improve performance.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSDataReadingOptions</span> <span class="n">diskCacheReadingOptions</span><span class="p">;</span>
-
-<span class="cm">/**
- * The writing options while writing cache to disk.
- * Defaults to `NSDataWritingAtomic`. You can set this to `NSDataWritingWithoutOverwriting` to prevent overwriting an existing file.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSDataWritingOptions</span> <span class="n">diskCacheWritingOptions</span><span class="p">;</span>
-
-<span class="cm">/**
- * The maximum length of time to keep an image in the disk cache, in seconds.
- * Setting this to a negative value means no expiring.
- * Setting this to zero means that all cached files would be removed when do expiration check.
- * Defaults to 1 weak.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSTimeInterval</span> <span class="n">maxDiskAge</span><span class="p">;</span>
-
-<span class="cm">/**
- * The maximum size of the disk cache, in bytes.
- * Defaults to 0. Which means there is no cache size limit.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">maxDiskSize</span><span class="p">;</span>
-
-<span class="cm">/**
- * The maximum "total cost" of the in-memory image cache. The cost function is the bytes size held in memory.
- * @note The memory cost is bytes size in memory, but not simple pixels count. For common ARGB8888 image, one pixel is 4 bytes (32 bits).
- * Defaults to 0. Which means there is no memory cost limit.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">maxMemoryCost</span><span class="p">;</span>
-
-<span class="cm">/**
- * The maximum number of objects in-memory image cache should hold.
- * Defaults to 0. Which means there is no memory count limit.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">maxMemoryCount</span><span class="p">;</span>
-
-<span class="cm">/*
- * The attribute which the clear cache will be checked against when clearing the disk cache
- * Default is Modified Date
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="Enums/SDImageCacheConfigExpireType.html">SDImageCacheConfigExpireType</a></span> <span class="n">diskCacheExpireType</span><span class="p">;</span>
-
-<span class="cm">/**
- * The custom file manager for disk cache. Pass nil to let disk cache choose the proper file manager.
- * Defaults to nil.
- * @note This value does not support dynamic changes. Which means further modification on this value after cache initlized has no effect.
- * @note Since `NSFileManager` does not support `NSCopying`. We just pass this by reference during copying. So it's not recommend to set this value on `defaultCacheConfig`.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSFileManager</span> <span class="o">*</span><span class="n">fileManager</span><span class="p">;</span>
-
-<span class="cm">/**
- * The custom memory cache class. Provided class instance must conform to `SDMemoryCache` protocol to allow usage.
- * Defaults to built-in `SDMemoryCache` class.
- * @note This value does not support dynamic changes. Which means further modification on this value after cache initlized has no effect.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">Class</span> <span class="n">memoryCacheClass</span><span class="p">;</span>
-
-<span class="cm">/**
- * The custom disk cache class. Provided class instance must conform to `SDDiskCache` protocol to allow usage.
- * Defaults to built-in `SDDiskCache` class.
- * @note This value does not support dynamic changes. Which means further modification on this value after cache initlized has no effect.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">assign</span> <span class="p">,</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">Class</span> <span class="n">diskCacheClass</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageCacheConfig</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -936,7 +783,7 @@ asynchronous so it doesn’t add unnecessary latency to the UI.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCacheConfig.h#L24-L125">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCacheConfig.h#L28-L129">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -958,72 +805,15 @@ asynchronous so it doesn’t add unnecessary latency to the UI.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>A caches manager to manage multiple caches.</p>
+
                         <a href="Classes/SDImageCachesManager.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageCachesManager</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Classes/SDImageCache.html">SDImageCache</a></span><span class="o">&gt;</span>
-
-<span class="cm">/**
- Returns the global shared caches manager instance. By default we will set [`SDImageCache.sharedImageCache`] into the caches array.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">class</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">SDImageCachesManager</span> <span class="o">*</span><span class="n">sharedManager</span><span class="p">;</span>
-
-<span class="c1">// These are op policy for cache manager.</span>
-
-<span class="cm">/**
- Operation policy for query op.
- Defaults to `Serial`, means query all caches serially (one completion called then next begin) until one cache query success (`image` != nil).
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="n">queryOperationPolicy</span><span class="p">;</span>
-
-<span class="cm">/**
- Operation policy for store op.
- Defaults to `HighestOnly`, means store to the highest priority cache only.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="n">storeOperationPolicy</span><span class="p">;</span>
-
-<span class="cm">/**
- Operation policy for remove op.
- Defaults to `Concurrent`, means remove all caches concurrently.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="n">removeOperationPolicy</span><span class="p">;</span>
-
-<span class="cm">/**
- Operation policy for contains op.
- Defaults to `Serial`, means check all caches serially (one completion called then next begin) until one cache check success (`containsCacheType` != None).
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="n">containsOperationPolicy</span><span class="p">;</span>
-
-<span class="cm">/**
- Operation policy for clear op.
- Defaults to `Concurrent`, means clear all caches concurrently.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="n">clearOperationPolicy</span><span class="p">;</span>
-
-<span class="cm">/**
- All caches in caches manager. The caches array is a priority queue, which means the later added cache will have the highest priority
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Classes/SDImageCache.html">SDImageCache</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">caches</span><span class="p">;</span>
-
-<span class="cm">/**
- Add a new cache to the end of caches array. Which has the highest priority.
- 
- @param cache cache
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addCache</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Classes/SDImageCache.html">SDImageCache</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">cache</span><span class="p">;</span>
-
-<span class="cm">/**
- Remove a cache in the caches array.
- 
- @param cache cache
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeCache</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Classes/SDImageCache.html">SDImageCache</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">cache</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageCachesManager</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Classes/SDImageCache.html">SDImageCache</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1033,7 +823,7 @@ asynchronous so it doesn’t add unnecessary latency to the UI.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCachesManager.h#L19-L77">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCachesManager.h#L23-L81">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1055,108 +845,15 @@ asynchronous so it doesn’t add unnecessary latency to the UI.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Provide some common helper methods for building the image decoder/encoder.</p>
+
                         <a href="Classes/SDImageCoderHelper.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageCoderHelper</span> <span class="p">:</span> <span class="nc">NSObject</span>
-
-<span class="cm">/**
- Return an animated image with frames array.
- For UIKit, this will apply the patch and then create animated UIImage. The patch is because that `+[UIImage animatedImageWithImages:duration:]` just use the average of duration for each image. So it will not work if different frame has different duration. Therefore we repeat the specify frame for specify times to let it work.
- For AppKit, NSImage does not support animates other than GIF. This will try to encode the frames to GIF format and then create an animated NSImage for rendering. Attention the animated image may loss some detail if the input frames contain full alpha channel because GIF only supports 1 bit alpha channel. (For 1 pixel, either transparent or not)
-
- @param frames The frames array. If no frames or frames is empty, return nil
- @return A animated image for rendering on UIImageView(UIKit) or NSImageView(AppKit)
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">animatedImageWithFrames</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="Classes/SDImageFrame.html">SDImageFrame</a></span> <span class="o">*&gt;</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">frames</span><span class="p">;</span>
-
-<span class="cm">/**
- Return frames array from an animated image.
- For UIKit, this will unapply the patch for the description above and then create frames array. This will also work for normal animated UIImage.
- For AppKit, NSImage does not support animates other than GIF. This will try to decode the GIF imageRep and then create frames array.
-
- @param animatedImage A animated image. If it's not animated, return nil
- @return The frames array
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="Classes/SDImageFrame.html">SDImageFrame</a></span> <span class="o">*&gt;</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">framesFromAnimatedImage</span><span class="p">:(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">animatedImage</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">frames</span><span class="p">(</span><span class="n">from</span><span class="o">:</span><span class="p">));</span>
-
-<span class="cm">/**
- Return the shared device-dependent RGB color space. This follows The Get Rule.
- On iOS, it's created with deviceRGB (if available, use sRGB).
- On macOS, it's from the screen colorspace (if failed, use deviceRGB)
- Because it's shared, you should not retain or release this object.
- 
- @return The device-dependent RGB color space
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">CGColorSpaceRef</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">colorSpaceGetDeviceRGB</span> <span class="n">CF_RETURNS_NOT_RETAINED</span><span class="p">;</span>
-
-<span class="cm">/**
- Check whether CGImage contains alpha channel.
- 
- @param cgImage The CGImage
- @return Return YES if CGImage contains alpha channel, otherwise return NO
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">CGImageContainsAlpha</span><span class="p">:(</span><span class="n">_Nonnull</span> <span class="n">CGImageRef</span><span class="p">)</span><span class="nv">cgImage</span><span class="p">;</span>
-
-<span class="cm">/**
- Create a decoded CGImage by the provided CGImage. This follows The Create Rule and you are response to call release after usage.
- It will detect whether image contains alpha channel, then create a new bitmap context with the same size of image, and draw it. This can ensure that the image do not need extra decoding after been set to the imageView.
- @note This actually call `CGImageCreateDecoded:orientation:` with the Up orientation.
-
- @param cgImage The CGImage
- @return A new created decoded image
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">CGImageRef</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">CGImageCreateDecoded</span><span class="p">:(</span><span class="n">_Nonnull</span> <span class="n">CGImageRef</span><span class="p">)</span><span class="nv">cgImage</span> <span class="n">CF_RETURNS_RETAINED</span><span class="p">;</span>
-
-<span class="cm">/**
- Create a decoded CGImage by the provided CGImage and orientation. This follows The Create Rule and you are response to call release after usage.
- It will detect whether image contains alpha channel, then create a new bitmap context with the same size of image, and draw it. This can ensure that the image do not need extra decoding after been set to the imageView.
- 
- @param cgImage The CGImage
- @param orientation The EXIF image orientation.
- @return A new created decoded image
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">CGImageRef</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">CGImageCreateDecoded</span><span class="p">:(</span><span class="n">_Nonnull</span> <span class="n">CGImageRef</span><span class="p">)</span><span class="nv">cgImage</span> <span class="nf">orientation</span><span class="p">:(</span><span class="n">CGImagePropertyOrientation</span><span class="p">)</span><span class="nv">orientation</span> <span class="n">CF_RETURNS_RETAINED</span><span class="p">;</span>
-
-<span class="cm">/**
- Return the decoded image by the provided image. This one unlike `CGImageCreateDecoded:`, will not decode the image which contains alpha channel or animated image
- @param image The image to be decoded
- @return The decoded image
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">decodedImageWithImage</span><span class="p">:(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">image</span><span class="p">;</span>
-
-<span class="cm">/**
- Return the decoded and probably scaled down image by the provided image. If the image is large than the limit size, will try to scale down. Or just works as `decodedImageWithImage:`
-
- @param image The image to be decoded and scaled down
- @param bytes The limit bytes size. Provide 0 to use the build-in limit.
- @return The decoded and probably scaled down image
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">decodedAndScaledDownImageWithImage</span><span class="p">:(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">image</span> <span class="nf">limitBytes</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">bytes</span><span class="p">;</span>
-
-<span class="cp">#if SD_UIKIT || SD_WATCH
-</span><span class="cm">/**
- Convert an EXIF image orientation to an iOS one.
-
- @param exifOrientation EXIF orientation
- @return iOS orientation
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">UIImageOrientation</span><span class="p">)</span><span class="nf">imageOrientationFromEXIFOrientation</span><span class="p">:(</span><span class="n">CGImagePropertyOrientation</span><span class="p">)</span><span class="nv">exifOrientation</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">imageOrientation</span><span class="p">(</span><span class="n">from</span><span class="o">:</span><span class="p">));</span>
-
-<span class="cm">/**
- Convert an iOS orientation to an EXIF image orientation.
-
- @param imageOrientation iOS orientation
- @return EXIF orientation
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">CGImagePropertyOrientation</span><span class="p">)</span><span class="nf">exifOrientationFromImageOrientation</span><span class="p">:(</span><span class="n">UIImageOrientation</span><span class="p">)</span><span class="nv">imageOrientation</span><span class="p">;</span>
-<span class="cp">#endif
-</span>
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageCoderHelper</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1166,7 +863,7 @@ asynchronous so it doesn’t add unnecessary latency to the UI.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCoderHelper.h#L13-L107">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCoderHelper.h#L16-L110">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1225,7 +922,7 @@ That means that coder can decode that data / encode to that format</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCodersManager.h#L32-L58">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCodersManager.h#L32-L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1247,36 +944,20 @@ That means that coder can decode that data / encode to that format</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>This class is used for creating animated images via <code>animatedImageWithFrames</code> in <code><a href="Classes/SDImageCoderHelper.html">SDImageCoderHelper</a></code>.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    If you need to specify animated images loop count, use <code>sd_imageLoopCount</code> property in <code>UIImage+Metadata.h</code>.
+
+</div>
+
                         <a href="Classes/SDImageFrame.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageFrame</span> <span class="p">:</span> <span class="nc">NSObject</span>
-
-<span class="c1">// This class is used for creating animated images via `animatedImageWithFrames` in `SDImageCoderHelper`. Attention if you need to specify animated images loop count, use `sd_imageLoopCount` property in `UIImage+Metadata.h`.</span>
-
-<span class="cm">/**
- The image of current frame. You should not set an animated image.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">UIImage</span> <span class="o">*</span><span class="n">image</span><span class="p">;</span>
-<span class="cm">/**
- The duration of current frame to be displayed. The number is seconds but not milliseconds. You should not set this to zero.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSTimeInterval</span> <span class="n">duration</span><span class="p">;</span>
-
-<span class="cm">/**
- Create a frame instance with specify image and duration
-
- @param image current frame's image
- @param duration current frame's duration
- @return frame instance
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">frameWithImage</span><span class="p">:(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">image</span> <span class="nf">duration</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">duration</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageFrame</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1286,7 +967,7 @@ That means that coder can decode that data / encode to that format</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageFrame.h#L12-L34">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageFrame.h#L16-L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1342,7 +1023,7 @@ That means that coder can decode that data / encode to that format</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageGIFCoder.h#L18-L22">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageGIFCoder.h#L18-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1393,7 +1074,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageIOCoder.h#L26-L30">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageIOCoder.h#L26-L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1415,40 +1096,15 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>A loaders manager to manage multiple loaders</p>
+
                         <a href="Classes/SDImageLoadersManager.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageLoadersManager</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageLoader.html">SDImageLoader</a></span><span class="o">&gt;</span>
-
-<span class="cm">/**
- Returns the global shared loaders manager instance. By default we will set [`SDWebImageDownloader.sharedDownloader`] into the loaders array.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">class</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">SDImageLoadersManager</span> <span class="o">*</span><span class="n">sharedManager</span><span class="p">;</span>
-
-<span class="cm">/**
- All image loaders in manager. The loaders array is a priority queue, which means the later added loader will have the highest priority
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageLoader.html">SDImageLoader</a></span><span class="o">&gt;&gt;*</span> <span class="n">loaders</span><span class="p">;</span>
-
-<span class="cm">/**
- Add a new image loader to the end of loaders array. Which has the highest priority.
- 
- @param loader loader
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addLoader</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageLoader.html">SDImageLoader</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">loader</span><span class="p">;</span>
-
-<span class="cm">/**
- Remove a image loader in the loaders array.
- 
- @param loader loader
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeLoader</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageLoader.html">SDImageLoader</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">loader</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageLoadersManager</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageLoader.html">SDImageLoader</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1458,7 +1114,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageLoadersManager.h#L11-L37">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageLoadersManager.h#L14-L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1487,21 +1143,20 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Pipeline transformer. Which you can bind multiple transformers together to let the image to be transformed one by one in order and generate the final image.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Because transformers are lightweight, if you want to append or arrange transfomers, create another pipeline transformer instead. This class is considered as immutable.
+
+</div>
+
                         <a href="Classes/SDImagePipelineTransformer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImagePipelineTransformer</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span>
-
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">transformers</span><span class="p">;</span>
-
-<span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">transformerWithTransformers</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">transformers</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImagePipelineTransformer</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1511,7 +1166,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageTransformer.h#L52-L59">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageTransformer.h#L54-L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1540,24 +1195,15 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Image round corner transformer</p>
+
                         <a href="Classes/SDImageRoundCornerTransformer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageRoundCornerTransformer</span><span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span>
-
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">cornerRadius</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="Type Definitions.html#/c:UIImage+Transform.h@T@SDRectCorner">SDRectCorner</a></span> <span class="n">corners</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">borderWidth</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">borderColor</span><span class="p">;</span>
-
-<span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">transformerWithRadius</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">cornerRadius</span> <span class="nf">corners</span><span class="p">:(</span><span class="n"><a href="Type Definitions.html#/c:UIImage+Transform.h@T@SDRectCorner">SDRectCorner</a></span><span class="p">)</span><span class="nv">corners</span> <span class="nf">borderWidth</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">borderWidth</span> <span class="nf">borderColor</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIColor</span> <span class="o">*</span><span class="p">)</span><span class="nv">borderColor</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageRoundCornerTransformer</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1567,7 +1213,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageTransformer.h#L66-L76">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageTransformer.h#L73-L104">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1585,22 +1231,15 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Image resizing transformer</p>
+
                         <a href="Classes/SDImageResizingTransformer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageResizingTransformer</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span>
-
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGSize</span> <span class="n">size</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="Enums/SDImageScaleMode.html">SDImageScaleMode</a></span> <span class="n">scaleMode</span><span class="p">;</span>
-
-<span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">transformerWithSize</span><span class="p">:(</span><span class="n">CGSize</span><span class="p">)</span><span class="nv">size</span> <span class="nf">scaleMode</span><span class="p">:(</span><span class="n"><a href="Enums/SDImageScaleMode.html">SDImageScaleMode</a></span><span class="p">)</span><span class="nv">scaleMode</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageResizingTransformer</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1610,7 +1249,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageTransformer.h#L79-L87">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageTransformer.h#L109-L124">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1628,21 +1267,15 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Image cropping transformer</p>
+
                         <a href="Classes/SDImageCroppingTransformer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageCroppingTransformer</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span>
-
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGRect</span> <span class="n">rect</span><span class="p">;</span>
-
-<span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">transformerWithRect</span><span class="p">:(</span><span class="n">CGRect</span><span class="p">)</span><span class="nv">rect</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageCroppingTransformer</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1652,7 +1285,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageTransformer.h#L90-L97">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageTransformer.h#L129-L139">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1670,22 +1303,15 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Image flipping transformer</p>
+
                         <a href="Classes/SDImageFlippingTransformer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageFlippingTransformer</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span>
-
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">horizontal</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">vertical</span><span class="p">;</span>
-
-<span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">transformerWithHorizontal</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">horizontal</span> <span class="nf">vertical</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">vertical</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageFlippingTransformer</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1695,7 +1321,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageTransformer.h#L100-L108">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageTransformer.h#L144-L159">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1713,22 +1339,15 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Image rotation transformer</p>
+
                         <a href="Classes/SDImageRotationTransformer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageRotationTransformer</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span>
-
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">angle</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">fitSize</span><span class="p">;</span>
-
-<span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">transformerWithAngle</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">angle</span> <span class="nf">fitSize</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">fitSize</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageRotationTransformer</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1738,7 +1357,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageTransformer.h#L111-L119">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageTransformer.h#L164-L180">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1767,21 +1386,15 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Image tint color transformer</p>
+
                         <a href="Classes/SDImageTintTransformer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageTintTransformer</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span>
-
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">tintColor</span><span class="p">;</span>
-
-<span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">transformerWithColor</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIColor</span> <span class="o">*</span><span class="p">)</span><span class="nv">tintColor</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageTintTransformer</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1791,7 +1404,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageTransformer.h#L124-L131">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageTransformer.h#L187-L197">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1820,21 +1433,15 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Image blur effect transformer</p>
+
                         <a href="Classes/SDImageBlurTransformer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageBlurTransformer</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span>
-
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">blurRadius</span><span class="p">;</span>
-
-<span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">transformerWithRadius</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">blurRadius</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageBlurTransformer</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1844,7 +1451,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageTransformer.h#L136-L143">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageTransformer.h#L204-L214">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1862,21 +1469,15 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Core Image filter transformer</p>
+
                         <a href="Classes/SDImageFilterTransformer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageFilterTransformer</span><span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span>
-
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">CIFilter</span> <span class="o">*</span><span class="n">filter</span><span class="p">;</span>
-
-<span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">transformerWithFilter</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">CIFilter</span> <span class="o">*</span><span class="p">)</span><span class="nv">filter</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageFilterTransformer</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1886,7 +1487,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageTransformer.h#L147-L154">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageTransformer.h#L220-L230">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1908,18 +1509,16 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>A memory cache which auto purge the cache on memory warning and support weak cache.</p>
+
                         <a href="Classes/SDMemoryCache.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="Protocols/SDMemoryCache.html">SDMemoryCache</a></span> <span class="o">&lt;</span><span class="n">KeyType</span><span class="p">,</span> <span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">:</span> <span class="n">NSCache</span> <span class="o">&lt;</span><span class="n">KeyType</span><span class="p">,</span> <span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDMemoryCache.html">SDMemoryCache</a></span><span class="o">&gt;</span>
-
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="Classes/SDImageCacheConfig.html">SDImageCacheConfig</a></span> <span class="o">*</span><span class="n">config</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="Protocols/SDMemoryCache.html">SDMemoryCache</a></span><span class="o">&lt;</span><span class="n">KeyType</span><span class="p">,</span> <span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">:</span> <span class="n">NSCache</span> <span class="o">&lt;</span><span class="n">KeyType</span><span class="p">,</span> <span class="n">ObjectType</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n"><a href="Protocols/SDMemoryCache.html">SDMemoryCache</a></span><span class="o">&gt;</span> <span class="k">@end</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1929,7 +1528,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDMemoryCache.h#L69-L73">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDMemoryCache.h#L73-L77">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1951,19 +1550,15 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>A cache key filter class with block.</p>
+
                         <a href="Classes/SDWebImageCacheKeyFilter.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="Protocols/SDWebImageCacheKeyFilter.html">SDWebImageCacheKeyFilter</a></span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageCacheKeyFilter.html">SDWebImageCacheKeyFilter</a></span><span class="o">&gt;</span>
-
-<span class="o">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">initWithBlock</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="Type Definitions.html#/c:SDWebImageCacheKeyFilter.h@T@SDWebImageCacheKeyFilterBlock">SDWebImageCacheKeyFilterBlock</a></span><span class="p">)</span><span class="n">block</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">cacheKeyFilterWithBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="Type Definitions.html#/c:SDWebImageCacheKeyFilter.h@T@SDWebImageCacheKeyFilterBlock">SDWebImageCacheKeyFilterBlock</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="Protocols/SDWebImageCacheKeyFilter.html">SDWebImageCacheKeyFilter</a></span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageCacheKeyFilter.html">SDWebImageCacheKeyFilter</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1973,7 +1568,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageCacheKeyFilter.h#L21-L26">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageCacheKeyFilter.h#L27-L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1995,19 +1590,15 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>A cache serializer class with block.</p>
+
                         <a href="Classes/SDWebImageCacheSerializer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="Protocols/SDWebImageCacheSerializer.html">SDWebImageCacheSerializer</a></span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageCacheSerializer.html">SDWebImageCacheSerializer</a></span><span class="o">&gt;</span>
-
-<span class="o">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">initWithBlock</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="Type Definitions.html#/c:SDWebImageCacheSerializer.h@T@SDWebImageCacheSerializerBlock">SDWebImageCacheSerializerBlock</a></span><span class="p">)</span><span class="n">block</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">cacheSerializerWithBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="Type Definitions.html#/c:SDWebImageCacheSerializer.h@T@SDWebImageCacheSerializerBlock">SDWebImageCacheSerializerBlock</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="Protocols/SDWebImageCacheSerializer.html">SDWebImageCacheSerializer</a></span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageCacheSerializer.html">SDWebImageCacheSerializer</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2017,7 +1608,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageCacheSerializer.h#L21-L26">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageCacheSerializer.h#L27-L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2057,7 +1648,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloader.h#L99-L121">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloader.h#L100-L122">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2093,7 +1684,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloader.h#L127-L272">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloader.h#L128-L273">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2115,83 +1706,20 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>The class contains all the config for image downloader</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This class conform to NSCopying, make sure to add the property in <code>copyWithZone:</code> as well.
+
+</div>
+
                         <a href="Classes/SDWebImageDownloaderConfig.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDWebImageDownloaderConfig</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span>
-
-<span class="cm">/**
- Gets the default downloader config used for shared instance or initialization when it does not provide any downloader config. Such as `SDWebImageDownloader.sharedDownloader`.
- @note You can modify the property on default downloader config, which can be used for later created downloader instance. The already created downloader instance does not get affected.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">class</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">SDWebImageDownloaderConfig</span> <span class="o">*</span><span class="n">defaultDownloaderConfig</span><span class="p">;</span>
-
-<span class="cm">/**
- * The maximum number of concurrent downloads.
- * Defaults to 6.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">maxConcurrentDownloads</span><span class="p">;</span>
-
-<span class="cm">/**
- * The timeout value (in seconds) for each download operation.
- * Defaults to 15.0.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSTimeInterval</span> <span class="n">downloadTimeout</span><span class="p">;</span>
-
-<span class="cm">/**
- * The minimum interval about progress percent during network downloading. Which means the next progress callback and current progress callback's progress percent difference should be larger or equal to this value. However, the final finish download progress callback does not get effected.
- * The value should be 0.0-1.0.
- * @note If you're using progressive decoding feature, this will also effect the image refresh rate.
- * @note This value may enhance the performance if you don't want progress callback too frequently.
- * Defaults to 0, which means each time we receive the new data from URLSession, we callback the progressBlock immediately.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="kt">double</span> <span class="n">minimumProgressInterval</span><span class="p">;</span>
-
-<span class="cm">/**
- * The custom session configuration in use by NSURLSession. If you don't provide one, we will use `defaultSessionConfiguration` instead.
- * Defatuls to nil.
- * @note This property does not support dynamic changes, means it's immutable after the downloader instance initialized.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURLSessionConfiguration</span> <span class="o">*</span><span class="n">sessionConfiguration</span><span class="p">;</span>
-
-<span class="cm">/**
- * Gets/Sets a subclass of `SDWebImageDownloaderOperation` as the default
- * `NSOperation` to be used each time SDWebImage constructs a request
- * operation to download an image.
- * Defaults to nil.
- * @note Passing `NSOperation&lt;SDWebImageDownloaderOperation&gt;` to set as default. Passing `nil` will revert to `SDWebImageDownloaderOperation`.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">Class</span> <span class="n">operationClass</span><span class="p">;</span>
-
-<span class="cm">/**
- * Changes download operations execution order.
- * Defaults to `SDWebImageDownloaderFIFOExecutionOrder`.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Enums/SDWebImageDownloaderExecutionOrder.html">SDWebImageDownloaderExecutionOrder</a></span> <span class="n">executionOrder</span><span class="p">;</span>
-
-<span class="cm">/**
- * Set the default URL credential to be set for request operations.
- * Defaults to nil.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURLCredential</span> <span class="o">*</span><span class="n">urlCredential</span><span class="p">;</span>
-
-<span class="cm">/**
- * Set username using for HTTP Basic authentication.
- * Defaults to nil.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">username</span><span class="p">;</span>
-
-<span class="cm">/**
- * Set password using for HTTP Basic authentication.
- * Defautls to nil.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">password</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDWebImageDownloaderConfig</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2201,7 +1729,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderConfig.h#L24-L93">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderConfig.h#L29-L98">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2223,112 +1751,16 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>The download operation class for SDWebImageDownloader.</p>
+
                         <a href="Classes/SDWebImageDownloaderOperation.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="Protocols/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a></span> <span class="p">:</span> <span class="nc">NSOperation</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a></span><span class="o">&gt;</span>
-
-<span class="cm">/**
- * The request used by the operation's task.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURLRequest</span> <span class="o">*</span><span class="n">request</span><span class="p">;</span>
-
-<span class="cm">/**
- * The response returned by the operation's task.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURLResponse</span> <span class="o">*</span><span class="n">response</span><span class="p">;</span>
-
-<span class="cm">/**
- * The operation's task
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURLSessionTask</span> <span class="o">*</span><span class="n">dataTask</span><span class="p">;</span>
-
-<span class="cm">/**
- * The credential used for authentication challenges in `-URLSession:task:didReceiveChallenge:completionHandler:`.
- *
- * This will be overridden by any shared credentials that exist for the username or password of the request URL, if present.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURLCredential</span> <span class="o">*</span><span class="n">credential</span><span class="p">;</span>
-
-<span class="cm">/**
- * The minimum interval about progress percent during network downloading. Which means the next progress callback and current progress callback's progress percent difference should be larger or equal to this value. However, the final finish download progress callback does not get effected.
- * The value should be 0.0-1.0.
- * @note If you're using progressive decoding feature, this will also effect the image refresh rate.
- * @note This value may enhance the performance if you don't want progress callback too frequently.
- * Defaults to 0, which means each time we receive the new data from URLSession, we callback the progressBlock immediately.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">double</span> <span class="n">minimumProgressInterval</span><span class="p">;</span>
-
-<span class="cm">/**
- * The options for the receiver.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="Enums/SDWebImageDownloaderOptions.html">SDWebImageDownloaderOptions</a></span> <span class="n">options</span><span class="p">;</span>
-
-<span class="cm">/**
- * The context for the receiver.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="Type Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></span> <span class="o">*</span><span class="n">context</span><span class="p">;</span>
-
-<span class="cm">/**
- *  Initializes a `SDWebImageDownloaderOperation` object
- *
- *  @see SDWebImageDownloaderOperation
- *
- *  @param request        the URL request
- *  @param session        the URL session in which this operation will run
- *  @param options        downloader options
- *
- *  @return the initialized instance
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithRequest</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURLRequest</span> <span class="o">*</span><span class="p">)</span><span class="nv">request</span>
-                              <span class="nf">inSession</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURLSession</span> <span class="o">*</span><span class="p">)</span><span class="nv">session</span>
-                                <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="Enums/SDWebImageDownloaderOptions.html">SDWebImageDownloaderOptions</a></span><span class="p">)</span><span class="nv">options</span><span class="p">;</span>
-
-<span class="cm">/**
- *  Initializes a `SDWebImageDownloaderOperation` object
- *
- *  @see SDWebImageDownloaderOperation
- *
- *  @param request        the URL request
- *  @param session        the URL session in which this operation will run
- *  @param options        downloader options
- *  @param context        A context contains different options to perform specify changes or processes, see `SDWebImageContextOption`. This hold the extra objects which `options` enum can not hold.
- *
- *  @return the initialized instance
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithRequest</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURLRequest</span> <span class="o">*</span><span class="p">)</span><span class="nv">request</span>
-                              <span class="nf">inSession</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURLSession</span> <span class="o">*</span><span class="p">)</span><span class="nv">session</span>
-                                <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="Enums/SDWebImageDownloaderOptions.html">SDWebImageDownloaderOptions</a></span><span class="p">)</span><span class="nv">options</span>
-                                <span class="nf">context</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="Type Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">context</span> <span class="n">NS_DESIGNATED_INITIALIZER</span><span class="p">;</span>
-
-<span class="cm">/**
- *  Adds handlers for progress and completion. Returns a tokent that can be passed to -cancel: to cancel this set of
- *  callbacks.
- *
- *  @param progressBlock  the block executed when a new chunk of data arrives.
- *                        @note the progress block is executed on a background queue
- *  @param completedBlock the block executed when the download is done.
- *                        @note the completed block is executed on the main queue for success. If errors are found, there is a chance the block will be executed on a background queue
- *
- *  @return the token to use to cancel this set of handlers
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">id</span><span class="p">)</span><span class="nf">addHandlersForProgress</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="Type Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderProgressBlock">SDWebImageDownloaderProgressBlock</a></span><span class="p">)</span><span class="nv">progressBlock</span>
-                            <span class="nf">completed</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="Type Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderCompletedBlock">SDWebImageDownloaderCompletedBlock</a></span><span class="p">)</span><span class="nv">completedBlock</span><span class="p">;</span>
-
-<span class="cm">/**
- *  Cancels a set of callbacks. Once all callbacks are canceled, the operation is cancelled.
- *
- *  @param token the token representing a set of callbacks to cancel
- *
- *  @return YES if the operation was stopped because this was the last token to be canceled. NO otherwise.
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">cancel</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">id</span><span class="p">)</span><span class="nv">token</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="Protocols/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a></span>
+    <span class="p">:</span> <span class="nc">NSOperation</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2338,7 +1770,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderOperation.h#L45-L143">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderOperation.h#L48-L146">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2360,19 +1792,16 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>A downloader request modifier class with block.</p>
+
                         <a href="Classes/SDWebImageDownloaderRequestModifier.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="Protocols/SDWebImageDownloaderRequestModifier.html">SDWebImageDownloaderRequestModifier</a></span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageDownloaderRequestModifier.html">SDWebImageDownloaderRequestModifier</a></span><span class="o">&gt;</span>
-
-<span class="o">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">initWithBlock</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="Type Definitions.html#/c:SDWebImageDownloaderRequestModifier.h@T@SDWebImageDownloaderRequestModifierBlock">SDWebImageDownloaderRequestModifierBlock</a></span><span class="p">)</span><span class="n">block</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">requestModifierWithBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="Type Definitions.html#/c:SDWebImageDownloaderRequestModifier.h@T@SDWebImageDownloaderRequestModifierBlock">SDWebImageDownloaderRequestModifierBlock</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc"><a href="Protocols/SDWebImageDownloaderRequestModifier.html">SDWebImageDownloaderRequestModifier</a></span>
+    <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageDownloaderRequestModifier.html">SDWebImageDownloaderRequestModifier</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2382,7 +1811,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderRequestModifier.h#L21-L26">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderRequestModifier.h#L27-L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2411,22 +1840,17 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Activity indicator class.
+for UIKit(macOS), it use a <code>UIActivityIndicatorView</code>.
+for AppKit(macOS), it use a <code>NSProgressIndicator</code> with the spinning style.</p>
+
                         <a href="Classes/SDWebImageActivityIndicator.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDWebImageActivityIndicator</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageIndicator.html">SDWebImageIndicator</a></span><span class="o">&gt;</span>
-
-<span class="cp">#if SD_UIKIT
-</span><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">UIActivityIndicatorView</span> <span class="o">*</span><span class="n">indicatorView</span><span class="p">;</span>
-<span class="cp">#else
-</span><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSProgressIndicator</span> <span class="o">*</span><span class="n">indicatorView</span><span class="p">;</span>
-<span class="cp">#endif
-</span>
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDWebImageActivityIndicator</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageIndicator.html">SDWebImageIndicator</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2436,7 +1860,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageIndicator.h#L48-L56">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageIndicator.h#L54-L62">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2465,22 +1889,17 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Progress indicator class.
+for UIKit(macOS), it use a <code>UIProgressView</code>.
+for AppKit(macOS), it use a <code>NSProgressIndicator</code> with the bar style.</p>
+
                         <a href="Classes/SDWebImageProgressIndicator.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDWebImageProgressIndicator</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageIndicator.html">SDWebImageIndicator</a></span><span class="o">&gt;</span>
-
-<span class="cp">#if SD_UIKIT
-</span><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">UIProgressView</span> <span class="o">*</span><span class="n">indicatorView</span><span class="p">;</span>
-<span class="cp">#else
-</span><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSProgressIndicator</span> <span class="o">*</span><span class="n">indicatorView</span><span class="p">;</span>
-<span class="cp">#endif
-</span>
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDWebImageProgressIndicator</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageIndicator.html">SDWebImageIndicator</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2490,7 +1909,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageIndicator.h#L77-L85">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageIndicator.h#L87-L95">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2512,31 +1931,15 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>A combined operation representing the cache and loader operation. You can use it to cancel the load process.</p>
+
                         <a href="Classes/SDWebImageCombinedOperation.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDWebImageCombinedOperation</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageOperation.html">SDWebImageOperation</a></span><span class="o">&gt;</span>
-
-<span class="cm">/**
- Cancel the current operation, including cache and loader process
- */</span>
-<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">cancel</span><span class="p">;</span>
-
-<span class="cm">/**
- The cache operation from the image cache query
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageOperation.html">SDWebImageOperation</a></span><span class="o">&gt;</span> <span class="n">cacheOperation</span><span class="p">;</span>
-
-<span class="cm">/**
- The loader operation from the image loader (such as download operation)
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageOperation.html">SDWebImageOperation</a></span><span class="o">&gt;</span> <span class="n">loaderOperation</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDWebImageCombinedOperation</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageOperation.html">SDWebImageOperation</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2546,7 +1949,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L22-L39">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageManager.h#L24-L41">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2572,18 +1975,22 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
 <li>a UIView.
 *</li>
 <li>Here is a simple example of how to use SDWebImageManager:
-*
-<code>
-SDWebImageManager *manager = [SDWebImageManager sharedManager];
+*</li>
+<li>@code</li>
+</ul>
+
+<p>SDWebImageManager *manager = [SDWebImageManager sharedManager];
 [manager loadImageWithURL:imageURL
-              options:0
-             progress:nil
-            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-                if (image) {
-                    // do something with image
-                }
-            }];
-</code></li>
+                  options:0
+                 progress:nil
+                completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                    if (image) {
+                        // do something with image
+                    }
+                }];</p>
+
+<ul>
+<li>@endcode</li>
 </ul>
 
                         <a href="Classes/SDWebImageManager.html" class="slightly-smaller">See more</a>
@@ -2602,7 +2009,7 @@ SDWebImageManager *manager = [SDWebImageManager sharedManager];
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageManager.h#L90-L235">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageManager.h#L97-L242">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2624,26 +2031,15 @@ SDWebImageManager *manager = [SDWebImageManager sharedManager];
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>A token represents a list of URLs, can be used to cancel the download.</p>
+
                         <a href="Classes/SDWebImagePrefetchToken.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDWebImagePrefetchToken</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageOperation.html">SDWebImageOperation</a></span><span class="o">&gt;</span>
-
-<span class="cm">/**
- * Cancel the current prefetching.
- */</span>
-<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">cancel</span><span class="p">;</span>
-
-<span class="cm">/**
- list of URLs of current prefetching.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSURL</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">urls</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDWebImagePrefetchToken</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageOperation.html">SDWebImageOperation</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2653,7 +2049,7 @@ SDWebImageManager *manager = [SDWebImageManager sharedManager];
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImagePrefetcher.h#L14-L26">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImagePrefetcher.h#L17-L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2689,7 +2085,7 @@ SDWebImageManager *manager = [SDWebImageManager sharedManager];
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImagePrefetcher.h#L58-L137">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImagePrefetcher.h#L64-L143">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2711,45 +2107,22 @@ SDWebImageManager *manager = [SDWebImageManager sharedManager];
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>This class is used to provide a transition animation after the view category load image finished. Use this on <code>sd_imageTransition</code> in UIView+WebCache.h
+for UIKit(iOS &amp; tvOS), we use <code>+[UIView transitionWithView:duration:options:animations:completion]</code> for transition animation.
+for AppKit(macOS), we use <code>+[NSAnimationContext runAnimationGroup:completionHandler:]</code> for transition animation. You can call <code>+[NSAnimationContext currentContext]</code> to grab the context during animations block.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    These transition are provided for basic usage. If you need complicated animation, consider to directly use Core Animation or use <code>SDWebImageAvoidAutoSetImage</code> and implement your own after image load finished.
+
+</div>
+
                         <a href="Classes/SDWebImageTransition.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDWebImageTransition</span> <span class="p">:</span> <span class="nc">NSObject</span>
-
-<span class="cm">/**
- By default, we set the image to the view at the beginning of the animtions. You can disable this and provide custom set image process
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">avoidAutoSetImage</span><span class="p">;</span>
-<span class="cm">/**
- The duration of the transition animation, measured in seconds. Defaults to 0.5.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSTimeInterval</span> <span class="n">duration</span><span class="p">;</span>
-<span class="cm">/**
- The timing function used for all animations within this transition animation (macOS).
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">CAMediaTimingFunction</span> <span class="o">*</span><span class="n">timingFunction</span> <span class="n">API_UNAVAILABLE</span><span class="p">(</span><span class="n">ios</span><span class="p">,</span> <span class="n">tvos</span><span class="p">,</span> <span class="n">watchos</span><span class="p">);</span>
-<span class="cm">/**
- A mask of options indicating how you want to perform the animations.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Type Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageAnimationOptions">SDWebImageAnimationOptions</a></span> <span class="n">animationOptions</span><span class="p">;</span>
-<span class="cm">/**
- A block object to be executed before the animation sequence starts.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="Type Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionPreparesBlock">SDWebImageTransitionPreparesBlock</a></span> <span class="n">prepares</span><span class="p">;</span>
-<span class="cm">/**
- A block object that contains the changes you want to make to the specified view.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="Type Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionAnimationsBlock">SDWebImageTransitionAnimationsBlock</a></span> <span class="n">animations</span><span class="p">;</span>
-<span class="cm">/**
- A block object to be executed when the animation sequence ends.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="Type Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionCompletionBlock">SDWebImageTransitionCompletionBlock</a></span> <span class="n">completion</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDWebImageTransition</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2759,7 +2132,7 @@ SDWebImageManager *manager = [SDWebImageManager sharedManager];
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageTransition.h#L31-L62">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageTransition.h#L32-L63">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2769,8 +2142,8 @@ SDWebImageManager *manager = [SDWebImageManager sharedManager];
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

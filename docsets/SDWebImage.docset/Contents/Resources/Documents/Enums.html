@@ -14,8 +14,8 @@
     <a title="Enumerations  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p><a href="index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -555,46 +555,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Image Cache Options</p>
+
                         <a href="Enums/SDImageCacheOptions.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">NS_OPTIONS</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">SDImageCacheOptions</span><span class="p">)</span> <span class="p">{</span>
-    <span class="cm">/**
-     * By default, we do not query image data when the image is already cached in memory. This mask can force to query image data at the same time. However, this query is asynchronously unless you specify `SDImageCacheQueryMemoryDataSync`
-     */</span>
-    <span class="n">SDImageCacheQueryMemoryData</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="cm">/**
-     * By default, when you only specify `SDImageCacheQueryMemoryData`, we query the memory image data asynchronously. Combined this mask as well to query the memory image data synchronously.
-     */</span>
-    <span class="n">SDImageCacheQueryMemoryDataSync</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="cm">/**
-     * By default, when the memory cache miss, we query the disk cache asynchronously. This mask can force to query disk cache (when memory cache miss) synchronously.
-     @note These 3 query options can be combined together. For the full list about these masks combination, see wiki page.
-     */</span>
-    <span class="n">SDImageCacheQueryDiskDataSync</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span><span class="p">,</span>
-    <span class="cm">/**
-     * By default, images are decoded respecting their original size. On iOS, this flag will scale down the
-     * images to a size compatible with the constrained memory of devices.
-     */</span>
-    <span class="n">SDImageCacheScaleDownLargeImages</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span><span class="p">,</span>
-    <span class="cm">/**
-     * By default, we will decode the image in the background during cache query and download from the network. This can help to improve performance because when rendering image on the screen, it need to be firstly decoded. But this happen on the main queue by Core Animation.
-     * However, this process may increase the memory usage as well. If you are experiencing a issue due to excessive memory consumption, This flag can prevent decode the image.
-     */</span>
-    <span class="n">SDImageCacheAvoidDecodeImage</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">,</span>
-    <span class="cm">/**
-     * By default, we decode the animated image. This flag can force decode the first frame only and produece the static image.
-     */</span>
-    <span class="n">SDImageCacheDecodeFirstFrameOnly</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">5</span><span class="p">,</span>
-    <span class="cm">/**
-     * By default, for `SDAnimatedImage`, we decode the animated image frame during rendering to reduce memory usage. This flag actually trigger `preloadAllAnimatedImageFrames = YES` after image load from disk cache
-     */</span>
-    <span class="n">SDImageCachePreloadAllFrames</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">6</span>
-<span class="p">}</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">SDImageCacheOptions</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -604,7 +573,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCache.h#L15-L47">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCache.h#L16-L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -626,23 +595,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Image Cache Expire Type</p>
+
                         <a href="Enums/SDImageCacheConfigExpireType.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">SDImageCacheConfigExpireType</span><span class="p">)</span> <span class="p">{</span>
-    <span class="cm">/**
-     * When the image is accessed it will update this value
-     */</span>
-    <span class="n">SDImageCacheConfigExpireTypeAccessDate</span><span class="p">,</span>
-    <span class="cm">/**
-     * The image was obtained from the disk cache (Default)
-     */</span>
-    <span class="n">SDImageCacheConfigExpireTypeModificationDate</span>
-<span class="p">}</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">SDImageCacheConfigExpireType</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -652,7 +613,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCacheConfig.h#L12-L21">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCacheConfig.h#L13-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -674,35 +635,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Image Cache Type</p>
+
                         <a href="Enums/SDImageCacheType.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">,</span> <span class="n">SDImageCacheType</span><span class="p">)</span> <span class="p">{</span>
-    <span class="cm">/**
-     * For query and contains op in response, means the image isn't available in the image cache
-     * For op in request, this type is not available and take no effect.
-     */</span>
-    <span class="n">SDImageCacheTypeNone</span><span class="p">,</span>
-    <span class="cm">/**
-     * For query and contains op in response, means the image was obtained from the disk cache.
-     * For op in request, means process only disk cache.
-     */</span>
-    <span class="n">SDImageCacheTypeDisk</span><span class="p">,</span>
-    <span class="cm">/**
-     * For query and contains op in response, means the image was obtained from the memory cache.
-     * For op in request, means process only memory cache.
-     */</span>
-    <span class="n">SDImageCacheTypeMemory</span><span class="p">,</span>
-    <span class="cm">/**
-     * For query and contains op in response, this type is not available and take no effect.
-     * For op in request, means process both memory cache and disk cache.
-     */</span>
-    <span class="n">SDImageCacheTypeAll</span>
-<span class="p">}</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">SDImageCacheType</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -712,7 +653,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCacheDefine.h#L14-L35">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCacheDefine.h#L15-L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -734,19 +675,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Policy for cache operation</p>
+
                         <a href="Enums/SDImageCachesManagerOperationPolicy.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">SDImageCachesManagerOperationPolicy</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">SDImageCachesManagerOperationPolicySerial</span><span class="p">,</span> <span class="c1">// process all caches serially (from the highest priority to the lowest priority cache by order)</span>
-    <span class="n">SDImageCachesManagerOperationPolicyConcurrent</span><span class="p">,</span> <span class="c1">// process all caches concurrently</span>
-    <span class="n">SDImageCachesManagerOperationPolicyHighestOnly</span><span class="p">,</span> <span class="c1">// process the highest priority cache only</span>
-    <span class="n">SDImageCachesManagerOperationPolicyLowestOnly</span> <span class="c1">// process the lowest priority cache only</span>
-<span class="p">}</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">SDImageCachesManagerOperationPolicy</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -756,7 +693,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCachesManager.h#L12-L17">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCachesManager.h#L13-L18">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -785,142 +722,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>WebCache options</p>
+
                         <a href="Enums/SDWebImageOptions.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">NS_OPTIONS</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">SDWebImageOptions</span><span class="p">)</span> <span class="p">{</span>
-    <span class="cm">/**
-     * By default, when a URL fail to be downloaded, the URL is blacklisted so the library won't keep trying.
-     * This flag disable this blacklisting.
-     */</span>
-    <span class="n">SDWebImageRetryFailed</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, image downloads are started during UI interactions, this flags disable this feature,
-     * leading to delayed download on UIScrollView deceleration for instance.
-     */</span>
-    <span class="n">SDWebImageLowPriority</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * This flag enables progressive download, the image is displayed progressively during download as a browser would do.
-     * By default, the image is only displayed once completely downloaded.
-     */</span>
-    <span class="n">SDWebImageProgressiveLoad</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * Even if the image is cached, respect the HTTP response cache control, and refresh the image from remote location if needed.
-     * The disk caching will be handled by NSURLCache instead of SDWebImage leading to slight performance degradation.
-     * This option helps deal with images changing behind the same request URL, e.g. Facebook graph api profile pics.
-     * If a cached image is refreshed, the completion block is called once with the cached image and again with the final image.
-     *
-     * Use this flag only if you can't make your URLs static with embedded cache busting parameter.
-     */</span>
-    <span class="n">SDWebImageRefreshCached</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * In iOS 4+, continue the download of the image if the app goes to background. This is achieved by asking the system for
-     * extra time in background to let the request finish. If the background task expires the operation will be cancelled.
-     */</span>
-    <span class="n">SDWebImageContinueInBackground</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * Handles cookies stored in NSHTTPCookieStore by setting
-     * NSMutableURLRequest.HTTPShouldHandleCookies = YES;
-     */</span>
-    <span class="n">SDWebImageHandleCookies</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">5</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * Enable to allow untrusted SSL certificates.
-     * Useful for testing purposes. Use with caution in production.
-     */</span>
-    <span class="n">SDWebImageAllowInvalidSSLCertificates</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">6</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, images are loaded in the order in which they were queued. This flag moves them to
-     * the front of the queue.
-     */</span>
-    <span class="n">SDWebImageHighPriority</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, placeholder images are loaded while the image is loading. This flag will delay the loading
-     * of the placeholder image until after the image has finished loading.
-     */</span>
-    <span class="n">SDWebImageDelayPlaceholder</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * We usually don't apply transform on animated images as most transformers could not manage animated images.
-     * Use this flag to transform them anyway.
-     */</span>
-    <span class="n">SDWebImageTransformAnimatedImage</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">9</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, image is added to the imageView after download. But in some cases, we want to
-     * have the hand before setting the image (apply a filter or add it with cross-fade animation for instance)
-     * Use this flag if you want to manually set the image in the completion when success
-     */</span>
-    <span class="n">SDWebImageAvoidAutoSetImage</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">10</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, images are decoded respecting their original size. On iOS, this flag will scale down the
-     * images to a size compatible with the constrained memory of devices.
-     * This flag take no effect if `SDWebImageAvoidDecodeImage` is set. And it will be ignored if `SDWebImageProgressiveLoad` is set.
-     */</span>
-    <span class="n">SDWebImageScaleDownLargeImages</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">11</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, we do not query image data when the image is already cached in memory. This mask can force to query image data at the same time. However, this query is asynchronously unless you specify `SDWebImageQueryMemoryDataSync`
-     */</span>
-    <span class="n">SDWebImageQueryMemoryData</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">12</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, when you only specify `SDWebImageQueryMemoryData`, we query the memory image data asynchronously. Combined this mask as well to query the memory image data synchronously.
-     * @note Query data synchronously is not recommend, unless you want to ensure the image is loaded in the same runloop to avoid flashing during cell reusing.
-     */</span>
-    <span class="n">SDWebImageQueryMemoryDataSync</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">13</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, when the memory cache miss, we query the disk cache asynchronously. This mask can force to query disk cache (when memory cache miss) synchronously.
-     * @note These 3 query options can be combined together. For the full list about these masks combination, see wiki page.
-     * @note Query data synchronously is not recommend, unless you want to ensure the image is loaded in the same runloop to avoid flashing during cell reusing.
-     */</span>
-    <span class="n">SDWebImageQueryDiskDataSync</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">14</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, when the cache missed, the image is load from the loader. This flag can prevent this to load from cache only.
-     */</span>
-    <span class="n">SDWebImageFromCacheOnly</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">15</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, we query the cache before the image is load from the loader. This flag can prevent this to load from loader only.
-     */</span>
-    <span class="n">SDWebImageFromLoaderOnly</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, when you use `SDWebImageTransition` to do some view transition after the image load finished, this transition is only applied for image download from the network. This mask can force to apply view transition for memory and disk cache as well.
-     */</span>
-    <span class="n">SDWebImageForceTransition</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">17</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, we will decode the image in the background during cache query and download from the network. This can help to improve performance because when rendering image on the screen, it need to be firstly decoded. But this happen on the main queue by Core Animation.
-     * However, this process may increase the memory usage as well. If you are experiencing a issue due to excessive memory consumption, This flag can prevent decode the image.
-     */</span>
-    <span class="n">SDWebImageAvoidDecodeImage</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">18</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, we decode the animated image. This flag can force decode the first frame only and produece the static image.
-     */</span>
-    <span class="n">SDWebImageDecodeFirstFrameOnly</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">19</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, for `SDAnimatedImage`, we decode the animated image frame during rendering to reduce memory usage. However, you can specify to preload all frames into memory to reduce CPU usage when the animated image is shared by lots of imageViews.
-     * This will actually trigger `preloadAllAnimatedImageFrames` in the background queue(Disk Cache &amp; Download only).
-     */</span>
-    <span class="n">SDWebImagePreloadAllFrames</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">20</span>
-<span class="p">}</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">SDWebImageOptions</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -930,7 +740,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDefine.h#L51-L179">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDefine.h#L52-L180">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -952,83 +762,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Downloader options</p>
+
                         <a href="Enums/SDWebImageDownloaderOptions.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">NS_OPTIONS</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">SDWebImageDownloaderOptions</span><span class="p">)</span> <span class="p">{</span>
-    <span class="cm">/**
-     * Put the download in the low queue priority and task priority.
-     */</span>
-    <span class="n">SDWebImageDownloaderLowPriority</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * This flag enables progressive download, the image is displayed progressively during download as a browser would do.
-     */</span>
-    <span class="n">SDWebImageDownloaderProgressiveLoad</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">,</span>
-
-    <span class="cm">/**
-     * By default, request prevent the use of NSURLCache. With this flag, NSURLCache
-     * is used with default policies.
-     */</span>
-    <span class="n">SDWebImageDownloaderUseNSURLCache</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span><span class="p">,</span>
-
-    <span class="cm">/**
-     * Call completion block with nil image/imageData if the image was read from NSURLCache
-     * And the error code is `SDWebImageErrorCacheNotModified`
-     * This flag should be combined with `SDWebImageDownloaderUseNSURLCache`.
-     */</span>
-    <span class="n">SDWebImageDownloaderIgnoreCachedResponse</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * In iOS 4+, continue the download of the image if the app goes to background. This is achieved by asking the system for
-     * extra time in background to let the request finish. If the background task expires the operation will be cancelled.
-     */</span>
-    <span class="n">SDWebImageDownloaderContinueInBackground</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">,</span>
-
-    <span class="cm">/**
-     * Handles cookies stored in NSHTTPCookieStore by setting 
-     * NSMutableURLRequest.HTTPShouldHandleCookies = YES;
-     */</span>
-    <span class="n">SDWebImageDownloaderHandleCookies</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">5</span><span class="p">,</span>
-
-    <span class="cm">/**
-     * Enable to allow untrusted SSL certificates.
-     * Useful for testing purposes. Use with caution in production.
-     */</span>
-    <span class="n">SDWebImageDownloaderAllowInvalidSSLCertificates</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">6</span><span class="p">,</span>
-
-    <span class="cm">/**
-     * Put the download in the high queue priority and task priority.
-     */</span>
-    <span class="n">SDWebImageDownloaderHighPriority</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, images are decoded respecting their original size. On iOS, this flag will scale down the
-     * images to a size compatible with the constrained memory of devices.
-     * This flag take no effect if `SDWebImageDownloaderAvoidDecodeImage` is set. And it will be ignored if `SDWebImageDownloaderProgressiveLoad` is set.
-     */</span>
-    <span class="n">SDWebImageDownloaderScaleDownLargeImages</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, we will decode the image in the background during cache query and download from the network. This can help to improve performance because when rendering image on the screen, it need to be firstly decoded. But this happen on the main queue by Core Animation.
-     * However, this process may increase the memory usage as well. If you are experiencing a issue due to excessive memory consumption, This flag can prevent decode the image.
-     */</span>
-    <span class="n">SDWebImageDownloaderAvoidDecodeImage</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">9</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, we decode the animated image. This flag can force decode the first frame only and produece the static image.
-     */</span>
-    <span class="n">SDWebImageDownloaderDecodeFirstFrameOnly</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">10</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * By default, for `SDAnimatedImage`, we decode the animated image frame during rendering to reduce memory usage. This flag actually trigger `preloadAllAnimatedImageFrames = YES` after image load from network
-     */</span>
-    <span class="n">SDWebImageDownloaderPreloadAllFrames</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">11</span>
-<span class="p">}</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">SDWebImageDownloaderOptions</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1038,7 +780,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloader.h#L17-L86">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloader.h#L18-L87">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1060,24 +802,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Operation execution order</p>
+
                         <a href="Enums/SDWebImageDownloaderExecutionOrder.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">,</span> <span class="n">SDWebImageDownloaderExecutionOrder</span><span class="p">)</span> <span class="p">{</span>
-    <span class="cm">/**
-     * Default value. All download operations will execute in queue style (first-in-first-out).
-     */</span>
-    <span class="n">SDWebImageDownloaderFIFOExecutionOrder</span><span class="p">,</span>
-    
-    <span class="cm">/**
-     * All download operations will execute in stack style (last-in-first-out).
-     */</span>
-    <span class="n">SDWebImageDownloaderLIFOExecutionOrder</span>
-<span class="p">}</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">SDWebImageDownloaderExecutionOrder</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1087,7 +820,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageDownloaderConfig.h#L12-L22">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageDownloaderConfig.h#L13-L23">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1109,20 +842,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>SDWebImage error domain and codes</p>
+
                         <a href="Enums/SDWebImageError.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">NS_ERROR_ENUM</span><span class="p">(</span><span class="n"><a href="Constants.html#/c:@SDWebImageErrorDomain">SDWebImageErrorDomain</a></span><span class="p">,</span> <span class="n">SDWebImageError</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">SDWebImageErrorInvalidURL</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="c1">// The URL is invalid, such as nil URL or corrupted URL</span>
-    <span class="n">SDWebImageErrorBadImageData</span> <span class="o">=</span> <span class="mi">1001</span><span class="p">,</span> <span class="c1">// The image data can not be decoded to image, or the image data is empty</span>
-    <span class="n">SDWebImageErrorCacheNotModified</span> <span class="o">=</span> <span class="mi">1002</span><span class="p">,</span> <span class="c1">// The remote location specify that the cached image is not modified, such as the HTTP response 304 code. It's useful for `SDWebImageRefreshCached`</span>
-    <span class="n">SDWebImageErrorInvalidDownloadOperation</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">,</span> <span class="c1">// The image download operation is invalid, such as nil operation or unexpected error occur when operation initialized</span>
-    <span class="n">SDWebImageErrorInvalidDownloadStatusCode</span> <span class="o">=</span> <span class="mi">2001</span><span class="p">,</span> <span class="c1">// The image downloda response a invalid status code. You can check the status code in error's userInfo under `SDWebImageErrorDownloadStatusCodeKey`</span>
-<span class="p">}</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">SDWebImageError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1132,7 +860,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageError.h#L16-L22">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageError.h#L18-L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1175,7 +903,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/UIImage+Transform.h#L11-L15">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/UIImage+Transform.h#L11-L15">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1185,8 +913,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

@@ -14,8 +14,8 @@
     <a title="SDImageFrame Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p><a href="../index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -538,33 +538,17 @@
             <h1>SDImageFrame</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageFrame</span> <span class="p">:</span> <span class="nc">NSObject</span>
-
-<span class="c1">// This class is used for creating animated images via `animatedImageWithFrames` in `SDImageCoderHelper`. Attention if you need to specify animated images loop count, use `sd_imageLoopCount` property in `UIImage+Metadata.h`.</span>
-
-<span class="cm">/**
- The image of current frame. You should not set an animated image.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">UIImage</span> <span class="o">*</span><span class="n">image</span><span class="p">;</span>
-<span class="cm">/**
- The duration of current frame to be displayed. The number is seconds but not milliseconds. You should not set this to zero.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSTimeInterval</span> <span class="n">duration</span><span class="p">;</span>
-
-<span class="cm">/**
- Create a frame instance with specify image and duration
-
- @param image current frame's image
- @param duration current frame's duration
- @return frame instance
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">frameWithImage</span><span class="p">:(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">image</span> <span class="nf">duration</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">duration</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageFrame</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>This class is used for creating animated images via <code>animatedImageWithFrames</code> in <code><a href="../Classes/SDImageCoderHelper.html">SDImageCoderHelper</a></code>.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    If you need to specify animated images loop count, use <code>sd_imageLoopCount</code> property in <code>UIImage+Metadata.h</code>.
+
+</div>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -599,7 +583,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageFrame.h#L19">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageFrame.h#L21">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -634,7 +618,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageFrame.h#L23">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageFrame.h#L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -705,7 +689,7 @@
                         <p>frame instance</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageFrame.h#L32">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageFrame.h#L34">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -715,8 +699,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

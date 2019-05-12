@@ -14,8 +14,8 @@
     <a title="SDImageLoader Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p><a href="../index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -538,51 +538,19 @@
             <h1>SDImageLoader</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDImageLoader</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span>
-
-<span class="cm">/**
- Whether current image loader supports to load the provide image URL.
- This will be checked everytime a new image request come for loader. If this return NO, we will mark this image load as failed. If return YES, we will start to call `requestImageWithURL:options:context:progress:completed:`.
-
- @param url The image URL to be loaded.
- @return YES to continue download, NO to stop download.
- */</span>
-<span class="o">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">canRequestImageForURL</span><span class="o">:</span><span class="p">(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="n">url</span><span class="p">;</span>
-
-<span class="cm">/**
- Load the image and image data with the given URL and return the image data. You're responsible for producing the image instance.
-
- @param url The URL represent the image. Note this may not be a HTTP URL
- @param options A mask to specify options to use for this request
- @param context A context contains different options to perform specify changes or processes, see `SDWebImageContextOption`. This hold the extra objects which `options` enum can not hold.
- @param progressBlock A block called while image is downloading
- *                    @note the progress block is executed on a background queue
- @param completedBlock A block called when operation has been completed.
- @return An operation which allow the user to cancel the current request.
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageOperation.html">SDWebImageOperation</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nf">requestImageWithURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
-                                                <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span><span class="p">)</span><span class="nv">options</span>
-                                                <span class="nf">context</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">context</span>
-                                               <span class="nf">progress</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderProgressBlock">SDImageLoaderProgressBlock</a></span><span class="p">)</span><span class="nv">progressBlock</span>
-                                              <span class="nf">completed</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderCompletedBlock">SDImageLoaderCompletedBlock</a></span><span class="p">)</span><span class="nv">completedBlock</span><span class="p">;</span>
-
-
-<span class="cm">/**
- Whether the error from image loader should be marked indded un-recoverable or not.
- If this return YES, failed URL which does not using `SDWebImageRetryFailed` will be blocked into black list. Else not.
-
- @param url The URL represent the image. Note this may not be a HTTP URL
- @param error The URL's loading error, from previous `requestImageWithURL:options:context:progress:completed:` completedBlock's error.
- @return Whether to block this url or not. Return YES to mark this URL as failed.
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">shouldBlockFailedURLWithURL</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
-                              <span class="nf">error</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDImageLoader</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>This is the protocol to specify custom image load process. You can create your own class to conform this protocol and use as a image loader to load image from network or any avaiable remote resources defined by yourself.
+If you want to implement custom loader for image download from network or local file, you just need to concentrate on image data download only. After the download finish, call <code><a href="../Functions.html#/c:@F@SDImageLoaderDecodeImageData">SDImageLoaderDecodeImageData</a></code> or <code><a href="../Functions.html#/c:@F@SDImageLoaderDecodeProgressiveImageData">SDImageLoaderDecodeProgressiveImageData</a></code> to use the built-in decoding process and produce image (Remember to call in the global queue). And finally callback the completion block.
+If you directlly get the image instance using some third-party SDKs, such as image directlly from Photos framework. You can process the image data and image instance by yourself without that built-in decoding process. And finally callback the completion block.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    It&rsquo;s your responsibility to load the image in the desired global queue(to avoid block main queue). We do not dispatch these method call in a global queue but just from the call queue (For <code><a href="../Classes/SDWebImageManager.html">SDWebImageManager</a></code>, it typically call from the main queue).
+
+</div>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -641,7 +609,7 @@ This will be checked everytime a new image request come for loader. If this retu
                         <p>YES to continue download, NO to stop download.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageLoader.h#L69">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageLoader.h#L70">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -756,7 +724,7 @@ This will be checked everytime a new image request come for loader. If this retu
                         <p>An operation which allow the user to cancel the current request.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageLoader.h#L82-L86">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageLoader.h#L83-L87">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -828,7 +796,7 @@ If this return YES, failed URL which does not using <code>SDWebImageRetryFailed<
                         <p>Whether to block this url or not. Return YES to mark this URL as failed.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageLoader.h#L97-L98">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageLoader.h#L98-L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -838,8 +806,8 @@ If this return YES, failed URL which does not using <code>SDWebImageRetryFailed<
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

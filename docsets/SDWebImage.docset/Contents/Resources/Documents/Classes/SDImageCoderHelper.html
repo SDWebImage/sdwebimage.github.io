@@ -14,8 +14,8 @@
     <a title="SDImageCoderHelper Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p><a href="../index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -538,105 +538,12 @@
             <h1>SDImageCoderHelper</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageCoderHelper</span> <span class="p">:</span> <span class="nc">NSObject</span>
-
-<span class="cm">/**
- Return an animated image with frames array.
- For UIKit, this will apply the patch and then create animated UIImage. The patch is because that `+[UIImage animatedImageWithImages:duration:]` just use the average of duration for each image. So it will not work if different frame has different duration. Therefore we repeat the specify frame for specify times to let it work.
- For AppKit, NSImage does not support animates other than GIF. This will try to encode the frames to GIF format and then create an animated NSImage for rendering. Attention the animated image may loss some detail if the input frames contain full alpha channel because GIF only supports 1 bit alpha channel. (For 1 pixel, either transparent or not)
-
- @param frames The frames array. If no frames or frames is empty, return nil
- @return A animated image for rendering on UIImageView(UIKit) or NSImageView(AppKit)
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">animatedImageWithFrames</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDImageFrame.html">SDImageFrame</a></span> <span class="o">*&gt;</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">frames</span><span class="p">;</span>
-
-<span class="cm">/**
- Return frames array from an animated image.
- For UIKit, this will unapply the patch for the description above and then create frames array. This will also work for normal animated UIImage.
- For AppKit, NSImage does not support animates other than GIF. This will try to decode the GIF imageRep and then create frames array.
-
- @param animatedImage A animated image. If it's not animated, return nil
- @return The frames array
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDImageFrame.html">SDImageFrame</a></span> <span class="o">*&gt;</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">framesFromAnimatedImage</span><span class="p">:(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">animatedImage</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">frames</span><span class="p">(</span><span class="n">from</span><span class="o">:</span><span class="p">));</span>
-
-<span class="cm">/**
- Return the shared device-dependent RGB color space. This follows The Get Rule.
- On iOS, it's created with deviceRGB (if available, use sRGB).
- On macOS, it's from the screen colorspace (if failed, use deviceRGB)
- Because it's shared, you should not retain or release this object.
- 
- @return The device-dependent RGB color space
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">CGColorSpaceRef</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">colorSpaceGetDeviceRGB</span> <span class="n">CF_RETURNS_NOT_RETAINED</span><span class="p">;</span>
-
-<span class="cm">/**
- Check whether CGImage contains alpha channel.
- 
- @param cgImage The CGImage
- @return Return YES if CGImage contains alpha channel, otherwise return NO
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">CGImageContainsAlpha</span><span class="p">:(</span><span class="n">_Nonnull</span> <span class="n">CGImageRef</span><span class="p">)</span><span class="nv">cgImage</span><span class="p">;</span>
-
-<span class="cm">/**
- Create a decoded CGImage by the provided CGImage. This follows The Create Rule and you are response to call release after usage.
- It will detect whether image contains alpha channel, then create a new bitmap context with the same size of image, and draw it. This can ensure that the image do not need extra decoding after been set to the imageView.
- @note This actually call `CGImageCreateDecoded:orientation:` with the Up orientation.
-
- @param cgImage The CGImage
- @return A new created decoded image
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">CGImageRef</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">CGImageCreateDecoded</span><span class="p">:(</span><span class="n">_Nonnull</span> <span class="n">CGImageRef</span><span class="p">)</span><span class="nv">cgImage</span> <span class="n">CF_RETURNS_RETAINED</span><span class="p">;</span>
-
-<span class="cm">/**
- Create a decoded CGImage by the provided CGImage and orientation. This follows The Create Rule and you are response to call release after usage.
- It will detect whether image contains alpha channel, then create a new bitmap context with the same size of image, and draw it. This can ensure that the image do not need extra decoding after been set to the imageView.
- 
- @param cgImage The CGImage
- @param orientation The EXIF image orientation.
- @return A new created decoded image
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">CGImageRef</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">CGImageCreateDecoded</span><span class="p">:(</span><span class="n">_Nonnull</span> <span class="n">CGImageRef</span><span class="p">)</span><span class="nv">cgImage</span> <span class="nf">orientation</span><span class="p">:(</span><span class="n">CGImagePropertyOrientation</span><span class="p">)</span><span class="nv">orientation</span> <span class="n">CF_RETURNS_RETAINED</span><span class="p">;</span>
-
-<span class="cm">/**
- Return the decoded image by the provided image. This one unlike `CGImageCreateDecoded:`, will not decode the image which contains alpha channel or animated image
- @param image The image to be decoded
- @return The decoded image
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">decodedImageWithImage</span><span class="p">:(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">image</span><span class="p">;</span>
-
-<span class="cm">/**
- Return the decoded and probably scaled down image by the provided image. If the image is large than the limit size, will try to scale down. Or just works as `decodedImageWithImage:`
-
- @param image The image to be decoded and scaled down
- @param bytes The limit bytes size. Provide 0 to use the build-in limit.
- @return The decoded and probably scaled down image
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">decodedAndScaledDownImageWithImage</span><span class="p">:(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">image</span> <span class="nf">limitBytes</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">bytes</span><span class="p">;</span>
-
-<span class="cp">#if SD_UIKIT || SD_WATCH
-</span><span class="cm">/**
- Convert an EXIF image orientation to an iOS one.
-
- @param exifOrientation EXIF orientation
- @return iOS orientation
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">UIImageOrientation</span><span class="p">)</span><span class="nf">imageOrientationFromEXIFOrientation</span><span class="p">:(</span><span class="n">CGImagePropertyOrientation</span><span class="p">)</span><span class="nv">exifOrientation</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">imageOrientation</span><span class="p">(</span><span class="n">from</span><span class="o">:</span><span class="p">));</span>
-
-<span class="cm">/**
- Convert an iOS orientation to an EXIF image orientation.
-
- @param imageOrientation iOS orientation
- @return EXIF orientation
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">CGImagePropertyOrientation</span><span class="p">)</span><span class="nf">exifOrientationFromImageOrientation</span><span class="p">:(</span><span class="n">UIImageOrientation</span><span class="p">)</span><span class="nv">imageOrientation</span><span class="p">;</span>
-<span class="cp">#endif
-</span>
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageCoderHelper</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>Provide some common helper methods for building the image decoder/encoder.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -697,7 +604,7 @@ For AppKit, NSImage does not support animates other than GIF. This will try to e
                         <p>A animated image for rendering on UIImageView(UIKit) or NSImageView(AppKit)</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCoderHelper.h#L23">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCoderHelper.h#L26">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -758,7 +665,7 @@ For AppKit, NSImage does not support animates other than GIF. This will try to d
                         <p>The frames array</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCoderHelper.h#L33">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCoderHelper.h#L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -800,7 +707,7 @@ Because it&rsquo;s shared, you should not retain or release this object.</p>
                         <p>The device-dependent RGB color space</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCoderHelper.h#L43">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCoderHelper.h#L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -858,7 +765,7 @@ Because it&rsquo;s shared, you should not retain or release this object.</p>
                         <p>Return YES if CGImage contains alpha channel, otherwise return NO</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCoderHelper.h#L51">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCoderHelper.h#L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -922,7 +829,7 @@ It will detect whether image contains alpha channel, then create a new bitmap co
                         <p>A new created decoded image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCoderHelper.h#L61">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCoderHelper.h#L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -995,7 +902,7 @@ It will detect whether image contains alpha channel, then create a new bitmap co
                         <p>A new created decoded image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCoderHelper.h#L71">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCoderHelper.h#L74">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1053,7 +960,7 @@ It will detect whether image contains alpha channel, then create a new bitmap co
                         <p>The decoded image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCoderHelper.h#L78">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCoderHelper.h#L81">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1125,7 +1032,7 @@ It will detect whether image contains alpha channel, then create a new bitmap co
                         <p>The decoded and probably scaled down image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCoderHelper.h#L87">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCoderHelper.h#L90">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1184,7 +1091,7 @@ It will detect whether image contains alpha channel, then create a new bitmap co
                         <p>iOS orientation</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCoderHelper.h#L96">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCoderHelper.h#L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1243,7 +1150,7 @@ It will detect whether image contains alpha channel, then create a new bitmap co
                         <p>EXIF orientation</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDImageCoderHelper.h#L104">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDImageCoderHelper.h#L107">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1253,8 +1160,8 @@ It will detect whether image contains alpha channel, then create a new bitmap co
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

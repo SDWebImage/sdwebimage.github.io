@@ -14,8 +14,8 @@
     <a title="SDWebImageTransition Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (67% documented)</p>
-        <p class="header-right"><a href="https://github.com/rs/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p><a href="../index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -538,42 +538,19 @@
             <h1>SDWebImageTransition</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDWebImageTransition</span> <span class="p">:</span> <span class="nc">NSObject</span>
-
-<span class="cm">/**
- By default, we set the image to the view at the beginning of the animtions. You can disable this and provide custom set image process
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">avoidAutoSetImage</span><span class="p">;</span>
-<span class="cm">/**
- The duration of the transition animation, measured in seconds. Defaults to 0.5.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSTimeInterval</span> <span class="n">duration</span><span class="p">;</span>
-<span class="cm">/**
- The timing function used for all animations within this transition animation (macOS).
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">CAMediaTimingFunction</span> <span class="o">*</span><span class="n">timingFunction</span> <span class="n">API_UNAVAILABLE</span><span class="p">(</span><span class="n">ios</span><span class="p">,</span> <span class="n">tvos</span><span class="p">,</span> <span class="n">watchos</span><span class="p">);</span>
-<span class="cm">/**
- A mask of options indicating how you want to perform the animations.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="../Type Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageAnimationOptions">SDWebImageAnimationOptions</a></span> <span class="n">animationOptions</span><span class="p">;</span>
-<span class="cm">/**
- A block object to be executed before the animation sequence starts.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Type Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionPreparesBlock">SDWebImageTransitionPreparesBlock</a></span> <span class="n">prepares</span><span class="p">;</span>
-<span class="cm">/**
- A block object that contains the changes you want to make to the specified view.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Type Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionAnimationsBlock">SDWebImageTransitionAnimationsBlock</a></span> <span class="n">animations</span><span class="p">;</span>
-<span class="cm">/**
- A block object to be executed when the animation sequence ends.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Type Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionCompletionBlock">SDWebImageTransitionCompletionBlock</a></span> <span class="n">completion</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDWebImageTransition</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>This class is used to provide a transition animation after the view category load image finished. Use this on <code>sd_imageTransition</code> in UIView+WebCache.h
+for UIKit(iOS &amp; tvOS), we use <code>+[UIView transitionWithView:duration:options:animations:completion]</code> for transition animation.
+for AppKit(macOS), we use <code>+[NSAnimationContext runAnimationGroup:completionHandler:]</code> for transition animation. You can call <code>+[NSAnimationContext currentContext]</code> to grab the context during animations block.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    These transition are provided for basic usage. If you need complicated animation, consider to directly use Core Animation or use <code>SDWebImageAvoidAutoSetImage</code> and implement your own after image load finished.
+
+</div>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -608,7 +585,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageTransition.h#L36">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageTransition.h#L37">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -643,7 +620,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageTransition.h#L40">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageTransition.h#L41">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -674,7 +651,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageTransition.h#L44">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageTransition.h#L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -710,7 +687,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageTransition.h#L48">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageTransition.h#L49">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -746,7 +723,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageTransition.h#L52">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageTransition.h#L53">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -782,7 +759,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageTransition.h#L56">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageTransition.h#L57">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -818,7 +795,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageTransition.h#L60">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageTransition.h#L61">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -865,7 +842,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageTransition.h#L71">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageTransition.h#L73">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -901,7 +878,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageTransition.h#L73">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageTransition.h#L75">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -937,7 +914,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageTransition.h#L75">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageTransition.h#L77">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -973,7 +950,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageTransition.h#L77">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageTransition.h#L79">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1009,7 +986,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageTransition.h#L79">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageTransition.h#L81">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1045,7 +1022,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageTransition.h#L81">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageTransition.h#L83">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1081,7 +1058,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.0/SDWebImage/SDWebImageTransition.h#L83">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.2/SDWebImage/SDWebImageTransition.h#L85">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1091,8 +1068,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-04-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
