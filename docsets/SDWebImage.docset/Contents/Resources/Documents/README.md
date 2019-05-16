@@ -15,6 +15,11 @@ The documentation is auto-generated using [Jazzy](https://github.com/realm/jazzy
 
 #### Generate the SDWebImage documentation
 
++ Clone both SDWebImage and this repo
++ Place them in the same folder
++ Go the SDWebImage folder
++ Run the following command (remember to update the version number)
+
 ```
 jazzy \
   --objc \
@@ -30,7 +35,4 @@ jazzy \
   --sdk iphonesimulator \
   --output ../sdwebimage.github.io
 ```
-
-(assuming SDWebImage and sdwebimage.github.io live in the same folder)
-
 
