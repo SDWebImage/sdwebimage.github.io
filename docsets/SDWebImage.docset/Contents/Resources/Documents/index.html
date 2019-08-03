@@ -13,7 +13,7 @@
     <a title="SDWebImage  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p><a href="index.html">SDWebImage 5.1.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -188,6 +188,12 @@
                 <a href="Classes/SDWebImageManager.html">SDWebImageManager</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/SDWebImageOptionsProcessor.html">SDWebImageOptionsProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageOptionsResult.html">SDWebImageOptionsResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/SDWebImagePrefetchToken.html">SDWebImagePrefetchToken</a>
               </li>
               <li class="nav-group-task">
@@ -266,6 +272,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextLoaderCachedImage">SDWebImageContextLoaderCachedImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a>
@@ -389,6 +398,9 @@
                 <a href="Protocols/SDWebImageOperation.html">SDWebImageOperation</a>
               </li>
               <li class="nav-group-task">
+                <a href="Protocols/SDWebImageOptionsProcessor.html">SDWebImageOptionsProcessor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Protocols/SDWebImagePrefetcherDelegate.html">SDWebImagePrefetcherDelegate</a>
               </li>
             </ul>
@@ -472,6 +484,9 @@
                 <a href="Type Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a>
               </li>
               <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:SDWebImageOptionsProcessor.h@T@SDWebImageOptionsProcessorBlock">SDWebImageOptionsProcessorBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Type Definitions.html#/c:SDWebImagePrefetcher.h@T@SDWebImagePrefetcherCompletionBlock">SDWebImagePrefetcherCompletionBlock</a>
               </li>
               <li class="nav-group-task">
@@ -544,6 +559,7 @@
 <a href="http://cocoadocs.org/docsets/SDWebImage/"><img src="http://img.shields.io/cocoapods/p/SDWebImage.svg?style=flat" alt="Pod Platform"></a>
 <a href="https://www.apache.org/licenses/LICENSE-2.0.html"><img src="http://img.shields.io/cocoapods/l/SDWebImage.svg?style=flat" alt="Pod License"></a>
 <a href="https://github.com/SDWebImage/SDWebImage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+<a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SwiftPM-Compatible-brightgreen.svg" alt="SwiftPM compatible"></a>
 <a href="https://codecov.io/gh/SDWebImage/SDWebImage"><img src="https://codecov.io/gh/SDWebImage/SDWebImage/branch/master/graph/badge.svg" alt="codecov"></a></p>
 
 <p>This library provides an async image downloader with cache support. For convenience, we added categories for UI elements like <code>UIImageView</code>, <code>UIButton</code>, <code>MKAnnotationView</code>.</p>
@@ -613,7 +629,7 @@ As such, we have moved/built new modules to <a href="https://github.com/SDWebIma
 <li>tvOS 9.0 or later</li>
 <li>watchOS 2.0 or later</li>
 <li>macOS 10.10 or later</li>
-<li>Xcode 9.0 or later</li>
+<li>Xcode 10.0 or later</li>
 </ul>
 <h4 id='backwards-compatibility' class='heading'>Backwards compatibility</h4>
 
@@ -681,12 +697,13 @@ This animated image solution is available for <code>iOS</code>/<code>tvOS</code>
 <p>In order to clean up things and make our core project do less things, we decided that the <code>FLAnimatedImage</code> integration does not belong here. From 5.0, this will still be available, but under a dedicated repo <a href="https://github.com/SDWebImage/SDWebImageFLPlugin">SDWebImageFLPlugin</a>.</p>
 <h2 id='installation' class='heading'>Installation</h2>
 
-<p>There are three ways to use SDWebImage in your project:</p>
+<p>There are four ways to use SDWebImage in your project:</p>
 
 <ul>
 <li>using CocoaPods</li>
 <li>using Carthage</li>
-<li>by cloning the project into your repository</li>
+<li>using Swift Package Manager</li>
+<li>manual install (build frameworks or embed Xcode Project)</li>
 </ul>
 <h3 id='installation-with-cocoapods' class='heading'>Installation with CocoaPods</h3>
 
@@ -735,12 +752,26 @@ If this is your first time using Carthage in the project, you&rsquo;ll need to g
 <blockquote>
 <p>NOTE: At this time, Carthage does not provide a way to build only specific repository subcomponents (or equivalent of CocoaPods&rsquo;s subspecs). All components and their dependencies will be built with the above command. However, you don&rsquo;t need to copy frameworks you aren&rsquo;t using into your project. For instance, if you aren&rsquo;t using <code>SDWebImageMapKit</code>, feel free to delete that framework from the Carthage Build directory after <code>carthage update</code> completes.</p>
 </blockquote>
-<h3 id='installation-by-cloning-the-repository' class='heading'>Installation by cloning the repository</h3>
-<div class="aside aside-see">
-    <p class="aside-title">See</p>
-    see <a href="https://raw.githubusercontent.com/SDWebImage/SDWebImage/master/Docs/ManualInstallation.md">Manual install</a>
+<h3 id='installation-with-swift-package-manager-xcode-11' class='heading'>Installation with Swift Package Manager (Xcode 11+)</h3>
 
-</div>
+<p><a href="https://swift.org/package-manager/">Swift Package Manager</a> (SwiftPM) is a tool for managing the distribution of Swift code as well as C-family dependency. From Xcode 11, SwiftPM got natively integrated with Xcode.</p>
+
+<p>SDWebImage support SwiftPM from version 5.1.0. To use SwiftPM, you should use Xcode 11 to open your project. Click <code>File</code> -&gt; <code>Swift Packages</code> -&gt; <code>Add Package Dependency</code>, enter <a href="https://github.com/SDWebImage/SDWebImage.git">SDWebImage repo&rsquo;s URL</a>. Or you can login Xcode with your GitHub account and just type <code>SDWebImage</code> to search.</p>
+
+<p>After select the package, you can choose the dependency type (tagged version, branch or commit). Then Xcode will setup all the stuff for you.</p>
+
+<p>If you&rsquo;re a framework author and use SDWebImage as a dependency, update your <code>Package.swift</code> file:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+    <span class="c1">// 5.1.0 ..&lt; 6.0.0</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/SDWebImage/SDWebImage.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"5.1.0"</span><span class="p">)</span>
+    <span class="p">],</span>
+    <span class="c1">// ...</span>
+<span class="p">)</span>
+</code></pre>
+<h3 id='manual-installation-guide' class='heading'>Manual Installation Guide</h3>
+
+<p>See more on <a href="https://github.com/SDWebImage/SDWebImage/wiki/Installation-Guide#manual-installation-guide">Manual install Guide</a></p>
 <h3 id='import-headers-in-your-source-files' class='heading'>Import headers in your source files</h3>
 
 <p>In the source files where you need to use the library, import the umbrella header file:</p>
@@ -800,8 +831,8 @@ community can help you solve it.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-16)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-08-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

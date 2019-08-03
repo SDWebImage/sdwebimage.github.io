@@ -14,7 +14,7 @@
     <a title="SDImageRoundCornerTransformer Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.1.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -189,6 +189,12 @@
                 <a href="../Classes/SDWebImageManager.html">SDWebImageManager</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/SDWebImageOptionsProcessor.html">SDWebImageOptionsProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageOptionsResult.html">SDWebImageOptionsResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/SDWebImagePrefetchToken.html">SDWebImagePrefetchToken</a>
               </li>
               <li class="nav-group-task">
@@ -267,6 +273,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextLoaderCachedImage">SDWebImageContextLoaderCachedImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a>
@@ -390,6 +399,9 @@
                 <a href="../Protocols/SDWebImageOperation.html">SDWebImageOperation</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageOptionsProcessor.html">SDWebImageOptionsProcessor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/SDWebImagePrefetcherDelegate.html">SDWebImagePrefetcherDelegate</a>
               </li>
             </ul>
@@ -471,6 +483,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Type Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:SDWebImageOptionsProcessor.h@T@SDWebImageOptionsProcessorBlock">SDWebImageOptionsProcessorBlock</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Type Definitions.html#/c:SDWebImagePrefetcher.h@T@SDWebImagePrefetcherCompletionBlock">SDWebImagePrefetcherCompletionBlock</a>
@@ -580,7 +595,7 @@ half the width or height.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.3/SDWebImage/SDImageTransformer.h#L80">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.1.0/SDWebImage/SDImageTransformer.h#L80">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -617,7 +632,7 @@ of the corners of the rectangle.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.3/SDWebImage/SDImageTransformer.h#L87">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.1.0/SDWebImage/SDImageTransformer.h#L87">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -654,7 +669,7 @@ or height.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.3/SDWebImage/SDImageTransformer.h#L94">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.1.0/SDWebImage/SDImageTransformer.h#L94">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -689,7 +704,7 @@ or height.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.3/SDWebImage/SDImageTransformer.h#L99">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.1.0/SDWebImage/SDImageTransformer.h#L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -722,7 +737,7 @@ or height.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.3/SDWebImage/SDImageTransformer.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.1.0/SDWebImage/SDImageTransformer.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -751,12 +766,12 @@ or height.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">radius</span> <span class="nv">cornerRadius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">corners</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:UIImage+Transform.h@T@SDRectCorner">SDRectCorner</a></span><span class="p">,</span> <span class="nv">borderWidth</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">borderColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">radius</span> <span class="nv">cornerRadius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">corners</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:UIImage+Transform.h@T@SDRectCorner">SDRectCorner</a></span><span class="p">,</span> <span class="nv">borderWidth</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">borderColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.0.3/SDWebImage/SDImageTransformer.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.1.0/SDWebImage/SDImageTransformer.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -766,8 +781,8 @@ or height.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-05-16)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-08-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
