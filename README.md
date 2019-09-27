@@ -19,14 +19,16 @@ The documentation is auto-generated using [Jazzy](https://github.com/realm/jazzy
 + Place them in the same folder
 + Go the SDWebImage folder
 + Run the following command (remember to update the version number)
++ Firstly, run `jazzy` command once, it will run `xcodebuild`, ignore the error output (Seems jazzy's issue)
++ Next, run the following command, remember to change the version string:
 
 ```
 jazzy \
   --objc \
   --author SDWebImage \
   --github_url https://github.com/SDWebImage/SDWebImage \
-  --github-file-prefix https://github.com/SDWebImage/SDWebImage/tree/5.0.0 \
-  --module-version 5.0.0 \
+  --github-file-prefix https://github.com/SDWebImage/SDWebImage/tree/5.2.0 \
+  --module-version 5.2.0 \
   --umbrella-header WebImage/SDWebImage.h \
   --documentation=Docs/\*.md \
   --undocumented-text "" \
