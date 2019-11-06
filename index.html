@@ -13,7 +13,7 @@
     <a title="SDWebImage  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImage 5.2.0 Docs</a> (81% documented)</p>
+        <p><a href="index.html">SDWebImage 5.3.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -90,6 +90,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Classes/SDAnimatedImage.html">SDAnimatedImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDAnimatedImagePlayer.html">SDAnimatedImagePlayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SDAnimatedImageView.html">SDAnimatedImageView</a>
@@ -185,10 +188,16 @@
                 <a href="Classes/SDWebImageDownloaderConfig.html">SDWebImageDownloaderConfig</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/SDWebImageDownloaderDecryptor.html">SDWebImageDownloaderDecryptor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SDWebImageDownloaderRequestModifier.html">SDWebImageDownloaderRequestModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageDownloaderResponseModifier.html">SDWebImageDownloaderResponseModifier</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SDWebImageManager.html">SDWebImageManager</a>
@@ -268,7 +277,13 @@
                 <a href="Constants.html#/c:@SDWebImageContextCustomManager">SDWebImageContextCustomManager</a>
               </li>
               <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextDownloadDecryptor">SDWebImageContextDownloadDecryptor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextDownloadRequestModifier">SDWebImageContextDownloadRequestModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextDownloadResponseModifier">SDWebImageContextDownloadResponseModifier</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextImageScaleFactor">SDWebImageContextImageScaleFactor</a>
@@ -389,10 +404,16 @@
                 <a href="Protocols/SDWebImageCacheSerializer.html">SDWebImageCacheSerializer</a>
               </li>
               <li class="nav-group-task">
+                <a href="Protocols/SDWebImageDownloaderDecryptor.html">SDWebImageDownloaderDecryptor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Protocols/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/SDWebImageDownloaderRequestModifier.html">SDWebImageDownloaderRequestModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDWebImageDownloaderResponseModifier.html">SDWebImageDownloaderResponseModifier</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/SDWebImageIndicator.html">SDWebImageIndicator</a>
@@ -478,10 +499,16 @@
                 <a href="Type%20Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderCompletedBlock">SDWebImageDownloaderCompletedBlock</a>
               </li>
               <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageDownloaderDecryptor.h@T@SDWebImageDownloaderDecryptorBlock">SDWebImageDownloaderDecryptorBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Type%20Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderProgressBlock">SDWebImageDownloaderProgressBlock</a>
               </li>
               <li class="nav-group-task">
                 <a href="Type%20Definitions.html#/c:SDWebImageDownloaderRequestModifier.h@T@SDWebImageDownloaderRequestModifierBlock">SDWebImageDownloaderRequestModifierBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageDownloaderResponseModifier.h@T@SDWebImageDownloaderResponseModifierBlock">SDWebImageDownloaderResponseModifierBlock</a>
               </li>
               <li class="nav-group-task">
                 <a href="Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageMutableContext">SDWebImageMutableContext</a>
@@ -577,28 +604,36 @@
 <li>[x] An asynchronous image downloader</li>
 <li>[x] An asynchronous memory + disk image caching with automatic cache expiration handling</li>
 <li>[x] A background image decompression</li>
-<li>[x] Improved <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#animated-image-50">support for animated images</a></li>
+<li>[x] Progressive image loading (including animated image, like GIF showing in Web browser)</li>
+<li>[x] <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#custom-coder-420">Extendable image coder</a> to support massive image format, like WebP</li>
+<li>[x] <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#animated-image-50">Full-stack solution for animated images</a> which keep a balance between CPU &amp;&amp; Memory</li>
 <li>[x] <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#transformer-50">Customizable and composable transformations</a> can be applied to the images right after download</li>
-<li>[x] <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#custom-cache-50">Custom cache control</a></li>
-<li>[x] Expand the image loading capabilites by adding your <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#custom-loader-50">own custom loaders</a> or using prebuilt loaders like <a href="https://github.com/SDWebImage/SDWebImageFLPlugin">FLAnimatedImage plugin</a> or <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin">Photos Library plugin</a></li>
-<li>[x] <a href="https://github.com/SDWebImage/SDWebImage/wiki/How-to-use#use-view-indicator-50">Loading indicators</a></li>
+<li>[x] <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#custom-cache-50">Customizable and multiple caches system</a></li>
+<li>[x] <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#custom-loader-50">Customizable and multiple loaders system</a> to expand the capabilities, like <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin">Photos Library</a></li>
+<li>[x] <a href="https://github.com/SDWebImage/SDWebImage/wiki/How-to-use#use-view-indicator-50">Image loading indicators</a></li>
+<li>[x] <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#image-transition-430">Image loading transition animation</a></li>
 <li>[x] A guarantee that the same URL won&rsquo;t be downloaded several times</li>
 <li>[x] A guarantee that bogus URLs won&rsquo;t be retried again and again</li>
 <li>[x] A guarantee that main thread will never be blocked</li>
+<li>[x] Modern Objective-C and better Swift support</li>
 <li>[x] Performances!</li>
-<li>[x] Use GCD and ARC</li>
 </ul>
 <h2 id='supported-image-formats' class='heading'>Supported Image Formats</h2>
 
 <ul>
 <li>Image formats supported by UIImage (JPEG, PNG, HEIC, &hellip;), including GIF/APNG/HEIC animation</li>
 <li>WebP format, including animated WebP (use the <a href="https://github.com/SDWebImage/SDWebImageWebPCoder">SDWebImageWebPCoder</a> project)</li>
-<li>Support extendable coder plugins for new image formats. Like BPG, HFIF, SVG, etc. See all the list in <a href="https://github.com/SDWebImage/SDWebImage/wiki/Coder-Plugin-List">Image coder plugin List</a></li>
+<li>Support extendable coder plugins for new image formats like BPG, AVIF. And vector format like PDF, SVG. See all the list in <a href="https://github.com/SDWebImage/SDWebImage/wiki/Coder-Plugin-List">Image coder plugin List</a></li>
 </ul>
 <h2 id='additional-modules' class='heading'>Additional modules</h2>
 
 <p>In order to keep SDWebImage focused and limited to the core features, but also allow extensibility and custom behaviors, during the 5.0 refactoring we focused on modularizing the library.
 As such, we have moved/built new modules to <a href="https://github.com/SDWebImage">SDWebImage org</a>.</p>
+<h4 id='swiftui' class='heading'>SwiftUI</h4>
+
+<p><a href="https://developer.apple.com/xcode/swiftui/">SwiftUI</a> is an innovative UI framework written in Swift to build user interfaces across all Apple platforms.</p>
+
+<p>We support SwiftUI by building with the functions (caching, loading and animation) powered by SDWebImage. You can have a try with <a href="https://github.com/SDWebImage/SDWebImageSwiftUI">SDWebImageSwiftUI</a></p>
 <h4 id='coders-for-additional-image-formats' class='heading'>Coders for additional image formats</h4>
 
 <ul>
@@ -606,6 +641,7 @@ As such, we have moved/built new modules to <a href="https://github.com/SDWebIma
 <li><a href="https://github.com/SDWebImage/SDWebImageHEIFCoder">SDWebImageHEIFCoder</a> - coder to support HEIF image without Apple&rsquo;s <code>Image/IO framework</code>, iOS 8+/macOS 10.10+ support.</li>
 <li><a href="https://github.com/SDWebImage/SDWebImageBPGCoder">SDWebImageBPGCoder</a> - coder for BPG format</li>
 <li><a href="https://github.com/SDWebImage/SDWebImageFLIFCoder">SDWebImageFLIFCoder</a> - coder for FLIF format</li>
+<li><a href="https://github.com/SDWebImage/SDWebImageAVIFCoder">SDWebImageAVIFCoder</a> - coder for AVIF (AV1-based) format</li>
 <li>and more from community!</li>
 </ul>
 <h4 id='loaders' class='heading'>Loaders</h4>
@@ -806,6 +842,11 @@ community can help you solve it.</p>
 <li><a href="https://github.com/dreampiggy">DreamPiggy</a></li>
 <li><a href="https://github.com/zhongwuzw">Wu Zhong</a></li>
 </ul>
+<h2 id='credits' class='heading'>Credits</h2>
+
+<p>Thank you to all the people who have already contributed to SDWebImage.</p>
+
+<p><a href="https://github.com/SDWebImage/SDWebImage/graphs/contributors"><img src="https://opencollective.com/SDWebImage/contributors.svg?width=890" alt="Contributors"></a></p>
 <h2 id='licenses' class='heading'>Licenses</h2>
 
 <p>All source code is licensed under the <a href="https://github.com/SDWebImage/SDWebImage/blob/master/LICENSE">MIT License</a>.</p>
@@ -842,7 +883,7 @@ community can help you solve it.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-09-27)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-11-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

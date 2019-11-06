@@ -14,7 +14,7 @@
     <a title="SDWebImageDownloaderOperation Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.2.0 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.3.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -91,6 +91,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/SDAnimatedImage.html">SDAnimatedImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDAnimatedImagePlayer.html">SDAnimatedImagePlayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/SDAnimatedImageView.html">SDAnimatedImageView</a>
@@ -186,10 +189,16 @@
                 <a href="../Classes/SDWebImageDownloaderConfig.html">SDWebImageDownloaderConfig</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/SDWebImageDownloaderDecryptor.html">SDWebImageDownloaderDecryptor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/SDWebImageDownloaderRequestModifier.html">SDWebImageDownloaderRequestModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageDownloaderResponseModifier.html">SDWebImageDownloaderResponseModifier</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/SDWebImageManager.html">SDWebImageManager</a>
@@ -269,7 +278,13 @@
                 <a href="../Constants.html#/c:@SDWebImageContextCustomManager">SDWebImageContextCustomManager</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextDownloadDecryptor">SDWebImageContextDownloadDecryptor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextDownloadRequestModifier">SDWebImageContextDownloadRequestModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextDownloadResponseModifier">SDWebImageContextDownloadResponseModifier</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextImageScaleFactor">SDWebImageContextImageScaleFactor</a>
@@ -390,10 +405,16 @@
                 <a href="../Protocols/SDWebImageCacheSerializer.html">SDWebImageCacheSerializer</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageDownloaderDecryptor.html">SDWebImageDownloaderDecryptor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/SDWebImageDownloaderRequestModifier.html">SDWebImageDownloaderRequestModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageDownloaderResponseModifier.html">SDWebImageDownloaderResponseModifier</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/SDWebImageIndicator.html">SDWebImageIndicator</a>
@@ -479,10 +500,16 @@
                 <a href="../Type%20Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderCompletedBlock">SDWebImageDownloaderCompletedBlock</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageDownloaderDecryptor.h@T@SDWebImageDownloaderDecryptorBlock">SDWebImageDownloaderDecryptorBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Type%20Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderProgressBlock">SDWebImageDownloaderProgressBlock</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Type%20Definitions.html#/c:SDWebImageDownloaderRequestModifier.h@T@SDWebImageDownloaderRequestModifierBlock">SDWebImageDownloaderRequestModifierBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageDownloaderResponseModifier.h@T@SDWebImageDownloaderResponseModifierBlock">SDWebImageDownloaderResponseModifierBlock</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageMutableContext">SDWebImageMutableContext</a>
@@ -607,7 +634,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.2.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L20-L22">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L20-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -644,7 +671,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.2.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L24-L27">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L24-L27">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -679,7 +706,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.2.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L29-L30">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L29-L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -713,7 +740,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.2.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -747,7 +774,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.2.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -781,7 +808,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.2.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -815,7 +842,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.2.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -849,7 +876,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.2.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -883,7 +910,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.2.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -893,7 +920,7 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-09-27)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-11-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
