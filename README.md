@@ -18,7 +18,6 @@ The documentation is auto-generated using [Jazzy](https://github.com/realm/jazzy
 + Clone both SDWebImage and this repo
 + Place them in the same folder
 + Go the SDWebImage folder
-+ Run the following command (remember to update the version number)
 + Firstly, run `jazzy` command once, it will run `xcodebuild`, ignore the error output (Seems jazzy's issue)
 + Next, run the following command, remember to change the version string:
 
