@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SDWebImageSwiftUI  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="SDWebImageSwiftUI  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SDWebImageSwiftUI 0.8.3 Docs</a> (84% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImageSwiftUI"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">SDWebImageSwiftUI Reference</a>
+        <img id="carat" src="img/carat.png" />
+        SDWebImageSwiftUI  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AnimatedImageCoordinator.html">AnimatedImageCoordinator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AnimatedImageViewWrapper.html">AnimatedImageViewWrapper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ProgressIndicatorWrapper.html">ProgressIndicatorWrapper</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/AnyTransition.html">AnyTransition</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/ActivityIndicator.html">ActivityIndicator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ActivityIndicator/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AnimatedImage.html">AnimatedImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Indicator.html">Indicator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ProgressIndicator.html">ProgressIndicator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ProgressIndicator/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/WebImage.html">WebImage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/AnimatedImageViewWrapper">AnimatedImageViewWrapper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/PlatformImage">PlatformImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:17SDWebImageSwiftUI08PlatformB0a">PlatformImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/PlatformView">PlatformView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:17SDWebImageSwiftUI12PlatformViewa">PlatformView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/PlatformViewRepresentable">PlatformViewRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:17SDWebImageSwiftUI25PlatformViewRepresentablea">PlatformViewRepresentable</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='sdwebimageswiftui' class='heading'>SDWebImageSwiftUI</h1>
+
+<p><a href="https://travis-ci.com/SDWebImage/SDWebImageSwiftUI"><img src="https://travis-ci.org/SDWebImage/SDWebImageSwiftUI.svg?branch=master" alt="CI Status"></a>
+<a href="https://cocoapods.org/pods/SDWebImageSwiftUI"><img src="https://img.shields.io/cocoapods/v/SDWebImageSwiftUI.svg?style=flat" alt="Version"></a>
+<a href="https://cocoapods.org/pods/SDWebImageSwiftUI"><img src="https://img.shields.io/cocoapods/l/SDWebImageSwiftUI.svg?style=flat" alt="License"></a>
+<a href="https://cocoapods.org/pods/SDWebImageSwiftUI"><img src="https://img.shields.io/cocoapods/p/SDWebImageSwiftUI.svg?style=flat" alt="Platform"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+<a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SwiftPM-Compatible-brightgreen.svg" alt="SwiftPM compatible"></a></p>
+<h2 id='what-39-s-for' class='heading'>What&rsquo;s for</h2>
+
+<p>SDWebImageSwiftUI is a SwiftUI image loading framework, which based on <a href="https://github.com/SDWebImage/SDWebImage">SDWebImage</a>.</p>
+
+<p>It brings all your favorite features from SDWebImage, like async image loading, memory/disk caching, animated image playback and performances.</p>
+<h2 id='features' class='heading'>Features</h2>
+
+<p>Since SDWebImageSwiftUI is built on top of SDWebImage, it provide both the out-of-box features as well as advanced powerful features you may want in real world Apps. Check our <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage">Wiki</a> when you need:</p>
+
+<ul>
+<li>[x] Animated Image full-stack solution, with balance of CPU &amp;&amp; RAM</li>
+<li>[x] Progressive image loading, with animation support</li>
+<li>[x] Reusable download, never request single URL twice</li>
+<li>[x] URL Request / Response Modifier, provide custom HTTP Header</li>
+<li>[x] Image Transformer, apply corner radius or CIFilter</li>
+<li>[x] Multiple caches system, query from different source</li>
+<li>[x] Multiple loaders system, load from different resource</li>
+</ul>
+
+<p>You can also get all benefits from the existing community around with SDWebImage. You can have massive image format support (GIF/APNG/WebP/HEIF/AVIF) via <a href="https://github.com/SDWebImage/SDWebImage/wiki/Coder-Plugin-List">Coder Plugins</a>, PhotoKit support via <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin">SDWebImagePhotosPlugin</a>, Firebase integration via <a href="https://github.com/firebase/FirebaseUI-iOS">FirebaseUI</a>, etc.</p>
+
+<p>Besides all these features, we do optimization for SwiftUI, like Binding, View Modifier, using the same design pattern to become a good SwiftUI citizen.</p>
+<h2 id='contribution' class='heading'>Contribution</h2>
+
+<p>This framework is under heavily development, it&rsquo;s recommended to use <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/releases">the latest release</a> as much as possible (including SDWebImage dependency).</p>
+
+<p>Note we do not guarantee the public API stable for current status until v1.0 version, to follow <a href="https://semver.org/">Semantic Versioning</a>.</p>
+
+<p>All issue reports, feature requests, contributions, and GitHub stars are welcomed. Hope for active feedback and promotion if you find this framework useful.</p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>Xcode 11+</li>
+<li>iOS 13+</li>
+<li>macOS 10.15+</li>
+<li>tvOS 13+</li>
+<li>watchOS 6+</li>
+<li>Swift 5.1+</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+<h4 id='cocoapods' class='heading'>CocoaPods</h4>
+
+<p>SDWebImageSwiftUI is available through <a href="https://cocoapods.org">CocoaPods</a>. To install
+it, simply add the following line to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'SDWebImageSwiftUI'</span>
+</code></pre>
+<h4 id='carthage' class='heading'>Carthage</h4>
+
+<p>SDWebImageSwiftUI is available through <a href="https://github.com/Carthage/Carthage">Carthage</a>.</p>
+<pre class="highlight plaintext"><code>github "SDWebImage/SDWebImageSwiftUI"
+</code></pre>
+<h4 id='swift-package-manager' class='heading'>Swift Package Manager</h4>
+
+<p>SDWebImageSwiftUI is available through <a href="https://swift.org/package-manager/">Swift Package Manager</a>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/SDWebImage/SDWebImageSwiftUI.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"0.8"</span><span class="p">)</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+</code></pre>
+<h2 id='usage' class='heading'>Usage</h2>
+<h3 id='using-code-webimage-code-to-load-network-image' class='heading'>Using <code><a href="Structs/WebImage.html">WebImage</a></code> to load network image</h3>
+
+<ul>
+<li>[x] Supports placeholder and detail options control for image loading as SDWebImage</li>
+<li>[x] Supports progressive image loading (like baseline)</li>
+<li>[x] Supports success/failure/progress changes event for custom handling</li>
+<li>[x] Supports indicator with activity/progress indicator and customization</li>
+<li>[x] Supports built-in animation and transition, powered by SwiftUI</li>
+</ul>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="kt">WebImage</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://nokiatech.github.io/heif/content/images/ski_jump_1440x960.heic"</span><span class="p">))</span>
+        <span class="o">.</span><span class="n">onSuccess</span> <span class="p">{</span> <span class="n">image</span><span class="p">,</span> <span class="n">cacheType</span> <span class="k">in</span>
+            <span class="c1">// Success</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">resizable</span><span class="p">()</span> <span class="c1">// Resizable like SwiftUI.Image</span>
+        <span class="o">.</span><span class="nf">placeholder</span><span class="p">(</span><span class="kt">Image</span><span class="p">(</span><span class="nv">systemName</span><span class="p">:</span> <span class="s">"photo"</span><span class="p">))</span> <span class="c1">// Placeholder Image</span>
+        <span class="c1">// Supports ViewBuilder as well</span>
+        <span class="o">.</span><span class="n">placeholder</span> <span class="p">{</span>
+            <span class="kt">Rectangle</span><span class="p">()</span><span class="o">.</span><span class="nf">foregroundColor</span><span class="p">(</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">indicator</span><span class="p">(</span><span class="o">.</span><span class="n">activity</span><span class="p">)</span> <span class="c1">// Activity Indicator</span>
+        <span class="o">.</span><span class="nf">animation</span><span class="p">(</span><span class="o">.</span><span class="nf">easeInOut</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">))</span> <span class="c1">// Animation Duration</span>
+        <span class="o">.</span><span class="nf">transition</span><span class="p">(</span><span class="o">.</span><span class="n">fade</span><span class="p">)</span> <span class="c1">// Fade Transition</span>
+        <span class="o">.</span><span class="nf">scaledToFit</span><span class="p">()</span>
+        <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nv">alignment</span><span class="p">:</span> <span class="o">.</span><span class="n">center</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Note: This <code><a href="Structs/WebImage.html">WebImage</a></code> using <code>Image</code> for internal implementation, which is the best compatible for SwiftUI layout and animation system. But it supports static image format only, because unlike <code>UIImageView</code> in UIKit, SwiftUI&rsquo;s <code>Image</code> does not support animation.</p>
+<h3 id='using-code-animatedimage-code-to-play-animation' class='heading'>Using <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> to play animation</h3>
+
+<ul>
+<li>[x] Supports network image as well as local data and bundle image</li>
+<li>[x] Supports animated progressive image loading (like web browser)</li>
+<li>[x] Supports animation control using the SwiftUI Binding</li>
+<li>[x] Supports indicator and transition, powered by SDWebImage and Core Animation</li>
+<li>[x] Supports advanced control like loop count, playback rate, buffer size, runloop mode, etc</li>
+<li>[x] Supports coordinate with native UIKit/AppKit/WatchKit view</li>
+</ul>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="kt">Group</span> <span class="p">{</span>
+        <span class="c1">// Network</span>
+        <span class="kt">AnimatedImage</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://raw.githubusercontent.com/liyong03/YLGIFImage/master/YLGIFImageDemo/YLGIFImageDemo/joy.gif"</span><span class="p">),</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">progressiveLoad</span><span class="p">])</span> <span class="c1">// Progressive Load</span>
+        <span class="o">.</span><span class="n">onFailure</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+            <span class="c1">// Error</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">resizable</span><span class="p">()</span> <span class="c1">// Actually this is not needed unlike SwiftUI.Image</span>
+        <span class="o">.</span><span class="nf">placeholder</span><span class="p">(</span><span class="kt">UIImage</span><span class="p">(</span><span class="nv">systemName</span><span class="p">:</span> <span class="s">"photo"</span><span class="p">))</span> <span class="c1">// Placeholder Image</span>
+        <span class="o">.</span><span class="nf">indicator</span><span class="p">(</span><span class="kt">SDWebImageActivityIndicator</span><span class="o">.</span><span class="n">medium</span><span class="p">)</span> <span class="c1">// Activity Indicator</span>
+        <span class="o">.</span><span class="nf">transition</span><span class="p">(</span><span class="o">.</span><span class="n">fade</span><span class="p">)</span> <span class="c1">// Fade Transition</span>
+        <span class="o">.</span><span class="nf">scaledToFit</span><span class="p">()</span> <span class="c1">// Attention to call it on AnimatedImage, but not `some View` after View Modifier</span>
+
+        <span class="c1">// Data</span>
+        <span class="kt">AnimatedImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="k">try!</span> <span class="kt">Data</span><span class="p">(</span><span class="nv">contentsOf</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">fileURLWithPath</span><span class="p">:</span> <span class="s">"/tmp/foo.webp"</span><span class="p">)))</span>
+        <span class="o">.</span><span class="nf">customLoopCount</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// Custom loop count</span>
+        <span class="o">.</span><span class="nf">playbackRate</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span> <span class="c1">// Playback speed rate</span>
+
+        <span class="c1">// Bundle (not Asset Catalog)</span>
+        <span class="kt">AnimatedImage</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"animation1"</span><span class="p">,</span> <span class="nv">isAnimating</span><span class="p">:</span> <span class="err">$</span><span class="n">isAnimating</span><span class="p">))</span> <span class="c1">// Animation control binding</span>
+        <span class="o">.</span><span class="nf">maxBufferSize</span><span class="p">(</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">onViewUpdate</span> <span class="p">{</span> <span class="n">view</span><span class="p">,</span> <span class="n">context</span> <span class="k">in</span> <span class="c1">// Advanced native view coordinate</span>
+            <span class="n">view</span><span class="o">.</span><span class="n">toolTip</span> <span class="o">=</span> <span class="s">"Mouseover Tip"</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Note: <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> supports both image url or image data for animated image format. Which use the SDWebImage&rsquo;s <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#animated-image-50">Animated ImageView</a> for internal implementation. Pay attention that since this base on UIKit/AppKit representable, some advanced SwiftUI layout and animation system may not work as expected. You may need UIKit/AppKit and Core Animation to modify the native view.</p>
+
+<p>Note: From v0.8.0, <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> on watchOS support all features the same as iOS/tvOS/macOS, including Animated WebP rendering, runloop mode, pausable, purgeable, playback rate, etc. It use the SDWebImage&rsquo;s <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#animated-player-530">Animated Player</a>, which is the same backend engine for iOS/tvOS/macOS&rsquo;s Animated ImageView.</p>
+
+<p>Note: From v0.4.0, <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> supports watchOS as well. However, it&rsquo;s not backed by SDWebImage&rsquo;s <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#animated-image-50">Animated ImageView</a> like iOS/tvOS/macOS. It use some tricks and hacks because of the limitation on current Apple&rsquo;s API. It also use Image/IO decoding system, which means it supports GIF and APNG format only, but not external format like Animated WebP.</p>
+<h3 id='which-view-to-choose' class='heading'>Which View to choose</h3>
+
+<p>Why we have two different View types here, is because of current SwiftUI limit. But we&rsquo;re aimed to provide best solution for all use cases.</p>
+
+<p>If you don&rsquo;t need animated image, prefer to use <code><a href="Structs/WebImage.html">WebImage</a></code> firstly. Which behaves the seamless as built-in SwiftUI View. If SwiftUI works, it works.</p>
+
+<p>If you need animated image, <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> is the one to choose. Remember it supports static image as well, you don&rsquo;t need to check the format, just use as it.</p>
+
+<p>But, because <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> use <code>UIViewRepresentable</code> and driven by UIKit, currently there may be some small incompatible issues between UIKit and SwiftUI layout and animation system, or bugs related to SwiftUI itself. We try our best to match SwiftUI behavior, and provide the same API as <code><a href="Structs/WebImage.html">WebImage</a></code>, which make it easy to switch between these two types if needed.</p>
+
+<p>For more information, it&rsquo;s really recommended to check our demo below, to learn detailed API usage.</p>
+<h2 id='demo' class='heading'>Demo</h2>
+
+<p>To run the example using SwiftUI, following the steps:</p>
+<pre class="highlight plaintext"><code>cd Example
+pod install
+</code></pre>
+
+<p>Then open the Xcode Workspace to run the demo application.</p>
+
+<p>Since SwiftUI is aimed to support all Apple platforms, our demo does this as well, one codebase including:</p>
+
+<ul>
+<li>iOS (iPhone/iPad/Mac Catalyst)</li>
+<li>macOS</li>
+<li>tvOS</li>
+<li>watchOS</li>
+</ul>
+
+<p>Demo Tips:</p>
+
+<ol>
+<li>Use <code>Switch</code> (right-click on macOS/force press on watchOS) to switch between <code><a href="Structs/WebImage.html">WebImage</a></code> and <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code>.</li>
+<li>Use <code>Reload</code> (right-click on macOS/force press on watchOS) to clear cache.</li>
+<li>Use <code>Swipe</code> to delete one image item.</li>
+<li>Clear cache and go to detail page to see progressive loading.</li>
+</ol>
+<h2 id='screenshot' class='heading'>Screenshot</h2>
+
+<ul>
+<li>iOS Demo</li>
+</ul>
+
+<p><img src='https://raw.githubusercontent.com/SDWebImage/SDWebImageSwiftUI/master/Example/Screenshot/Demo-iOS.jpg' height=960 /></p>
+
+<ul>
+<li>macOS Demo</li>
+</ul>
+
+<p><img src='https://raw.githubusercontent.com/SDWebImage/SDWebImageSwiftUI/master/Example/Screenshot/Demo-macOS.jpg' width=960 /></p>
+
+<ul>
+<li>tvOS Demo</li>
+</ul>
+
+<p><img src='https://raw.githubusercontent.com/SDWebImage/SDWebImageSwiftUI/master/Example/Screenshot/Demo-tvOS.jpg' width=960 /></p>
+
+<ul>
+<li>watchOS Demo</li>
+</ul>
+
+<p><img src='https://raw.githubusercontent.com/SDWebImage/SDWebImageSwiftUI/master/Example/Screenshot/Demo-watchOS.jpg' width=480 /></p>
+<h2 id='extra-notes' class='heading'>Extra Notes</h2>
+
+<p>Besides all above things, this project can also ensure the following function available on Swift platform for SDWebImage itself.</p>
+
+<ul>
+<li>SwiftUI compatibility</li>
+<li>Swift Package Manager integration</li>
+<li>Swift source code compatibility and Swifty</li>
+</ul>
+
+<p>Which means, this project is one core use case and downstream dependency, which driven SDWebImage itself future development.</p>
+<h2 id='author' class='heading'>Author</h2>
+
+<p><a href="https://github.com/dreampiggy">DreamPiggy</a></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>SDWebImageSwiftUI is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImageSwiftUI" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-11-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,124 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
+      "line": 20,
+      "symbol": "AnimatedImageViewWrapper.draw(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
+      "line": 40,
+      "symbol": "AnimatedImageViewWrapper.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
+      "line": 46,
+      "symbol": "AnimatedImageViewWrapper.intrinsicContentSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
+      "line": 59,
+      "symbol": "AnimatedImageViewWrapper.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
+      "line": 64,
+      "symbol": "AnimatedImageViewWrapper.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
+      "line": 84,
+      "symbol": "ProgressIndicatorWrapper.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
+      "line": 90,
+      "symbol": "ProgressIndicatorWrapper.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
+      "line": 95,
+      "symbol": "ProgressIndicatorWrapper.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/Indicator/ActivityIndicator.swift",
+      "line": 75,
+      "symbol": "ActivityIndicator.Style",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/Indicator/ActivityIndicator.swift",
+      "line": 76,
+      "symbol": "ActivityIndicator.Style.medium",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/Indicator/ActivityIndicator.swift",
+      "line": 77,
+      "symbol": "ActivityIndicator.Style.large",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/Indicator/ProgressIndicator.swift",
+      "line": 105,
+      "symbol": "ProgressIndicator.Style",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/Indicator/ProgressIndicator.swift",
+      "line": 106,
+      "symbol": "ProgressIndicator.Style.default",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/Indicator/ProgressIndicator.swift",
+      "line": 108,
+      "symbol": "ProgressIndicator.Style.bar",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/SDWebImageSwiftUI.swift",
+      "line": 15,
+      "symbol": "PlatformImage",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/SDWebImageSwiftUI.swift",
+      "line": 32,
+      "symbol": "PlatformView",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/SDWebImageSwiftUI.swift",
+      "line": 42,
+      "symbol": "PlatformViewRepresentable",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI"
+}
