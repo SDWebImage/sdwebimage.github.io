@@ -37,3 +37,21 @@ jazzy \
   --output ../sdwebimage.github.io
 ```
 
+#### Generate SDWebImage related project documentation
+
+SDWebImage now contains many related project, like the [Coder Plugins](https://github.com/SDWebImage/SDWebImage/wiki/Coder-Plugin-List) repo, the SwiftUI repo [SDWebImageSwiftUI](https://github.com/SDWebImage/SDWebImageSwiftUI).
+
+You should place the generated documentation output folder, inside the sub-directory of this repo. Take SDWebImageSwiftUI for example:
+
+```
+jazzy \
+  --author SDWebImage \
+  --github_url https://github.com/SDWebImage/SDWebImageSwiftUI \
+  --github-file-prefix https://github.com/SDWebImage/SDWebImageSwiftUI/tree/0.8.3 \
+  --module-version 0.8.3 \
+  --undocumented-text "" \
+  --module SDWebImageSwiftUI \
+  --framework-root . \
+  --sdk iphonesimulator \
+  --output ../sdwebimage.github.io/SDWebImageSwiftUI
+```
