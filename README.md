@@ -1,7 +1,7 @@
 # SDWebImage documentation
 SDWebImage Documentation https://sdwebimage.github.io
 
-This repository hosts the in source documentation for [SDWebImage](https://github.com/SDWebImage/SDWebImage). You can view this at [sdwebimage.github.io](https://sdwebimage.github.io).
+This repository hosts the in source documentation for [SDWebImage](https://github.com/SDWebImage/SDWebImage) and its related projects. You can view this at [sdwebimage.github.io](https://sdwebimage.github.io).
 
 ## Maintenance
 
@@ -12,6 +12,10 @@ The documentation is auto-generated using [Jazzy](https://github.com/realm/jazzy
 ```
 [sudo] gem install jazzy
 ```
+
+#### Modify the contents
+
+This documentation page now hosting both Core repo and other related framework's documentation. To modify the contents, just using the Markdown format and using jazzy to generate the HTML representation. Or directly modify the `index.html`.
 
 #### Generate the SDWebImage documentation
 
@@ -34,7 +38,7 @@ jazzy \
   --module SDWebImage \
   --framework-root . \
   --sdk iphonesimulator \
-  --output ../sdwebimage.github.io
+  --output ../sdwebimage.github.io/SDWebImage
 ```
 
 #### Generate SDWebImage related project documentation
