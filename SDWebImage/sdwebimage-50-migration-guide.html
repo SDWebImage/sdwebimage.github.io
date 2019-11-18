@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SDWebImage-5.0-Migration-guide  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="SDWebImage-5.0-Migration-guide  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SDWebImage 5.3.1 Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">SDWebImage Reference</a>
+        <img id="carat" src="img/carat.png" />
+        SDWebImage-5.0-Migration-guide  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="howtouse.html">HowToUse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="manualinstallation.html">ManualInstallation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="sdwebimage-40-migration-guide.html">SDWebImage-4.0-Migration-guide</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="sdwebimage-50-migration-guide.html">SDWebImage-5.0-Migration-guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Categories/NSData%28ImageContentType%29.html">NSData(ImageContentType)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/UIButton%28WebCache%29.html">UIButton(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/UIImage%28ForceDecode%29.html">UIImage(ForceDecode)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/UIImage%28GIF%29.html">UIImage(GIF)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/UIImage%28MemoryCacheCost%29.html">UIImage(MemoryCacheCost)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/UIImage%28Metadata%29.html">UIImage(Metadata)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/UIImage%28MultiFormat%29.html">UIImage(MultiFormat)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/UIImage%28Transform%29.html">UIImage(Transform)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/UIImageView%28HighlightedWebCache%29.html">UIImageView(HighlightedWebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/UIImageView%28WebCache%29.html">UIImageView(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/UIView%28WebCache%29.html">UIView(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/UIView%28WebCacheOperation%29.html">UIView(WebCacheOperation)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/SDAnimatedImage.html">SDAnimatedImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDAnimatedImagePlayer.html">SDAnimatedImagePlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDAnimatedImageView.html">SDAnimatedImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDDiskCache.html">SDDiskCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageAPNGCoder.html">SDImageAPNGCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageBlurTransformer.html">SDImageBlurTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageCache.html">SDImageCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageCacheConfig.html">SDImageCacheConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageCachesManager.html">SDImageCachesManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageCoderHelper.html">SDImageCoderHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageCodersManager.html">SDImageCodersManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageCroppingTransformer.html">SDImageCroppingTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageFilterTransformer.html">SDImageFilterTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageFlippingTransformer.html">SDImageFlippingTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageFrame.html">SDImageFrame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageGIFCoder.html">SDImageGIFCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageHEICCoder.html">SDImageHEICCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageIOAnimatedCoder.html">SDImageIOAnimatedCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageIOCoder.html">SDImageIOCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageLoadersManager.html">SDImageLoadersManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImagePipelineTransformer.html">SDImagePipelineTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageResizingTransformer.html">SDImageResizingTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageRotationTransformer.html">SDImageRotationTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageRoundCornerTransformer.html">SDImageRoundCornerTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDImageTintTransformer.html">SDImageTintTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDMemoryCache.html">SDMemoryCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageActivityIndicator.html">SDWebImageActivityIndicator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageCacheKeyFilter.html">SDWebImageCacheKeyFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageCacheSerializer.html">SDWebImageCacheSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageCombinedOperation.html">SDWebImageCombinedOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageDownloadToken.html">SDWebImageDownloadToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageDownloader.html">SDWebImageDownloader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageDownloaderConfig.html">SDWebImageDownloaderConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageDownloaderDecryptor.html">SDWebImageDownloaderDecryptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageDownloaderRequestModifier.html">SDWebImageDownloaderRequestModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageDownloaderResponseModifier.html">SDWebImageDownloaderResponseModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageManager.html">SDWebImageManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageOptionsProcessor.html">SDWebImageOptionsProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageOptionsResult.html">SDWebImageOptionsResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImagePrefetchToken.html">SDWebImagePrefetchToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImagePrefetcher.html">SDWebImagePrefetcher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageProgressIndicator.html">SDWebImageProgressIndicator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDWebImageTransition.html">SDWebImageTransition</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDImageCoderDecodeFirstFrameOnly">SDImageCoderDecodeFirstFrameOnly</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDImageCoderDecodeScaleFactor">SDImageCoderDecodeScaleFactor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDImageCoderWebImageContext">SDImageCoderWebImageContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:NSData+ImageContentType.h@SDImageFormatGIF">SDImageFormatGIF</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:NSData+ImageContentType.h@SDImageFormatHEIC">SDImageFormatHEIC</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:NSData+ImageContentType.h@SDImageFormatHEIF">SDImageFormatHEIF</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:NSData+ImageContentType.h@SDImageFormatJPEG">SDImageFormatJPEG</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:NSData+ImageContentType.h@SDImageFormatPNG">SDImageFormatPNG</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:NSData+ImageContentType.h@SDImageFormatTIFF">SDImageFormatTIFF</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:NSData+ImageContentType.h@SDImageFormatUndefined">SDImageFormatUndefined</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:NSData+ImageContentType.h@SDImageFormatWebP">SDImageFormatWebP</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextAnimatedImageClass">SDWebImageContextAnimatedImageClass</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextCacheKeyFilter">SDWebImageContextCacheKeyFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextCacheSerializer">SDWebImageContextCacheSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextCustomManager">SDWebImageContextCustomManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextDownloadDecryptor">SDWebImageContextDownloadDecryptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextDownloadRequestModifier">SDWebImageContextDownloadRequestModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextDownloadResponseModifier">SDWebImageContextDownloadResponseModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextImageScaleFactor">SDWebImageContextImageScaleFactor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextImageTransformer">SDWebImageContextImageTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextLoaderCachedImage">SDWebImageContextLoaderCachedImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextStoreCacheType">SDWebImageContextStoreCacheType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageDownloadFinishNotification">SDWebImageDownloadFinishNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageDownloadReceiveResponseNotification">SDWebImageDownloadReceiveResponseNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageDownloadStartNotification">SDWebImageDownloadStartNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageDownloadStopNotification">SDWebImageDownloadStopNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageErrorDomain">SDWebImageErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageErrorDownloadStatusCodeKey">SDWebImageErrorDownloadStatusCodeKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageProgressUnitCountUnknown">SDWebImageProgressUnitCountUnknown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@WebImageVersionNumber">WebImageVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@WebImageVersionString">WebImageVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/SDImageCacheConfigExpireType.html">SDImageCacheConfigExpireType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SDImageCacheOptions.html">SDImageCacheOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SDImageCacheType.html">SDImageCacheType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SDImageScaleMode.html">SDImageScaleMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SDWebImageDownloaderExecutionOrder.html">SDWebImageDownloaderExecutionOrder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SDWebImageDownloaderOptions.html">SDWebImageDownloaderOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SDWebImageError.html">SDWebImageError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SDWebImageOptions.html">SDWebImageOptions</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/SDAnimatedImage.html">SDAnimatedImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDAnimatedImageCoder.html">SDAnimatedImageCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDAnimatedImageProvider.html">SDAnimatedImageProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDDiskCache.html">SDDiskCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDImageCache.html">SDImageCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDImageCoder.html">SDImageCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDImageLoader.html">SDImageLoader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDImageTransformer.html">SDImageTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDMemoryCache.html">SDMemoryCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDProgressiveImageCoder.html">SDProgressiveImageCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDWebImageCacheKeyFilter.html">SDWebImageCacheKeyFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDWebImageCacheSerializer.html">SDWebImageCacheSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDWebImageDownloaderDecryptor.html">SDWebImageDownloaderDecryptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDWebImageDownloaderRequestModifier.html">SDWebImageDownloaderRequestModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDWebImageDownloaderResponseModifier.html">SDWebImageDownloaderResponseModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDWebImageIndicator.html">SDWebImageIndicator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDWebImageManagerDelegate.html">SDWebImageManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDWebImageOperation.html">SDWebImageOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDWebImageOptionsProcessor.html">SDWebImageOptionsProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SDWebImagePrefetcherDelegate.html">SDWebImagePrefetcherDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheAdditionalCachePathBlock">SDImageCacheAdditionalCachePathBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheCalculateSizeBlock">SDImageCacheCalculateSizeBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheCheckCompletionBlock">SDImageCacheCheckCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheContainsCompletionBlock">SDImageCacheContainsCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderMutableOptions">SDImageCoderMutableOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderOption">SDImageCoderOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderOptions">SDImageCoderOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderCompletedBlock">SDImageLoaderCompletedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderProgressBlock">SDImageLoaderProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageManager.h@T@SDInternalCompletionBlock">SDInternalCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:UIImage+Transform.h@T@SDRectCorner">SDRectCorner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:UIView+WebCache.h@T@SDSetImageBlock">SDSetImageBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageAnimationOptions">SDWebImageAnimationOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageCacheKeyFilter.h@T@SDWebImageCacheKeyFilterBlock">SDWebImageCacheKeyFilterBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageCacheSerializer.h@T@SDWebImageCacheSerializerBlock">SDWebImageCacheSerializerBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContextOption">SDWebImageContextOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderCompletedBlock">SDWebImageDownloaderCompletedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageDownloaderDecryptor.h@T@SDWebImageDownloaderDecryptorBlock">SDWebImageDownloaderDecryptorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderProgressBlock">SDWebImageDownloaderProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageDownloaderRequestModifier.h@T@SDWebImageDownloaderRequestModifierBlock">SDWebImageDownloaderRequestModifierBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageDownloaderResponseModifier.h@T@SDWebImageDownloaderResponseModifierBlock">SDWebImageDownloaderResponseModifierBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageMutableContext">SDWebImageMutableContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageOptionsProcessor.h@T@SDWebImageOptionsProcessorBlock">SDWebImageOptionsProcessorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImagePrefetcher.h@T@SDWebImagePrefetcherCompletionBlock">SDWebImagePrefetcherCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImagePrefetcher.h@T@SDWebImagePrefetcherProgressBlock">SDWebImagePrefetcherProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionAnimationsBlock">SDWebImageTransitionAnimationsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionCompletionBlock">SDWebImageTransitionCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionPreparesBlock">SDWebImageTransitionPreparesBlock</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDGraphicsBeginImageContext">SDGraphicsBeginImageContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDGraphicsBeginImageContextWithOptions">SDGraphicsBeginImageContextWithOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDGraphicsEndImageContext">SDGraphicsEndImageContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDGraphicsGetCurrentContext">SDGraphicsGetCurrentContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDGraphicsGetImageFromCurrentImageContext">SDGraphicsGetImageFromCurrentImageContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDImageCacheDecodeImageData">SDImageCacheDecodeImageData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDImageLoaderDecodeImageData">SDImageLoaderDecodeImageData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDImageLoaderDecodeProgressiveImageData">SDImageLoaderDecodeProgressiveImageData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDImageScaleFactorForKey">SDImageScaleFactorForKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDScaledImageForKey">SDScaledImageForKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDScaledImageForScaleFactor">SDScaledImageForScaleFactor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDTransformedKeyForKey">SDTransformedKeyForKey</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h2 id='sdwebimage-5-0-migration-guide' class='heading'>SDWebImage 5.0 Migration Guide</h2>
+
+<p>SDWebImage 5.0 is the latest major release of SDWebImage, a top library for downloading and caching images.
+As a major release, following <a href="http://semver.org/">Semantic Versioning</a> conventions, 5.0 introduces several API-breaking changes with its new architecture.</p>
+
+<p>This guide is provided in order to ease the transition of existing applications using SDWebImage 4.X to the latest APIs, as well as explain the design and structure of new and changed functionality.</p>
+<h3 id='requirements-ios-8-mac-os-x-10-10-watchos-2-tvos-9-xcode-9' class='heading'>Requirements: iOS 8, Mac OS X 10.10, watchOS 2, tvOS 9, Xcode 9</h3>
+
+<p>SDWebImage 5.0 officially supports iOS 8 and later, Mac OS X 10.10 and later, watchOS 2 and later and tvOS 9 and later.
+It needs Xcode 9 or later to be able to build everything properly.</p>
+
+<p>For targeting previous versions of the SDKs, check <a href="https://github.com/rs/SDWebImage#backwards-compatibility">README - Backwards compatibility</a>.</p>
+<h3 id='migration' class='heading'>Migration</h3>
+
+<p>Using the view categories brings no change from 4.x to 5.0. </p>
+
+<p>Objective-C:</p>
+<pre class="highlight plaintext"><code>[imageView sd_setImageWithURL:url placeholderImage:placeholderImage];
+</code></pre>
+
+<p>Swift:</p>
+<pre class="highlight swift"><code><span class="n">imageView</span><span class="o">.</span><span class="nf">sd_setImage</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="nv">placeholderImage</span><span class="p">:</span> <span class="n">placeholder</span><span class="p">)</span>
+</code></pre>
+
+<p>However, all view categories in 5.0 introduce a new extra arg called <code><a href="Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></code>. This param can hold anything, as oposed to the previous <code><a href="Enums/SDWebImageOptions.html">SDWebImageOptions</a></code> enum limitations. This gives developers advanced control for the behavior of image loading (cache, loader, etc). See the declaration for <code><a href="Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></code> for detailed information.</p>
+<h3 id='new-feature' class='heading'>New Feature</h3>
+<h4 id='animated-image-view' class='heading'>Animated Image View</h4>
+
+<p>In 5.0, we introduced a brand new mechanism for supporting animated images. This includes animated image loading, rendering, decoding, and also supports customizations (for advanced users).</p>
+
+<p>This animated image solution is available for <code>iOS</code>/<code>tvOS</code>/<code>macOS</code>. The <code><a href="Protocols/SDAnimatedImage.html">SDAnimatedImage</a></code> is subclass of <code>UIImage/NSImage</code>, and <code><a href="Classes/SDAnimatedImageView.html">SDAnimatedImageView</a></code> is subclass of <code>UIImageView/NSImageView</code>, to make them compatible with the common frameworks APIs. See <a href="https://github.com/rs/SDWebImage/wiki/Advanced-Usage#animated-image-50">Animated Image</a> for more detailed information.</p>
+<h4 id='image-transformer' class='heading'>Image Transformer</h4>
+
+<p>In 5.0, we introduced an easy way to hook an image transformation process after the image was downloaded from network. This allows the user to easily scale, rotate, add rounded corner the original image and even chain a list of transformations. These transformed images will also be stored to the cache as they are after transformation. The reasons for this decision are: avoiding redoing the transformations (which can lead to unwanted behavior) and also time saving. See <a href="https://github.com/rs/SDWebImage/wiki/Advanced-Usage#image-transformer-50">Image Transformer</a> for more detailed information.</p>
+<h4 id='customization' class='heading'>Customization</h4>
+
+<p>In 5.0, we refactored our framework architecture in many aspects. This makes our framework easier to customize for advanced users, without the need for hooking anything or forking. We introduced <a href="https://github.com/rs/SDWebImage/wiki/Advanced-Usage#custom-cache-50">Custom Cache</a> to control detailed cache loading behavior, and separate the memory cache &amp; disk cache implementation. We introduced <a href="https://github.com/rs/SDWebImage/wiki/Advanced-Usage#custom-loader-50">Custom Loader</a> to allow custom loading from your own source (doesn&rsquo;t have to be the network). And also, we changed the current <a href="https://github.com/rs/SDWebImage/wiki/Advanced-Usage#custom-coder-420">Custom Coder</a> to work better for custom image decoder/encoder and animated images.</p>
+<h4 id='view-indicator' class='heading'>View Indicator</h4>
+
+<p>In 5.0, we refactored the image loading indicator API into a better and extensible API for <code>iOS</code>/<code>tvOS</code>/<code>macOS</code>. This is suitable for easy usage like providing a loading view during the image loading process. See <a href="https://github.com/rs/SDWebImage/wiki/How-to-use#use-view-indicator-50">View Indicator</a> for more detailed information.</p>
+<h4 id='flanimatedimage-support-moved-to-a-dedicated-plugin-repo' class='heading'>FLAnimatedImage support moved to a dedicated plugin repo</h4>
+
+<p>In order to clean up things and make our core project do less things, we decided that the <code>FLAnimatedImage</code> integration does not belong here. From 5.0, this will still be available, but under a dedicated repo <a href="https://github.com/SDWebImage/SDWebImageFLPlugin">SDWebImageFLPlugin</a>.</p>
+<h4 id='photos-plugin' class='heading'>Photos Plugin</h4>
+
+<p>By taking the advantage of the <a href="https://github.com/rs/SDWebImage/wiki/Advanced-Usage#custom-loader-50">Custom Loader</a> feature, we introduced a plugin to allow easy loading images from the Photos Library. See <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin">SDWebImagePhotosPlugin</a> for more detailed information.</p>
+<h3 id='notable-behavior-changes-without-api-breaking' class='heading'>Notable Behavior Changes (without API breaking)</h3>
+<h4 id='cache' class='heading'>Cache</h4>
+<h5 id='cache-paths' class='heading'>Cache Paths</h5>
+
+<p><code><a href="Classes/SDImageCache.html">SDImageCache</a></code> in 5.x, use <code>~/Library/Caches/com.hackemist.SDImageCache/default/</code> as default cache path. However, 4.x use <code>~/Library/Caches/default/com.hackemist.SDWebImageCache.default/</code>. And don&rsquo;t be worried, we will do the migration automatically once the shared cache initialized.</p>
+
+<p>However, if you have some other custom namespace cache instance, you should try to do migration by yourself. But typically, since the cache is designed to be invalid at any time, you&rsquo;d better not to bind some important logic related on that cache path changes.</p>
+
+<p>And, if you&rsquo;re previously using any version from <code>5.0.0-beta</code> to <code>5.0.0-beta3</code>, please note that the cache folder has been temporarily moved to <code>~/Library/Caches/default/com.hackemist.SDImageCache.default/</code>, however, the final release version of 5.0.0 use the path above. If you upgrade from those beta version, you may need manually do migration, check <code>+[SDDiskCache moveCacheDirectoryFromPath:toPath:]</code> for detail information.</p>
+<h5 id='cache-cost-function' class='heading'>Cache Cost Function</h5>
+
+<p><code><a href="Classes/SDImageCacheConfig.html#/c:objc(cs)SDImageCacheConfig(py)maxMemoryCost">SDImageCacheConfig.maxMemoryCost</a></code> can be used to specify the memory cost limit. In the 4.x, the cost function is the <strong>pixel count</strong> of images. However, 5.x change it into the total <strong>bytes size</strong> of images. </p>
+
+<p>Because for memory cache, we actually care about the memory usage about bytes, but not the count of pixels. And pixel count can not accurately represent the memory usage.</p>
+
+<p>The bytes of a image occupied in the memory, can use the simple formula below:</p>
+
+<p><strong>bytes size</strong> = <strong>pixel count</strong> * <strong>bytes per pixel</strong></p>
+
+<p>The <strong>bytes per pixel</strong> is a constant depends on <a href="https://developer.apple.com/library/archive/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/dq_images/dq_images.html">image pixel format</a>. For mostly used images (8 bits per channel with alpha), the value is 4. So you can simply migrate your previous pixel count value with 4 multiplied.</p>
+<h4 id='prefetcher' class='heading'>Prefetcher</h4>
+
+<p><code><a href="Classes/SDWebImagePrefetcher.html">SDWebImagePrefetcher</a></code> in 5.x, change the concept of fetching batch of URLs. Now, each time you call <code>prefetchURLs:</code>, you will get a token which represents the specified URLs list. It does not cancel the previous URLs which is prefetching, which make the shared prefetcher behaves more intuitively.</p>
+
+<p>However, in 4.x, each time you call <code>prefetchURLs:</code>, it will cancel all previous URLs which is been prefetching.</p>
+
+<p>If you still want the same behavior, manually call <code>cancelPrefetching</code> each time before any <code>prefetchURLs:</code> calls.</p>
+
+<ul>
+<li>Objective-C</li>
+</ul>
+<pre class="highlight plaintext"><code>SDWebImagePrefetcher *prefetcher = SDWebImagePrefetcher.sharedImagePrefetcher;
+[prefetcher cancelPrefetching];
+[prefetcher prefetchURLs:@[url1, url2]];
+</code></pre>
+
+<ul>
+<li>Swift</li>
+</ul>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">prefetcher</span> <span class="o">=</span> <span class="kt">SDWebImagePrefetcher</span><span class="o">.</span><span class="n">shared</span>
+<span class="n">prefetcher</span><span class="o">.</span><span class="nf">cancelPrefetching</span><span class="p">()</span>
+<span class="n">prefetcher</span><span class="o">.</span><span class="nf">prefetchURLs</span><span class="p">([</span><span class="n">url1</span><span class="p">,</span> <span class="n">url2</span><span class="p">])</span>
+</code></pre>
+<h4 id='error-codes-and-domain' class='heading'>Error codes and domain</h4>
+
+<p>For image loading from network, if you don&rsquo;t pass <code>SDWebImageRetryFailed</code> option, we&rsquo;ll try to blocking some URLs which is indeed mark as failed.</p>
+
+<p>This check is done previously in a hard-coded logic for specify error codes. However, due to some compatible issue, we don&rsquo;t check the error domain. (Learn about <a href="https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ErrorHandlingCocoa/ErrorObjectsDomains/ErrorObjectsDomains.html">NSError&rsquo;s domain and codes</a>) And arbitrarily block some codes which may from custom download operation implementations.</p>
+
+<p>Since in 5.x, we supports custom loaders which can use any third-party SDKs, and have their own error domain and error codes. So we now only filter the error codes in <a href="https://developer.apple.com/documentation/foundation/nsurlerrordomain">NSURLErrorDomain</a>. If you have already using some error codes without error domain check, or you use <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#custom-download-operation-40">Custom Download Operation</a>, be sure to update it with the right way.</p>
+
+<p>At the same time, our framework errors, now using the formal <code><a href="Constants.html#/c:@SDWebImageErrorDomain">SDWebImageErrorDomain</a></code> with the pre-defined codes. Check <code>SDWebImageError.h</code> for details.</p>
+<h3 id='api-changes' class='heading'>API Changes</h3>
+<h4 id='sdimagecache' class='heading'>SDImageCache</h4>
+
+<ul>
+<li>moved <code>maxMemoryCost</code> and <code>maxMemoryCountLimit</code> to <code><a href="Classes/SDImageCacheConfig.html">SDImageCacheConfig</a></code></li>
+<li><code>makeDiskCachePath:</code> removed, use <code>NSSearchPathForDirectoriesInDomains</code> with NSString&rsquo;s Path API instead.</li>
+<li><code>addReadOnlyCachePath:</code> removed, use <code>additionalCachePathBlock</code> instead</li>
+<li><code>cachePathForKey:inPath:</code> removed, use <code>cachePathForKey:</code> with NSString&rsquo;s path API instead.</li>
+<li><code>defaultCachePathForKey:</code> removed, use <code>cachePathForKey:</code> instead</li>
+<li><code>SDCacheQueryCompletedBlock</code> renamed to <code><a href="Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a></code></li>
+<li><code>SDWebImageCheckCacheCompletionBlock</code> renamed to <code><a href="Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheCheckCompletionBlock">SDImageCacheCheckCompletionBlock</a></code></li>
+<li><code>SDWebImageCalculateSizeBlock</code> renamed to <code><a href="Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheCalculateSizeBlock">SDImageCacheCalculateSizeBlock</a></code></li>
+<li><code>getSize</code> renamed to <code>totalDiskSize</code></li>
+<li><code>getDiskCount</code> renamed to <code>totalDiskCount</code></li>
+</ul>
+<h4 id='sdimagecacheconfig' class='heading'>SDImageCacheConfig</h4>
+
+<ul>
+<li><code>shouldDecompressImages</code> removed. Use  <code>SDImageCacheAvoidDecodeImage</code> in cache options instead</li>
+<li><code>maxCacheAge</code> renamed to <code>maxDiskAge</code></li>
+<li><code>maxCacheSize</code> renamed to <code>maxDiskSize</code></li>
+</ul>
+<h4 id='sdwebimagemanager' class='heading'>SDWebImageManager</h4>
+
+<ul>
+<li><code>loadImageWithURL:options:progress:completed:</code> changed the <code>completed</code> param requirement from <code>nullable</code> to <code>nonnull</code></li>
+<li><code>loadImageWithURL:options:progress:completed:</code> return type <code>id&lt;SDWebImageOperation&gt;</code> changed to <code>SDWebImageCombinedOperation *</code></li>
+<li><code>imageCache</code> changed from nullable to nonnull. And property type changed from <code>SDImageCache *</code> to <code>id&lt;SDImageCache&gt;</code>. The default value does not change.</li>
+<li><code>imageDownloader</code> renamed to <code>imageLoader</code> and changed from nullable to nonnull. And property type changed from <code>SDWebImageDownloader *</code> to <code>id&lt;SDImageLoader&gt;</code>. The default value does not change.</li>
+<li><code>cacheKeyFilter</code> property type changed to <code>id&lt;SDWebImageCacheKeyFilter&gt;</code>, you can use <code>+[SDWebImageCacheKeyFilter cacheKeyFilterWithBlock:]</code> to create</li>
+<li><code>cacheSerializer</code> property type changed to <code>id&lt;SDWebImageCacheSerializer&gt;</code>, you can use <code>+[SDWebImageCacheSerializer cacheSerializerWithBlock:]</code> to create</li>
+<li><code><a href="Type%20Definitions.html#/c:SDWebImageCacheKeyFilter.h@T@SDWebImageCacheKeyFilterBlock">SDWebImageCacheKeyFilterBlock</a></code>&lsquo;s <code>url</code> arg change from nullable to nonnull</li>
+<li><code>initWithCache:downloader:</code> &rsquo;s <code>cache</code> arg type changed from <code>SDImageCache *</code> to <code>id&lt;SDImageCache&gt;</code></li>
+<li><code>initWithCache:downloader</code> renamed to <code>initWithCache:loader:</code></li>
+<li><code>saveImageToCache:forURL:</code> removed. Use <code>SDImageCache storeImage:imageData:forKey:cacheType:completion:</code> (or <code>SDImageCache storeImage:forKey:toDisk:completion:</code> if you use default cache class) with <code>cacheKeyForURL:</code> instead.</li>
+<li><code>diskImageExistsForURL:completion:</code> removed. Use <code>SDImageCache containsImageForKey:cacheType:completion:</code> (or <code>SDImageCache diskImageExistsWithKey:completion:</code> if you use default cache class) with <code>cacheKeyForURL:</code> instead.</li>
+<li><code>cachedImageExistsForURL:completion</code> removed. Use <code>SDImageCache containsImageForKey:cacheType:completion:</code> (or <code>SDImageCache diskImageExistsWithKey:completion:</code> and <code>SDImageCache imageFromMemoryCacheForKey:</code> if you use default cache class) with <code>cacheKeyForURL:</code> instead.</li>
+</ul>
+<h4 id='sdwebimagemanagerdelegate' class='heading'>SDWebImageManagerDelegate</h4>
+
+<ul>
+<li>removed <code>imageManager:transformDownloadedImage:forKey:</code>, use <code><a href="Protocols/SDImageTransformer.html">SDImageTransformer</a></code> with context option instead</li>
+</ul>
+<h4 id='uiview-and-subclasses-uiimageview-uibutton' class='heading'>UIView and subclasses (UIImageView, UIButton, &hellip;)</h4>
+
+<ul>
+<li><code>sd_internalSetImageWithURL:placeholderImage:options:operationKey:setImageBlock:progress:completed:</code> renamed to <code>UIView sd_internalSetImageWithURL:placeholderImage:options:context:setImageBlock:progress:completed:</code> (The biggest changes is that the completion block type from <code><a href="Type%20Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a></code> to <code><a href="Type%20Definitions.html#/c:SDWebImageManager.h@T@SDInternalCompletionBlock">SDInternalCompletionBlock</a></code>. Which allow advanced user to get more information of image loading process)</li>
+<li><code>sd_internalSetImageWithURL:placeholderImage:options:operationKey:setImageBlock:progress:completed:context:</code> removed</li>
+<li>activity indicator refactoring - use <code>sd_imageIndicator</code> with <code><a href="Classes/SDWebImageActivityIndicator.html">SDWebImageActivityIndicator</a></code>
+
+<ul>
+<li><code>sd_setShowActivityIndicatorView:</code> removed</li>
+<li><code>sd_setIndicatorStyle:</code> removed</li>
+<li><code>sd_showActivityIndicatorView</code> removed</li>
+<li><code>sd_addActivityIndicator:</code> removed</li>
+<li><code>sd_removeActivityIndicator:</code> removed</li>
+</ul></li>
+</ul>
+<h4 id='uiimage' class='heading'>UIImage</h4>
+
+<ul>
+<li>Renamed <code>isGIF</code> to <code>sd_isAnimated</code>, also <code>NSImage isGIF</code> renamed to <code>NSImage sd_isAnimated</code></li>
+<li>Renamed <code>decodedImageWithImage:</code> to <code>sd_decodedImageWithImage:</code></li>
+<li>Renamed <code>decodedAndScaledDownImageWithImage:</code> to <code>sd_decodedAndScaledDownImageWithImage:</code></li>
+<li>Renamed <code>sd_animatedGIFWithData</code> to <code>sd_imageWithGIFData:</code></li>
+<li>Removed <code>sd_webpLoopCount</code></li>
+</ul>
+<h4 id='uiimageview' class='heading'>UIImageView</h4>
+
+<ul>
+<li>Removed <code>sd_setImageWithPreviousCachedImageWithURL:placeholderImage:options:progress:completed</code></li>
+</ul>
+<h4 id='sdwebimagedownloader' class='heading'>SDWebImageDownloader</h4>
+
+<ul>
+<li><code>shouldDecompressImages</code> moved to <code>SDWebImageDownloaderConfig.shouldDecompressImages</code></li>
+<li><code>maxConcurrentDownloads</code> moved to <code><a href="Classes/SDWebImageDownloaderConfig.html#/c:objc(cs)SDWebImageDownloaderConfig(py)maxConcurrentDownloads">SDWebImageDownloaderConfig.maxConcurrentDownloads</a></code></li>
+<li><code>downloadTimeout</code> moved to <code><a href="Classes/SDWebImageDownloaderConfig.html#/c:objc(cs)SDWebImageDownloaderConfig(py)downloadTimeout">SDWebImageDownloaderConfig.downloadTimeout</a></code></li>
+<li><code>operationClass</code> moved to <code><a href="Classes/SDWebImageDownloaderConfig.html#/c:objc(cs)SDWebImageDownloaderConfig(py)operationClass">SDWebImageDownloaderConfig.operationClass</a></code></li>
+<li><code>executionOrder</code> moved to <code><a href="Classes/SDWebImageDownloaderConfig.html#/c:objc(cs)SDWebImageDownloaderConfig(py)executionOrder">SDWebImageDownloaderConfig.executionOrder</a></code></li>
+<li><code>urlCredential</code> moved to <code><a href="Classes/SDWebImageDownloaderConfig.html#/c:objc(cs)SDWebImageDownloaderConfig(py)urlCredential">SDWebImageDownloaderConfig.urlCredential</a></code></li>
+<li><code>username</code> moved to <code><a href="Classes/SDWebImageDownloaderConfig.html#/c:objc(cs)SDWebImageDownloaderConfig(py)username">SDWebImageDownloaderConfig.username</a></code></li>
+<li><code>password</code> moved to <code><a href="Classes/SDWebImageDownloaderConfig.html#/c:objc(cs)SDWebImageDownloaderConfig(py)password">SDWebImageDownloaderConfig.password</a></code></li>
+<li><code>initWithSessionConfiguration:</code> removed, use <code>initWithConfig:</code> with session configuration instead</li>
+<li><code>createNewSessionWithConfiguration:</code> removed, use <code>initWithConfig:</code> with new session configuration instead. To modify shared downloader configuration, provide custom <code><a href="Classes/SDWebImageDownloaderConfig.html#/c:objc(cs)SDWebImageDownloaderConfig(cpy)defaultDownloaderConfig">SDWebImageDownloaderConfig.defaultDownloaderConfig</a></code> before it created.</li>
+<li><code>headersFilter</code> removed, use <code>requestModifier</code> instead</li>
+<li><code>cancel:</code> removed, use <code><a href="Classes/SDWebImageDownloadToken.html#/c:objc(cs)SDWebImageDownloadToken(im)cancel">-[SDWebImageDownloadToken cancel]</a></code> instead</li>
+<li><code>shouldDecompressImages</code> removed. Use <code>SDWebImageDownloaderAvoidDecodeImage</code> in downloader options instead</li>
+<li>use <code><a href="Type%20Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderProgressBlock">SDImageLoaderProgressBlock</a></code> instead of <code><a href="Type%20Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderProgressBlock">SDWebImageDownloaderProgressBlock</a></code></li>
+<li>use <code><a href="Type%20Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderCompletedBlock">SDImageLoaderCompletedBlock</a></code> instead of <code><a href="Type%20Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderCompletedBlock">SDWebImageDownloaderCompletedBlock</a></code></li>
+</ul>
+<h4 id='sdwebimagedownloaderoperation' class='heading'>SDWebImageDownloaderOperation</h4>
+
+<ul>
+<li><code>initWithRequest:inSession:options:context:</code> is now the designated initializer</li>
+<li>Removed <code>shouldUseCredentialStorage</code> property</li>
+<li><code>SDWebImageDownloadOperationInterface</code> protocol renamed to <code>SDWebImageDownloadOperation</code></li>
+<li><code>expectedSize</code> removed, use <code>response.expectedContentLength</code> instead</li>
+<li><code>shouldDecompressImages</code> removed. Use <code>SDWebImageDownloaderAvoidDecodeImage</code> in downloader options instead.</li>
+<li><code>response</code> property change to readonly</li>
+</ul>
+<h4 id='sdwebimageprefetcher' class='heading'>SDWebImagePrefetcher</h4>
+
+<ul>
+<li><code>prefetchURLs:</code> and <code>prefetchURLs:progress:completed:</code> return types changed from <code>void</code> to <code><a href="Classes/SDWebImagePrefetchToken.html">SDWebImagePrefetchToken</a></code></li>
+<li><code>prefetcherQueue</code> property renamed to <code>delegateQueue</code></li>
+<li><code>maxConcurrentDownloads</code> replaced with <code>maxConcurrentPrefetchCount</code></li>
+</ul>
+<h4 id='sdimagecoder' class='heading'>SDImageCoder</h4>
+
+<ul>
+<li><code>SDCGColorSpaceGetDeviceRGB()</code> moved to <code><a href="Classes/SDImageCoderHelper.html#/c:objc(cs)SDImageCoderHelper(cm)colorSpaceGetDeviceRGB">+[SDImageCoderHelper colorSpaceGetDeviceRGB]</a></code></li>
+<li><code>SDCGImageRefContainsAlpha()</code>, moved to <code>+[SDImageCoderHelper imageRefContainsAlpha:]</code></li>
+<li><code>decodedImageWithData:</code> replaced with <code>decodedImageWithData:options:</code></li>
+<li><code>encodedDataWithImage:format:</code> replaced with <code>encodedDataWithImage:format:options</code></li>
+<li><code>init</code> method from <code>SDWebImageProgressiveCoder</code> changed to <code>initIncrementalWithOptions:</code></li>
+<li><code>incrementalDecodedImageWithData:finished</code> replaced with <code>updateIncrementalData:finished</code> and <code>incrementalDecodedImageWithOptions:</code> two APIs</li>
+<li>removed <code>decompressedImage:data:options</code>, use <code><a href="Classes/SDImageCoderHelper.html#/c:objc(cs)SDImageCoderHelper(cm)decodedImageWithImage:">+[SDImageCoderHelper decodedImageWithImage:]</a></code> and <code><a href="Classes/SDImageCoderHelper.html#/c:objc(cs)SDImageCoderHelper(cm)decodedAndScaledDownImageWithImage:limitBytes:">+[SDImageCoderHelper decodedAndScaledDownImageWithImage:limitBytes:]</a></code> instead</li>
+</ul>
+<h4 id='constants' class='heading'>Constants</h4>
+
+<ul>
+<li><code>SDWebImageInternalSetImageGroupKey</code> renamed to <code>SDWebImageContextSetImageGroup</code></li>
+<li><code>SDWebImageExternalCustomManagerKey</code> renamed to <code><a href="Constants.html#/c:@SDWebImageContextCustomManager">SDWebImageContextCustomManager</a></code></li>
+</ul>
+<h4 id='swift-specific-api-change' class='heading'>Swift Specific API Change</h4>
+
+<p>In SDWebImage 5.0 we did a clean up of the API. We are using many modern Objective-C declarations to generate the Swift API. We now provide full nullability support, string enum, class property, and even custom Swift API name, all to make the framework easier to use for our Swift users. Here are the API change specify for Swift. </p>
+<h5 id='uiview-webcache' class='heading'>UIView+WebCache</h5>
+
+<ul>
+<li><code>sd_imageURL()</code> changed to <code>sd_imageURL</code></li>
+</ul>
+<h5 id='sdimagecache' class='heading'>SDImageCache</h5>
+
+<ul>
+<li><code>shared()</code> changed to <code>shared</code></li>
+</ul>
+<h5 id='sdwebimagemanager' class='heading'>SDWebImageManager</h5>
+
+<ul>
+<li><code>shared()</code> changed to <code>shared</code></li>
+<li><code>isRunning()</code> changed to <code>isRunning</code></li>
+</ul>
+<h5 id='sdwebimagedownloader' class='heading'>SDWebImageDownloader</h5>
+
+<ul>
+<li><code>shared()</code> changed to <code>shared</code></li>
+<li><code>setOperationClass(_:)</code> available for Swift user with <code>operationClass</code> property</li>
+<li><code>setSuspended(_:)</code> changed to <code>isSuspended</code> property</li>
+</ul>
+<h5 id='sdwebimagedownloadoperation' class='heading'>SDWebImageDownloadOperation</h5>
+
+<ul>
+<li><code>SDWebImageDownloadOperationInterface</code> protocol renamed to <code>SDWebImageDownloadOperationProtocol</code>.</li>
+</ul>
+<h5 id='sdimagecodersmanager' class='heading'>SDImageCodersManager</h5>
+
+<ul>
+<li><code>sharedInstance()</code> changed to <code>shared</code></li>
+</ul>
+<h5 id='sdimageiocoder' class='heading'>SDImageIOCoder</h5>
+
+<ul>
+<li><code>shared()</code> changed to <code>shared</code></li>
+</ul>
+<h5 id='sdimagegifcoder' class='heading'>SDImageGIFCoder</h5>
+
+<ul>
+<li><code>shared()</code> changed to <code>shared</code></li>
+</ul>
+<h5 id='sdimagewebpcoder' class='heading'>SDImageWebPCoder</h5>
+
+<ul>
+<li><code>shared()</code> changed to <code>shared</code></li>
+</ul>
+<h5 id='nsdata-imagecontenttype' class='heading'>NSData-ImageContentType</h5>
+
+<ul>
+<li><code>sd_UTTypeFromSDImageFormat</code> return <code>CFString</code> instead of <code>Unmanaged&lt;CFString&gt;</code></li>
+</ul>
+<h5 id='uibutton-webcache' class='heading'>UIButton-WebCache</h5>
+
+<ul>
+<li><code>sd_currentImageURL()</code> changed to <code>sd_currentImageURL</code></li>
+</ul>
+<h5 id='nsbutton-webcache' class='heading'>NSButton-WebCache</h5>
+
+<ul>
+<li><code>sd_currentImageURL()</code> changed to <code>sd_currentImageURL</code></li>
+<li><code>sd_currentAlternateImageURL()</code> changed to <code>sd_currentAlternateImageURL</code></li>
+</ul>
+<h3 id='full-api-diff' class='heading'>Full API Diff</h3>
+
+<p>For advanced user who need the detailed API diff, we provide the full diff in a HTML web page (Currently based on 4.4.4 and 5.0.0-beta4):</p>
+
+<p><a href="https://htmlpreview.github.io/?https://github.com/rs/SDWebImage/blob/master/Docs/API-Diff/5.0/apidiff.html">SDWebImage 5.0 API Diff</a>.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-11-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

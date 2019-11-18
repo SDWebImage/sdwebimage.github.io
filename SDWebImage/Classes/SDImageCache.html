@@ -1,0 +1,2737 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SDImageCache Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/SDImageCache" class="dashAnchor"></a>
+    <a title="SDImageCache Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SDWebImage 5.3.1 Docs</a> (81% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SDWebImage Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SDImageCache Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../howtouse.html">HowToUse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../manualinstallation.html">ManualInstallation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../sdwebimage-40-migration-guide.html">SDWebImage-4.0-Migration-guide</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../sdwebimage-50-migration-guide.html">SDWebImage-5.0-Migration-guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Categories/NSData%28ImageContentType%29.html">NSData(ImageContentType)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/UIButton%28WebCache%29.html">UIButton(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/UIImage%28ForceDecode%29.html">UIImage(ForceDecode)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/UIImage%28GIF%29.html">UIImage(GIF)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/UIImage%28MemoryCacheCost%29.html">UIImage(MemoryCacheCost)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/UIImage%28Metadata%29.html">UIImage(Metadata)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/UIImage%28MultiFormat%29.html">UIImage(MultiFormat)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/UIImage%28Transform%29.html">UIImage(Transform)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/UIImageView%28HighlightedWebCache%29.html">UIImageView(HighlightedWebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/UIImageView%28WebCache%29.html">UIImageView(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/UIView%28WebCache%29.html">UIView(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/UIView%28WebCacheOperation%29.html">UIView(WebCacheOperation)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/SDAnimatedImage.html">SDAnimatedImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDAnimatedImagePlayer.html">SDAnimatedImagePlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDAnimatedImageView.html">SDAnimatedImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDDiskCache.html">SDDiskCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageAPNGCoder.html">SDImageAPNGCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageBlurTransformer.html">SDImageBlurTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageCache.html">SDImageCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageCacheConfig.html">SDImageCacheConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageCachesManager.html">SDImageCachesManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageCoderHelper.html">SDImageCoderHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageCodersManager.html">SDImageCodersManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageCroppingTransformer.html">SDImageCroppingTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageFilterTransformer.html">SDImageFilterTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageFlippingTransformer.html">SDImageFlippingTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageFrame.html">SDImageFrame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageGIFCoder.html">SDImageGIFCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageHEICCoder.html">SDImageHEICCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageIOAnimatedCoder.html">SDImageIOAnimatedCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageIOCoder.html">SDImageIOCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageLoadersManager.html">SDImageLoadersManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImagePipelineTransformer.html">SDImagePipelineTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageResizingTransformer.html">SDImageResizingTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageRotationTransformer.html">SDImageRotationTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageRoundCornerTransformer.html">SDImageRoundCornerTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageTintTransformer.html">SDImageTintTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDMemoryCache.html">SDMemoryCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageActivityIndicator.html">SDWebImageActivityIndicator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageCacheKeyFilter.html">SDWebImageCacheKeyFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageCacheSerializer.html">SDWebImageCacheSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageCombinedOperation.html">SDWebImageCombinedOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageDownloadToken.html">SDWebImageDownloadToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageDownloader.html">SDWebImageDownloader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageDownloaderConfig.html">SDWebImageDownloaderConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageDownloaderDecryptor.html">SDWebImageDownloaderDecryptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageDownloaderRequestModifier.html">SDWebImageDownloaderRequestModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageDownloaderResponseModifier.html">SDWebImageDownloaderResponseModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageManager.html">SDWebImageManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageOptionsProcessor.html">SDWebImageOptionsProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageOptionsResult.html">SDWebImageOptionsResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImagePrefetchToken.html">SDWebImagePrefetchToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImagePrefetcher.html">SDWebImagePrefetcher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageProgressIndicator.html">SDWebImageProgressIndicator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDWebImageTransition.html">SDWebImageTransition</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderDecodeFirstFrameOnly">SDImageCoderDecodeFirstFrameOnly</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderDecodeScaleFactor">SDImageCoderDecodeScaleFactor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderWebImageContext">SDImageCoderWebImageContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatGIF">SDImageFormatGIF</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatHEIC">SDImageFormatHEIC</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatHEIF">SDImageFormatHEIF</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatJPEG">SDImageFormatJPEG</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatPNG">SDImageFormatPNG</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatTIFF">SDImageFormatTIFF</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatUndefined">SDImageFormatUndefined</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatWebP">SDImageFormatWebP</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextAnimatedImageClass">SDWebImageContextAnimatedImageClass</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextCacheKeyFilter">SDWebImageContextCacheKeyFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextCacheSerializer">SDWebImageContextCacheSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextCustomManager">SDWebImageContextCustomManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextDownloadDecryptor">SDWebImageContextDownloadDecryptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextDownloadRequestModifier">SDWebImageContextDownloadRequestModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextDownloadResponseModifier">SDWebImageContextDownloadResponseModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextImageScaleFactor">SDWebImageContextImageScaleFactor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextImageTransformer">SDWebImageContextImageTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextLoaderCachedImage">SDWebImageContextLoaderCachedImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextStoreCacheType">SDWebImageContextStoreCacheType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageDownloadFinishNotification">SDWebImageDownloadFinishNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageDownloadReceiveResponseNotification">SDWebImageDownloadReceiveResponseNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageDownloadStartNotification">SDWebImageDownloadStartNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageDownloadStopNotification">SDWebImageDownloadStopNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageErrorDomain">SDWebImageErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageErrorDownloadStatusCodeKey">SDWebImageErrorDownloadStatusCodeKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageProgressUnitCountUnknown">SDWebImageProgressUnitCountUnknown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@WebImageVersionNumber">WebImageVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@WebImageVersionString">WebImageVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SDImageCacheConfigExpireType.html">SDImageCacheConfigExpireType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDImageCacheOptions.html">SDImageCacheOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDImageCacheType.html">SDImageCacheType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDImageScaleMode.html">SDImageScaleMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDWebImageDownloaderExecutionOrder.html">SDWebImageDownloaderExecutionOrder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDWebImageDownloaderOptions.html">SDWebImageDownloaderOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDWebImageError.html">SDWebImageError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/SDAnimatedImage.html">SDAnimatedImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDAnimatedImageCoder.html">SDAnimatedImageCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDAnimatedImageProvider.html">SDAnimatedImageProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDDiskCache.html">SDDiskCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDImageCache.html">SDImageCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDImageCoder.html">SDImageCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDImageLoader.html">SDImageLoader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDImageTransformer.html">SDImageTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDMemoryCache.html">SDMemoryCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDProgressiveImageCoder.html">SDProgressiveImageCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageCacheKeyFilter.html">SDWebImageCacheKeyFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageCacheSerializer.html">SDWebImageCacheSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageDownloaderDecryptor.html">SDWebImageDownloaderDecryptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageDownloaderOperation.html">SDWebImageDownloaderOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageDownloaderRequestModifier.html">SDWebImageDownloaderRequestModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageDownloaderResponseModifier.html">SDWebImageDownloaderResponseModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageIndicator.html">SDWebImageIndicator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageManagerDelegate.html">SDWebImageManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageOperation.html">SDWebImageOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImageOptionsProcessor.html">SDWebImageOptionsProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDWebImagePrefetcherDelegate.html">SDWebImagePrefetcherDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheAdditionalCachePathBlock">SDImageCacheAdditionalCachePathBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheCalculateSizeBlock">SDImageCacheCalculateSizeBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheCheckCompletionBlock">SDImageCacheCheckCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheContainsCompletionBlock">SDImageCacheContainsCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderMutableOptions">SDImageCoderMutableOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderOption">SDImageCoderOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderOptions">SDImageCoderOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderCompletedBlock">SDImageLoaderCompletedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderProgressBlock">SDImageLoaderProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageManager.h@T@SDInternalCompletionBlock">SDInternalCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:UIImage+Transform.h@T@SDRectCorner">SDRectCorner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:UIView+WebCache.h@T@SDSetImageBlock">SDSetImageBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageAnimationOptions">SDWebImageAnimationOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageCacheKeyFilter.h@T@SDWebImageCacheKeyFilterBlock">SDWebImageCacheKeyFilterBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageCacheSerializer.h@T@SDWebImageCacheSerializerBlock">SDWebImageCacheSerializerBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContextOption">SDWebImageContextOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderCompletedBlock">SDWebImageDownloaderCompletedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageDownloaderDecryptor.h@T@SDWebImageDownloaderDecryptorBlock">SDWebImageDownloaderDecryptorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageDownloader.h@T@SDWebImageDownloaderProgressBlock">SDWebImageDownloaderProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageDownloaderRequestModifier.h@T@SDWebImageDownloaderRequestModifierBlock">SDWebImageDownloaderRequestModifierBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageDownloaderResponseModifier.h@T@SDWebImageDownloaderResponseModifierBlock">SDWebImageDownloaderResponseModifierBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageMutableContext">SDWebImageMutableContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageOptionsProcessor.h@T@SDWebImageOptionsProcessorBlock">SDWebImageOptionsProcessorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImagePrefetcher.h@T@SDWebImagePrefetcherCompletionBlock">SDWebImagePrefetcherCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImagePrefetcher.h@T@SDWebImagePrefetcherProgressBlock">SDWebImagePrefetcherProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionAnimationsBlock">SDWebImageTransitionAnimationsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionCompletionBlock">SDWebImageTransitionCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDWebImageTransition.h@T@SDWebImageTransitionPreparesBlock">SDWebImageTransitionPreparesBlock</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDGraphicsBeginImageContext">SDGraphicsBeginImageContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDGraphicsBeginImageContextWithOptions">SDGraphicsBeginImageContextWithOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDGraphicsEndImageContext">SDGraphicsEndImageContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDGraphicsGetCurrentContext">SDGraphicsGetCurrentContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDGraphicsGetImageFromCurrentImageContext">SDGraphicsGetImageFromCurrentImageContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDImageCacheDecodeImageData">SDImageCacheDecodeImageData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDImageLoaderDecodeImageData">SDImageLoaderDecodeImageData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDImageLoaderDecodeProgressiveImageData">SDImageLoaderDecodeProgressiveImageData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDImageScaleFactorForKey">SDImageScaleFactorForKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDScaledImageForKey">SDScaledImageForKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDScaledImageForScaleFactor">SDScaledImageForScaleFactor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDTransformedKeyForKey">SDTransformedKeyForKey</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SDImageCache</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageCache</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>SDImageCache maintains a memory cache and a disk cache. Disk cache write operations are performed
+asynchronous so it doesn’t add unnecessary latency to the UI.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/objc/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(py)config"></a>
+                    <a name="//apple_ref/objc/Property/config" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(py)config">config</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Cache Config object - storing all kind of settings.
+The property is copy so change of currrent config will not accidentally affect other cache&rsquo;s config.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="../Classes/SDImageCacheConfig.html">SDImageCacheConfig</a></span> <span class="o">*</span><span class="n">config</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@NSCopying</span> <span class="k">var</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDImageCacheConfig.html">SDImageCacheConfig</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L70">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(py)memoryCache"></a>
+                    <a name="//apple_ref/objc/Property/memoryCache" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(py)memoryCache">memoryCache</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The memory cache implementation object used for current image cache.
+By default we use <code><a href="../Protocols/SDMemoryCache.html">SDMemoryCache</a></code> class, you can also use this to call your own implementation class method.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    To customize this class, check <code><a href="../Classes/SDImageCacheConfig.html#/c:objc(cs)SDImageCacheConfig(py)memoryCacheClass">SDImageCacheConfig.memoryCacheClass</a></code> property.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDMemoryCache.html">SDMemoryCache</a></span><span class="o">&gt;</span> <span class="n">memoryCache</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">memoryCache</span><span class="p">:</span> <span class="kt">SDMemoryCacheProtocol</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L77">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(py)diskCache"></a>
+                    <a name="//apple_ref/objc/Property/diskCache" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(py)diskCache">diskCache</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The disk cache implementation object used for current image cache.
+By default we use <code><a href="../Protocols/SDMemoryCache.html">SDMemoryCache</a></code> class, you can also use this to call your own implementation class method.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    To customize this class, check <code><a href="../Classes/SDImageCacheConfig.html#/c:objc(cs)SDImageCacheConfig(py)diskCacheClass">SDImageCacheConfig.diskCacheClass</a></code> property.
+
+</div>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    When calling method about read/write in disk cache, be sure to either make your disk cache implementation IO-safe or using the same access queue to avoid issues.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDDiskCache.html">SDDiskCache</a></span><span class="o">&gt;</span> <span class="n">diskCache</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">diskCache</span><span class="p">:</span> <span class="kt">SDDiskCacheProtocol</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L85">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(py)diskCachePath"></a>
+                    <a name="//apple_ref/objc/Property/diskCachePath" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(py)diskCachePath">diskCachePath</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The disk cache&rsquo;s root path</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">diskCachePath</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">diskCachePath</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L90">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(py)additionalCachePathBlock"></a>
+                    <a name="//apple_ref/objc/Property/additionalCachePathBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(py)additionalCachePathBlock">additionalCachePathBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The additional disk cache path to check if the query from disk cache not exist;
+The <code>key</code> param is the image cache key. The returned file path will be used to load the disk cache. If return nil, ignore it.
+Useful if you want to bundle pre-loaded images with your app</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheAdditionalCachePathBlock">SDImageCacheAdditionalCachePathBlock</a></span> <span class="n">additionalCachePathBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">additionalCachePathBlock</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheAdditionalCachePathBlock">SDImageCacheAdditionalCachePathBlock</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L97">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Singleton%20and%20initialization"></a>
+                <a name="//apple_ref/objc/Section/Singleton and initialization" class="dashAnchor"></a>
+                <a href="#/Singleton%20and%20initialization">
+                  <h3 class="section-name">Singleton and initialization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(cpy)sharedImageCache"></a>
+                    <a name="//apple_ref/objc/Property/sharedImageCache" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(cpy)sharedImageCache">sharedImageCache</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns global shared cache instance</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">,</span> <span class="n">class</span><span class="p">)</span> <span class="n">SDImageCache</span> <span class="o">*</span><span class="n">sharedImageCache</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="k">var</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">SDImageCache</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L104">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)initWithNamespace:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithNamespace:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)initWithNamespace:">-initWithNamespace:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Init a new cache store with a specific namespace</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithNamespace</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">ns</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">namespace</span> <span class="nv">ns</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ns</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The namespace to use for this cache store</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L111">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)initWithNamespace:diskCacheDirectory:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithNamespace:diskCacheDirectory:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)initWithNamespace:diskCacheDirectory:">-initWithNamespace:diskCacheDirectory:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Init a new cache store with a specific namespace and directory.
+ If you don&rsquo;t provide the disk cache directory, we will use the User Cache directory with prefix (~/Library/Caches/com.hackemist.SDImageCache/).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithNamespace</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">ns</span>
+                       <span class="nf">diskCacheDirectory</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">directory</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">namespace</span> <span class="nv">ns</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">diskCacheDirectory</span> <span class="nv">directory</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ns</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The namespace to use for this cache store</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>directory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Directory to cache disk images in</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L120-L121">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)initWithNamespace:diskCacheDirectory:config:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithNamespace:diskCacheDirectory:config:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)initWithNamespace:diskCacheDirectory:config:">-initWithNamespace:diskCacheDirectory:config:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Init a new cache store with a specific namespace, directory and file manager
+ The final disk cache directory should looks like ($directory/$namespace). And the default config of shared cache, should result in (~/Library/Caches/com.hackemist.SDImageCache/default/)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithNamespace</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">ns</span>
+                       <span class="nf">diskCacheDirectory</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">directory</span>
+                                   <span class="nf">config</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/SDImageCacheConfig.html">SDImageCacheConfig</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">config</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n">namespace</span> <span class="nv">ns</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">diskCacheDirectory</span> <span class="nv">directory</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDImageCacheConfig.html">SDImageCacheConfig</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ns</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The namespace to use for this cache store</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>directory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Directory to cache disk images in</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>config</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The cache config to be used to create the cache. You can provide custom memory cache or disk cache class in the cache config</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L131-L133">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Cache%20paths"></a>
+                <a name="//apple_ref/objc/Section/Cache paths" class="dashAnchor"></a>
+                <a href="#/Cache%20paths">
+                  <h3 class="section-name">Cache paths</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)cachePathForKey:"></a>
+                    <a name="//apple_ref/objc/Method/-cachePathForKey:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)cachePathForKey:">-cachePathForKey:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the cache path for a certain key</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nf">cachePathForKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">cachePath</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique image cache key</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The cache path. You can check <code>lastPathComponent</code> to grab the file name.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L143">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Store%20Ops"></a>
+                <a name="//apple_ref/objc/Section/Store Ops" class="dashAnchor"></a>
+                <a href="#/Store%20Ops">
+                  <h3 class="section-name">Store Ops</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)storeImage:forKey:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-storeImage:forKey:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)storeImage:forKey:completion:">-storeImage:forKey:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asynchronously store an image into memory and disk cache at the given key.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">storeImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">image</span>
+            <span class="nf">forKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span>
+        <span class="nf">completion</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">)</span><span class="nv">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">store</span><span class="p">(</span><span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image to store</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique image cache key, usually it&rsquo;s image absolute URL</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block executed after the operation is finished</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L154-L156">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)storeImage:forKey:toDisk:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-storeImage:forKey:toDisk:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)storeImage:forKey:toDisk:completion:">-storeImage:forKey:toDisk:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asynchronously store an image into memory and disk cache at the given key.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">storeImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">image</span>
+            <span class="nf">forKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span>
+            <span class="nf">toDisk</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">toDisk</span>
+        <span class="nf">completion</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">)</span><span class="nv">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">store</span><span class="p">(</span><span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">toDisk</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image to store</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique image cache key, usually it&rsquo;s image absolute URL</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toDisk</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Store the image to disk cache if YES. If NO, the completion block is called synchronously</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block executed after the operation is finished</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L166-L169">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)storeImage:imageData:forKey:toDisk:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-storeImage:imageData:forKey:toDisk:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)storeImage:imageData:forKey:toDisk:completion:">-storeImage:imageData:forKey:toDisk:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asynchronously store an image into memory and disk cache at the given key.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">storeImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">image</span>
+         <span class="nf">imageData</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">imageData</span>
+            <span class="nf">forKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span>
+            <span class="nf">toDisk</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">toDisk</span>
+        <span class="nf">completion</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">)</span><span class="nv">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">store</span><span class="p">(</span><span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="nv">imageData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span> <span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">toDisk</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image to store</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image data as returned by the server, this representation will be used for disk storage
+                    instead of converting the given image object into a storable/compressed image format in order
+                    to save quality and CPU</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique image cache key, usually it&rsquo;s image absolute URL</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toDisk</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Store the image to disk cache if YES. If NO, the completion block is called synchronously</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block executed after the operation is finished</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L182-L186">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)storeImageToMemory:forKey:"></a>
+                    <a name="//apple_ref/objc/Method/-storeImageToMemory:forKey:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)storeImageToMemory:forKey:">-storeImageToMemory:forKey:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Synchronously store image into memory cache at the given key.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">storeImageToMemory</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">image</span>
+                    <span class="nf">forKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">storeImage</span><span class="p">(</span><span class="n">toMemory</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image to store</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique image cache key, usually it&rsquo;s image absolute URL</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L194-L195">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)storeImageDataToDisk:forKey:"></a>
+                    <a name="//apple_ref/objc/Method/-storeImageDataToDisk:forKey:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)storeImageDataToDisk:forKey:">-storeImageDataToDisk:forKey:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Synchronously store image data into disk cache at the given key.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">storeImageDataToDisk</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">imageData</span>
+                      <span class="nf">forKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">storeImageData</span><span class="p">(</span><span class="n">toDisk</span> <span class="nv">imageData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span> <span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image data to store</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique image cache key, usually it&rsquo;s image absolute URL</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L203-L204">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Contains%20and%20Check%20Ops"></a>
+                <a name="//apple_ref/objc/Section/Contains and Check Ops" class="dashAnchor"></a>
+                <a href="#/Contains%20and%20Check%20Ops">
+                  <h3 class="section-name">Contains and Check Ops</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)diskImageExistsWithKey:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-diskImageExistsWithKey:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)diskImageExistsWithKey:completion:">-diskImageExistsWithKey:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asynchronously check if image exists in disk cache already (does not load the image)</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    the completion block will be always executed on the main queue
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">diskImageExistsWithKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span>
+                    <span class="nf">completion</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheCheckCompletionBlock">SDImageCacheCheckCompletionBlock</a></span><span class="p">)</span>
+                                   <span class="n">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">diskImageExists</span><span class="p">(</span><span class="n">withKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheCheckCompletionBlock">SDImageCacheCheckCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the key describing the url</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the block to be executed when the check is done.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L216">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)diskImageDataExistsWithKey:"></a>
+                    <a name="//apple_ref/objc/Method/-diskImageDataExistsWithKey:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)diskImageDataExistsWithKey:">-diskImageDataExistsWithKey:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Synchronously check if image data exists in disk cache already (does not load the image)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">diskImageDataExistsWithKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">diskImageDataExists</span><span class="p">(</span><span class="n">withKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the key describing the url</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L223">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Query%20and%20Retrieve%20Ops"></a>
+                <a name="//apple_ref/objc/Section/Query and Retrieve Ops" class="dashAnchor"></a>
+                <a href="#/Query%20and%20Retrieve%20Ops">
+                  <h3 class="section-name">Query and Retrieve Ops</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)diskImageDataForKey:"></a>
+                    <a name="//apple_ref/objc/Method/-diskImageDataForKey:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)diskImageDataForKey:">-diskImageDataForKey:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asynchronously queries the cache with operation and call the completion when done.
+  Query the image data for the given key synchronously.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nf">diskImageDataForKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">diskImageData</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique key used to store the wanted image</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The image data for the given key, or nil if not found.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L234">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)queryCacheOperationForKey:done:"></a>
+                    <a name="//apple_ref/objc/Method/-queryCacheOperationForKey:done:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)queryCacheOperationForKey:done:">-queryCacheOperationForKey:done:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Operation that queries the cache asynchronously and call the completion when done.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSOperation</span> <span class="o">*</span><span class="p">)</span>
+    <span class="nf">queryCacheOperationForKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span>
+                         <span class="nf">done</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a></span><span class="p">)</span>
+                                  <span class="n">doneBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">queryCacheOperation</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">done</span> <span class="nv">doneBlock</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Operation</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique key used to store the wanted image</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>doneBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion block. Will not get called if the operation is cancelled</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a NSOperation instance containing the cache op</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L244">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)queryCacheOperationForKey:options:done:"></a>
+                    <a name="//apple_ref/objc/Method/-queryCacheOperationForKey:options:done:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)queryCacheOperationForKey:options:done:">-queryCacheOperationForKey:options:done:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asynchronously queries the cache with operation and call the completion when done.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSOperation</span> <span class="o">*</span><span class="p">)</span>
+    <span class="nf">queryCacheOperationForKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span>
+                      <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="../Enums/SDImageCacheOptions.html">SDImageCacheOptions</a></span><span class="p">)</span><span class="nv">options</span>
+                         <span class="nf">done</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a></span><span class="p">)</span>
+                                  <span class="n">doneBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">queryCacheOperation</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDImageCacheOptions.html">SDImageCacheOptions</a></span> <span class="o">=</span> <span class="p">[],</span> <span class="n">done</span> <span class="nv">doneBlock</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Operation</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique key used to store the wanted image</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A mask to specify options to use for this cache query</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>doneBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion block. Will not get called if the operation is cancelled</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a NSOperation instance containing the cache op</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L255">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)queryCacheOperationForKey:options:context:done:"></a>
+                    <a name="//apple_ref/objc/Method/-queryCacheOperationForKey:options:context:done:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)queryCacheOperationForKey:options:context:done:">-queryCacheOperationForKey:options:context:done:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asynchronously queries the cache with operation and call the completion when done.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSOperation</span> <span class="o">*</span><span class="p">)</span>
+    <span class="nf">queryCacheOperationForKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span>
+                      <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="../Enums/SDImageCacheOptions.html">SDImageCacheOptions</a></span><span class="p">)</span><span class="nv">options</span>
+                      <span class="nf">context</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">context</span>
+                         <span class="nf">done</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a></span><span class="p">)</span>
+                                  <span class="n">doneBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">queryCacheOperation</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDImageCacheOptions.html">SDImageCacheOptions</a></span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">context</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContextOption">SDWebImageContextOption</a></span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="n">done</span> <span class="nv">doneBlock</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Operation</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique key used to store the wanted image</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A mask to specify options to use for this cache query</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>context</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A context contains different options to perform specify changes or processes, see <code><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContextOption">SDWebImageContextOption</a></code>. This hold the extra objects which <code>options</code> enum can not hold.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>doneBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion block. Will not get called if the operation is cancelled</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a NSOperation instance containing the cache op</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L267">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)imageFromMemoryCacheForKey:"></a>
+                    <a name="//apple_ref/objc/Method/-imageFromMemoryCacheForKey:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)imageFromMemoryCacheForKey:">-imageFromMemoryCacheForKey:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Synchronously query the memory cache.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nf">imageFromMemoryCacheForKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">imageFromMemoryCache</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique key used to store the image</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The image for the given key, or nil if not found.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L275">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)imageFromDiskCacheForKey:"></a>
+                    <a name="//apple_ref/objc/Method/-imageFromDiskCacheForKey:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)imageFromDiskCacheForKey:">-imageFromDiskCacheForKey:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Synchronously query the disk cache.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nf">imageFromDiskCacheForKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">imageFromDiskCache</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique key used to store the image</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The image for the given key, or nil if not found.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L283">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)imageFromCacheForKey:"></a>
+                    <a name="//apple_ref/objc/Method/-imageFromCacheForKey:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)imageFromCacheForKey:">-imageFromCacheForKey:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Synchronously query the cache (memory and or disk) after checking the memory cache.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nf">imageFromCacheForKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">imageFromCache</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique key used to store the image</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The image for the given key, or nil if not found.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L291">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Remove%20Ops"></a>
+                <a name="//apple_ref/objc/Section/Remove Ops" class="dashAnchor"></a>
+                <a href="#/Remove%20Ops">
+                  <h3 class="section-name">Remove Ops</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)removeImageForKey:withCompletion:"></a>
+                    <a name="//apple_ref/objc/Method/-removeImageForKey:withCompletion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)removeImageForKey:withCompletion:">-removeImageForKey:withCompletion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asynchronously remove the image from memory and disk cache</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeImageForKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span>
+           <span class="nf">withCompletion</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removeImage</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">withCompletion</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique image cache key</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block that should be executed after the image has been removed (optional)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L301">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)removeImageForKey:fromDisk:withCompletion:"></a>
+                    <a name="//apple_ref/objc/Method/-removeImageForKey:fromDisk:withCompletion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)removeImageForKey:fromDisk:withCompletion:">-removeImageForKey:fromDisk:withCompletion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asynchronously remove the image from memory and optionally disk cache</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeImageForKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span>
+                 <span class="nf">fromDisk</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">fromDisk</span>
+           <span class="nf">withCompletion</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removeImage</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">fromDisk</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">withCompletion</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique image cache key</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fromDisk</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Also remove cache entry from disk if YES. If NO, the completion block is called synchronously</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block that should be executed after the image has been removed (optional)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L310">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)removeImageFromMemoryForKey:"></a>
+                    <a name="//apple_ref/objc/Method/-removeImageFromMemoryForKey:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)removeImageFromMemoryForKey:">-removeImageFromMemoryForKey:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Synchronously remove the image from memory cache.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeImageFromMemoryForKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removeImageFromMemory</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique image cache key</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L317">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)removeImageFromDiskForKey:"></a>
+                    <a name="//apple_ref/objc/Method/-removeImageFromDiskForKey:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)removeImageFromDiskForKey:">-removeImageFromDiskForKey:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Synchronously remove the image from disk cache.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeImageFromDiskForKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removeImageFromDisk</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unique image cache key</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L324">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Cache%20clean%20Ops"></a>
+                <a name="//apple_ref/objc/Section/Cache clean Ops" class="dashAnchor"></a>
+                <a href="#/Cache%20clean%20Ops">
+                  <h3 class="section-name">Cache clean Ops</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)clearMemory"></a>
+                    <a name="//apple_ref/objc/Method/-clearMemory" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)clearMemory">-clearMemory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Synchronously Clear all memory cached images</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">clearMemory</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">clearMemory</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L331">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)clearDiskOnCompletion:"></a>
+                    <a name="//apple_ref/objc/Method/-clearDiskOnCompletion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)clearDiskOnCompletion:">-clearDiskOnCompletion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asynchronously clear all disk cached images. Non-blocking method - returns immediately.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">clearDiskOnCompletion</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">clearDisk</span><span class="p">(</span><span class="n">onCompletion</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block that should be executed after cache expiration completes (optional)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L337">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)deleteOldFilesWithCompletionBlock:"></a>
+                    <a name="//apple_ref/objc/Method/-deleteOldFilesWithCompletionBlock:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)deleteOldFilesWithCompletionBlock:">-deleteOldFilesWithCompletionBlock:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asynchronously remove all expired cached image from disk. Non-blocking method - returns immediately.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteOldFilesWithCompletionBlock</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">)</span><span class="nv">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">deleteOldFiles</span><span class="p">(</span><span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block that should be executed after cache expiration completes (optional)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L343">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Cache%20Info"></a>
+                <a name="//apple_ref/objc/Section/Cache Info" class="dashAnchor"></a>
+                <a href="#/Cache%20Info">
+                  <h3 class="section-name">Cache Info</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)totalDiskSize"></a>
+                    <a name="//apple_ref/objc/Method/-totalDiskSize" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)totalDiskSize">-totalDiskSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the total bytes size of images in the disk cache</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="n">totalDiskSize</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">totalDiskSize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L350">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)totalDiskCount"></a>
+                    <a name="//apple_ref/objc/Method/-totalDiskCount" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)totalDiskCount">-totalDiskCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the number of images in the disk cache</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="n">totalDiskCount</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">totalDiskCount</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L355">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDImageCache(im)calculateSizeWithCompletionBlock:"></a>
+                    <a name="//apple_ref/objc/Method/-calculateSizeWithCompletionBlock:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageCache(im)calculateSizeWithCompletionBlock:">-calculateSizeWithCompletionBlock:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asynchronously calculate the disk cache&rsquo;s size.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">calculateSizeWithCompletionBlock</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheCalculateSizeBlock">SDImageCacheCalculateSizeBlock</a></span><span class="p">)</span><span class="nv">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">calculateSize</span><span class="p">(</span><span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheCalculateSizeBlock">SDImageCacheCalculateSizeBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDImageCache.h#L360">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-11-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
