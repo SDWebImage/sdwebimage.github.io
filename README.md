@@ -45,7 +45,11 @@ jazzy \
 
 SDWebImage now contains many related project, like the [Coder Plugins](https://github.com/SDWebImage/SDWebImage/wiki/Coder-Plugin-List) repo, the SwiftUI repo [SDWebImageSwiftUI](https://github.com/SDWebImage/SDWebImageSwiftUI).
 
-You should place the generated documentation output folder, inside the sub-directory of this repo. Take SDWebImageSwiftUI for example:
+You should place the generated documentation output folder, inside the sub-directory of this repo.
+
+##### Swift
+
+For Swift project, take SDWebImageSwiftUI for example:
 
 ```
 jazzy \
@@ -58,4 +62,37 @@ jazzy \
   --framework-root . \
   --sdk iphonesimulator \
   --output ../sdwebimage.github.io/SDWebImageSwiftUI
+```
+
+##### Objective-C
+
+For Objective-C project, it's a little trick that you have to **fake** an umbrella header, make the include header search path, the same as folder structure. Take SDWebImagePhotosPlugin for example:
+
+Move the `SDWebImagePhotosPlugin/Module/SDWebImagePhotosPlugin.h` -> `SDWebImagePhotosPlugin/SDWebImagePhotosPlugin.h`. Then modify all the include form, from this:
+
+```objectivec
+#import <SDWebImagePhotosPlugin/NSURL+SDWebImagePhotosPlugin.h>
+```
+
+to this:
+
+```objectivec
+#import "Classes/NSURL+SDWebImagePhotosPlugin.h"
+```
+
+Finally, use jazzy to generate the documentation:
+
+```
+jazzy \
+  --objc \
+  --author SDWebImagePhotosPlugin \
+  --github_url https://github.com/SDWebImage/SDWebImagePhotosPlugin \
+  --github-file-prefix https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0 \
+  --module-version 0.4.0 \
+  --umbrella-header SDWebImagePhotosPlugin/SDWebImagePhotosPlugin.h \
+  --undocumented-text "" \
+  --module SDWebImagePhotosPlugin \
+  --framework-root . \
+  --sdk iphonesimulator \
+  --output ../sdwebimage.github.io/SDWebImagePhotosPlugin
 ```
