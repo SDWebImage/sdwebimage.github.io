@@ -13,7 +13,7 @@
     <a title="SDWebImageSwiftUI  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImageSwiftUI 0.8.3 Docs</a> (84% documented)</p>
+        <p><a href="index.html">SDWebImageSwiftUI 0.8.5 Docs</a> (84% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImageSwiftUI"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -134,7 +134,7 @@
 <li>[x] Multiple loaders system, load from different resource</li>
 </ul>
 
-<p>You can also get all benefits from the existing community around with SDWebImage. You can have massive image format support (GIF/APNG/WebP/HEIF/AVIF) via <a href="https://github.com/SDWebImage/SDWebImage/wiki/Coder-Plugin-List">Coder Plugins</a>, PhotoKit support via <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin">SDWebImagePhotosPlugin</a>, Firebase integration via <a href="https://github.com/firebase/FirebaseUI-iOS">FirebaseUI</a>, etc.</p>
+<p>You can also get all benefits from the existing community around with SDWebImage. You can have massive image format support (GIF/APNG/WebP/HEIF/AVIF/SVG/PDF) via <a href="https://github.com/SDWebImage/SDWebImage/wiki/Coder-Plugin-List">Coder Plugins</a>, PhotoKit support via <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin">SDWebImagePhotosPlugin</a>, Firebase integration via <a href="https://github.com/firebase/FirebaseUI-iOS">FirebaseUI</a>, etc.</p>
 
 <p>Besides all these features, we do optimization for SwiftUI, like Binding, View Modifier, using the same design pattern to become a good SwiftUI citizen.</p>
 <h2 id='contribution' class='heading'>Contribution</h2>
@@ -204,11 +204,12 @@ it, simply add the following line to your Podfile:</p>
 <span class="p">}</span>
 </code></pre>
 
-<p>Note: This <code><a href="Structs/WebImage.html">WebImage</a></code> using <code>Image</code> for internal implementation, which is the best compatible for SwiftUI layout and animation system. But it supports static image format only, because unlike <code>UIImageView</code> in UIKit, SwiftUI&rsquo;s <code>Image</code> does not support animation.</p>
+<p>Note: This <code><a href="Structs/WebImage.html">WebImage</a></code> using <code>Image</code> for internal implementation, which is the best compatible for SwiftUI layout and animation system. But it supports static image format only, because unlike <code>UIImageView</code> in UIKit, SwiftUI&rsquo;s <code>Image</code> does not support animated image or vector image.</p>
 <h3 id='using-code-animatedimage-code-to-play-animation' class='heading'>Using <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> to play animation</h3>
 
 <ul>
 <li>[x] Supports network image as well as local data and bundle image</li>
+<li>[x] Supports animated image format as well as vector image format</li>
 <li>[x] Supports animated progressive image loading (like web browser)</li>
 <li>[x] Supports animation control using the SwiftUI Binding</li>
 <li>[x] Supports indicator and transition, powered by SDWebImage and Core Animation</li>
@@ -257,8 +258,81 @@ it, simply add the following line to your Podfile:</p>
 <p>If you need animated image, <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> is the one to choose. Remember it supports static image as well, you don&rsquo;t need to check the format, just use as it.</p>
 
 <p>But, because <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> use <code>UIViewRepresentable</code> and driven by UIKit, currently there may be some small incompatible issues between UIKit and SwiftUI layout and animation system, or bugs related to SwiftUI itself. We try our best to match SwiftUI behavior, and provide the same API as <code><a href="Structs/WebImage.html">WebImage</a></code>, which make it easy to switch between these two types if needed.</p>
+<h3 id='customization-and-configuration-setup' class='heading'>Customization and configuration setup</h3>
 
-<p>For more information, it&rsquo;s really recommended to check our demo below, to learn detailed API usage.</p>
+<p>This framework is based on SDWebImage, which supports advanced customization and configuration to meet different users&rsquo; demand.</p>
+
+<p>You can register multiple coder plugins for external image format. You can register multiple caches (different paths and config), multiple loaders (URLSession and Photos URLs). You can control the cache expiration date, size, download priority, etc. All in our <a href="https://github.com/SDWebImage/SDWebImage/wiki/">wiki</a>.</p>
+
+<p>The best place to put these setup code for SwiftUI App, it&rsquo;s the <code>AppDelegate.swift</code>:</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplication</span><span class="o">.</span><span class="kt">LaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+    <span class="c1">// Add WebP/SVG/PDF support</span>
+    <span class="kt">SDImageCodersManager</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">addCoder</span><span class="p">(</span><span class="kt">SDImageWebPCoder</span><span class="o">.</span><span class="n">shared</span><span class="p">)</span>
+    <span class="kt">SDImageCodersManager</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">addCoder</span><span class="p">(</span><span class="kt">SDImageSVGCoder</span><span class="o">.</span><span class="n">shared</span><span class="p">)</span>
+    <span class="kt">SDImageCodersManager</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">addCoder</span><span class="p">(</span><span class="kt">SDImagePDFCoder</span><span class="o">.</span><span class="n">shared</span><span class="p">)</span>
+
+    <span class="c1">// Add default HTTP header</span>
+    <span class="kt">SDWebImageDownloader</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">setValue</span><span class="p">(</span><span class="s">"image/webp,image/apng,image/*,*/*;q=0.8"</span><span class="p">,</span> <span class="nv">forHTTPHeaderField</span><span class="p">:</span> <span class="s">"Accept"</span><span class="p">)</span>
+
+    <span class="c1">// Add multiple caches</span>
+    <span class="k">let</span> <span class="nv">cache</span> <span class="o">=</span> <span class="kt">SDImageCache</span><span class="p">(</span><span class="nv">namespace</span><span class="p">:</span> <span class="s">"tiny"</span><span class="p">)</span>
+    <span class="n">cache</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">maxMemoryCost</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span> <span class="c1">// 100MB memory</span>
+    <span class="n">cache</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">maxDiskSize</span> <span class="o">=</span> <span class="mi">50</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span> <span class="c1">// 50MB disk</span>
+    <span class="kt">SDImageCachesManager</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">addCache</span><span class="p">(</span><span class="n">cache</span><span class="p">)</span>
+    <span class="kt">SDWebImageManager</span><span class="o">.</span><span class="n">defaultImageCache</span> <span class="o">=</span> <span class="kt">SDImageCachesManager</span><span class="o">.</span><span class="n">shared</span>
+
+    <span class="c1">// Add multiple loaders with Photos Asset support</span>
+    <span class="kt">SDImageLoadersManager</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">addLoader</span><span class="p">(</span><span class="kt">SDWebImagePhotosLoader</span><span class="o">.</span><span class="n">shared</span><span class="p">)</span>
+    <span class="kt">SDWebImageManager</span><span class="o">.</span><span class="n">defaultImageLoader</span> <span class="o">=</span> <span class="kt">SDImageLoadersManager</span><span class="o">.</span><span class="n">shared</span>
+    <span class="k">return</span> <span class="kc">true</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>For more information, it&rsquo;s really recommended to check our demo, to learn detailed API usage. You can also have a check at the latest API documentation, for advanced usage.</p>
+<h2 id='documentation' class='heading'>Documentation</h2>
+
+<ul>
+<li><a href="https://sdwebimage.github.io/SDWebImageSwiftUI/">SDWebImageSwiftUI API documentation</a></li>
+<li><a href="https://sdwebimage.github.io/">SDWebImage API documentation</a></li>
+</ul>
+<h2 id='faq' class='heading'>FAQ</h2>
+<h3 id='common-problems' class='heading'>Common Problems</h3>
+
+<ul>
+<li>Using Image/WebImage/AnimatedImage in Button/NavigationLink</li>
+</ul>
+
+<p>SwiftUI&rsquo;s <code>Button</code> apply overlay to its content (except <code>Text</code>) by default, this is common mistake to write code like this, which cause strange behavior:</p>
+<pre class="highlight swift"><code><span class="c1">// Wrong</span>
+<span class="kt">Button</span><span class="p">(</span><span class="nv">action</span><span class="p">:</span> <span class="p">{</span>
+    <span class="c1">// Clicked</span>
+<span class="p">})</span> <span class="p">{</span>
+    <span class="kt">WebImage</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// NavigationLink create Button implicitly</span>
+<span class="kt">NavigationView</span> <span class="p">{</span>
+    <span class="kt">NavigationLink</span><span class="p">(</span><span class="nv">destination</span><span class="p">:</span> <span class="kt">Text</span><span class="p">(</span><span class="s">"Detail view here"</span><span class="p">))</span> <span class="p">{</span>
+        <span class="kt">WebImage</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Instead, you must override the <code>.buttonStyle</code> to use the plain style, or the <code>.renderingMode</code> to use original mode. You can also use the <code>.onTapGesture</code> modifier for touch handling. See <a href="https://www.hackingwithswift.com/quick-start/swiftui/how-to-disable-the-overlay-color-for-images-inside-button-and-navigationlink">How to disable the overlay color for images inside Button and NavigationLink</a></p>
+<pre class="highlight swift"><code><span class="c1">// Correct</span>
+<span class="kt">Button</span><span class="p">(</span><span class="nv">action</span><span class="p">:</span> <span class="p">{</span>
+    <span class="c1">// Clicked</span>
+<span class="p">})</span> <span class="p">{</span>
+    <span class="kt">WebImage</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="o">.</span><span class="nf">buttonStyle</span><span class="p">(</span><span class="kt">PlainButtonStyle</span><span class="p">())</span>
+<span class="c1">// Or</span>
+<span class="kt">NavigationView</span> <span class="p">{</span>
+    <span class="kt">NavigationLink</span><span class="p">(</span><span class="nv">destination</span><span class="p">:</span> <span class="kt">Text</span><span class="p">(</span><span class="s">"Detail view here"</span><span class="p">))</span> <span class="p">{</span>
+        <span class="kt">WebImage</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">renderingMode</span><span class="p">(</span><span class="o">.</span><span class="n">original</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <h2 id='demo' class='heading'>Demo</h2>
 
 <p>To run the example using SwiftUI, following the steps:</p>
@@ -283,6 +357,7 @@ pod install
 <li>Use <code>Switch</code> (right-click on macOS/force press on watchOS) to switch between <code><a href="Structs/WebImage.html">WebImage</a></code> and <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code>.</li>
 <li>Use <code>Reload</code> (right-click on macOS/force press on watchOS) to clear cache.</li>
 <li>Use <code>Swipe</code> to delete one image item.</li>
+<li>Pinch gesture (Digital Crown on watchOS, play button on tvOS) to zoom-in detail page image.</li>
 <li>Clear cache and go to detail page to see progressive loading.</li>
 </ol>
 <h2 id='screenshot' class='heading'>Screenshot</h2>
@@ -331,7 +406,7 @@ pod install
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImageSwiftUI" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-11-12)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImageSwiftUI" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-11-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
