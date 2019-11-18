@@ -78,6 +78,7 @@ to this:
 
 ```objectivec
 #import "Classes/NSURL+SDWebImagePhotosPlugin.h"
+// And, if there are no `#import <UIKit/UIKit.h>`, add this as well
 ```
 
 Finally, use jazzy to generate the documentation:
