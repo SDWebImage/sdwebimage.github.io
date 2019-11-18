@@ -1,0 +1,33 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageWebPCoder/SDWebImageWebPCoder/Classes/SDImageWebPCoder.h",
+      "line": 16,
+      "symbol": "SDImageWebPCoder.sharedCoder",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageWebPCoder/SDWebImageWebPCoder/Classes/UIImage+WebP.h",
+      "line": 12,
+      "symbol": "UIImage(WebP)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageWebPCoder/SDWebImageWebPCoder/SDWebImageWebPCoder.h",
+      "line": 15,
+      "symbol": "SDWebImageWebPCoderVersionNumber",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageWebPCoder/SDWebImageWebPCoder/SDWebImageWebPCoder.h",
+      "line": 16,
+      "symbol": "SDWebImageWebPCoderVersionString",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/lizhuoli/Documents/GitHub/SDWebImageWebPCoder"
+}
