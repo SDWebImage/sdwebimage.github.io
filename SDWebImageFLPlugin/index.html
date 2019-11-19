@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SDWebImageFLPlugin  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="SDWebImageFLPlugin  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SDWebImageFLPlugin 0.3.0 Docs</a> (61% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImageFLPlugin"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">SDWebImageFLPlugin Reference</a>
+        <img id="carat" src="img/carat.png" />
+        SDWebImageFLPlugin  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Categories/FLAnimatedImageView%28WebCache%29.html">FLAnimatedImageView(WebCache)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/SDFLAnimatedImage.html">SDFLAnimatedImage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageFLPluginVersionNumber">SDWebImageFLPluginVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageFLPluginVersionString">SDWebImageFLPluginVersionString</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='sdwebimageflplugin' class='heading'>SDWebImageFLPlugin</h1>
+
+<p><a href="https://travis-ci.org/SDWebImage/SDWebImageFLPlugin"><img src="https://img.shields.io/travis/SDWebImage/SDWebImageFLPlugin.svg?style=flat" alt="CI Status"></a>
+<a href="https://cocoapods.org/pods/SDWebImageFLPlugin"><img src="https://img.shields.io/cocoapods/v/SDWebImageFLPlugin.svg?style=flat" alt="Version"></a>
+<a href="https://cocoapods.org/pods/SDWebImageFLPlugin"><img src="https://img.shields.io/cocoapods/l/SDWebImageFLPlugin.svg?style=flat" alt="License"></a>
+<a href="https://cocoapods.org/pods/SDWebImageFLPlugin"><img src="https://img.shields.io/cocoapods/p/SDWebImageFLPlugin.svg?style=flat" alt="Platform"></a>
+<a href="https://github.com/SDWebImage/SDWebImageFLPlugin"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+<a href="https://codecov.io/gh/SDWebImage/SDWebImageFLPlugin"><img src="https://codecov.io/gh/SDWebImage/SDWebImageFLPlugin/branch/master/graph/badge.svg" alt="codecov"></a></p>
+
+<p>Starting with the SDWebImage 5.0 version, we move the <a href="https://github.com/Flipboard/FLAnimatedImage">FLAnimatedImage</a> support code from the Core Repo to this stand-alone repo.</p>
+
+<p>Code which previously use FLAnimatedImage with SDWebImage can continue to work with this plugin. But it&rsquo;s recommended to use the <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#animated-image-50">5.0 Animated Image Solution</a> to get better support and more features.</p>
+<h2 id='what-39-s-for' class='heading'>What&rsquo;s for</h2>
+
+<p>SDWebImageFLPlugin is a plugin for <a href="https://github.com/rs/SDWebImage/">SDWebImage</a> framework, which provide the image loading support for <a href="https://github.com/Flipboard/FLAnimatedImage">FLAnimatedImage</a> animated GIF engine.</p>
+
+<p>By using SDWebImageFLPlugin, you can use all you familiar SDWebImage&rsquo;s loading method, on the <code>FLAnimatedImageView</code>, which is the base component of FLAnimatedImage.</p>
+
+<p>To use it, simply make sure you use <code>FLAnimatedImageView</code> instead of <code>UIImageView</code> and import this plugin.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>To load images from network, just simply call the View Category method like normal UIImageView.</p>
+
+<ul>
+<li>Objective-C</li>
+</ul>
+<pre class="highlight plaintext"><code>FLAnimatedImageView *imageView;
+[imageView sd_setImageWithURL:[NSURL URLWithString:@"http://www.domain.com/path/to/image.gif"]];
+</code></pre>
+
+<ul>
+<li>Swift</li>
+</ul>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">imageView</span><span class="p">:</span> <span class="kt">FLAnimatedImageView</span>
+<span class="n">imageView</span><span class="o">.</span><span class="nf">sd_setImage</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"http://www.domain.com/path/to/image.gif"</span><span class="p">))</span>
+</code></pre>
+
+<p>The magic because we create one custom animation class called <code><a href="Classes/SDFLAnimatedImage.html">SDFLAnimatedImage</a></code> to load GIF images, and use <code>UIImage</code> for normal images.</p>
+
+<p>For placeholder, you can even provide a <code>FLAnimatedImage</code> to allow GIF placeholder on <code>FLAnimatedImageView</code> using the wrapper class <code><a href="Classes/SDFLAnimatedImage.html">SDFLAnimatedImage</a></code>.</p>
+
+<ul>
+<li>Objective-C</li>
+</ul>
+<pre class="highlight plaintext"><code>FLAnimatedImageView *imageView;
+FLAnimatedImage *animatedImage = [FLAnimatedImage animatedImageWithGIFData:gifData];
+SDFLAnimatedImage *placeholder = [[SDFLAnimatedImage alloc] initWithAnimatedImage:animatedImage];
+[imageView sd_setImageWithURL:[NSURL URLWithString:@"http://www.domain.com/path/to/image.gif"] placeholderImage:placeholder];
+</code></pre>
+
+<ul>
+<li>Swift</li>
+</ul>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">imageView</span><span class="p">:</span> <span class="kt">FLAnimatedImageView</span>
+<span class="k">let</span> <span class="nv">animatedImage</span> <span class="o">=</span> <span class="kt">FLAnimatedImage</span><span class="p">(</span><span class="nv">animatedGIFData</span><span class="p">:</span> <span class="n">gifData</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">placeholder</span> <span class="o">=</span> <span class="kt">SDFLAnimatedImage</span><span class="p">(</span><span class="nv">animatedImage</span><span class="p">:</span> <span class="n">animatedImage</span><span class="p">)</span>
+<span class="n">imageView</span><span class="o">.</span><span class="nf">sd_setImage</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"http://www.domain.com/path/to/image.gif"</span><span class="p">),</span> <span class="nv">placeholderImage</span><span class="p">:</span> <span class="n">placeholder</span><span class="p">)</span>
+</code></pre>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 8+</li>
+<li>Xcode 9+</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+<h4 id='cocoapods' class='heading'>CocoaPods</h4>
+
+<p>SDWebImageFLPlugin is available through <a href="https://cocoapods.org">CocoaPods</a>. To install
+it, simply add the following line to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'SDWebImageFLPlugin'</span>
+</code></pre>
+<h4 id='carthage' class='heading'>Carthage</h4>
+
+<p>SDWebImageFLPlugin is available through <a href="https://github.com/Carthage/Carthage">Carthage</a>.</p>
+<pre class="highlight plaintext"><code>github "SDWebImage/SDWebImageFLPlugin"
+</code></pre>
+<h2 id='author' class='heading'>Author</h2>
+
+<p>DreamPiggy, <a href="mailto:lizhuoli1126@126.com">lizhuoli1126@126.com</a></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>SDWebImageFLPlugin is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImageFLPlugin" target="_blank" rel="external">SDWebImageFLPlugin</a>. All rights reserved. (Last updated: 2019-11-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

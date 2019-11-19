@@ -1,0 +1,61 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageFLPlugin/SDWebImageFLPlugin/Classes/FLAnimatedImageBridge/SDFLAnimatedImage.h",
+      "line": 49,
+      "symbol": "SDFLAnimatedImage.+imageWithContentsOfFile:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageFLPlugin/SDWebImageFLPlugin/Classes/FLAnimatedImageBridge/SDFLAnimatedImage.h",
+      "line": 50,
+      "symbol": "SDFLAnimatedImage.+imageWithData:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageFLPlugin/SDWebImageFLPlugin/Classes/FLAnimatedImageBridge/SDFLAnimatedImage.h",
+      "line": 51,
+      "symbol": "SDFLAnimatedImage.+imageWithData:scale:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageFLPlugin/SDWebImageFLPlugin/Classes/FLAnimatedImageBridge/SDFLAnimatedImage.h",
+      "line": 52,
+      "symbol": "SDFLAnimatedImage.-initWithContentsOfFile:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageFLPlugin/SDWebImageFLPlugin/Classes/FLAnimatedImageBridge/SDFLAnimatedImage.h",
+      "line": 53,
+      "symbol": "SDFLAnimatedImage.-initWithData:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageFLPlugin/SDWebImageFLPlugin/Classes/FLAnimatedImageBridge/SDFLAnimatedImage.h",
+      "line": 54,
+      "symbol": "SDFLAnimatedImage.-initWithData:scale:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageFLPlugin/SDWebImageFLPlugin/Classes/FLAnimatedImageBridge/SDWebImageFLPlugin.h",
+      "line": 17,
+      "symbol": "SDWebImageFLPluginVersionNumber",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageFLPlugin/SDWebImageFLPlugin/Classes/FLAnimatedImageBridge/SDWebImageFLPlugin.h",
+      "line": 18,
+      "symbol": "SDWebImageFLPluginVersionString",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/lizhuoli/Documents/GitHub/SDWebImageFLPlugin"
+}
