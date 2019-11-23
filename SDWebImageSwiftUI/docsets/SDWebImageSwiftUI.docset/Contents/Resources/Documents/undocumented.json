@@ -2,56 +2,56 @@
   "warnings": [
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
-      "line": 20,
+      "line": 28,
       "symbol": "AnimatedImageViewWrapper.draw(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
-      "line": 40,
+      "line": 48,
       "symbol": "AnimatedImageViewWrapper.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
-      "line": 46,
+      "line": 54,
       "symbol": "AnimatedImageViewWrapper.intrinsicContentSize",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
-      "line": 59,
+      "line": 67,
       "symbol": "AnimatedImageViewWrapper.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
-      "line": 64,
+      "line": 72,
       "symbol": "AnimatedImageViewWrapper.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
-      "line": 84,
+      "line": 92,
       "symbol": "ProgressIndicatorWrapper.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
-      "line": 90,
+      "line": 98,
       "symbol": "ProgressIndicatorWrapper.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
-      "line": 95,
+      "line": 103,
       "symbol": "ProgressIndicatorWrapper.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
