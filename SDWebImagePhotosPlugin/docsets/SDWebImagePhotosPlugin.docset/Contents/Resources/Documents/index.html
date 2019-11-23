@@ -13,7 +13,7 @@
     <a title="SDWebImagePhotosPlugin  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImagePhotosPlugin 0.4.0 Docs</a> (57% documented)</p>
+        <p><a href="index.html">SDWebImagePhotosPlugin 1.0.0 Docs</a> (80% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -42,7 +42,7 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/SDWebImagePhotosLoader.html">SDWebImagePhotosLoader</a>
+                <a href="Classes/SDImagePhotosLoader.html">SDImagePhotosLoader</a>
               </li>
             </ul>
           </li>
@@ -53,16 +53,16 @@
                 <a href="Constants.html#/c:@SDWebImagePhotosErrorDomain">SDWebImagePhotosErrorDomain</a>
               </li>
               <li class="nav-group-task">
-                <a href="Constants.html#/c:@SDWebImagePhotosLoaderPixelSize">SDWebImagePhotosLoaderPixelSize</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Constants.html#/c:@SDWebImagePhotosLoaderPointSize">SDWebImagePhotosLoaderPointSize</a>
+                <a href="Constants.html#/c:@SDWebImagePhotosPixelSize">SDWebImagePhotosPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImagePhotosPluginVersionNumber">SDWebImagePhotosPluginVersionNumber</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImagePhotosPluginVersionString">SDWebImagePhotosPluginVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImagePhotosPointSize">SDWebImagePhotosPointSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImagePhotosProgressExpectedSize">SDWebImagePhotosProgressExpectedSize</a>
@@ -125,7 +125,7 @@ it, simply add the following line to your Podfile:</p>
 <p>SDWebImagePhotosPlugin is available through <a href="https://swift.org/package-manager">Swift Package Manager</a>.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
     <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/SDWebImage/SDWebImagePhotosPlugin.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"0.3"</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/SDWebImage/SDWebImagePhotosPlugin.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"1.0"</span><span class="p">)</span>
     <span class="p">]</span>
 <span class="p">)</span>
 </code></pre>
@@ -142,14 +142,14 @@ it, simply add the following line to your Podfile:</p>
 <li>Objective-C</li>
 </ul>
 <pre class="highlight plaintext"><code>// Assign loader to custom manager
-SDWebImageManager *manager = [[SDWebImageManager alloc] initWithCache:SDImageCache.sharedImageCache loader:SDWebImagePhotosLoader.sharedLoader];
+SDWebImageManager *manager = [[SDWebImageManager alloc] initWithCache:SDImageCache.sharedImageCache loader:SDImagePhotosLoader.sharedLoader];
 </code></pre>
 
 <ul>
 <li>Swift</li>
 </ul>
 <pre class="highlight swift"><code><span class="c1">// Assign loader to custom manager</span>
-<span class="k">let</span> <span class="nv">manager</span> <span class="o">=</span> <span class="kt">SDWebImageManager</span><span class="p">(</span><span class="nv">cache</span><span class="p">:</span> <span class="kt">SDImageCache</span><span class="o">.</span><span class="n">shared</span><span class="p">,</span> <span class="nv">loader</span><span class="p">:</span> <span class="kt">SDWebImagePhotosLoader</span><span class="o">.</span><span class="n">shared</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">manager</span> <span class="o">=</span> <span class="kt">SDWebImageManager</span><span class="p">(</span><span class="nv">cache</span><span class="p">:</span> <span class="kt">SDImageCache</span><span class="o">.</span><span class="n">shared</span><span class="p">,</span> <span class="nv">loader</span><span class="p">:</span> <span class="kt">SDImagePhotosLoader</span><span class="o">.</span><span class="n">shared</span><span class="p">)</span>
 </code></pre>
 <h4 id='use-loaders-manager-globally' class='heading'>Use loaders manager (globally)</h4>
 
@@ -159,7 +159,7 @@ SDWebImageManager *manager = [[SDWebImageManager alloc] initWithCache:SDImageCac
 <li>Objective-C</li>
 </ul>
 <pre class="highlight plaintext"><code>// Supports HTTP URL as well as Photos URL globally
-SDImageLoadersManager.sharedManager.loaders = @[SDWebImageDownloader.sharedDownloader, SDWebImagePhotosLoader.sharedLoader];
+SDImageLoadersManager.sharedManager.loaders = @[SDWebImageDownloader.sharedDownloader, SDImagePhotosLoader.sharedLoader];
 // Replace default manager's loader implementation
 SDWebImageManager.defaultImageLoader = SDImageLoadersManager.sharedManager;
 </code></pre>
@@ -168,7 +168,7 @@ SDWebImageManager.defaultImageLoader = SDImageLoadersManager.sharedManager;
 <li>Swift</li>
 </ul>
 <pre class="highlight swift"><code><span class="c1">// Supports HTTP URL as well as Photos URL globally</span>
-<span class="kt">SDImageLoadersManager</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">loaders</span> <span class="o">=</span> <span class="p">[</span><span class="kt">SDWebImageDownloader</span><span class="o">.</span><span class="n">shared</span><span class="p">,</span> <span class="kt">SDWebImagePhotosLoader</span><span class="o">.</span><span class="n">shared</span><span class="p">]</span>
+<span class="kt">SDImageLoadersManager</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">loaders</span> <span class="o">=</span> <span class="p">[</span><span class="kt">SDWebImageDownloader</span><span class="o">.</span><span class="n">shared</span><span class="p">,</span> <span class="kt">SDImagePhotosLoader</span><span class="o">.</span><span class="n">shared</span><span class="p">]</span>
 <span class="c1">// Replace default manager's loader implementation</span>
 <span class="kt">SDWebImageManager</span><span class="o">.</span><span class="n">defaultImageLoader</span> <span class="o">=</span> <span class="kt">SDImageLoadersManager</span><span class="o">.</span><span class="n">shared</span>
 </code></pre>
@@ -213,13 +213,13 @@ NSURL *potosURL = [NSURL sd_URLWithAssetLocalIdentifier:identifier];
 <ul>
 <li>Objective-C</li>
 </ul>
-<pre class="highlight plaintext"><code>SDWebImagePhotosLoader.sharedLoader.requestImageAssetOnly = NO;
+<pre class="highlight plaintext"><code>SDImagePhotosLoader.sharedLoader.requestImageAssetOnly = NO;
 </code></pre>
 
 <ul>
 <li>Swift</li>
 </ul>
-<pre class="highlight swift"><code><span class="kt">SDWebImagePhotosLoader</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">requestImageAssetOnly</span> <span class="o">=</span> <span class="kc">false</span>
+<pre class="highlight swift"><code><span class="kt">SDImagePhotosLoader</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">requestImageAssetOnly</span> <span class="o">=</span> <span class="kc">false</span>
 </code></pre>
 
 <p>Then just request the PHAssets or using the fetch options, which the media type is <code>.video</code>.</p>
@@ -234,7 +234,7 @@ NSURL *potosURL = [NSURL sd_URLWithAssetLocalIdentifier:identifier];
 // ignore iCloud Shared Album (`localIdentifier` Photos URL only)
 PHFetchOptions *fetchOptions = [PHFetchOptions new];
 fetchOptions.predicate = [NSPredicate predicateWithFormat:@"sourceType != %d", PHAssetSourceTypeCloudShared];
-SDWebImagePhotosLoader.sharedLoader.fetchOptions = fetchOptions;
+SDImagePhotosLoader.sharedLoader.fetchOptions = fetchOptions;
 
 // request-level options
 // allows iCloud Photos Library
@@ -250,7 +250,7 @@ requestOptions.networkAccessAllowed = YES;
 <span class="c1">// ignore iCloud Shared Album (`localIdentifier` Photos URL only)</span>
 <span class="k">let</span> <span class="nv">fetchOptions</span> <span class="o">=</span> <span class="kt">PHFetchOptions</span><span class="p">()</span>
 <span class="n">fetchOptions</span><span class="o">.</span><span class="n">predicate</span> <span class="o">=</span> <span class="kt">NSPredicate</span><span class="p">(</span><span class="nv">format</span><span class="p">:</span> <span class="s">"sourceType != %d"</span><span class="p">,</span> <span class="kt">PHAssetSourceType</span><span class="o">.</span><span class="n">typeCloudShared</span><span class="o">.</span><span class="n">rawValue</span><span class="p">)</span>
-<span class="kt">SDWebImagePhotosLoader</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">fetchOptions</span> <span class="o">=</span> <span class="n">fetchOptions</span>
+<span class="kt">SDImagePhotosLoader</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">fetchOptions</span> <span class="o">=</span> <span class="n">fetchOptions</span>
 
 <span class="c1">// request-level options</span>
 <span class="c1">// allows iCloud Photos Library</span>
@@ -270,7 +270,7 @@ requestOptions.networkAccessAllowed = YES;
 
 <p>The Photos taken by iPhone&rsquo;s Camera, its pixel size may be really large (4K+). So if you want to load large Photos Library assets for rendering, you&rsquo;d better specify target size with a limited size (like you render imageView&rsquo;s size).</p>
 
-<p>By default, we query the target size matching the original image pixel size (See: <code><a href="Constants.html#/c:@SDWebImagePhotosLoaderPixelSize">SDWebImagePhotosLoaderPixelSize</a></code>), which may consume much memory on iOS device.</p>
+<p>By default, we query the target size matching the original image pixel size (See: <code><a href="Constants.html#/c:@SDWebImagePhotosPixelSize">SDWebImagePhotosPixelSize</a></code>), which may consume much memory on iOS device.</p>
 <h2 id='demo' class='heading'>Demo</h2>
 
 <p>If you have some issue about usage, SDWebImagePhotosPlugin provide a demo for iOS &amp;&amp; macOS platform. To run the demo, clone the repo and run the following command.</p>
@@ -290,7 +290,7 @@ open SDWebImagePhotosPlugin.xcworkspace
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImagePhotosPlugin" target="_blank" rel="external">SDWebImagePhotosPlugin</a>. All rights reserved. (Last updated: 2019-11-18)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImagePhotosPlugin" target="_blank" rel="external">SDWebImagePhotosPlugin</a>. All rights reserved. (Last updated: 2019-11-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

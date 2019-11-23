@@ -14,7 +14,7 @@
     <a title="Constants  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImagePhotosPlugin 0.4.0 Docs</a> (57% documented)</p>
+        <p><a href="index.html">SDWebImagePhotosPlugin 1.0.0 Docs</a> (80% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -43,7 +43,7 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/SDWebImagePhotosLoader.html">SDWebImagePhotosLoader</a>
+                <a href="Classes/SDImagePhotosLoader.html">SDImagePhotosLoader</a>
               </li>
             </ul>
           </li>
@@ -54,16 +54,16 @@
                 <a href="Constants.html#/c:@SDWebImagePhotosErrorDomain">SDWebImagePhotosErrorDomain</a>
               </li>
               <li class="nav-group-task">
-                <a href="Constants.html#/c:@SDWebImagePhotosLoaderPixelSize">SDWebImagePhotosLoaderPixelSize</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Constants.html#/c:@SDWebImagePhotosLoaderPointSize">SDWebImagePhotosLoaderPointSize</a>
+                <a href="Constants.html#/c:@SDWebImagePhotosPixelSize">SDWebImagePhotosPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImagePhotosPluginVersionNumber">SDWebImagePhotosPluginVersionNumber</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImagePhotosPluginVersionString">SDWebImagePhotosPluginVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImagePhotosPointSize">SDWebImagePhotosPointSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImagePhotosProgressExpectedSize">SDWebImagePhotosProgressExpectedSize</a>
@@ -118,7 +118,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosDefine.h#L14">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/1.0.0/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosDefine.h#L14">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -126,9 +126,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@SDWebImagePhotosLoaderPixelSize"></a>
-                    <a name="//apple_ref/objc/Constant/SDWebImagePhotosLoaderPixelSize" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@SDWebImagePhotosLoaderPixelSize">SDWebImagePhotosLoaderPixelSize</a>
+                    <a name="/c:@SDWebImagePhotosPixelSize"></a>
+                    <a name="//apple_ref/objc/Constant/SDWebImagePhotosPixelSize" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@SDWebImagePhotosPixelSize">SDWebImagePhotosPixelSize</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -144,12 +144,12 @@ This is the default value if you don&rsquo;t specify any targetSize.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="k">const</span> <span class="n">CGSize</span> <span class="n">SDWebImagePhotosLoaderPixelSize</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="k">const</span> <span class="n">CGSize</span> <span class="n">SDWebImagePhotosPixelSize</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosDefine.h#L20">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/1.0.0/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosDefine.h#L20">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -157,9 +157,9 @@ This is the default value if you don&rsquo;t specify any targetSize.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@SDWebImagePhotosLoaderPointSize"></a>
-                    <a name="//apple_ref/objc/Constant/SDWebImagePhotosLoaderPointSize" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@SDWebImagePhotosLoaderPointSize">SDWebImagePhotosLoaderPointSize</a>
+                    <a name="/c:@SDWebImagePhotosPointSize"></a>
+                    <a name="//apple_ref/objc/Constant/SDWebImagePhotosPointSize" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@SDWebImagePhotosPointSize">SDWebImagePhotosPointSize</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -175,12 +175,12 @@ The scale is from the custom scale factor, or using the device scale factor if n
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="k">const</span> <span class="n">CGSize</span> <span class="n">SDWebImagePhotosLoaderPointSize</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="k">const</span> <span class="n">CGSize</span> <span class="n">SDWebImagePhotosPointSize</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosDefine.h#L26">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/1.0.0/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosDefine.h#L26">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -211,7 +211,7 @@ This value is used to represent the <code>exceptedSize</code>, and the <code>rec
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosDefine.h#L32">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/1.0.0/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosDefine.h#L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -249,7 +249,7 @@ This value is used to represent the <code>exceptedSize</code>, and the <code>rec
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosError.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/1.0.0/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosError.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -287,7 +287,7 @@ This value is used to represent the <code>exceptedSize</code>, and the <code>rec
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0/SDWebImagePhotosPlugin/SDWebImagePhotosPlugin.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/1.0.0/SDWebImagePhotosPlugin/SDWebImagePhotosPlugin.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -316,7 +316,7 @@ This value is used to represent the <code>exceptedSize</code>, and the <code>rec
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0/SDWebImagePhotosPlugin/SDWebImagePhotosPlugin.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/1.0.0/SDWebImagePhotosPlugin/SDWebImagePhotosPlugin.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -326,7 +326,7 @@ This value is used to represent the <code>exceptedSize</code>, and the <code>rec
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImagePhotosPlugin" target="_blank" rel="external">SDWebImagePhotosPlugin</a>. All rights reserved. (Last updated: 2019-11-18)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImagePhotosPlugin" target="_blank" rel="external">SDWebImagePhotosPlugin</a>. All rights reserved. (Last updated: 2019-11-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

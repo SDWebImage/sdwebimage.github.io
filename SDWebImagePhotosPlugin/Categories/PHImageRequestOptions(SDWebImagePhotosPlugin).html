@@ -14,7 +14,7 @@
     <a title="PHImageRequestOptions(SDWebImagePhotosPlugin) Category Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImagePhotosPlugin 0.4.0 Docs</a> (57% documented)</p>
+        <p><a href="../index.html">SDWebImagePhotosPlugin 1.0.0 Docs</a> (80% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -43,7 +43,7 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/SDWebImagePhotosLoader.html">SDWebImagePhotosLoader</a>
+                <a href="../Classes/SDImagePhotosLoader.html">SDImagePhotosLoader</a>
               </li>
             </ul>
           </li>
@@ -54,16 +54,16 @@
                 <a href="../Constants.html#/c:@SDWebImagePhotosErrorDomain">SDWebImagePhotosErrorDomain</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@SDWebImagePhotosLoaderPixelSize">SDWebImagePhotosLoaderPixelSize</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Constants.html#/c:@SDWebImagePhotosLoaderPointSize">SDWebImagePhotosLoaderPointSize</a>
+                <a href="../Constants.html#/c:@SDWebImagePhotosPixelSize">SDWebImagePhotosPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImagePhotosPluginVersionNumber">SDWebImagePhotosPluginVersionNumber</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImagePhotosPluginVersionString">SDWebImagePhotosPluginVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImagePhotosPointSize">SDWebImagePhotosPointSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImagePhotosProgressExpectedSize">SDWebImagePhotosProgressExpectedSize</a>
@@ -89,23 +89,12 @@
             <h1>PHImageRequestOptions(SDWebImagePhotosPlugin)</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">PHImageRequestOptions</span> <span class="p">(</span><span class="nl">SDWebImagePhotosPlugin</span><span class="p">)</span>
-
-<span class="cm">/**
- The `targetSize` value for image asset request. Defaults to `SDWebImagePhotosLoaderPixelSize`.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">CGSize</span> <span class="n">sd_targetSize</span><span class="p">;</span>
-
-<span class="cm">/**
- The `contentMode` value for image asset request. Defaults to `PHImageContentModeDefault`.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">PHImageContentMode</span> <span class="n">sd_contentMode</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">PHImageRequestOptions</span> <span class="p">(</span><span class="nl">SDWebImagePhotosPlugin</span><span class="p">)</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>PHImageRequestOptions category to provide targetSize and contentMode when fetch Photos image asset</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -123,7 +112,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The <code>targetSize</code> value for image asset request. Defaults to <code><a href="../Constants.html#/c:@SDWebImagePhotosLoaderPixelSize">SDWebImagePhotosLoaderPixelSize</a></code>.</p>
+                        <p>The <code>targetSize</code> value for image asset request. Defaults to <code><a href="../Constants.html#/c:@SDWebImagePhotosPixelSize">SDWebImagePhotosPixelSize</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -140,7 +129,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0/SDWebImagePhotosPlugin/Classes/PHImageRequestOptions+SDWebImagePhotosPlugin.h#L17">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/1.0.0/SDWebImagePhotosPlugin/Classes/PHImageRequestOptions+SDWebImagePhotosPlugin.h#L17">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -175,7 +164,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0/SDWebImagePhotosPlugin/Classes/PHImageRequestOptions+SDWebImagePhotosPlugin.h#L22">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/1.0.0/SDWebImagePhotosPlugin/Classes/PHImageRequestOptions+SDWebImagePhotosPlugin.h#L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -185,7 +174,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImagePhotosPlugin" target="_blank" rel="external">SDWebImagePhotosPlugin</a>. All rights reserved. (Last updated: 2019-11-18)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImagePhotosPlugin" target="_blank" rel="external">SDWebImagePhotosPlugin</a>. All rights reserved. (Last updated: 2019-11-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

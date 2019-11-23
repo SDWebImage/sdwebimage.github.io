@@ -14,7 +14,7 @@
     <a title="NSURL(SDWebImagePhotosPlugin) Category Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImagePhotosPlugin 0.4.0 Docs</a> (57% documented)</p>
+        <p><a href="../index.html">SDWebImagePhotosPlugin 1.0.0 Docs</a> (80% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -43,7 +43,7 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/SDWebImagePhotosLoader.html">SDWebImagePhotosLoader</a>
+                <a href="../Classes/SDImagePhotosLoader.html">SDImagePhotosLoader</a>
               </li>
             </ul>
           </li>
@@ -54,16 +54,16 @@
                 <a href="../Constants.html#/c:@SDWebImagePhotosErrorDomain">SDWebImagePhotosErrorDomain</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@SDWebImagePhotosLoaderPixelSize">SDWebImagePhotosLoaderPixelSize</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Constants.html#/c:@SDWebImagePhotosLoaderPointSize">SDWebImagePhotosLoaderPointSize</a>
+                <a href="../Constants.html#/c:@SDWebImagePhotosPixelSize">SDWebImagePhotosPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImagePhotosPluginVersionNumber">SDWebImagePhotosPluginVersionNumber</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImagePhotosPluginVersionString">SDWebImagePhotosPluginVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImagePhotosPointSize">SDWebImagePhotosPointSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImagePhotosProgressExpectedSize">SDWebImagePhotosProgressExpectedSize</a>
@@ -89,44 +89,12 @@
             <h1>NSURL(SDWebImagePhotosPlugin)</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NSURL</span> <span class="p">(</span><span class="nl">SDWebImagePhotosPlugin</span><span class="p">)</span>
-
-<span class="cm">/**
- The localIdentifier value for Photos URL, or nil for other URL.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">sd_assetLocalIdentifier</span><span class="p">;</span>
-
-<span class="cm">/**
- The `PHAsset` value for Photos URL, or nil for other URL, or the `PHAsset` is not availble.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">PHAsset</span> <span class="o">*</span><span class="n">sd_asset</span><span class="p">;</span>
-
-<span class="cm">/**
- Check whether the current URL represents Photos URL.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">sd_isPhotosURL</span><span class="p">;</span>
-
-<span class="cm">/**
- Create a Photos URL with `PHAsset` 's local identifier
-
- @param identifier `PHAsset` 's local identifier
- @return A Photos URL
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">sd_URLWithAssetLocalIdentifier</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span><span class="p">;</span>
-
-<span class="cm">/**
- Create a Photos URL with `PHAsset`
-
- @param asset `PHAsset` object
- @return A Photos URL
- */</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">sd_URLWithAsset</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">PHAsset</span> <span class="o">*</span><span class="p">)</span><span class="nv">asset</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NSURL</span> <span class="p">(</span><span class="nl">SDWebImagePhotosPlugin</span><span class="p">)</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>NSURL category for Photos URL support</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -162,7 +130,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0/SDWebImagePhotosPlugin/Classes/NSURL+SDWebImagePhotosPlugin.h#L18">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/1.0.0/SDWebImagePhotosPlugin/Classes/NSURL+SDWebImagePhotosPlugin.h#L18">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -197,7 +165,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0/SDWebImagePhotosPlugin/Classes/NSURL+SDWebImagePhotosPlugin.h#L23">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/1.0.0/SDWebImagePhotosPlugin/Classes/NSURL+SDWebImagePhotosPlugin.h#L23">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -232,7 +200,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0/SDWebImagePhotosPlugin/Classes/NSURL+SDWebImagePhotosPlugin.h#L28">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/1.0.0/SDWebImagePhotosPlugin/Classes/NSURL+SDWebImagePhotosPlugin.h#L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -291,7 +259,7 @@
                         <p>A Photos URL</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0/SDWebImagePhotosPlugin/Classes/NSURL+SDWebImagePhotosPlugin.h#L36">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/1.0.0/SDWebImagePhotosPlugin/Classes/NSURL+SDWebImagePhotosPlugin.h#L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -349,7 +317,7 @@
                         <p>A Photos URL</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0/SDWebImagePhotosPlugin/Classes/NSURL+SDWebImagePhotosPlugin.h#L44">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/1.0.0/SDWebImagePhotosPlugin/Classes/NSURL+SDWebImagePhotosPlugin.h#L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -359,7 +327,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImagePhotosPlugin" target="_blank" rel="external">SDWebImagePhotosPlugin</a>. All rights reserved. (Last updated: 2019-11-18)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImagePhotosPlugin" target="_blank" rel="external">SDWebImagePhotosPlugin</a>. All rights reserved. (Last updated: 2019-11-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -1,20 +1,6 @@
 {
   "warnings": [
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImagePhotosPlugin/SDWebImagePhotosPlugin/Classes/NSURL+SDWebImagePhotosPlugin.h",
-      "line": 13,
-      "symbol": "NSURL(SDWebImagePhotosPlugin)",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImagePhotosPlugin/SDWebImagePhotosPlugin/Classes/PHImageRequestOptions+SDWebImagePhotosPlugin.h",
-      "line": 12,
-      "symbol": "PHImageRequestOptions(SDWebImagePhotosPlugin)",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImagePhotosPlugin/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosError.h",
       "line": 11,
       "symbol": "SDWebImagePhotosErrorDomain",
@@ -33,34 +19,6 @@
       "line": 13,
       "symbol": "SDWebImagePhotosError",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImagePhotosPlugin/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosError.h",
-      "line": 14,
-      "symbol": "SDWebImagePhotosError.SDWebImagePhotosErrorInvalidURL",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImagePhotosPlugin/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosError.h",
-      "line": 15,
-      "symbol": "SDWebImagePhotosError.SDWebImagePhotosErrorNotAuthorized",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImagePhotosPlugin/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosError.h",
-      "line": 16,
-      "symbol": "SDWebImagePhotosError.SDWebImagePhotosErrorNotImageAsset",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImagePhotosPlugin/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosLoader.h",
-      "line": 17,
-      "symbol": "SDWebImagePhotosLoader",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {

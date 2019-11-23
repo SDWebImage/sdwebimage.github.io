@@ -14,7 +14,7 @@
     <a title="SDWebImagePhotosError Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImagePhotosPlugin 0.4.0 Docs</a> (57% documented)</p>
+        <p><a href="../index.html">SDWebImagePhotosPlugin 1.0.0 Docs</a> (80% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -43,7 +43,7 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/SDWebImagePhotosLoader.html">SDWebImagePhotosLoader</a>
+                <a href="../Classes/SDImagePhotosLoader.html">SDImagePhotosLoader</a>
               </li>
             </ul>
           </li>
@@ -54,16 +54,16 @@
                 <a href="../Constants.html#/c:@SDWebImagePhotosErrorDomain">SDWebImagePhotosErrorDomain</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@SDWebImagePhotosLoaderPixelSize">SDWebImagePhotosLoaderPixelSize</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Constants.html#/c:@SDWebImagePhotosLoaderPointSize">SDWebImagePhotosLoaderPointSize</a>
+                <a href="../Constants.html#/c:@SDWebImagePhotosPixelSize">SDWebImagePhotosPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImagePhotosPluginVersionNumber">SDWebImagePhotosPluginVersionNumber</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImagePhotosPluginVersionString">SDWebImagePhotosPluginVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImagePhotosPointSize">SDWebImagePhotosPointSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImagePhotosProgressExpectedSize">SDWebImagePhotosProgressExpectedSize</a>
@@ -90,10 +90,11 @@
               <div class="declaration">
                 <div class="language">
                   <pre class="highlight objective_c"><code><span class="n">NS_ERROR_ENUM</span><span class="p">(</span><span class="n"><a href="../Constants.html#/c:@SDWebImagePhotosErrorDomain">SDWebImagePhotosErrorDomain</a></span><span class="p">,</span> <span class="n">SDWebImagePhotosError</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">SDWebImagePhotosErrorInvalidURL</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">,</span> <span class="c1">// Photos URL is nil or not valid
-</span>    <span class="n">SDWebImagePhotosErrorNotAuthorized</span> <span class="o">=</span> <span class="mi">10001</span><span class="p">,</span> <span class="c1">// Photos framework access is not authorized by user
-</span>    <span class="n">SDWebImagePhotosErrorNotImageAsset</span> <span class="o">=</span> <span class="mi">10002</span> <span class="c1">// Photos URL is not image asset type (like Video or Audio)
-</span><span class="p">}</span></code></pre>
+    <span class="c1">/// Photos framework access is not authorized by user
+</span>    <span class="n">SDWebImagePhotosErrorNotAuthorized</span> <span class="o">=</span> <span class="mi">10001</span><span class="p">,</span>
+    <span class="c1">/// Photos URL is not image asset type (like Video or Audio)
+</span>    <span class="n">SDWebImagePhotosErrorNotImageAsset</span> <span class="o">=</span> <span class="mi">10002</span>
+<span class="p">}</span></code></pre>
 
                 </div>
               </div>
@@ -102,40 +103,6 @@
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@E@SDWebImagePhotosError@SDWebImagePhotosErrorInvalidURL"></a>
-                    <a name="//apple_ref/objc/Case/SDWebImagePhotosErrorInvalidURL" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@SDWebImagePhotosError@SDWebImagePhotosErrorInvalidURL">SDWebImagePhotosErrorInvalidURL</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">SDWebImagePhotosErrorInvalidURL</span> <span class="o">=</span> <span class="mi">10000</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidURL</span> <span class="o">=</span> <span class="mi">10000</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosError.h#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -149,7 +116,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Photos framework access is not authorized by user</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -165,7 +133,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosError.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/1.0.0/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosError.h#L15">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -183,7 +151,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Photos URL is not image asset type (like Video or Audio)</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -199,7 +168,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosError.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/1.0.0/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosError.h#L17">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -209,7 +178,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImagePhotosPlugin" target="_blank" rel="external">SDWebImagePhotosPlugin</a>. All rights reserved. (Last updated: 2019-11-18)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImagePhotosPlugin" target="_blank" rel="external">SDWebImagePhotosPlugin</a>. All rights reserved. (Last updated: 2019-11-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

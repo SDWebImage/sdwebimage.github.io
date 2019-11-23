@@ -14,7 +14,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImagePhotosPlugin 0.4.0 Docs</a> (57% documented)</p>
+        <p><a href="index.html">SDWebImagePhotosPlugin 1.0.0 Docs</a> (80% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -43,7 +43,7 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/SDWebImagePhotosLoader.html">SDWebImagePhotosLoader</a>
+                <a href="Classes/SDImagePhotosLoader.html">SDImagePhotosLoader</a>
               </li>
             </ul>
           </li>
@@ -54,16 +54,16 @@
                 <a href="Constants.html#/c:@SDWebImagePhotosErrorDomain">SDWebImagePhotosErrorDomain</a>
               </li>
               <li class="nav-group-task">
-                <a href="Constants.html#/c:@SDWebImagePhotosLoaderPixelSize">SDWebImagePhotosLoaderPixelSize</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Constants.html#/c:@SDWebImagePhotosLoaderPointSize">SDWebImagePhotosLoaderPointSize</a>
+                <a href="Constants.html#/c:@SDWebImagePhotosPixelSize">SDWebImagePhotosPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImagePhotosPluginVersionNumber">SDWebImagePhotosPluginVersionNumber</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImagePhotosPluginVersionString">SDWebImagePhotosPluginVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImagePhotosPointSize">SDWebImagePhotosPointSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImagePhotosProgressExpectedSize">SDWebImagePhotosProgressExpectedSize</a>
@@ -96,9 +96,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)SDWebImagePhotosLoader"></a>
-                    <a name="//apple_ref/objc/Class/SDWebImagePhotosLoader" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDWebImagePhotosLoader">SDWebImagePhotosLoader</a>
+                    <a name="/c:objc(cs)SDImagePhotosLoader"></a>
+                    <a name="//apple_ref/objc/Class/SDImagePhotosLoader" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImagePhotosLoader">SDImagePhotosLoader</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -106,54 +106,40 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
-                        <a href="Classes/SDWebImagePhotosLoader.html" class="slightly-smaller">See more</a>
+                        <p>The imgae loader to load image asset from Photos library. You need to register the loader into manager firstly. Use <code>@import SDWebImagePhotosPlugin</code> to import full framework instead of each header.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    To control single image request options, use the context option in <code>SDWebImagePhotosDefine.h</code>.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Use <code>NSURL+SDWebImagePhotosPlugin.h</code> category to create Photos URL instead of string. Use <code>PHImageRequestOptions+SDWebImagePhotosPlugin.h</code> category to provide extra info for request options.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    And it&rsquo;s also strongly recommeded to totally disable memory cache if you want to query batch of Photos images frequently. You can do this by using <code>SDWebImageFromLoaderOnly</code> options during image request. And you can use <code>SDWebImageContextStoreCacheType</code> with <code>SDImageCacheTypeNone</code> to disable cache storing. This is because Photos framework manage the image cache by their own process outside your application process and can reduce memory usage.
+
+</div>
+
+                        <a href="Classes/SDImagePhotosLoader.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDWebImagePhotosLoader</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">SDImageLoader</span><span class="o">&gt;</span>
-
-<span class="cm">/**
- The global shared instance for Photos loader.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">class</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">SDWebImagePhotosLoader</span> <span class="o">*</span><span class="n">sharedLoader</span><span class="p">;</span>
-
-<span class="cm">/**
- The default `fetchOptions` used for PHAsset fetch with the localIdentifier.
- Defaults to nil.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">PHFetchOptions</span> <span class="o">*</span><span class="n">fetchOptions</span><span class="p">;</span>
-
-<span class="cm">/**
- The default `imageRequestOptions` used for image asset request.
- Defatuls value are these:
- networkAccessAllowed = YES;
- resizeMode = PHImageRequestOptionsResizeModeFast;
- deliveryMode = PHImageRequestOptionsDeliveryModeOpportunistic;
- version = PHImageRequestOptionsVersionCurrent;
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">PHImageRequestOptions</span> <span class="o">*</span><span class="n">imageRequestOptions</span><span class="p">;</span>
-
-<span class="cm">/**
- Whether we request only `PHAssetMediaTypeImage` asset and ignore other types (video/audio/unknown).
- When we found other type, an error `SDWebImagePhotosErrorNotImageAsset` will be reported.
- Defaults to YES. If you prefer to load other type like video asset's poster image, set this value to NO.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">requestImageAssetOnly</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImagePhotosLoader</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SDWebImagePhotosLoader</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SDImagePhotosLoader</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/0.4.0/SDWebImagePhotosPlugin/Classes/SDWebImagePhotosLoader.h#L17-L47">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin/tree/1.0.0/SDWebImagePhotosPlugin/Classes/SDImagePhotosLoader.h#L18-L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -163,7 +149,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImagePhotosPlugin" target="_blank" rel="external">SDWebImagePhotosPlugin</a>. All rights reserved. (Last updated: 2019-11-18)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImagePhotosPlugin" target="_blank" rel="external">SDWebImagePhotosPlugin</a>. All rights reserved. (Last updated: 2019-11-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
