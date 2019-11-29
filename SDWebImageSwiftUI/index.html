@@ -13,7 +13,7 @@
     <a title="SDWebImageSwiftUI  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImageSwiftUI 0.8.6 Docs</a> (84% documented)</p>
+        <p><a href="index.html">SDWebImageSwiftUI 0.9.0 Docs</a> (85% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImageSwiftUI"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -78,9 +78,6 @@
           <li class="nav-group-name">
             <a href="Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Typealiases.html#/AnimatedImageViewWrapper">AnimatedImageViewWrapper</a>
-              </li>
               <li class="nav-group-task">
                 <a href="Typealiases.html#/PlatformImage">PlatformImage</a>
               </li>
@@ -171,7 +168,7 @@ it, simply add the following line to your Podfile:</p>
 <p>SDWebImageSwiftUI is available through <a href="https://swift.org/package-manager/">Swift Package Manager</a>.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
     <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/SDWebImage/SDWebImageSwiftUI.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"0.8"</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/SDWebImage/SDWebImageSwiftUI.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"0.9"</span><span class="p">)</span>
     <span class="p">],</span>
 <span class="p">)</span>
 </code></pre>
@@ -184,6 +181,7 @@ it, simply add the following line to your Podfile:</p>
 <li>[x] Supports success/failure/progress changes event for custom handling</li>
 <li>[x] Supports indicator with activity/progress indicator and customization</li>
 <li>[x] Supports built-in animation and transition, powered by SwiftUI</li>
+<li>[x] Supports animated image as well! (from v0.9.0)</li>
 </ul>
 <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
     <span class="kt">WebImage</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://nokiatech.github.io/heif/content/images/ski_jump_1440x960.heic"</span><span class="p">))</span>
@@ -196,6 +194,7 @@ it, simply add the following line to your Podfile:</p>
         <span class="o">.</span><span class="n">placeholder</span> <span class="p">{</span>
             <span class="kt">Rectangle</span><span class="p">()</span><span class="o">.</span><span class="nf">foregroundColor</span><span class="p">(</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
         <span class="p">}</span>
+        <span class="o">.</span><span class="nf">animated</span><span class="p">()</span> <span class="c1">// Supports Animated Image</span>
         <span class="o">.</span><span class="nf">indicator</span><span class="p">(</span><span class="o">.</span><span class="n">activity</span><span class="p">)</span> <span class="c1">// Activity Indicator</span>
         <span class="o">.</span><span class="nf">animation</span><span class="p">(</span><span class="o">.</span><span class="nf">easeInOut</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">))</span> <span class="c1">// Animation Duration</span>
         <span class="o">.</span><span class="nf">transition</span><span class="p">(</span><span class="o">.</span><span class="n">fade</span><span class="p">)</span> <span class="c1">// Fade Transition</span>
@@ -204,7 +203,9 @@ it, simply add the following line to your Podfile:</p>
 <span class="p">}</span>
 </code></pre>
 
-<p>Note: This <code><a href="Structs/WebImage.html">WebImage</a></code> using <code>Image</code> for internal implementation, which is the best compatible for SwiftUI layout and animation system. But it supports static image format only, because unlike <code>UIImageView</code> in UIKit, SwiftUI&rsquo;s <code>Image</code> does not support animated image or vector image.</p>
+<p>Note: This <code><a href="Structs/WebImage.html">WebImage</a></code> using <code>Image</code> for internal implementation, which is the best compatible for SwiftUI layout and animation system. In previous version, <code><a href="Structs/WebImage.html">WebImage</a></code> supports static image format only, because unlike <code>UIImageView</code> in UIKit, SwiftUI&rsquo;s <code>Image</code> does not support animated image or vector image.</p>
+
+<p>Note: From v0.9.0, <code><a href="Structs/WebImage.html">WebImage</a></code> supports animated image as well! You can use <code>.animated()</code> to start animation. This is done by using the native SwiftUI rendering system and SDWebImage&rsquo;s powerful <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#animated-player-530">Animated Player</a>. But it&rsquo;s still recommend to use <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> for advanced controls like progressive animation rendering, runloop mode, playback rate, etc.</p>
 <h3 id='using-code-animatedimage-code-to-play-animation' class='heading'>Using <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> to play animation</h3>
 
 <ul>
@@ -246,16 +247,18 @@ it, simply add the following line to your Podfile:</p>
 
 <p>Note: <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> supports both image url or image data for animated image format. Which use the SDWebImage&rsquo;s <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#animated-image-50">Animated ImageView</a> for internal implementation. Pay attention that since this base on UIKit/AppKit representable, some advanced SwiftUI layout and animation system may not work as expected. You may need UIKit/AppKit and Core Animation to modify the native view.</p>
 
-<p>Note: From v0.8.0, <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> on watchOS support all features the same as iOS/tvOS/macOS, including Animated WebP rendering, runloop mode, pausable, purgeable, playback rate, etc. It use the SDWebImage&rsquo;s <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#animated-player-530">Animated Player</a>, which is the same backend engine for iOS/tvOS/macOS&rsquo;s Animated ImageView.</p>
+<p>Note: From v0.9.0, <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> on watchOS drop the supports on watchOS, because of using hacks and private APIs. For watchOS user, choose <code><a href="Structs/WebImage.html">WebImage</a></code> instead.</p>
 
-<p>Note: From v0.4.0, <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> supports watchOS as well. However, it&rsquo;s not backed by SDWebImage&rsquo;s <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#animated-image-50">Animated ImageView</a> like iOS/tvOS/macOS. It use some tricks and hacks because of the limitation on current Apple&rsquo;s API. It also use Image/IO decoding system, which means it supports GIF and APNG format only, but not external format like Animated WebP.</p>
+<p>Note: From v0.8.0, <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> on watchOS support all features the same as iOS/tvOS/macOS, including Animated WebP rendering, runloop mode, pausable, purgeable, playback rate, etc. It use the SDWebImage&rsquo;s <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#animated-player-530">Animated Player</a>, which is the same backend engine for iOS/tvOS/macOS&rsquo;s Animated ImageView.</p>
 <h3 id='which-view-to-choose' class='heading'>Which View to choose</h3>
 
 <p>Why we have two different View types here, is because of current SwiftUI limit. But we&rsquo;re aimed to provide best solution for all use cases.</p>
 
 <p>If you don&rsquo;t need animated image, prefer to use <code><a href="Structs/WebImage.html">WebImage</a></code> firstly. Which behaves the seamless as built-in SwiftUI View. If SwiftUI works, it works.</p>
 
-<p>If you need animated image, <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> is the one to choose. Remember it supports static image as well, you don&rsquo;t need to check the format, just use as it.</p>
+<p>If you need simple animated image, use v0.9.0 above with <code><a href="Structs/WebImage.html">WebImage</a></code>. Which provide the animated image support.</p>
+
+<p>If you need powerful animated image, <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> is the one to choose. Remember it supports static image as well, you don&rsquo;t need to check the format, just use as it.</p>
 
 <p>But, because <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> use <code>UIViewRepresentable</code> and driven by UIKit, currently there may be some small incompatible issues between UIKit and SwiftUI layout and animation system, or bugs related to SwiftUI itself. We try our best to match SwiftUI behavior, and provide the same API as <code><a href="Structs/WebImage.html">WebImage</a></code>, which make it easy to switch between these two types if needed.</p>
 <h3 id='customization-and-configuration-setup' class='heading'>Customization and configuration setup</h3>
@@ -282,7 +285,7 @@ it, simply add the following line to your Podfile:</p>
     <span class="kt">SDWebImageManager</span><span class="o">.</span><span class="n">defaultImageCache</span> <span class="o">=</span> <span class="kt">SDImageCachesManager</span><span class="o">.</span><span class="n">shared</span>
 
     <span class="c1">// Add multiple loaders with Photos Asset support</span>
-    <span class="kt">SDImageLoadersManager</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">addLoader</span><span class="p">(</span><span class="kt">SDWebImagePhotosLoader</span><span class="o">.</span><span class="n">shared</span><span class="p">)</span>
+    <span class="kt">SDImageLoadersManager</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">addLoader</span><span class="p">(</span><span class="kt">SDImagePhotosLoader</span><span class="o">.</span><span class="n">shared</span><span class="p">)</span>
     <span class="kt">SDWebImageManager</span><span class="o">.</span><span class="n">defaultImageLoader</span> <span class="o">=</span> <span class="kt">SDImageLoadersManager</span><span class="o">.</span><span class="n">shared</span>
     <span class="k">return</span> <span class="kc">true</span>
 <span class="p">}</span>
@@ -406,7 +409,7 @@ pod install
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImageSwiftUI" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-11-23)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImageSwiftUI" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-11-30)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
