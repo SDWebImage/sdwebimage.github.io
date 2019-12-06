@@ -149,7 +149,7 @@
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDDiskCache.h",
-      "line": 111,
+      "line": 131,
       "symbol": "SDDiskCache.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -422,7 +422,7 @@
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDMemoryCache.h",
-      "line": 75,
+      "line": 76,
       "symbol": "SDMemoryCache.config",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
@@ -464,21 +464,14 @@
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageCacheSerializer.h",
-      "line": 20,
-      "symbol": "SDWebImageCacheSerializer.-cacheDataWithImage:originalData:imageURL:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageCacheSerializer.h",
-      "line": 29,
+      "line": 33,
       "symbol": "SDWebImageCacheSerializer.-initWithBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageCacheSerializer.h",
-      "line": 30,
+      "line": 34,
       "symbol": "SDWebImageCacheSerializer.+cacheSerializerWithBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
@@ -831,6 +824,13 @@
       "line": 24,
       "symbol": "SDWebImageTransitionCompletionBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/UIImage+ExtendedCacheData.h",
+      "line": 13,
+      "symbol": "UIImage(ExtendedCacheData)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },
     {

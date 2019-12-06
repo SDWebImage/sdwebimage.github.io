@@ -14,7 +14,7 @@
     <a title="SDWebImageCacheSerializer Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.3.1 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.4.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -53,6 +53,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Categories/UIButton%28WebCache%29.html">UIButton(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/UIImage%28ExtendedCacheData%29.html">UIImage(ExtendedCacheData)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Categories/UIImage%28ForceDecode%29.html">UIImage(ForceDecode)</a>
@@ -610,13 +613,16 @@ We can use a block to specify the cache serializer. But Using protocol can make 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Provide the image data associated to the image and store to disk cache</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nf">cacheDataWithImage</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">image</span> <span class="nf">originalData</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span> <span class="nf">imageURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">imageURL</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nf">cacheDataWithImage</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">image</span>
+                           <span class="nf">originalData</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span>
+                               <span class="nf">imageURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">imageURL</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -625,8 +631,51 @@ We can use a block to specify the cache serializer. But Using protocol can make 
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The loaded image</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The original loaded image data</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image URL</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/SDWebImageCacheSerializer.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageCacheSerializer.h#L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -636,8 +685,8 @@ We can use a block to specify the cache serializer. But Using protocol can make 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-11-18)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-12-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

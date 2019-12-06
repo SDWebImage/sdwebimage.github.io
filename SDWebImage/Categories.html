@@ -14,7 +14,7 @@
     <a title="Categories  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImage 5.3.1 Docs</a> (81% documented)</p>
+        <p><a href="index.html">SDWebImage 5.4.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -53,6 +53,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Categories/UIButton%28WebCache%29.html">UIButton(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/UIImage%28ExtendedCacheData%29.html">UIImage(ExtendedCacheData)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Categories/UIImage%28ForceDecode%29.html">UIImage(ForceDecode)</a>
@@ -616,7 +619,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/NSData+ImageContentType.h#L30-L57">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/NSData+ImageContentType.h#L30-L57">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -651,7 +654,52 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/UIButton+WebCache.h#L18-L385">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L18-L385">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cy)UIImage@ExtendedCacheData"></a>
+                    <a name="//apple_ref/objc/Extension/UIImage(ExtendedCacheData)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cy)UIImage@ExtendedCacheData">UIImage(ExtendedCacheData)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Categories/UIImage%28ExtendedCacheData%29.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">UIImage</span> <span class="p">(</span><span class="nl">ExtendedCacheData</span><span class="p">)</span>
+
+<span class="cm">/**
+ Read and Write the extended object and bind it to the image. Which can hold some extra metadata like Image's scale factor, URL rich link, date, etc.
+ The extended object should conforms to NSCoding, which we use `NSKeyedArchiver` and `NSKeyedUnarchiver` to archive it to data, and write to disk cache.
+ @note The disk cache preserve both of the data and extended data with the same cache key. For manual query, use the `SDDiskCache` protocol method `extendedDataForKey:` instead.
+ @note You can specify arbitrary object conforms to NSCoding (NSObject protocol here is used to support object using `NS_ROOT_CLASS`, which is not NSObject subclass). If you load image from disk cache, you should check the extended object class to avoid corrupted data.
+ @warning This object don't need to implements NSSecureCoding (but it's recommended),  because we allows arbitrary class.
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n">NSObject</span><span class="p">,</span> <span class="n">NSCoding</span><span class="o">&gt;</span> <span class="n">sd_extendedObject</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/UIImage+ExtendedCacheData.h#L13-L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -686,7 +734,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/UIImage+ForceDecode.h#L14-L46">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/UIImage+ForceDecode.h#L14-L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -721,7 +769,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/UIImage+GIF.h#L15-L26">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/UIImage+GIF.h#L15-L26">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -756,7 +804,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/UIImage+MemoryCacheCost.h#L14-L27">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/UIImage+MemoryCacheCost.h#L14-L27">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -791,7 +839,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/UIImage+Metadata.h#L15-L49">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/UIImage+Metadata.h#L15-L49">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -826,7 +874,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/UIImage+MultiFormat.h#L15-L79">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/UIImage+MultiFormat.h#L15-L79">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -862,7 +910,7 @@ Image process is based on Core Graphics and vImage.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/UIImage+Transform.h#L33-L146">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/UIImage+Transform.h#L33-L146">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -897,7 +945,7 @@ Image process is based on Core Graphics and vImage.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/UIImageView+HighlightedWebCache.h#L18-L127">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/UIImageView+HighlightedWebCache.h#L18-L127">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -932,7 +980,7 @@ Image process is based on Core Graphics and vImage.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/UIImageView+WebCache.h#L46-L194">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/UIImageView+WebCache.h#L46-L194">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -967,7 +1015,7 @@ Image process is based on Core Graphics and vImage.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/UIView+WebCache.h#L25-L101">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/UIView+WebCache.h#L25-L101">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1003,7 +1051,7 @@ All the stored operations are weak, so it will be dalloced after image loading f
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.3.1/build/Release/include/SDWebImage/UIView+WebCacheOperation.h#L16-L48">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/UIView+WebCacheOperation.h#L16-L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1013,8 +1061,8 @@ All the stored operations are weak, so it will be dalloced after image loading f
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-11-18)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-12-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
