@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SDWebImageLinkPlugin  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="SDWebImageLinkPlugin  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SDWebImageLinkPlugin 0.2.1 Docs</a> (75% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImageLinkPlugin"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">SDWebImageLinkPlugin Reference</a>
+        <img id="carat" src="img/carat.png" />
+        SDWebImageLinkPlugin  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Categories/LPLinkView%28WebCache%29.html">LPLinkView(WebCache)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/SDImageLinkLoader.html">SDImageLinkLoader</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageLinkErrorDomain">SDWebImageLinkErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageLinkPluginVersionNumber">SDWebImageLinkPluginVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageLinkPluginVersionString">SDWebImageLinkPluginVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/SDWebImageLinkError.html">SDWebImageLinkError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='sdwebimagelinkplugin' class='heading'>SDWebImageLinkPlugin</h1>
+
+<p><a href="https://travis-ci.org/SDWebImage/SDWebImageLinkPlugin"><img src="https://img.shields.io/travis/SDWebImage/SDWebImageLinkPlugin.svg?style=flat" alt="CI Status"></a>
+<a href="https://cocoapods.org/pods/SDWebImageLinkPlugin"><img src="https://img.shields.io/cocoapods/v/SDWebImageLinkPlugin.svg?style=flat" alt="Version"></a>
+<a href="https://cocoapods.org/pods/SDWebImageLinkPlugin"><img src="https://img.shields.io/cocoapods/l/SDWebImageLinkPlugin.svg?style=flat" alt="License"></a>
+<a href="https://cocoapods.org/pods/SDWebImageLinkPlugin"><img src="https://img.shields.io/cocoapods/p/SDWebImageLinkPlugin.svg?style=flat" alt="Platform"></a>
+<a href="https://github.com/SDWebImage/SDWebImageLinkPlugin"><img src="https://img.shields.io/badge/Carthage-compatible-brightgreen.svg?style=flat" alt="Carthage compatible"></a>
+<a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg?style=flat" alt="SwiftPM compatible"></a>
+<a href="https://codecov.io/gh/SDWebImage/SDWebImageLinkPlugin"><img src="https://codecov.io/gh/SDWebImage/SDWebImageLinkPlugin/branch/master/graph/badge.svg" alt="codecov"></a></p>
+<h2 id='what-39-s-for' class='heading'>What&rsquo;s for</h2>
+
+<p>SDWebImageLinkPlugin is a plugin for <a href="https://github.com/rs/SDWebImage/">SDWebImage</a> framework, which provide the image loading support for rich link URL, by using the <a href="https://developer.apple.com/documentation/linkpresentation">Link Presentation</a> framework introduced in iOS 13/macOS 10.15.</p>
+
+<p>By using this plugin, it allows you to use your familiar View Category method from SDWebImage, to load rich link&rsquo;s poster image, with the URL or <code>LPLinkMetadata</code>. And make it easy to use <code>LPLinkView</code> with cache support.</p>
+
+<p>See more about Link Presentation in <a href="https://developer.apple.com/videos/play/wwdc2019/262/">WWDC 262: Embedding and Sharing Visually Rich Links</a></p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 13+</li>
+<li>macOS 10.15+</li>
+<li>Xcode 11+</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+<h4 id='cocoapods' class='heading'>CocoaPods</h4>
+
+<p>SDWebImageLinkPlugin is available through <a href="https://cocoapods.org">CocoaPods</a>. To install
+it, simply add the following line to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'SDWebImageLinkPlugin'</span>
+</code></pre>
+<h4 id='carthage' class='heading'>Carthage</h4>
+
+<p>SDWebImageLinkPlugin is available through <a href="https://github.com/Carthage/Carthage">Carthage</a>.</p>
+<pre class="highlight plaintext"><code>github "SDWebImage/SDWebImageLinkPlugin"
+</code></pre>
+<h4 id='swift-package-manager-xcode-11' class='heading'>Swift Package Manager (Xcode 11+)</h4>
+
+<p>SDWebImageLinkPlugin is available through <a href="https://swift.org/package-manager">Swift Package Manager</a>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/SDWebImage/SDWebImageLinkPlugin.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"0.1"</span><span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre>
+<h2 id='usage' class='heading'>Usage</h2>
+<h4 id='setup-loader' class='heading'>Setup Loader</h4>
+
+<p>To use the LinkPlugin, you should setup the loader firstly. See more here in <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#loaders-manager">Wiki - Loaders Manager</a></p>
+
+<ul>
+<li>Objective-C</li>
+</ul>
+<pre class="highlight plaintext"><code>// Put this code on AppDelegate.m
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // Override point for customization after application launch.
+    [SDImageLoadersManager.sharedManager addLoader:SDImageLinkLoader.sharedLoader];
+    SDWebImageManager.defaultImageLoader = SDImageLoadersManager.sharedManager;
+    return YES;
+}
+</code></pre>
+<h4 id='load-rich-link-on-uiimageview' class='heading'>Load Rich Link on UIImageView</h4>
+
+<p>The simple and fast usage, it to use the SDWebImage provided category on <code>UIImageView</code>.</p>
+
+<ul>
+<li>Objective-C</li>
+</ul>
+<pre class="highlight plaintext"><code>NSURL *url = [NSURL URLWithString:@"https://webkit.org/"];
+self.imageView = [[UIImageView alloc] init];
+self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+[self.view addSubview:self.imageView];
+[self.imageView sd_setImageWithURL:url completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+    if (image &amp;&amp; [image.sd_extendedObject isKindOfClass:LPLinkMetadata.class]) {
+        NSLog(@"%@", @"UIImageView metadata load success");
+    }
+}];
+</code></pre>
+<h4 id='load-rich-link-on-lplinkview' class='heading'>Load Rich Link on LPLinkView</h4>
+
+<p>Important note on <code>LPLinkView</code>: Current iOS 13.0 contains bug that <code>LPLinkView</code> may not compatible with TableView/CollectionView cell-reusing. To workaround this issue, you can choose one of these below (one is OK):</p>
+
+<ol>
+<li>Do not using cache at all. So, always pass <code>SDWebImageFromLoaderOnly</code> to load the metadata from network</li>
+<li>Using trick code, create <code>LPLinkView</code> with empty <code>LPLinkMetadata</code>, or nil URL (important).</li>
+</ol>
+
+<ul>
+<li>Objective-C</li>
+</ul>
+<pre class="highlight objective_c"><code><span class="n">NSURL</span> <span class="o">*</span><span class="n">url</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURL</span> <span class="nf">URLWithString</span><span class="p">:</span><span class="s">@"https://www.apple.com/iphone/"</span><span class="p">];</span>
+<span class="n">self</span><span class="p">.</span><span class="n">linkView</span> <span class="o">=</span> <span class="p">[[</span><span class="n">LPLinkView</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithURL</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
+<span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="nf">addSubview</span><span class="p">:</span><span class="n">self</span><span class="p">.</span><span class="n">linkView</span><span class="p">];</span>
+<span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">linkView</span> <span class="nf">sd_setImageWithURL</span><span class="p">:</span><span class="n">url</span> <span class="nf">completed</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">image</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">error</span><span class="p">,</span> <span class="n">SDImageCacheType</span> <span class="n">cacheType</span><span class="p">,</span> <span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">imageURL</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">image</span> <span class="o">&amp;&amp;</span> <span class="p">[</span><span class="n">image</span><span class="p">.</span><span class="n">sd_extendedObject</span> <span class="nf">isKindOfClass</span><span class="p">:</span><span class="n">LPLinkMetadata</span><span class="p">.</span><span class="n">class</span><span class="p">])</span> <span class="p">{</span>
+        <span class="n">NSLog</span><span class="p">(</span><span class="s">@"%@"</span><span class="p">,</span> <span class="s">@"LPLinkView metadata load success"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}];</span>
+</code></pre>
+<h4 id='using-lplinkmetadata' class='heading'>Using LPLinkMetadata</h4>
+
+<p>For some cases, if you have the pre-fetched or pre-created <code>LPLinkMetadata</code> object, you can use <code>SDWebImageContextLinkMetadata</code> context option to associate it, without extra request to the original link URL. But in most cases, you don&rsquo;t need so, just use the <code>NSURL</code> point to the rich link, we query the <code>LPLinkMetadata</code> with <a href="https://developer.apple.com/documentation/linkpresentation/lpmetadataprovider?language=objc">LPMetadataProvider</a>.</p>
+
+<p>Remember, if you don&rsquo;t want the double cache (<code>LPLinkMetadata</code> archive will contains the image data as well, but not simple image URL), do not sync or cache the metadata from callback&rsquo;s <code>image.sd_extendedObject</code> to your own storage using <code>NSCoding</code> methods. Let the framework do this thing.</p>
+
+<ul>
+<li>Objective-C</li>
+</ul>
+<pre class="highlight plaintext"><code>// Decoding a metadata from your serialization solution
+LPLinkMetadata *metadata = [NSKeyedUnarchiver unarchiveObjectWithFile:@"/path/to/metadata"];
+// Load image without query metadata again
+[imageView sd_setImageWithURL:metadata.originalURL placeholderImage:nil options:0 context:@{SDWebImageContextLinkMetadata : metadata}];
+</code></pre>
+
+<p>Note: By default, if the image is cached, we do not send request to query new metadata. If you need to query the metadata as well, consider using SDWebImage&rsquo;s <code>SDWebImageRefreshCached</code> option. Or using <code>SDWebImageFromLoaderOnly</code> to avoid cache during query.</p>
+
+<p>Note: By default, we prefer to load the image only, which does not generate the image data. This can increase the loading speed. But however, you can also specify to generate the image data by using <code>SDWebImageContextLinkRequestImageData</code> context option.</p>
+<h2 id='demo' class='heading'>Demo</h2>
+
+<p>If you have some issue about usage, SDWebImageLinkPlugin provide a demo for iOS &amp;&amp; macOS platform. To run the demo, clone the repo and run the following command.</p>
+<pre class="highlight shell"><code><span class="nb">cd </span>Example/
+pod <span class="nb">install
+</span>open SDWebImageLinkPlugin.xcworkspace
+</code></pre>
+
+<p>After the Xcode project was opened, click <code>Run</code> to build and run the demo.</p>
+
+<p>Tips: The iOS demo provide the both of two views&rsquo; usage. Click <code>Switch View</code> to toggle between UIImageView/LPLinkView.</p>
+<h2 id='screenshot' class='heading'>Screenshot</h2>
+
+<p><img src="https://raw.githubusercontent.com/SDWebImage/SDWebImageLinkPlugin/master/Example/Screenshot/LinkDemo.png" width="300" />
+<img src="https://raw.githubusercontent.com/SDWebImage/SDWebImageLinkPlugin/master/Example/Screenshot/LinkDemo-macOS.png" width="600" /></p>
+
+<p>These rich link image is from the <a href="https://www.apple.com/">Apple site</a> and <a href="https://webkit.org/">WebKit site</a>.</p>
+<h2 id='author' class='heading'>Author</h2>
+
+<p>DreamPiggy</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>SDWebImageLinkPlugin is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImageLinkPlugin" target="_blank" rel="external">SDWebImageLinkPlugin</a>. All rights reserved. (Last updated: 2019-12-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
