@@ -14,7 +14,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImage 5.4.0 Docs</a> (81% documented)</p>
+        <p><a href="index.html">SDWebImage 5.5.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -103,6 +103,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SDDiskCache.html">SDDiskCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDGraphicsImageRenderer.html">SDGraphicsImageRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDGraphicsImageRendererFormat.html">SDGraphicsImageRendererFormat</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SDImageAPNGCoder.html">SDImageAPNGCoder</a>
@@ -233,7 +239,13 @@
                 <a href="Constants.html#/c:@SDImageCoderDecodeFirstFrameOnly">SDImageCoderDecodeFirstFrameOnly</a>
               </li>
               <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDImageCoderDecodePreserveAspectRatio">SDImageCoderDecodePreserveAspectRatio</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDImageCoderDecodeScaleFactor">SDImageCoderDecodeScaleFactor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDImageCoderDecodeThumbnailPixelSize">SDImageCoderDecodeThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
@@ -290,7 +302,13 @@
                 <a href="Constants.html#/c:@SDWebImageContextDownloadResponseModifier">SDWebImageContextDownloadResponseModifier</a>
               </li>
               <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextImagePreserveAspectRatio">SDWebImageContextImagePreserveAspectRatio</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextImageScaleFactor">SDWebImageContextImageScaleFactor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextImageThumbnailPixelSize">SDWebImageContextImageThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextImageTransformer">SDWebImageContextImageTransformer</a>
@@ -339,6 +357,9 @@
           <li class="nav-group-name">
             <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/SDGraphicsImageRendererFormatRange.html">SDGraphicsImageRendererFormatRange</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Enums/SDImageCacheConfigExpireType.html">SDImageCacheConfigExpireType</a>
               </li>
@@ -441,6 +462,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Type%20Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDGraphicsImageRenderer.h@T@SDGraphicsImageDrawingActions">SDGraphicsImageDrawingActions</a>
               </li>
               <li class="nav-group-task">
                 <a href="Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheAdditionalCachePathBlock">SDImageCacheAdditionalCachePathBlock</a>
@@ -624,7 +648,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDAnimatedImage.h#L71-L113">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDAnimatedImage.h#L71-L114">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -664,7 +688,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDAnimatedImagePlayer.h#L14-L90">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDAnimatedImagePlayer.h#L14-L90">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -707,7 +731,7 @@ For AppKit: use <code>-setAnimates:</code> to control animating, <code>animates<
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDAnimatedImageView.h#L21-L90">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDAnimatedImageView.h#L21-L90">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -747,7 +771,83 @@ For AppKit: use <code>-setAnimates:</code> to control animating, <code>animates<
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDDiskCache.h#L125-L145">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDDiskCache.h#L125-L145">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDGraphicsImageRendererFormat"></a>
+                    <a name="//apple_ref/objc/Class/SDGraphicsImageRendererFormat" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDGraphicsImageRendererFormat">SDGraphicsImageRendererFormat</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A set of drawing attributes that represent the configuration of an image renderer context.</p>
+
+                        <a href="Classes/SDGraphicsImageRendererFormat.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDGraphicsImageRendererFormat</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SDGraphicsImageRendererFormat</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDGraphicsImageRenderer.h#L29-L51">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDGraphicsImageRenderer"></a>
+                    <a name="//apple_ref/objc/Class/SDGraphicsImageRenderer" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDGraphicsImageRenderer">SDGraphicsImageRenderer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A graphics renderer for creating Core Graphics-backed images.</p>
+
+                        <a href="Classes/SDGraphicsImageRenderer.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDGraphicsImageRenderer</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SDGraphicsImageRenderer</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDGraphicsImageRenderer.h#L54-L73">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -788,7 +888,7 @@ For AppKit: use <code>-setAnimates:</code> to control animating, <code>animates<
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageAPNGCoder.h#L15-L19">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageAPNGCoder.h#L15-L19">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -829,7 +929,7 @@ asynchronous so it doesn’t add unnecessary latency to the UI.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageCache.h#L62-L362">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageCache.h#L62-L362">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -874,7 +974,7 @@ asynchronous so it doesn’t add unnecessary latency to the UI.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageCacheConfig.h#L28-L129">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageCacheConfig.h#L36-L137">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -914,7 +1014,7 @@ asynchronous so it doesn’t add unnecessary latency to the UI.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageCachesManager.h#L23-L81">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageCachesManager.h#L23-L81">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -954,7 +1054,7 @@ asynchronous so it doesn’t add unnecessary latency to the UI.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageCoderHelper.h#L16-L110">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageCoderHelper.h#L16-L126">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1013,7 +1113,7 @@ That means that coder can decode that data / encode to that format</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageCodersManager.h#L32-L58">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageCodersManager.h#L32-L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1058,7 +1158,7 @@ That means that coder can decode that data / encode to that format</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageFrame.h#L16-L36">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageFrame.h#L16-L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1114,7 +1214,7 @@ That means that coder can decode that data / encode to that format</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageGIFCoder.h#L18-L22">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageGIFCoder.h#L18-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1168,7 +1268,7 @@ See <a href="https://nokiatech.github.io/heif/technical.html">https://nokiatech.
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageHEICCoder.h#L20-L24">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageHEICCoder.h#L20-L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1211,7 +1311,7 @@ For Image/IO, See Apple&rsquo;s documentation: <a href="https://developer.apple.
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageIOAnimatedCoder.h#L18-L59">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageIOAnimatedCoder.h#L18-L59">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1262,7 +1362,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageIOCoder.h#L26-L30">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageIOCoder.h#L26-L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1302,7 +1402,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageLoadersManager.h#L14-L40">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageLoadersManager.h#L14-L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1354,7 +1454,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageTransformer.h#L54-L64">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageTransformer.h#L54-L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1401,7 +1501,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageTransformer.h#L73-L104">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageTransformer.h#L73-L104">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1437,7 +1537,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageTransformer.h#L109-L124">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageTransformer.h#L109-L124">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1473,7 +1573,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageTransformer.h#L129-L139">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageTransformer.h#L129-L139">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1509,7 +1609,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageTransformer.h#L144-L159">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageTransformer.h#L144-L159">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1545,7 +1645,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageTransformer.h#L164-L180">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageTransformer.h#L164-L180">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1592,7 +1692,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageTransformer.h#L187-L197">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageTransformer.h#L187-L197">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1639,7 +1739,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageTransformer.h#L204-L214">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageTransformer.h#L204-L214">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1675,7 +1775,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageTransformer.h#L220-L230">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageTransformer.h#L220-L230">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1716,7 +1816,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDMemoryCache.h#L74-L78">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDMemoryCache.h#L74-L78">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1756,7 +1856,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageCacheKeyFilter.h#L27-L32">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageCacheKeyFilter.h#L27-L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1796,7 +1896,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageCacheSerializer.h#L31-L36">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageCacheSerializer.h#L31-L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1836,7 +1936,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L109-L131">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L109-L131">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1872,7 +1972,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L137-L299">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L137-L299">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1917,7 +2017,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloaderConfig.h#L29-L98">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderConfig.h#L29-L98">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1958,7 +2058,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloaderDecryptor.h#L31-L36">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderDecryptor.h#L31-L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1999,7 +2099,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L48-L146">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L48-L146">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2040,7 +2140,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloaderRequestModifier.h#L30-L35">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderRequestModifier.h#L30-L35">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2081,7 +2181,7 @@ Encode(Hardware): !Simulator &amp;&amp; ((iOS 11 &amp;&amp; A10FusionChip) || (m
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloaderResponseModifier.h#L30-L35">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderResponseModifier.h#L30-L35">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2130,7 +2230,7 @@ for AppKit(macOS), it use a <code>NSProgressIndicator</code> with the spinning s
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageIndicator.h#L54-L62">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageIndicator.h#L54-L62">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2179,7 +2279,7 @@ for AppKit(macOS), it use a <code>NSProgressIndicator</code> with the bar style.
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageIndicator.h#L93-L101">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageIndicator.h#L93-L101">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2219,7 +2319,7 @@ for AppKit(macOS), it use a <code>NSProgressIndicator</code> with the bar style.
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageManager.h#L25-L42">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L25-L42">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2279,7 +2379,7 @@ for AppKit(macOS), it use a <code>NSProgressIndicator</code> with the bar style.
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageManager.h#L98-L269">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L98-L269">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2319,7 +2419,7 @@ for AppKit(macOS), it use a <code>NSProgressIndicator</code> with the bar style.
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageOptionsProcessor.h#L20-L41">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageOptionsProcessor.h#L20-L41">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2355,7 +2455,7 @@ for AppKit(macOS), it use a <code>NSProgressIndicator</code> with the bar style.
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageOptionsProcessor.h#L67-L72">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageOptionsProcessor.h#L67-L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2395,7 +2495,7 @@ for AppKit(macOS), it use a <code>NSProgressIndicator</code> with the bar style.
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImagePrefetcher.h#L17-L29">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImagePrefetcher.h#L17-L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2431,7 +2531,7 @@ for AppKit(macOS), it use a <code>NSProgressIndicator</code> with the bar style.
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImagePrefetcher.h#L64-L143">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImagePrefetcher.h#L64-L143">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2478,7 +2578,7 @@ for AppKit(macOS), we use <code>+[NSAnimationContext runAnimationGroup:completio
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageTransition.h#L32-L63">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageTransition.h#L32-L63">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2488,7 +2588,7 @@ for AppKit(macOS), we use <code>+[NSAnimationContext runAnimationGroup:completio
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-12-06)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-01-16)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

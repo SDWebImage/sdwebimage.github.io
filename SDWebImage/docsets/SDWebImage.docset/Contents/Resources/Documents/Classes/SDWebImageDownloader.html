@@ -14,7 +14,7 @@
     <a title="SDWebImageDownloader Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.4.0 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.5.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -103,6 +103,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/SDDiskCache.html">SDDiskCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDGraphicsImageRenderer.html">SDGraphicsImageRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDGraphicsImageRendererFormat.html">SDGraphicsImageRendererFormat</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/SDImageAPNGCoder.html">SDImageAPNGCoder</a>
@@ -233,7 +239,13 @@
                 <a href="../Constants.html#/c:@SDImageCoderDecodeFirstFrameOnly">SDImageCoderDecodeFirstFrameOnly</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderDecodePreserveAspectRatio">SDImageCoderDecodePreserveAspectRatio</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderDecodeScaleFactor">SDImageCoderDecodeScaleFactor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderDecodeThumbnailPixelSize">SDImageCoderDecodeThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
@@ -290,7 +302,13 @@
                 <a href="../Constants.html#/c:@SDWebImageContextDownloadResponseModifier">SDWebImageContextDownloadResponseModifier</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextImagePreserveAspectRatio">SDWebImageContextImagePreserveAspectRatio</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextImageScaleFactor">SDWebImageContextImageScaleFactor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextImageThumbnailPixelSize">SDWebImageContextImageThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextImageTransformer">SDWebImageContextImageTransformer</a>
@@ -339,6 +357,9 @@
           <li class="nav-group-name">
             <a href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SDGraphicsImageRendererFormatRange.html">SDGraphicsImageRendererFormatRange</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Enums/SDImageCacheConfigExpireType.html">SDImageCacheConfigExpireType</a>
               </li>
@@ -441,6 +462,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Type%20Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDGraphicsImageRenderer.h@T@SDGraphicsImageDrawingActions">SDGraphicsImageDrawingActions</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheAdditionalCachePathBlock">SDImageCacheAdditionalCachePathBlock</a>
@@ -631,7 +655,7 @@ Most config properties support dynamic changes during download, except something
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L143">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L143">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -675,7 +699,7 @@ Defaults to nil, means does not modify the original download request.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L151">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L151">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -719,7 +743,7 @@ Defaults to nil, means does not modify the original download response.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L159">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L159">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -768,7 +792,7 @@ Defaults to nil, means does not modify the original download data.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L168">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L168">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -809,7 +833,7 @@ Defaults to nil, means does not modify the original download data.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L174">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L174">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -844,7 +868,7 @@ Defaults to nil, means does not modify the original download data.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L179">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L179">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -879,7 +903,7 @@ Defaults to nil, means does not modify the original download data.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L184">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L184">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -915,7 +939,7 @@ Defaults to nil, means does not modify the original download data.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L189">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L189">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -975,7 +999,7 @@ You can specify session configuration, timeout or operation class through downlo
                         <p>new instance of downloader class</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L198">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L198">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1042,7 +1066,7 @@ You can specify session configuration, timeout or operation class through downlo
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L206">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L206">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1081,7 +1105,7 @@ You can specify session configuration, timeout or operation class through downlo
                         <p>The value associated with the header field field, or <code>nil</code> if there is no corresponding header field.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L213">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L213">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1168,7 +1192,7 @@ You can specify session configuration, timeout or operation class through downlo
                         <p>A token (SDWebImageDownloadToken) that can be used to cancel this operation</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L234-L235">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L234-L235">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1283,7 +1307,7 @@ You can specify session configuration, timeout or operation class through downlo
                         <p>A token (SDWebImageDownloadToken) that can be used to cancel this operation</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L259-L262">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L259-L262">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1404,7 +1428,7 @@ You can specify session configuration, timeout or operation class through downlo
                         <p>A token (SDWebImageDownloadToken) that can be used to cancel this operation</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L280-L284">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L280-L284">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1439,7 +1463,7 @@ You can specify session configuration, timeout or operation class through downlo
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L289">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L289">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1503,7 +1527,7 @@ You can specify session configuration, timeout or operation class through downlo
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L297">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L297">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1513,7 +1537,7 @@ You can specify session configuration, timeout or operation class through downlo
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-12-06)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-01-16)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

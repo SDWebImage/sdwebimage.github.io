@@ -13,7 +13,7 @@
     <a title="SDWebImage  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImage 5.4.0 Docs</a> (81% documented)</p>
+        <p><a href="index.html">SDWebImage 5.5.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -102,6 +102,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SDDiskCache.html">SDDiskCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDGraphicsImageRenderer.html">SDGraphicsImageRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDGraphicsImageRendererFormat.html">SDGraphicsImageRendererFormat</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SDImageAPNGCoder.html">SDImageAPNGCoder</a>
@@ -232,7 +238,13 @@
                 <a href="Constants.html#/c:@SDImageCoderDecodeFirstFrameOnly">SDImageCoderDecodeFirstFrameOnly</a>
               </li>
               <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDImageCoderDecodePreserveAspectRatio">SDImageCoderDecodePreserveAspectRatio</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDImageCoderDecodeScaleFactor">SDImageCoderDecodeScaleFactor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDImageCoderDecodeThumbnailPixelSize">SDImageCoderDecodeThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
@@ -289,7 +301,13 @@
                 <a href="Constants.html#/c:@SDWebImageContextDownloadResponseModifier">SDWebImageContextDownloadResponseModifier</a>
               </li>
               <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextImagePreserveAspectRatio">SDWebImageContextImagePreserveAspectRatio</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextImageScaleFactor">SDWebImageContextImageScaleFactor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextImageThumbnailPixelSize">SDWebImageContextImageThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextImageTransformer">SDWebImageContextImageTransformer</a>
@@ -338,6 +356,9 @@
           <li class="nav-group-name">
             <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/SDGraphicsImageRendererFormatRange.html">SDGraphicsImageRendererFormatRange</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Enums/SDImageCacheConfigExpireType.html">SDImageCacheConfigExpireType</a>
               </li>
@@ -440,6 +461,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Type%20Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDGraphicsImageRenderer.h@T@SDGraphicsImageDrawingActions">SDGraphicsImageDrawingActions</a>
               </li>
               <li class="nav-group-task">
                 <a href="Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheAdditionalCachePathBlock">SDImageCacheAdditionalCachePathBlock</a>
@@ -606,8 +630,9 @@
 <li>[x] Categories for <code>UIImageView</code>, <code>UIButton</code>, <code>MKAnnotationView</code> adding web image and cache management</li>
 <li>[x] An asynchronous image downloader</li>
 <li>[x] An asynchronous memory + disk image caching with automatic cache expiration handling</li>
-<li>[x] A background image decompression</li>
+<li>[x] A background image decompression to avoid frame rate drop</li>
 <li>[x] Progressive image loading (including animated image, like GIF showing in Web browser)</li>
+<li>[x] <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#thumbnail-decoding-550">Thumbnail image decoding</a> to save CPU &amp;&amp; Memory for large images</li>
 <li>[x] <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#custom-coder-420">Extendable image coder</a> to support massive image format, like WebP</li>
 <li>[x] <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#animated-image-50">Full-stack solution for animated images</a> which keep a balance between CPU &amp;&amp; Memory</li>
 <li>[x] <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#transformer-50">Customizable and composable transformations</a> can be applied to the images right after download</li>
@@ -645,12 +670,15 @@ As such, we have moved/built new modules to <a href="https://github.com/SDWebIma
 <li><a href="https://github.com/SDWebImage/SDWebImageBPGCoder">SDWebImageBPGCoder</a> - coder for BPG format</li>
 <li><a href="https://github.com/SDWebImage/SDWebImageFLIFCoder">SDWebImageFLIFCoder</a> - coder for FLIF format</li>
 <li><a href="https://github.com/SDWebImage/SDWebImageAVIFCoder">SDWebImageAVIFCoder</a> - coder for AVIF (AV1-based) format</li>
+<li><a href="https://github.com/SDWebImage/SDWebImagePDFCoder">SDWebImagePDFCoder</a> - coder for PDF vector format image</li>
+<li><a href="https://github.com/SDWebImage/SDWebImageSVGCoder">SDWebImageSVGCoder</a> - coder for SVG vector format image</li>
 <li>and more from community!</li>
 </ul>
 <h4 id='loaders' class='heading'>Loaders</h4>
 
 <ul>
 <li><a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin">SDWebImagePhotosPlugin</a> - plugin to support loading images from Photos (using <code>Photos.framework</code>)</li>
+<li><a href="https://github.com/SDWebImage/SDWebImageLinkPlugin">SDWebImageLinkPlugin</a> - plugin to support loading images from rich link url, as well as <code>LPLinkView</code> (using <code>LinkPresentation.framework</code>)</li>
 </ul>
 <h4 id='integration-with-3rd-party-libraries' class='heading'>Integration with 3rd party libraries</h4>
 
@@ -886,7 +914,7 @@ community can help you solve it.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-12-06)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-01-16)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

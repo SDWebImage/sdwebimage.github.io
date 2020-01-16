@@ -14,7 +14,7 @@
     <a title="Type Definitions  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImage 5.4.0 Docs</a> (81% documented)</p>
+        <p><a href="index.html">SDWebImage 5.5.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -103,6 +103,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SDDiskCache.html">SDDiskCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDGraphicsImageRenderer.html">SDGraphicsImageRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDGraphicsImageRendererFormat.html">SDGraphicsImageRendererFormat</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SDImageAPNGCoder.html">SDImageAPNGCoder</a>
@@ -233,7 +239,13 @@
                 <a href="Constants.html#/c:@SDImageCoderDecodeFirstFrameOnly">SDImageCoderDecodeFirstFrameOnly</a>
               </li>
               <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDImageCoderDecodePreserveAspectRatio">SDImageCoderDecodePreserveAspectRatio</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDImageCoderDecodeScaleFactor">SDImageCoderDecodeScaleFactor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDImageCoderDecodeThumbnailPixelSize">SDImageCoderDecodeThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
@@ -290,7 +302,13 @@
                 <a href="Constants.html#/c:@SDWebImageContextDownloadResponseModifier">SDWebImageContextDownloadResponseModifier</a>
               </li>
               <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextImagePreserveAspectRatio">SDWebImageContextImagePreserveAspectRatio</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextImageScaleFactor">SDWebImageContextImageScaleFactor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextImageThumbnailPixelSize">SDWebImageContextImageThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextImageTransformer">SDWebImageContextImageTransformer</a>
@@ -339,6 +357,9 @@
           <li class="nav-group-name">
             <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/SDGraphicsImageRendererFormatRange.html">SDGraphicsImageRendererFormatRange</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Enums/SDImageCacheConfigExpireType.html">SDImageCacheConfigExpireType</a>
               </li>
@@ -441,6 +462,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Type%20Definitions.html#/c:SDWebImageManager.h@T@SDExternalCompletionBlock">SDExternalCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDGraphicsImageRenderer.h@T@SDGraphicsImageDrawingActions">SDGraphicsImageDrawingActions</a>
               </li>
               <li class="nav-group-task">
                 <a href="Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheAdditionalCachePathBlock">SDImageCacheAdditionalCachePathBlock</a>
@@ -624,7 +648,51 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/NSData+ImageContentType.h#L17">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/NSData+ImageContentType.h#L17">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:SDGraphicsImageRenderer.h@T@SDGraphicsImageDrawingActions"></a>
+                    <a name="//apple_ref/objc/Type/SDGraphicsImageDrawingActions" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SDGraphicsImageRenderer.h@T@SDGraphicsImageDrawingActions">SDGraphicsImageDrawingActions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>These following class are provided to use <code>UIGraphicsImageRenderer</code> with polyfill, which allows write cross-platform(AppKit/UIKit) code and avoid runtime version check.
+Compared to <code>UIGraphicsBeginImageContext</code>, <code>UIGraphicsImageRenderer</code> use dynamic bitmap from your draw code to generate CGContext, not always use ARGB8888, which is more performant on RAM usage.
+Which means, if you draw CGImage/CIImage which contains grayscale only, the underlaying bitmap context use grayscale, it&rsquo;s managed by system and not a fixed type. (actually, the <code>kCGContextTypeAutomatic</code>)
+For usage, See more in Apple&rsquo;s documentation: <a href="https://developer.apple.com/documentation/uikit/uigraphicsimagerenderer">https://developer.apple.com/documentation/uikit/uigraphicsimagerenderer</a>
+For UIKit on iOS/tvOS 10+, these method just use the same <code>UIGraphicsImageRenderer</code> API.
+For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGraphics.h</code> to implements the same behavior (but without dynamic bitmap support)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">SDGraphicsImageDrawingActions</span><span class="p">)(</span><span class="n">CGContextRef</span> <span class="n">_Nonnull</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDGraphicsImageDrawingActions</span> <span class="o">=</span> <span class="p">(</span><span class="kt">CGContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDGraphicsImageRenderer.h#L20">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -662,7 +730,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageCacheDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageCacheDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -696,7 +764,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageCacheDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageCacheDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -730,7 +798,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageCacheDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageCacheDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -764,7 +832,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageCacheDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageCacheDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -798,7 +866,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageCacheDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageCacheDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -836,7 +904,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageCoder.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageCoder.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -865,7 +933,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageCoder.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageCoder.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -894,7 +962,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageCoder.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageCoder.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -932,7 +1000,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageLoader.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageLoader.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -966,7 +1034,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDImageLoader.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDImageLoader.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1004,7 +1072,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageCacheKeyFilter.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageCacheKeyFilter.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1042,7 +1110,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageCacheSerializer.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageCacheSerializer.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1080,7 +1148,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1114,7 +1182,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1143,7 +1211,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1172,7 +1240,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1210,7 +1278,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1244,7 +1312,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloader.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1282,7 +1350,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloaderDecryptor.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderDecryptor.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1320,7 +1388,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloaderRequestModifier.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderRequestModifier.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1358,7 +1426,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageDownloaderResponseModifier.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderResponseModifier.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1396,7 +1464,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1430,7 +1498,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1468,7 +1536,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageOptionsProcessor.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageOptionsProcessor.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1506,7 +1574,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImagePrefetcher.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImagePrefetcher.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1540,7 +1608,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImagePrefetcher.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImagePrefetcher.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1578,7 +1646,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageTransition.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageTransition.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1612,7 +1680,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageTransition.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageTransition.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1646,7 +1714,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageTransition.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageTransition.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1680,7 +1748,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/SDWebImageTransition.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageTransition.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1718,7 +1786,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/UIImage+Transform.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/UIImage+Transform.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1756,7 +1824,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.4.0/build/Release/include/SDWebImage/UIView+WebCache.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/UIView+WebCache.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1766,7 +1834,7 @@ For custom coder plugin, it can also extern the enum for supported format. See <
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-12-06)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-01-16)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
