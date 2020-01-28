@@ -14,7 +14,7 @@
     <a title="WebImage Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImageSwiftUI 0.9.0 Docs</a> (85% documented)</p>
+        <p><a href="../index.html">SDWebImageSwiftUI 1.0.0-beta Docs</a> (85% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImageSwiftUI"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -80,19 +80,10 @@
             <a href="../Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/PlatformImage">PlatformImage</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:17SDWebImageSwiftUI08PlatformB0a">PlatformImage</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/PlatformView">PlatformView</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:17SDWebImageSwiftUI12PlatformViewa">PlatformView</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Typealiases.html#/PlatformViewRepresentable">PlatformViewRepresentable</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:17SDWebImageSwiftUI25PlatformViewRepresentablea">PlatformViewRepresentable</a>
@@ -107,16 +98,49 @@
             <h1>WebImage</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">WebImage</span> <span class="p">:</span> <span class="kt">View</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">13.0</span><span class="p">,</span> <span class="kt">OSX</span> <span class="mf">10.15</span><span class="p">,</span> <span class="n">tvOS</span> <span class="mf">13.0</span><span class="p">,</span> <span class="n">watchOS</span> <span class="mf">6.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">struct</span> <span class="kt">WebImage</span> <span class="p">:</span> <span class="kt">View</span></code></pre>
 
                 </div>
               </div>
-            <p>A Image View type to load image from url. Supports static image format.</p>
+            <p>A Image View type to load image from url. Supports static/animated image format.</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SDWebImageSwiftUI03WebB0V11isAnimatingSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isAnimating" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI03WebB0V11isAnimatingSbvp">isAnimating</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Binding to control the animation. You can bind external logic to control the animation status.
+True to start animation, false to stop animation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@Binding</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">isAnimating</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">nonmutating</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L26">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -185,7 +209,92 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/0.9.0/SDWebImageSwiftUI/Classes/WebImage.swift#L31-L36">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L42-L44">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SDWebImageSwiftUI03WebB0V3url7options7context11isAnimatingAC10Foundation3URLVSg_So0aB7OptionsVSDySo0aB13ContextOptionaypGSg0cD07BindingVySbGtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(url:options:context:isAnimating:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI03WebB0V3url7options7context11isAnimatingAC10Foundation3URLVSg_So0aB7OptionsVSDySo0aB13ContextOptionaypGSg0cD07BindingVySbGtcfc">init(url:options:context:isAnimating:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a web image with url, placeholder, custom options and context. Optional can support animated image using Binding.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">SDWebImageOptions</span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">context</span><span class="p">:</span> <span class="p">[</span><span class="kt">SDWebImageContextOption</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">isAnimating</span><span class="p">:</span> <span class="kt">Binding</span><span class="o">&lt;</span><span class="kt">Bool</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image url</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The options to use when downloading the image. See <code>SDWebImageOptions</code> for the possible values.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>context</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A context contains different options to perform specify changes or processes, see <code>SDWebImageContextOption</code>. This hold the extra objects which <code>options</code> enum can not hold.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isAnimating</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The binding for animation control. The binding value should be <code>true</code> when initialized to setup the correct animated image class. If not, you must provide the <code>.animatedImageClass</code> explicitly. When the animation started, this binding can been used to start / stop the animation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L51-L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -214,7 +323,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/0.9.0/SDWebImageSwiftUI/Classes/WebImage.swift#L38-L89">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L66-L134">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -281,7 +390,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/0.9.0/SDWebImageSwiftUI/Classes/WebImage.swift#L103-L108">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L175-L180">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -330,7 +439,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/0.9.0/SDWebImageSwiftUI/Classes/WebImage.swift#L112-L114">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L184-L186">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -379,7 +488,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/0.9.0/SDWebImageSwiftUI/Classes/WebImage.swift#L118-L120">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L190-L192">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -428,7 +537,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/0.9.0/SDWebImageSwiftUI/Classes/WebImage.swift#L124-L126">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L196-L198">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -485,7 +594,7 @@
                         <p>A view that triggers <code>action</code> when this image load fails.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/0.9.0/SDWebImageSwiftUI/Classes/WebImage.swift#L136-L139">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L209-L212">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -510,7 +619,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onSuccess</span><span class="p">(</span><span class="n">perform</span> <span class="nv">action</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Typealiases.html#/PlatformImage">PlatformImage</a></span><span class="p">,</span> <span class="kt">SDImageCacheType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">WebImage</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onSuccess</span><span class="p">(</span><span class="n">perform</span> <span class="nv">action</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Typealiases.html#/s:17SDWebImageSwiftUI08PlatformB0a">PlatformImage</a></span><span class="p">,</span> <span class="kt">SDImageCacheType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">WebImage</span></code></pre>
 
                         </div>
                       </div>
@@ -538,7 +647,7 @@
                         <p>A view that triggers <code>action</code> when this image load successes.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/0.9.0/SDWebImageSwiftUI/Classes/WebImage.swift#L145-L148">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L218-L221">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -591,7 +700,7 @@
                         <p>A view that triggers <code>action</code> when this image load successes.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/0.9.0/SDWebImageSwiftUI/Classes/WebImage.swift#L154-L157">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L227-L230">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -649,7 +758,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/0.9.0/SDWebImageSwiftUI/Classes/WebImage.swift#L166-L170">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L240-L244">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -703,7 +812,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/0.9.0/SDWebImageSwiftUI/Classes/WebImage.swift#L175-L181">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L249-L255">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -752,7 +861,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/0.9.0/SDWebImageSwiftUI/Classes/WebImage.swift#L185-L189">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L259-L263">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -801,7 +910,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/0.9.0/SDWebImageSwiftUI/Classes/WebImage.swift#L193-L197">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L267-L271">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -854,7 +963,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/0.9.0/SDWebImageSwiftUI/Classes/WebImage.swift#L205-L207">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L280-L282">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -903,7 +1012,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/0.9.0/SDWebImageSwiftUI/Classes/WebImage.swift#L211-L213">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L286-L288">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -915,9 +1024,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17SDWebImageSwiftUI03WebB0V8animatedyACSbF"></a>
-                    <a name="//apple_ref/swift/Method/animated(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SDWebImageSwiftUI03WebB0V8animatedyACSbF">animated(_:)</a>
+                    <a name="/s:17SDWebImageSwiftUI03WebB0V15customLoopCountyACSuSgF"></a>
+                    <a name="//apple_ref/swift/Method/customLoopCount(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI03WebB0V15customLoopCountyACSuSgF">customLoopCount(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -925,15 +1034,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Make the image to support animated images. The animation will start when view appears, and pause when disappears.</p>
+                        <p>Total loop count for animated image rendering. Defaults to nil.</p>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    Currently we do not have advanced control like binding, reset frame index, playback rate, etc. For those use case, it&rsquo;s recommend to use <code><a href="../Structs/AnimatedImage.html">AnimatedImage</a></code> type instead. (support iOS/tvOS/macOS)
-
-</div>
-<div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This API need polishing. In the future we may choose to create a new View type instead.</p>
+    Pass nil to disable customization, use the image itself loop count (<code>animatedImageLoopCount</code>) instead
 
 </div>
 
@@ -942,7 +1046,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">animated</span><span class="p">(</span><span class="n">_</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">WebImage</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">customLoopCount</span><span class="p">(</span><span class="n">_</span> <span class="nv">loopCount</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">WebImage</span></code></pre>
 
                         </div>
                       </div>
@@ -953,12 +1057,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>animated</em>
+                                <em>loopCount</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Whether or not to enable animationn.</p>
+                                  <p>The animation loop count</p>
                                 </div>
                               </td>
                             </tr>
@@ -966,7 +1070,273 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/0.9.0/SDWebImageSwiftUI/Classes/WebImage.swift#L224-L243">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L298-L302">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SDWebImageSwiftUI03WebB0V13maxBufferSizeyACSuSgF"></a>
+                    <a name="//apple_ref/swift/Method/maxBufferSize(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI03WebB0V13maxBufferSizeyACSuSgF">maxBufferSize(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provide a max buffer size by bytes. This is used to adjust frame buffer count and can be useful when the decoding cost is expensive (such as Animated WebP software decoding). Default is nil.</p>
+
+<p><code>0</code> or nil means automatically adjust by calculating current memory usage.
+<code>1</code> means without any buffer cache, each of frames will be decoded and then be freed after rendering. (Lowest Memory and Highest CPU)
+<code>UInt.max</code> means cache all the buffer. (Lowest CPU and Highest Memory)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">maxBufferSize</span><span class="p">(</span><span class="n">_</span> <span class="nv">bufferSize</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">WebImage</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bufferSize</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The max buffer size</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L310-L314">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SDWebImageSwiftUI03WebB0V11runLoopModeyACSo05NSRungH0aF"></a>
+                    <a name="//apple_ref/swift/Method/runLoopMode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI03WebB0V11runLoopModeyACSo05NSRungH0aF">runLoopMode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The runLoopMode when animation is playing on. Defaults is <code>.common</code>
+ You can specify a runloop mode to let it rendering.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This is useful for some cases, for example, always specify NSDefaultRunLoopMode, if you want to pause the animation when user scroll (for Mac user, drag the mouse or touchpad)
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">runLoopMode</span><span class="p">(</span><span class="n">_</span> <span class="nv">runLoopMode</span><span class="p">:</span> <span class="kt">RunLoop</span><span class="o">.</span><span class="kt">Mode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">WebImage</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>runLoopMode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The runLoopMode for animation</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L320-L324">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SDWebImageSwiftUI03WebB0V8pausableyACSbF"></a>
+                    <a name="//apple_ref/swift/Method/pausable(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI03WebB0V8pausableyACSbF">pausable(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether or not to pause the animation (keep current frame), instead of stop the animation (frame index reset to 0). When <code><a href="../Structs/WebImage.html#/s:17SDWebImageSwiftUI03WebB0V11isAnimatingSbvp">isAnimating</a></code> binding value changed to false. Defaults is true.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    For some of use case, you may want to reset the frame index to 0 when stop, but some other want to keep the current frame index.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">pausable</span><span class="p">(</span><span class="n">_</span> <span class="nv">pausable</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">WebImage</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pausable</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether or not to pause the animation instead of stop the animation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L329-L333">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SDWebImageSwiftUI03WebB0V9purgeableyACSbF"></a>
+                    <a name="//apple_ref/swift/Method/purgeable(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI03WebB0V9purgeableyACSbF">purgeable(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether or not to clear frame buffer cache when stopped. Defaults is false.
+Note: This is useful when you want to limit the memory usage during frequently visibility changes (such as image view inside a list view, then push and pop)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">purgeable</span><span class="p">(</span><span class="n">_</span> <span class="nv">purgeable</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">WebImage</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>purgeable</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether or not to clear frame buffer cache when stopped.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L338-L342">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SDWebImageSwiftUI03WebB0V12playbackRateyACSdF"></a>
+                    <a name="//apple_ref/swift/Method/playbackRate(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI03WebB0V12playbackRateyACSdF">playbackRate(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Control the animation playback rate. Default is 1.0.
+<code>1.0</code> means the normal speed.
+<code>0.0</code> means stopping the animation.
+<code>0.0-1.0</code> means the slow speed.
+<code>&gt; 1.0</code> means the fast speed.
+<code>&lt; 0.0</code> is not supported currently and stop animation. (may support reverse playback in the future)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">playbackRate</span><span class="p">(</span><span class="n">_</span> <span class="nv">playbackRate</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">WebImage</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>playbackRate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The animation playback rate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.0.0-beta/SDWebImageSwiftUI/Classes/WebImage.swift#L351-L355">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -976,8 +1346,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImageSwiftUI" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-11-30)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImageSwiftUI" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-01-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
