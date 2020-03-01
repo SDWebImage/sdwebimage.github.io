@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LOTAnimatedImage Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/LOTAnimatedImage" class="dashAnchor"></a>
+    <a title="LOTAnimatedImage Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SDWebImageLottiePlugin 0.1.0 Docs</a> (74% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImageLottiePlugin"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SDWebImageLottiePlugin Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        LOTAnimatedImage Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Categories/LOTAnimatedControl%28WebCache%29.html">LOTAnimatedControl(WebCache)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/LOTAnimationView%28WebCache%29.html">LOTAnimationView(WebCache)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/LOTAnimatedImage.html">LOTAnimatedImage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageLottiePluginVersionNumber">SDWebImageLottiePluginVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageLottiePluginVersionString">SDWebImageLottiePluginVersionString</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>LOTAnimatedImage</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">LOTAnimatedImage</span> <span class="p">:</span> <span class="nc">UIImage</span> <span class="o">&lt;</span><span class="n">SDAnimatedImage</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>A wrapper class to allow <code>LOTComposition</code> to be compatible for SDWebImage loading/cache/rendering system. The <code>GIF</code> image loading from <code>LOTCompositionView+WebCache</code> category, will use this subclass instead of <code>UIImage</code>.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Though this class conforms to <code>SDAnimatedImage</code> protocol, so it&rsquo;s compatible to be used for <code>SDAnimatedImageView</code>. But it&rsquo;s normally discouraged to do so. Because it does not provide optimization for animation rendering. Instead, use <code>SDAnimatedImage</code> class with <code>SDAnimatedImageView</code>.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    If you want to get the bitmap version of Lottie animation at specify frame, call <code>animatedImageFrameAtIndex:</code> will result a snapshot for frame.
+
+</div>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)LOTAnimatedImage(py)composition"></a>
+                    <a name="//apple_ref/objc/Property/composition" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)LOTAnimatedImage(py)composition">composition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code>LOTComposition</code> instance for Lottie representation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">LOTComposition</span> <span class="o">*</span><span class="n">composition</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">composition</span><span class="p">:</span> <span class="kt">LOTComposition</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageLottiePlugin/tree/0.1.0/SDWebImageLottiePlugin/Classes/LOTAnimatedImage.h#L23">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)LOTAnimatedImage(im)initWithComposition:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithComposition:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)LOTAnimatedImage(im)initWithComposition:">-initWithComposition:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create the wrapper with specify <code>LOTComposition</code> instance. The instance should be nonnull.
+This is a convenience method for some use cases, for example, create a placeholder with <code>LOTComposition</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithComposition</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">LOTComposition</span> <span class="o">*</span><span class="p">)</span><span class="nv">composition</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">composition</span><span class="p">:</span> <span class="kt">LOTComposition</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>composition</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>LOTComposition</code> instance</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An initialized object</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageLottiePlugin/tree/0.1.0/SDWebImageLottiePlugin/Classes/LOTAnimatedImage.h#L31">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)LOTAnimatedImage(cm)imageWithContentsOfFile:"></a>
+                    <a name="//apple_ref/objc/Method/+imageWithContentsOfFile:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)LOTAnimatedImage(cm)imageWithContentsOfFile:">+imageWithContentsOfFile:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">imageWithContentsOfFile</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">path</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageLottiePlugin/tree/0.1.0/SDWebImageLottiePlugin/Classes/LOTAnimatedImage.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)LOTAnimatedImage(cm)imageWithData:"></a>
+                    <a name="//apple_ref/objc/Method/+imageWithData:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)LOTAnimatedImage(cm)imageWithData:">+imageWithData:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">imageWithData</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageLottiePlugin/tree/0.1.0/SDWebImageLottiePlugin/Classes/LOTAnimatedImage.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)LOTAnimatedImage(cm)imageWithData:scale:"></a>
+                    <a name="//apple_ref/objc/Method/+imageWithData:scale:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)LOTAnimatedImage(cm)imageWithData:scale:">+imageWithData:scale:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">imageWithData</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span> <span class="nf">scale</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">scale</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageLottiePlugin/tree/0.1.0/SDWebImageLottiePlugin/Classes/LOTAnimatedImage.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)LOTAnimatedImage(im)initWithContentsOfFile:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithContentsOfFile:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)LOTAnimatedImage(im)initWithContentsOfFile:">-initWithContentsOfFile:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithContentsOfFile</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">path</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">?(</span><span class="n">contentsOfFile</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageLottiePlugin/tree/0.1.0/SDWebImageLottiePlugin/Classes/LOTAnimatedImage.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)LOTAnimatedImage(im)initWithData:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithData:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)LOTAnimatedImage(im)initWithData:">-initWithData:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithData</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">?(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageLottiePlugin/tree/0.1.0/SDWebImageLottiePlugin/Classes/LOTAnimatedImage.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)LOTAnimatedImage(im)initWithData:scale:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithData:scale:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)LOTAnimatedImage(im)initWithData:scale:">-initWithData:scale:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithData</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span> <span class="nf">scale</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">scale</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">?(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">scale</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageLottiePlugin/tree/0.1.0/SDWebImageLottiePlugin/Classes/LOTAnimatedImage.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImageLottiePlugin" target="_blank" rel="external">SDWebImageLottiePlugin</a>. All rights reserved. (Last updated: 2020-03-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

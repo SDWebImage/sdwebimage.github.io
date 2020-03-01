@@ -1,0 +1,61 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageLottiePlugin/SDWebImageLottiePlugin/Classes/LOTAnimatedImage.h",
+      "line": 35,
+      "symbol": "LOTAnimatedImage.+imageWithContentsOfFile:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageLottiePlugin/SDWebImageLottiePlugin/Classes/LOTAnimatedImage.h",
+      "line": 36,
+      "symbol": "LOTAnimatedImage.+imageWithData:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageLottiePlugin/SDWebImageLottiePlugin/Classes/LOTAnimatedImage.h",
+      "line": 37,
+      "symbol": "LOTAnimatedImage.+imageWithData:scale:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageLottiePlugin/SDWebImageLottiePlugin/Classes/LOTAnimatedImage.h",
+      "line": 38,
+      "symbol": "LOTAnimatedImage.-initWithContentsOfFile:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageLottiePlugin/SDWebImageLottiePlugin/Classes/LOTAnimatedImage.h",
+      "line": 39,
+      "symbol": "LOTAnimatedImage.-initWithData:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageLottiePlugin/SDWebImageLottiePlugin/Classes/LOTAnimatedImage.h",
+      "line": 40,
+      "symbol": "LOTAnimatedImage.-initWithData:scale:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageLottiePlugin/SDWebImageLottiePlugin/Classes/SDWebImageLottiePlugin.h",
+      "line": 12,
+      "symbol": "SDWebImageLottiePluginVersionNumber",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageLottiePlugin/SDWebImageLottiePlugin/Classes/SDWebImageLottiePlugin.h",
+      "line": 15,
+      "symbol": "SDWebImageLottiePluginVersionString",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/lizhuoli/Documents/GitHub/SDWebImageLottiePlugin"
+}
