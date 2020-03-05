@@ -14,7 +14,7 @@
     <a title="Constants  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImageFLPlugin 0.3.0 Docs</a> (61% documented)</p>
+        <p><a href="index.html">SDWebImageFLPlugin 0.4.0 Docs</a> (65% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImageFLPlugin"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -48,6 +48,12 @@
             <a href="Constants.html">Constants</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextOptimalFrameCacheSize">SDWebImageContextOptimalFrameCacheSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextPredrawingEnabled">SDWebImageContextPredrawingEnabled</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageFLPluginVersionNumber">SDWebImageFLPluginVersionNumber</a>
               </li>
               <li class="nav-group-task">
@@ -65,6 +71,84 @@
 
           </section>
           <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@SDWebImageContextOptimalFrameCacheSize"></a>
+                    <a name="//apple_ref/objc/Constant/SDWebImageContextOptimalFrameCacheSize" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@SDWebImageContextOptimalFrameCacheSize">SDWebImageContextOptimalFrameCacheSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Optimal frame cache size of FLAnimatedImage during initializer. (1.0.11 version later)
+This value will help you set <code>optimalFrameCacheSize</code> arg of FLAnimatedImage initializer after image load.
+Defaults to 0.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="n">SDWebImageContextOption</span> <span class="n">_Nonnull</span> <span class="k">const</span> <span class="n">SDWebImageContextOptimalFrameCacheSize</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">optimalFrameCacheSize</span><span class="p">:</span> <span class="kt">SDWebImageContextOption</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageFLPlugin/tree/0.4.0/SDWebImageFLPlugin/Classes/FLAnimatedImageBridge/SDFLAnimatedImage.h#L17">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@SDWebImageContextPredrawingEnabled"></a>
+                    <a name="//apple_ref/objc/Constant/SDWebImageContextPredrawingEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@SDWebImageContextPredrawingEnabled">SDWebImageContextPredrawingEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Predrawing control of FLAnimatedImage during initializer. (1.0.11 version later)
+This value will help you set <code>predrawingEnabled</code> arg of FLAnimatedImage initializer after image load.
+Defaults to YES.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="n">SDWebImageContextOption</span> <span class="n">_Nonnull</span> <span class="k">const</span> <span class="n">SDWebImageContextPredrawingEnabled</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">predrawingEnabled</span><span class="p">:</span> <span class="kt">SDWebImageContextOption</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageFLPlugin/tree/0.4.0/SDWebImageFLPlugin/Classes/FLAnimatedImageBridge/SDFLAnimatedImage.h#L23">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class="task-group">
               <ul>
                 <li class="item">
@@ -89,9 +173,14 @@
                           <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXPORT</span> <span class="kt">double</span> <span class="n">SDWebImageFLPluginVersionNumber</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">SDWebImageFLPluginVersionNumber</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageFLPlugin/tree/0.3.0/SDWebImageFLPlugin/Classes/FLAnimatedImageBridge/SDWebImageFLPlugin.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageFLPlugin/tree/0.4.0/SDWebImageFLPlugin/Classes/SDWebImageFLPlugin.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -120,7 +209,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageFLPlugin/tree/0.3.0/SDWebImageFLPlugin/Classes/FLAnimatedImageBridge/SDWebImageFLPlugin.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageFLPlugin/tree/0.4.0/SDWebImageFLPlugin/Classes/SDWebImageFLPlugin.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -130,8 +219,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage/SDWebImageFLPlugin" target="_blank" rel="external">SDWebImageFLPlugin</a>. All rights reserved. (Last updated: 2019-11-19)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImageFLPlugin" target="_blank" rel="external">SDWebImageFLPlugin</a>. All rights reserved. (Last updated: 2020-03-05)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
