@@ -71,6 +71,20 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/NSData+ImageContentType.h",
+      "line": 26,
+      "symbol": "SDImageFormatPDF",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/NSData+ImageContentType.h",
+      "line": 27,
+      "symbol": "SDImageFormatSVG",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDAnimatedImage.h",
       "line": 76,
       "symbol": "SDAnimatedImage.+imageNamed:",
@@ -661,13 +675,20 @@
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h",
       "line": 39,
-      "symbol": "SDWebImageDownloaderOperation.credential",
+      "symbol": "SDWebImageDownloaderOperation.metrics",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h",
       "line": 40,
+      "symbol": "SDWebImageDownloaderOperation.credential",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h",
+      "line": 41,
       "symbol": "SDWebImageDownloaderOperation.minimumProgressInterval",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"

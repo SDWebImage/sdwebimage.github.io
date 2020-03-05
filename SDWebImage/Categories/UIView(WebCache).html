@@ -14,7 +14,7 @@
     <a title="UIView(WebCache) Category Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.5.0 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.6.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -269,7 +269,13 @@
                 <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatJPEG">SDImageFormatJPEG</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatPDF">SDImageFormatPDF</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatPNG">SDImageFormatPNG</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatSVG">SDImageFormatSVG</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatTIFF">SDImageFormatTIFF</a>
@@ -300,6 +306,15 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextDownloadResponseModifier">SDWebImageContextDownloadResponseModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextImageCache">SDWebImageContextImageCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextImageCoder">SDWebImageContextImageCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextImageLoader">SDWebImageContextImageLoader</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextImagePreserveAspectRatio">SDWebImageContextImagePreserveAspectRatio</a>
@@ -658,7 +673,49 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/UIView+WebCache.h#L32">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIView+WebCache.h#L32">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)UIView(py)sd_latestOperationKey"></a>
+                    <a name="//apple_ref/objc/Property/sd_latestOperationKey" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)UIView(py)sd_latestOperationKey">sd_latestOperationKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the current image operation key. Operation key is used to identify the different queries for one view instance (like UIButton).
+See more about this in <code><a href="../Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a></code>.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    You can use method <code>UIView+WebCacheOperation</code> to invesigate different queries&rsquo; operation.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSString</span> <span class="o">*</span><span class="n">sd_latestOperationKey</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sd_latestOperationKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIView+WebCache.h#L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -710,7 +767,7 @@ The <code>totalUnitCount</code> and <code>completedUnitCount</code> will be rese
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/UIView+WebCache.h#L41">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIView+WebCache.h#L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -857,7 +914,7 @@ In case of error the image parameter is nil and the third parameter may contain 
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/UIView+WebCache.h#L67-L73">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIView+WebCache.h#L74-L80">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -892,7 +949,7 @@ In case of error the image parameter is nil and the third parameter may contain 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/UIView+WebCache.h#L78">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIView+WebCache.h#L85">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -940,7 +997,7 @@ If you specify nil, do not do transition. Defautls to nil.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/UIView+WebCache.h#L88">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIView+WebCache.h#L95">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -993,7 +1050,7 @@ The setter will remove the old indicator view and add new indicator view to curr
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/UIView+WebCache.h#L97">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIView+WebCache.h#L104">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1003,7 +1060,7 @@ The setter will remove the old indicator view and add new indicator view to curr
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-01-16)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

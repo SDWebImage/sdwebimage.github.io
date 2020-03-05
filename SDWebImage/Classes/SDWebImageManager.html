@@ -14,7 +14,7 @@
     <a title="SDWebImageManager Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.5.0 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.6.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -269,7 +269,13 @@
                 <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatJPEG">SDImageFormatJPEG</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatPDF">SDImageFormatPDF</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatPNG">SDImageFormatPNG</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatSVG">SDImageFormatSVG</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatTIFF">SDImageFormatTIFF</a>
@@ -300,6 +306,15 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextDownloadResponseModifier">SDWebImageContextDownloadResponseModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextImageCache">SDWebImageContextImageCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextImageCoder">SDWebImageContextImageCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextImageLoader">SDWebImageContextImageLoader</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextImagePreserveAspectRatio">SDWebImageContextImagePreserveAspectRatio</a>
@@ -633,7 +648,7 @@
 [manager loadImageWithURL:imageURL
                   options:0
                  progress:nil
-                completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                completed:^(UIImage *image, NSData *data, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
                     if (image) {
                         // do something with image
                     }
@@ -678,7 +693,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L103">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L103">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -713,7 +728,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L108">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L108">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -748,7 +763,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L113">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L113">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -790,7 +805,7 @@ Defaults to nil, which means no transform is applied.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L120">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L120">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -839,7 +854,7 @@ return [url absoluteString];
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L135">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L135">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -893,7 +908,7 @@ switch (format) {
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L155">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L155">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -955,7 +970,7 @@ SDWebImageManager.sharedManager.optionsProcessor = [SDWebImageOptionsProcessor o
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L181">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L181">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -990,7 +1005,7 @@ SDWebImageManager.sharedManager.optionsProcessor = [SDWebImageOptionsProcessor o
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L186">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L186">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1027,7 +1042,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDImageCache.html#/c:objc
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L192">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L192">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1064,7 +1079,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L198">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L198">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1099,7 +1114,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L203">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L203">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1139,7 +1154,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         <p>new instance of <code>SDWebImageManager</code> with specified cache and loader.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L209">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L209">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1252,7 +1267,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         <p>Returns an instance of SDWebImageCombinedOperation, which you can cancel the loading process.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L236-L239">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L236-L239">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1364,7 +1379,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         <p>Returns an instance of SDWebImageCombinedOperation, which you can cancel the loading process.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L253-L257">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L253-L257">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1399,7 +1414,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L262">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L262">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1434,7 +1449,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageManager.h#L267">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L267">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1444,7 +1459,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-01-16)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

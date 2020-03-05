@@ -14,7 +14,7 @@
     <a title="SDWebImageDownloaderOperation Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.5.0 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.6.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -269,7 +269,13 @@
                 <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatJPEG">SDImageFormatJPEG</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatPDF">SDImageFormatPDF</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatPNG">SDImageFormatPNG</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatSVG">SDImageFormatSVG</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatTIFF">SDImageFormatTIFF</a>
@@ -300,6 +306,15 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextDownloadResponseModifier">SDWebImageContextDownloadResponseModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextImageCache">SDWebImageContextImageCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextImageCoder">SDWebImageContextImageCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextImageLoader">SDWebImageContextImageLoader</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextImagePreserveAspectRatio">SDWebImageContextImagePreserveAspectRatio</a>
@@ -654,7 +669,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L53">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -689,7 +704,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L58">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L59">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -724,7 +739,44 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L63">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L64">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDWebImageDownloaderOperation(py)metrics"></a>
+                    <a name="//apple_ref/objc/Property/metrics" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDWebImageDownloaderOperation(py)metrics">metrics</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The collected metrics from <code>-URLSession:task:didFinishCollectingMetrics:</code>.
+This can be used to collect the network metrics like download duration, DNS lookup duration, SSL handshake dureation, etc. See Apple&rsquo;s documentation: <a href="https://developer.apple.com/documentation/foundation/urlsessiontaskmetrics">https://developer.apple.com/documentation/foundation/urlsessiontaskmetrics</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSURLSessionTaskMetrics</span> <span class="o">*</span><span class="n">metrics</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">metrics</span><span class="p">:</span> <span class="kt">URLSessionTaskMetrics</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L70">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -761,7 +813,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L70">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L77">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -808,7 +860,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L79">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L86">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -843,7 +895,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L84">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L91">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -878,7 +930,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L89">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L96">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -967,7 +1019,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         <p>the initialized instance</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L102-L104">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L109-L111">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1069,7 +1121,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         <p>the initialized instance</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L118-L121">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L125-L128">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1146,7 +1198,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         <p>the token to use to cancel this set of handlers</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L134-L135">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L141-L142">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1204,7 +1256,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         <p>YES if the operation was stopped because this was the last token to be canceled. NO otherwise.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.5.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L144">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h#L151">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1214,7 +1266,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-01-16)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
