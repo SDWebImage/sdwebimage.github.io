@@ -13,7 +13,7 @@
     <a title="SDWebImageSwiftUI  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImageSwiftUI 1.0.0 Docs</a> (87% documented)</p>
+        <p><a href="index.html">SDWebImageSwiftUI 1.1.0 Docs</a> (88% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImageSwiftUI"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -35,6 +35,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AnimatedImageViewWrapper.html">AnimatedImageViewWrapper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ImageManager.html">ImageManager</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ProgressIndicatorWrapper.html">ProgressIndicatorWrapper</a>
@@ -109,11 +112,11 @@
             <h1 id='sdwebimageswiftui' class='heading'>SDWebImageSwiftUI</h1>
 
 <p><a href="https://travis-ci.org/SDWebImage/SDWebImageSwiftUI"><img src="https://travis-ci.org/SDWebImage/SDWebImageSwiftUI.svg?branch=master" alt="CI Status"></a>
-<a href="https://cocoapods.org/pods/SDWebImageSwiftUI"><img src="https://img.shields.io/cocoapods/v/SDWebImageSwiftUI.svg?style=flat" alt="Version"></a>
-<a href="https://cocoapods.org/pods/SDWebImageSwiftUI"><img src="https://img.shields.io/cocoapods/l/SDWebImageSwiftUI.svg?style=flat" alt="License"></a>
-<a href="https://cocoapods.org/pods/SDWebImageSwiftUI"><img src="https://img.shields.io/cocoapods/p/SDWebImageSwiftUI.svg?style=flat" alt="Platform"></a>
-<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
-<a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SwiftPM-Compatible-brightgreen.svg" alt="SwiftPM compatible"></a>
+<a href="https://cocoapods.org/pods/SDWebImageSwiftUI"><img src="https://img.shields.io/cocoapods/v/SDWebImageSwiftUI.svg" alt="Version"></a>
+<a href="https://cocoapods.org/pods/SDWebImageSwiftUI"><img src="https://img.shields.io/cocoapods/l/SDWebImageSwiftUI.svg" alt="License"></a>
+<a href="https://cocoapods.org/pods/SDWebImageSwiftUI"><img src="https://img.shields.io/cocoapods/p/SDWebImageSwiftUI.svg" alt="Platform"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-brightgreen.svg" alt="Carthage compatible"></a>
+<a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg" alt="SwiftPM compatible"></a>
 <a href="https://codecov.io/gh/SDWebImage/SDWebImageSwiftUI"><img src="https://codecov.io/gh/SDWebImage/SDWebImageSwiftUI/branch/master/graph/badge.svg" alt="codecov"></a></p>
 <h2 id='what-39-s-for' class='heading'>What&rsquo;s for</h2>
 
@@ -228,9 +231,10 @@ it, simply add the following line to your Podfile:</p>
 <p>Note: This <code><a href="Structs/WebImage.html">WebImage</a></code> using <code>Image</code> for internal implementation, which is the best compatible for SwiftUI layout and animation system. But unlike SwiftUI&rsquo;s <code>Image</code> which does not support animated image or vector image, <code><a href="Structs/WebImage.html">WebImage</a></code> supports animated image as well.</p>
 
 <p>Note: The <code><a href="Structs/WebImage.html">WebImage</a></code> animation provide common use case, so it&rsquo;s still recommend to use <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> for advanced controls like progressive animation rendering.</p>
-<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">@State</span> <span class="k">var</span> <span class="nv">isAnimating</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
     <span class="kt">WebImage</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://raw.githubusercontent.com/liyong03/YLGIFImage/master/YLGIFImageDemo/YLGIFImageDemo/joy.gif"</span><span class="p">),</span> <span class="nv">isAnimating</span><span class="p">:</span> <span class="err">$</span><span class="n">isAnimating</span><span class="p">))</span> <span class="c1">// Animation Control, supports dynamic changes</span>
-    <span class="c1">// The initial value of binding should be true (or you can use `.animatedImageClass` context option and pass `SDAnimatedImage`)</span>
+    <span class="c1">// The initial value of binding should be true</span>
     <span class="o">.</span><span class="nf">customLoopCount</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// Custom loop count</span>
     <span class="o">.</span><span class="nf">playbackRate</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span> <span class="c1">// Playback speed rate</span>
     <span class="c1">// `WebImage` supports advanced control just like `AnimatedImage`, but without the progressive animation support</span>
@@ -270,6 +274,7 @@ it, simply add the following line to your Podfile:</p>
         <span class="o">.</span><span class="nf">maxBufferSize</span><span class="p">(</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
         <span class="o">.</span><span class="n">onViewUpdate</span> <span class="p">{</span> <span class="n">view</span><span class="p">,</span> <span class="n">context</span> <span class="k">in</span> <span class="c1">// Advanced native view coordinate</span>
             <span class="n">view</span><span class="o">.</span><span class="n">toolTip</span> <span class="o">=</span> <span class="s">"Mouseover Tip"</span>
+            <span class="k">let</span> <span class="nv">coordinator</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">coordinator</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -290,11 +295,42 @@ it, simply add the following line to your Podfile:</p>
 
 <p>If you don&rsquo;t need animated image, prefer to use <code><a href="Structs/WebImage.html">WebImage</a></code> firstly. Which behaves the seamless as built-in SwiftUI View. If SwiftUI works, it works.</p>
 
-<p>If you need simple animated image, use <code><a href="Structs/WebImage.html">WebImage</a></code>. Which provide the basic animated image support. But it does not support progressive animation rendering, playback rate, etc.</p>
+<p>If you need simple animated image, use <code><a href="Structs/WebImage.html">WebImage</a></code>. Which provide the basic animated image support. But it does not support progressive animation rendering, if you don&rsquo;t care about this.</p>
 
 <p>If you need powerful animated image, <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> is the one to choose. Remember it supports static image as well, you don&rsquo;t need to check the format, just use as it.</p>
 
 <p>But, because <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> use <code>UIViewRepresentable</code> and driven by UIKit, currently there may be some small incompatible issues between UIKit and SwiftUI layout and animation system, or bugs related to SwiftUI itself. We try our best to match SwiftUI behavior, and provide the same API as <code><a href="Structs/WebImage.html">WebImage</a></code>, which make it easy to switch between these two types if needed.</p>
+<h3 id='use-code-imagemanager-code-for-your-own-view-type' class='heading'>Use <code><a href="Classes/ImageManager.html">ImageManager</a></code> for your own View type</h3>
+
+<p>The <code><a href="Classes/ImageManager.html">ImageManager</a></code> is a class which conforms to Combine&rsquo;s <a href="https://developer.apple.com/documentation/combine/observableobject">ObservableObject</a> protocol. Which is the core fetching data source of <code><a href="Structs/WebImage.html">WebImage</a></code> we provided.</p>
+
+<p>For advanced use case, like loading image into the complicated View graph which you don&rsquo;t want to use <code><a href="Structs/WebImage.html">WebImage</a></code>. You can directly bind your own View type with the Manager.</p>
+
+<p>It looks familiar like <code>SDWebImageManager</code>, but it&rsquo;s built for SwiftUI world, which provide the Source of Truth for loading images. You&rsquo;d better use SwiftUI&rsquo;s <code>@ObservedObject</code> to bind each single manager instance for your View instance, which automatically update your View&rsquo;s body when image status changed.</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">MyView</span> <span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="kd">@ObservedObject</span> <span class="k">var</span> <span class="nv">imageManager</span><span class="p">:</span> <span class="kt">ImageManager</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="c1">// Your custom complicated view graph</span>
+        <span class="kt">Group</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="n">imageManager</span><span class="o">.</span><span class="n">image</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                <span class="kt">Image</span><span class="p">(</span><span class="nv">uiImage</span><span class="p">:</span> <span class="n">imageManager</span><span class="o">.</span><span class="n">image</span><span class="o">!</span><span class="p">)</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="kt">Rectangle</span><span class="p">()</span><span class="o">.</span><span class="nf">fill</span><span class="p">(</span><span class="kt">Color</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="c1">// Trigger image loading when appear</span>
+        <span class="o">.</span><span class="n">onAppear</span> <span class="p">{</span> <span class="k">self</span><span class="o">.</span><span class="n">imageManager</span><span class="o">.</span><span class="nf">load</span><span class="p">()</span> <span class="p">}</span>
+        <span class="c1">// Cancel image loading when disappear</span>
+        <span class="o">.</span><span class="n">onDisappear</span> <span class="p">{</span> <span class="k">self</span><span class="o">.</span><span class="n">imageManager</span><span class="o">.</span><span class="nf">cancel</span><span class="p">()</span> <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">struct</span> <span class="kt">MyView_Previews</span><span class="p">:</span> <span class="kt">PreviewProvider</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">previews</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">MyView</span><span class="p">(</span><span class="nv">imageManager</span><span class="p">:</span> <span class="kt">ImageManager</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://via.placeholder.com/200x200.jpg"</span><span class="p">))</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <h3 id='customization-and-configuration-setup' class='heading'>Customization and configuration setup</h3>
 
 <p>This framework is based on SDWebImage, which supports advanced customization and configuration to meet different users&rsquo; demand.</p>
@@ -474,7 +510,7 @@ pod install
 <ol>
 <li>Use <code>Switch</code> (right-click on macOS/force press on watchOS) to switch between <code><a href="Structs/WebImage.html">WebImage</a></code> and <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code>.</li>
 <li>Use <code>Reload</code> (right-click on macOS/force press on watchOS) to clear cache.</li>
-<li>Use <code>Swipe To Delete</code> (menu button on tvOS) to delete one image url from list.</li>
+<li>Use <code>Swipe Left</code> (menu button on tvOS) to delete one image url from list.</li>
 <li>Pinch gesture (Digital Crown on watchOS, play button on tvOS) to zoom-in detail page image.</li>
 <li>Clear cache and go to detail page to see progressive loading.</li>
 </ol>
@@ -554,7 +590,7 @@ pod install
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImageSwiftUI" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-03)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImageSwiftUI" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-24)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
