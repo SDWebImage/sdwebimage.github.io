@@ -2,944 +2,958 @@
   "warnings": [
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/WebImage/SDWebImage.h",
-      "line": 17,
-      "symbol": "WebImageVersionNumber",
+      "line": 13,
+      "symbol": "SDWebImageVersionNumber",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/WebImage/SDWebImage.h",
-      "line": 20,
-      "symbol": "WebImageVersionString",
+      "line": 16,
+      "symbol": "SDWebImageVersionString",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/NSData+ImageContentType.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/NSData+ImageContentType.h",
       "line": 18,
       "symbol": "SDImageFormatUndefined",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/NSData+ImageContentType.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/NSData+ImageContentType.h",
       "line": 19,
       "symbol": "SDImageFormatJPEG",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/NSData+ImageContentType.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/NSData+ImageContentType.h",
       "line": 20,
       "symbol": "SDImageFormatPNG",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/NSData+ImageContentType.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/NSData+ImageContentType.h",
       "line": 21,
       "symbol": "SDImageFormatGIF",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/NSData+ImageContentType.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/NSData+ImageContentType.h",
       "line": 22,
       "symbol": "SDImageFormatTIFF",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/NSData+ImageContentType.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/NSData+ImageContentType.h",
       "line": 23,
       "symbol": "SDImageFormatWebP",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/NSData+ImageContentType.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/NSData+ImageContentType.h",
       "line": 24,
       "symbol": "SDImageFormatHEIC",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/NSData+ImageContentType.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/NSData+ImageContentType.h",
       "line": 25,
       "symbol": "SDImageFormatHEIF",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/NSData+ImageContentType.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/NSData+ImageContentType.h",
       "line": 26,
       "symbol": "SDImageFormatPDF",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/NSData+ImageContentType.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/NSData+ImageContentType.h",
       "line": 27,
       "symbol": "SDImageFormatSVG",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDAnimatedImage.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImage.h",
       "line": 76,
       "symbol": "SDAnimatedImage.+imageNamed:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDAnimatedImage.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImage.h",
       "line": 78,
       "symbol": "SDAnimatedImage.+imageNamed:inBundle:compatibleWithTraitCollection:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDAnimatedImage.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImage.h",
       "line": 82,
       "symbol": "SDAnimatedImage.+imageWithContentsOfFile:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDAnimatedImage.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImage.h",
       "line": 83,
       "symbol": "SDAnimatedImage.+imageWithData:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDAnimatedImage.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImage.h",
       "line": 84,
       "symbol": "SDAnimatedImage.+imageWithData:scale:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDAnimatedImage.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImage.h",
       "line": 85,
       "symbol": "SDAnimatedImage.-initWithContentsOfFile:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDAnimatedImage.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImage.h",
       "line": 86,
       "symbol": "SDAnimatedImage.-initWithData:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDAnimatedImage.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImage.h",
       "line": 87,
       "symbol": "SDAnimatedImage.-initWithData:scale:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDAnimatedImage.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImage.h",
       "line": 110,
       "symbol": "SDAnimatedImage.-preloadAllFrames",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDAnimatedImage.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImage.h",
       "line": 111,
       "symbol": "SDAnimatedImage.-unloadAllFrames",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDAnimatedImage.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImage.h",
       "line": 112,
       "symbol": "SDAnimatedImage.allFramesLoaded",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDDiskCache.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDDiskCache.h",
       "line": 131,
       "symbol": "SDDiskCache.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDGraphicsImageRenderer.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDGraphicsImageRenderer.h",
       "line": 21,
       "symbol": "SDGraphicsImageRendererFormatRange",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDGraphicsImageRenderer.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDGraphicsImageRenderer.h",
       "line": 21,
       "symbol": "SDGraphicsImageRendererFormatRange",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDGraphicsImageRenderer.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDGraphicsImageRenderer.h",
       "line": 22,
       "symbol": "SDGraphicsImageRendererFormatRange.SDGraphicsImageRendererFormatRangeUnspecified",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDGraphicsImageRenderer.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDGraphicsImageRenderer.h",
       "line": 23,
       "symbol": "SDGraphicsImageRendererFormatRange.SDGraphicsImageRendererFormatRangeAutomatic",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDGraphicsImageRenderer.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDGraphicsImageRenderer.h",
       "line": 24,
       "symbol": "SDGraphicsImageRendererFormatRange.SDGraphicsImageRendererFormatRangeExtended",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDGraphicsImageRenderer.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDGraphicsImageRenderer.h",
       "line": 25,
       "symbol": "SDGraphicsImageRendererFormatRange.SDGraphicsImageRendererFormatRangeStandard",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageAPNGCoder.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageAPNGCoder.h",
       "line": 17,
       "symbol": "SDImageAPNGCoder.sharedCoder",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageCacheConfig.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheConfig.h",
       "line": 62,
       "symbol": "SDImageCacheConfig.shouldUseWeakMemoryCache",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageCacheConfig.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheConfig.h",
       "line": 113,
       "symbol": "SDImageCacheConfig.diskCacheExpireType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageCacheDefine.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h",
       "line": 38,
       "symbol": "SDImageCacheCheckCompletionBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageCacheDefine.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h",
       "line": 39,
+      "symbol": "SDImageCacheQueryDataCompletionBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h",
+      "line": 40,
       "symbol": "SDImageCacheCalculateSizeBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageCacheDefine.h",
-      "line": 40,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h",
+      "line": 41,
       "symbol": "SDImageCacheAdditionalCachePathBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageCacheDefine.h",
-      "line": 41,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h",
+      "line": 42,
       "symbol": "SDImageCacheQueryCompletionBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageCacheDefine.h",
-      "line": 42,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h",
+      "line": 43,
       "symbol": "SDImageCacheContainsCompletionBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageCachesManager.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageCachesManager.h",
       "line": 14,
       "symbol": "SDImageCachesManagerOperationPolicy.SDImageCachesManagerOperationPolicySerial",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageCachesManager.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageCachesManager.h",
       "line": 15,
       "symbol": "SDImageCachesManagerOperationPolicy.SDImageCachesManagerOperationPolicyConcurrent",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageCachesManager.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageCachesManager.h",
       "line": 16,
       "symbol": "SDImageCachesManagerOperationPolicy.SDImageCachesManagerOperationPolicyHighestOnly",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageCachesManager.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageCachesManager.h",
       "line": 17,
       "symbol": "SDImageCachesManagerOperationPolicy.SDImageCachesManagerOperationPolicyLowestOnly",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageCoder.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h",
       "line": 13,
       "symbol": "SDImageCoderOption",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageCoder.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h",
       "line": 14,
       "symbol": "SDImageCoderOptions",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageCoder.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h",
       "line": 15,
       "symbol": "SDImageCoderMutableOptions",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageGIFCoder.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h",
+      "line": 87,
+      "symbol": "",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.unexposed",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageGIFCoder.h",
       "line": 20,
       "symbol": "SDImageGIFCoder.sharedCoder",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageHEICCoder.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageHEICCoder.h",
       "line": 22,
       "symbol": "SDImageHEICCoder.sharedCoder",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageIOCoder.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageIOCoder.h",
       "line": 28,
       "symbol": "SDImageIOCoder.sharedCoder",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageLoader.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageLoader.h",
       "line": 13,
       "symbol": "SDImageLoaderProgressBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageLoader.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageLoader.h",
       "line": 14,
       "symbol": "SDImageLoaderCompletedBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageTransformer.h",
-      "line": 61,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h",
+      "line": 71,
       "symbol": "SDImagePipelineTransformer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageTransformer.h",
-      "line": 62,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h",
+      "line": 72,
       "symbol": "SDImagePipelineTransformer.+transformerWithTransformers:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageTransformer.h",
-      "line": 101,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h",
+      "line": 111,
       "symbol": "SDImageRoundCornerTransformer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageTransformer.h",
-      "line": 102,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h",
+      "line": 112,
       "symbol": "SDImageRoundCornerTransformer.+transformerWithRadius:corners:borderWidth:borderColor:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageTransformer.h",
-      "line": 121,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h",
+      "line": 131,
       "symbol": "SDImageResizingTransformer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageTransformer.h",
-      "line": 122,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h",
+      "line": 132,
       "symbol": "SDImageResizingTransformer.+transformerWithSize:scaleMode:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageTransformer.h",
-      "line": 136,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h",
+      "line": 146,
       "symbol": "SDImageCroppingTransformer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageTransformer.h",
-      "line": 137,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h",
+      "line": 147,
       "symbol": "SDImageCroppingTransformer.+transformerWithRect:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageTransformer.h",
-      "line": 156,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h",
+      "line": 166,
       "symbol": "SDImageFlippingTransformer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageTransformer.h",
-      "line": 157,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h",
+      "line": 167,
       "symbol": "SDImageFlippingTransformer.+transformerWithHorizontal:vertical:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageTransformer.h",
-      "line": 177,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h",
+      "line": 187,
       "symbol": "SDImageRotationTransformer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageTransformer.h",
-      "line": 178,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h",
+      "line": 188,
       "symbol": "SDImageRotationTransformer.+transformerWithAngle:fitSize:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageTransformer.h",
-      "line": 194,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h",
+      "line": 204,
       "symbol": "SDImageTintTransformer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageTransformer.h",
-      "line": 195,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h",
+      "line": 205,
       "symbol": "SDImageTintTransformer.+transformerWithColor:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageTransformer.h",
-      "line": 211,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h",
+      "line": 221,
       "symbol": "SDImageBlurTransformer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageTransformer.h",
-      "line": 212,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h",
+      "line": 222,
       "symbol": "SDImageBlurTransformer.+transformerWithRadius:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageTransformer.h",
-      "line": 227,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h",
+      "line": 237,
       "symbol": "SDImageFilterTransformer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDImageTransformer.h",
-      "line": 228,
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h",
+      "line": 238,
       "symbol": "SDImageFilterTransformer.+transformerWithFilter:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDMemoryCache.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDMemoryCache.h",
       "line": 76,
       "symbol": "SDMemoryCache.config",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageCacheKeyFilter.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageCacheKeyFilter.h",
       "line": 12,
       "symbol": "SDWebImageCacheKeyFilterBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageCacheKeyFilter.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageCacheKeyFilter.h",
       "line": 20,
       "symbol": "SDWebImageCacheKeyFilter.-cacheKeyForURL:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageCacheKeyFilter.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageCacheKeyFilter.h",
       "line": 29,
       "symbol": "SDWebImageCacheKeyFilter.-initWithBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageCacheKeyFilter.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageCacheKeyFilter.h",
       "line": 30,
       "symbol": "SDWebImageCacheKeyFilter.+cacheKeyFilterWithBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageCacheSerializer.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageCacheSerializer.h",
       "line": 12,
       "symbol": "SDWebImageCacheSerializerBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageCacheSerializer.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageCacheSerializer.h",
       "line": 33,
       "symbol": "SDWebImageCacheSerializer.-initWithBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageCacheSerializer.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageCacheSerializer.h",
       "line": 34,
       "symbol": "SDWebImageCacheSerializer.+cacheSerializerWithBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDefine.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDefine.h",
       "line": 11,
       "symbol": "SDWebImageNoParamsBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDefine.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDefine.h",
       "line": 12,
       "symbol": "SDWebImageContextOption",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDefine.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDefine.h",
       "line": 13,
       "symbol": "SDWebImageContext",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDefine.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDefine.h",
       "line": 14,
       "symbol": "SDWebImageMutableContext",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloader.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloader.h",
       "line": 98,
       "symbol": "SDWebImageDownloadStartNotification",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloader.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloader.h",
       "line": 99,
       "symbol": "SDWebImageDownloadReceiveResponseNotification",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloader.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloader.h",
       "line": 100,
       "symbol": "SDWebImageDownloadStopNotification",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloader.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloader.h",
       "line": 101,
       "symbol": "SDWebImageDownloadFinishNotification",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloader.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloader.h",
       "line": 103,
       "symbol": "SDWebImageDownloaderProgressBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloader.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloader.h",
       "line": 104,
       "symbol": "SDWebImageDownloaderCompletedBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderDecryptor.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderDecryptor.h",
       "line": 12,
       "symbol": "SDWebImageDownloaderDecryptorBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderDecryptor.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderDecryptor.h",
       "line": 33,
       "symbol": "SDWebImageDownloaderDecryptor.-initWithBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderDecryptor.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderDecryptor.h",
       "line": 34,
       "symbol": "SDWebImageDownloaderDecryptor.+decryptorWithBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderOperation.h",
       "line": 20,
       "symbol": "SDWebImageDownloaderOperation.-initWithRequest:inSession:options:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderOperation.h",
       "line": 24,
       "symbol": "SDWebImageDownloaderOperation.-initWithRequest:inSession:options:context:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderOperation.h",
       "line": 29,
       "symbol": "SDWebImageDownloaderOperation.-addHandlersForProgress:completed:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderOperation.h",
       "line": 32,
       "symbol": "SDWebImageDownloaderOperation.-cancel:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderOperation.h",
       "line": 34,
       "symbol": "SDWebImageDownloaderOperation.request",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderOperation.h",
       "line": 35,
       "symbol": "SDWebImageDownloaderOperation.response",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderOperation.h",
       "line": 38,
       "symbol": "SDWebImageDownloaderOperation.dataTask",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderOperation.h",
       "line": 39,
       "symbol": "SDWebImageDownloaderOperation.metrics",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderOperation.h",
       "line": 40,
       "symbol": "SDWebImageDownloaderOperation.credential",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderOperation.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderOperation.h",
       "line": 41,
       "symbol": "SDWebImageDownloaderOperation.minimumProgressInterval",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderRequestModifier.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderRequestModifier.h",
       "line": 12,
       "symbol": "SDWebImageDownloaderRequestModifierBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderRequestModifier.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderRequestModifier.h",
       "line": 32,
       "symbol": "SDWebImageDownloaderRequestModifier.-initWithBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderRequestModifier.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderRequestModifier.h",
       "line": 33,
       "symbol": "SDWebImageDownloaderRequestModifier.+requestModifierWithBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderResponseModifier.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderResponseModifier.h",
       "line": 12,
       "symbol": "SDWebImageDownloaderResponseModifierBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderResponseModifier.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderResponseModifier.h",
       "line": 32,
       "symbol": "SDWebImageDownloaderResponseModifier.-initWithBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageDownloaderResponseModifier.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderResponseModifier.h",
       "line": 33,
       "symbol": "SDWebImageDownloaderResponseModifier.+responseModifierWithBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageError.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageError.h",
       "line": 12,
       "symbol": "SDWebImageErrorDomain",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageError.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageError.h",
       "line": 19,
       "symbol": "SDWebImageError.SDWebImageErrorInvalidURL",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageError.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageError.h",
       "line": 20,
       "symbol": "SDWebImageError.SDWebImageErrorBadImageData",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageError.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageError.h",
       "line": 21,
       "symbol": "SDWebImageError.SDWebImageErrorCacheNotModified",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageError.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageError.h",
       "line": 22,
       "symbol": "SDWebImageError.SDWebImageErrorInvalidDownloadOperation",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageError.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageError.h",
       "line": 23,
       "symbol": "SDWebImageError.SDWebImageErrorInvalidDownloadStatusCode",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageError.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageError.h",
       "line": 24,
       "symbol": "SDWebImageError.SDWebImageErrorCancelled",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageError.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageError.h",
       "line": 25,
       "symbol": "SDWebImageError.SDWebImageErrorInvalidDownloadResponse",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageIndicator.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageIndicator.h",
       "line": 57,
       "symbol": "SDWebImageActivityIndicator.indicatorView",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageIndicator.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageIndicator.h",
       "line": 96,
       "symbol": "SDWebImageProgressIndicator.indicatorView",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageManager.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h",
       "line": 18,
       "symbol": "SDExternalCompletionBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageManager.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h",
       "line": 20,
       "symbol": "SDInternalCompletionBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageOperation.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageOperation.h",
       "line": 14,
       "symbol": "SDWebImageOperation.-cancel",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageOptionsProcessor.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageOptionsProcessor.h",
       "line": 15,
       "symbol": "SDWebImageOptionsProcessorBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageOptionsProcessor.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageOptionsProcessor.h",
       "line": 69,
       "symbol": "SDWebImageOptionsProcessor.-initWithBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageOptionsProcessor.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageOptionsProcessor.h",
       "line": 70,
       "symbol": "SDWebImageOptionsProcessor.+optionsProcessorWithBlock:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImagePrefetcher.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImagePrefetcher.h",
       "line": 58,
       "symbol": "SDWebImagePrefetcherProgressBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImagePrefetcher.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImagePrefetcher.h",
       "line": 59,
       "symbol": "SDWebImagePrefetcherCompletionBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageTransition.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageTransition.h",
       "line": 15,
       "symbol": "SDWebImageAnimationOptions",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageTransition.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageTransition.h",
       "line": 22,
       "symbol": "SDWebImageTransitionPreparesBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageTransition.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageTransition.h",
       "line": 23,
       "symbol": "SDWebImageTransitionAnimationsBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/SDWebImageTransition.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/SDWebImageTransition.h",
       "line": 24,
       "symbol": "SDWebImageTransitionCompletionBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/UIImage+ExtendedCacheData.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/UIImage+ExtendedCacheData.h",
       "line": 13,
       "symbol": "UIImage(ExtendedCacheData)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/UIImage+Transform.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h",
       "line": 11,
       "symbol": "SDImageScaleMode",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/UIImage+Transform.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h",
       "line": 11,
       "symbol": "SDImageScaleMode",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/UIImage+Transform.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h",
       "line": 12,
       "symbol": "SDImageScaleMode.SDImageScaleModeFill",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/UIImage+Transform.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h",
       "line": 13,
       "symbol": "SDImageScaleMode.SDImageScaleModeAspectFit",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/UIImage+Transform.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h",
       "line": 14,
       "symbol": "SDImageScaleMode.SDImageScaleModeAspectFill",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/UIImage+Transform.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h",
       "line": 18,
       "symbol": "SDRectCorner",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release/include/SDWebImage/UIView+WebCache.h",
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/build/Release-iphonesimulator/include/SDWebImage/UIView+WebCache.h",
       "line": 20,
       "symbol": "SDSetImageBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",

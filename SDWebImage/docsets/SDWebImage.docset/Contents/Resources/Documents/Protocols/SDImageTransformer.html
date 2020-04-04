@@ -14,7 +14,7 @@
     <a title="SDImageTransformer Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.6.0 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.7.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -248,10 +248,19 @@
                 <a href="../Constants.html#/c:@SDImageCoderDecodeThumbnailPixelSize">SDImageCoderDecodeThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeBackgroundColor">SDImageCoderEncodeBackgroundColor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxFileSize">SDImageCoderEncodeMaxFileSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxPixelSize">SDImageCoderEncodeMaxPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderWebImageContext">SDImageCoderWebImageContext</a>
@@ -335,6 +344,9 @@
                 <a href="../Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextQueryCacheType">SDWebImageContextQueryCacheType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a>
               </li>
               <li class="nav-group-task">
@@ -362,10 +374,10 @@
                 <a href="../Constants.html#/c:@SDWebImageProgressUnitCountUnknown">SDWebImageProgressUnitCountUnknown</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionNumber">WebImageVersionNumber</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionNumber">SDWebImageVersionNumber</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionString">WebImageVersionString</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionString">SDWebImageVersionString</a>
               </li>
             </ul>
           </li>
@@ -497,6 +509,9 @@
                 <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryDataCompletionBlock">SDImageCacheQueryDataCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderMutableOptions">SDImageCoderMutableOptions</a>
               </li>
               <li class="nav-group-task">
@@ -616,6 +631,9 @@
                 <a href="../Functions.html#/c:@F@SDScaledImageForScaleFactor">SDScaledImageForScaleFactor</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDThumbnailedKeyForKey">SDThumbnailedKeyForKey</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/c:@F@SDTransformedKeyForKey">SDTransformedKeyForKey</a>
               </li>
             </ul>
@@ -665,7 +683,7 @@ You can provide transformer to cache and manager (Through the <code>transformer<
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="err">@required</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">transformerKey</span><span class="p">;</span></code></pre>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">transformerKey</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -679,7 +697,7 @@ You can provide transformer to cache and manager (Through the <code>transformer<
                         <p>The cache key to appended after the original cache key. Should not be nil.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDImageTransformer.h#L35">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h#L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -689,7 +707,7 @@ You can provide transformer to cache and manager (Through the <code>transformer<
                     <code>
                     <a name="/c:objc(pl)SDImageTransformer(im)transformedImageWithImage:forKey:"></a>
                     <a name="//apple_ref/objc/Method/-transformedImageWithImage:forKey:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDImageTransformer(im)transformedImageWithImage:forKey:">-transformedImageWithImage:forKey:</a>
+                    <a class="token" href="#/c:objc(pl)SDImageTransformer(im)transformedImageWithImage:forKey:">-transformedImageWithImage:<wbr>forKey:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -738,7 +756,7 @@ You can provide transformer to cache and manager (Through the <code>transformer<
                               </td>
                               <td>
                                 <div>
-                                  <p>The cache key associated to the image</p>
+                                  <p>The cache key associated to the image. This arg is a hint for image source, not always useful and should be nullable. In the future we will remove this arg.</p>
                                 </div>
                               </td>
                             </tr>
@@ -750,7 +768,7 @@ You can provide transformer to cache and manager (Through the <code>transformer<
                         <p>The transformed image, or nil if transform failed</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDImageTransformer.h#L44">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h#L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -760,8 +778,8 @@ You can provide transformer to cache and manager (Through the <code>transformer<
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

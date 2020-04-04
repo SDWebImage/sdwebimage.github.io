@@ -14,7 +14,7 @@
     <a title="SDAnimatedImageProvider Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.6.0 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.7.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -248,10 +248,19 @@
                 <a href="../Constants.html#/c:@SDImageCoderDecodeThumbnailPixelSize">SDImageCoderDecodeThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeBackgroundColor">SDImageCoderEncodeBackgroundColor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxFileSize">SDImageCoderEncodeMaxFileSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxPixelSize">SDImageCoderEncodeMaxPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderWebImageContext">SDImageCoderWebImageContext</a>
@@ -335,6 +344,9 @@
                 <a href="../Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextQueryCacheType">SDWebImageContextQueryCacheType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a>
               </li>
               <li class="nav-group-task">
@@ -362,10 +374,10 @@
                 <a href="../Constants.html#/c:@SDWebImageProgressUnitCountUnknown">SDWebImageProgressUnitCountUnknown</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionNumber">WebImageVersionNumber</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionNumber">SDWebImageVersionNumber</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionString">WebImageVersionString</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionString">SDWebImageVersionString</a>
               </li>
             </ul>
           </li>
@@ -497,6 +509,9 @@
                 <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryDataCompletionBlock">SDImageCacheQueryDataCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderMutableOptions">SDImageCoderMutableOptions</a>
               </li>
               <li class="nav-group-task">
@@ -616,6 +631,9 @@
                 <a href="../Functions.html#/c:@F@SDScaledImageForScaleFactor">SDScaledImageForScaleFactor</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDThumbnailedKeyForKey">SDThumbnailedKeyForKey</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/c:@F@SDTransformedKeyForKey">SDTransformedKeyForKey</a>
               </li>
             </ul>
@@ -660,7 +678,7 @@ We may use this method to grab back the original image data if need, such as NSC
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="err">@required</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSData</span> <span class="o">*</span><span class="n">animatedImageData</span><span class="p">;</span></code></pre>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSData</span> <span class="o">*</span><span class="n">animatedImageData</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -674,7 +692,7 @@ We may use this method to grab back the original image data if need, such as NSC
                         <p>The animated image data</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDImageCoder.h#L182">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h#L205">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -701,7 +719,8 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="err">@required</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">animatedImageFrameCount</span><span class="p">;</span></code></pre>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span>
+    <span class="n">NSUInteger</span> <span class="n">animatedImageFrameCount</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -715,7 +734,7 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
                         <p>Total animated frame count.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDImageCoder.h#L190">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h#L213">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -741,7 +760,8 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="err">@required</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">animatedImageLoopCount</span><span class="p">;</span></code></pre>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span>
+    <span class="n">NSUInteger</span> <span class="n">animatedImageLoopCount</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -755,7 +775,7 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
                         <p>Animation loop count</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDImageCoder.h#L196">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h#L219">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -765,7 +785,7 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
                     <code>
                     <a name="/c:objc(pl)SDAnimatedImageProvider(im)animatedImageFrameAtIndex:"></a>
                     <a name="//apple_ref/objc/Method/-animatedImageFrameAtIndex:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDAnimatedImageProvider(im)animatedImageFrameAtIndex:">-animatedImageFrameAtIndex:</a>
+                    <a class="token" href="#/c:objc(pl)SDAnimatedImageProvider(im)animatedImageFrameAtIndex:">-animatedImageFrameAtIndex:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -818,7 +838,7 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
                         <p>Frame&rsquo;s image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDImageCoder.h#L204">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h#L227">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -828,7 +848,7 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
                     <code>
                     <a name="/c:objc(pl)SDAnimatedImageProvider(im)animatedImageDurationAtIndex:"></a>
                     <a name="//apple_ref/objc/Method/-animatedImageDurationAtIndex:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDAnimatedImageProvider(im)animatedImageDurationAtIndex:">-animatedImageDurationAtIndex:</a>
+                    <a class="token" href="#/c:objc(pl)SDAnimatedImageProvider(im)animatedImageDurationAtIndex:">-animatedImageDurationAtIndex:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -881,7 +901,7 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
                         <p>Frame&rsquo;s duration</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDImageCoder.h#L212">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h#L235">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -891,8 +911,8 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

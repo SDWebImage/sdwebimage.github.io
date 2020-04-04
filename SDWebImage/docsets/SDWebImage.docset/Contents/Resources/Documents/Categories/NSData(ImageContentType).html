@@ -14,7 +14,7 @@
     <a title="NSData(ImageContentType) Category Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.6.0 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.7.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -248,10 +248,19 @@
                 <a href="../Constants.html#/c:@SDImageCoderDecodeThumbnailPixelSize">SDImageCoderDecodeThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeBackgroundColor">SDImageCoderEncodeBackgroundColor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxFileSize">SDImageCoderEncodeMaxFileSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxPixelSize">SDImageCoderEncodeMaxPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderWebImageContext">SDImageCoderWebImageContext</a>
@@ -335,6 +344,9 @@
                 <a href="../Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextQueryCacheType">SDWebImageContextQueryCacheType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a>
               </li>
               <li class="nav-group-task">
@@ -362,10 +374,10 @@
                 <a href="../Constants.html#/c:@SDWebImageProgressUnitCountUnknown">SDWebImageProgressUnitCountUnknown</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionNumber">WebImageVersionNumber</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionNumber">SDWebImageVersionNumber</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionString">WebImageVersionString</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionString">SDWebImageVersionString</a>
               </li>
             </ul>
           </li>
@@ -497,6 +509,9 @@
                 <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryDataCompletionBlock">SDImageCacheQueryDataCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderMutableOptions">SDImageCoderMutableOptions</a>
               </li>
               <li class="nav-group-task">
@@ -616,6 +631,9 @@
                 <a href="../Functions.html#/c:@F@SDScaledImageForScaleFactor">SDScaledImageForScaleFactor</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDThumbnailedKeyForKey">SDThumbnailedKeyForKey</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/c:@F@SDTransformedKeyForKey">SDTransformedKeyForKey</a>
               </li>
             </ul>
@@ -643,7 +661,7 @@
                     <code>
                     <a name="/c:objc(cs)NSData(cm)sd_imageFormatForImageData:"></a>
                     <a name="//apple_ref/objc/Method/+sd_imageFormatForImageData:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSData(cm)sd_imageFormatForImageData:">+sd_imageFormatForImageData:</a>
+                    <a class="token" href="#/c:objc(cs)NSData(cm)sd_imageFormatForImageData:">+sd_imageFormatForImageData:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -691,7 +709,7 @@
                         <p>the image format as <code><a href="../Type%20Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></code> (enum)</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/NSData+ImageContentType.h#L41">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/NSData+ImageContentType.h#L41">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -701,7 +719,7 @@
                     <code>
                     <a name="/c:objc(cs)NSData(cm)sd_UTTypeFromImageFormat:"></a>
                     <a name="//apple_ref/objc/Method/+sd_UTTypeFromImageFormat:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSData(cm)sd_UTTypeFromImageFormat:">+sd_UTTypeFromImageFormat:</a>
+                    <a class="token" href="#/c:objc(cs)NSData(cm)sd_UTTypeFromImageFormat:">+sd_UTTypeFromImageFormat:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -710,6 +728,11 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Convert SDImageFormat to UTType</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    For unknown format, <code>kUTTypeImage</code> abstract type will return
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -749,7 +772,7 @@
                         <p>The UTType as CFStringRef</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/NSData+ImageContentType.h#L49">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/NSData+ImageContentType.h#L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -759,7 +782,7 @@
                     <code>
                     <a name="/c:objc(cs)NSData(cm)sd_imageFormatFromUTType:"></a>
                     <a name="//apple_ref/objc/Method/+sd_imageFormatFromUTType:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSData(cm)sd_imageFormatFromUTType:">+sd_imageFormatFromUTType:</a>
+                    <a class="token" href="#/c:objc(cs)NSData(cm)sd_imageFormatFromUTType:">+sd_imageFormatFromUTType:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -768,6 +791,11 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Convert UTTyppe to SDImageFormat</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    For unknown type, <code><a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatUndefined">SDImageFormatUndefined</a></code> will return
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -807,7 +835,7 @@
                         <p>The Format as SDImageFormat</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/NSData+ImageContentType.h#L57">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/NSData+ImageContentType.h#L59">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -817,8 +845,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

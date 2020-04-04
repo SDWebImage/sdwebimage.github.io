@@ -14,7 +14,7 @@
     <a title="SDDiskCache Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.6.0 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.7.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -248,10 +248,19 @@
                 <a href="../Constants.html#/c:@SDImageCoderDecodeThumbnailPixelSize">SDImageCoderDecodeThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeBackgroundColor">SDImageCoderEncodeBackgroundColor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxFileSize">SDImageCoderEncodeMaxFileSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxPixelSize">SDImageCoderEncodeMaxPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderWebImageContext">SDImageCoderWebImageContext</a>
@@ -335,6 +344,9 @@
                 <a href="../Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextQueryCacheType">SDWebImageContextQueryCacheType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a>
               </li>
               <li class="nav-group-task">
@@ -362,10 +374,10 @@
                 <a href="../Constants.html#/c:@SDWebImageProgressUnitCountUnknown">SDWebImageProgressUnitCountUnknown</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionNumber">WebImageVersionNumber</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionNumber">SDWebImageVersionNumber</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionString">WebImageVersionString</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionString">SDWebImageVersionString</a>
               </li>
             </ul>
           </li>
@@ -497,6 +509,9 @@
                 <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryDataCompletionBlock">SDImageCacheQueryDataCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderMutableOptions">SDImageCoderMutableOptions</a>
               </li>
               <li class="nav-group-task">
@@ -616,6 +631,9 @@
                 <a href="../Functions.html#/c:@F@SDScaledImageForScaleFactor">SDScaledImageForScaleFactor</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDThumbnailedKeyForKey">SDThumbnailedKeyForKey</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/c:@F@SDTransformedKeyForKey">SDTransformedKeyForKey</a>
               </li>
             </ul>
@@ -643,7 +661,7 @@
                     <code>
                     <a name="/c:objc(pl)SDDiskCache(im)initWithCachePath:config:"></a>
                     <a name="//apple_ref/objc/Method/-initWithCachePath:config:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDDiskCache(im)initWithCachePath:config:">-initWithCachePath:config:</a>
+                    <a class="token" href="#/c:objc(pl)SDDiskCache(im)initWithCachePath:config:">-initWithCachePath:<wbr>config:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -705,7 +723,7 @@ Once initialized you should not read and write to this directory.</p>
                         <p>A new cache object, or nil if an error occurs.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDDiskCache.h#L28">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDDiskCache.h#L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -715,7 +733,7 @@ Once initialized you should not read and write to this directory.</p>
                     <code>
                     <a name="/c:objc(pl)SDDiskCache(im)containsDataForKey:"></a>
                     <a name="//apple_ref/objc/Method/-containsDataForKey:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDDiskCache(im)containsDataForKey:">-containsDataForKey:</a>
+                    <a class="token" href="#/c:objc(pl)SDDiskCache(im)containsDataForKey:">-containsDataForKey:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -764,7 +782,7 @@ This method may blocks the calling thread until file read finished.</p>
                         <p>Whether the key is in cache.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDDiskCache.h#L37">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDDiskCache.h#L37">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -774,7 +792,7 @@ This method may blocks the calling thread until file read finished.</p>
                     <code>
                     <a name="/c:objc(pl)SDDiskCache(im)dataForKey:"></a>
                     <a name="//apple_ref/objc/Method/-dataForKey:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDDiskCache(im)dataForKey:">-dataForKey:</a>
+                    <a class="token" href="#/c:objc(pl)SDDiskCache(im)dataForKey:">-dataForKey:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -823,7 +841,7 @@ This method may blocks the calling thread until file read finished.</p>
                         <p>The value associated with key, or nil if no value is associated with key.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDDiskCache.h#L46">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDDiskCache.h#L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -833,7 +851,7 @@ This method may blocks the calling thread until file read finished.</p>
                     <code>
                     <a name="/c:objc(pl)SDDiskCache(im)setData:forKey:"></a>
                     <a name="//apple_ref/objc/Method/-setData:forKey:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDDiskCache(im)setData:forKey:">-setData:forKey:</a>
+                    <a class="token" href="#/c:objc(pl)SDDiskCache(im)setData:forKey:">-setData:<wbr>forKey:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -890,7 +908,7 @@ This method may blocks the calling thread until file write finished.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDDiskCache.h#L55">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDDiskCache.h#L55">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -900,7 +918,7 @@ This method may blocks the calling thread until file write finished.</p>
                     <code>
                     <a name="/c:objc(pl)SDDiskCache(im)extendedDataForKey:"></a>
                     <a name="//apple_ref/objc/Method/-extendedDataForKey:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDDiskCache(im)extendedDataForKey:">-extendedDataForKey:</a>
+                    <a class="token" href="#/c:objc(pl)SDDiskCache(im)extendedDataForKey:">-extendedDataForKey:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -949,7 +967,7 @@ This method may blocks the calling thread until file read finished.</p>
                         <p>The value associated with key, or nil if no value is associated with key.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDDiskCache.h#L64">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDDiskCache.h#L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -959,7 +977,7 @@ This method may blocks the calling thread until file read finished.</p>
                     <code>
                     <a name="/c:objc(pl)SDDiskCache(im)setExtendedData:forKey:"></a>
                     <a name="//apple_ref/objc/Method/-setExtendedData:forKey:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDDiskCache(im)setExtendedData:forKey:">-setExtendedData:forKey:</a>
+                    <a class="token" href="#/c:objc(pl)SDDiskCache(im)setExtendedData:forKey:">-setExtendedData:<wbr>forKey:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1019,7 +1037,7 @@ on UNIX, the common way for this is to use the Extended file attributes (xattr)<
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDDiskCache.h#L75">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDDiskCache.h#L75">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1029,7 +1047,7 @@ on UNIX, the common way for this is to use the Extended file attributes (xattr)<
                     <code>
                     <a name="/c:objc(pl)SDDiskCache(im)removeDataForKey:"></a>
                     <a name="//apple_ref/objc/Method/-removeDataForKey:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDDiskCache(im)removeDataForKey:">-removeDataForKey:</a>
+                    <a class="token" href="#/c:objc(pl)SDDiskCache(im)removeDataForKey:">-removeDataForKey:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1074,7 +1092,7 @@ This method may blocks the calling thread until file delete finished.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDDiskCache.h#L83">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDDiskCache.h#L83">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1110,7 +1128,7 @@ This method may blocks the calling thread until file delete finished.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDDiskCache.h#L89">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDDiskCache.h#L89">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1145,7 +1163,7 @@ This method may blocks the calling thread until file delete finished.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDDiskCache.h#L94">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDDiskCache.h#L94">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1155,7 +1173,7 @@ This method may blocks the calling thread until file delete finished.</p>
                     <code>
                     <a name="/c:objc(pl)SDDiskCache(im)cachePathForKey:"></a>
                     <a name="//apple_ref/objc/Method/-cachePathForKey:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDDiskCache(im)cachePathForKey:">-cachePathForKey:</a>
+                    <a class="token" href="#/c:objc(pl)SDDiskCache(im)cachePathForKey:">-cachePathForKey:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1203,7 +1221,7 @@ This method may blocks the calling thread until file delete finished.</p>
                         <p>The cache path for key. Or nil if the key can not associate to a path</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDDiskCache.h#L102">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDDiskCache.h#L102">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1243,7 +1261,7 @@ This method may blocks the calling thread until file read finished.</p>
                         <p>The total data count.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDDiskCache.h#L110">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDDiskCache.h#L110">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1283,7 +1301,7 @@ This method may blocks the calling thread until file read finished.</p>
                         <p>The total data size in bytes.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDDiskCache.h#L118">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDDiskCache.h#L118">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1293,8 +1311,8 @@ This method may blocks the calling thread until file read finished.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

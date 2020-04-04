@@ -14,7 +14,7 @@
     <a title="UIImage(Transform) Category Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.6.0 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.7.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -248,10 +248,19 @@
                 <a href="../Constants.html#/c:@SDImageCoderDecodeThumbnailPixelSize">SDImageCoderDecodeThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeBackgroundColor">SDImageCoderEncodeBackgroundColor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxFileSize">SDImageCoderEncodeMaxFileSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxPixelSize">SDImageCoderEncodeMaxPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderWebImageContext">SDImageCoderWebImageContext</a>
@@ -335,6 +344,9 @@
                 <a href="../Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextQueryCacheType">SDWebImageContextQueryCacheType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a>
               </li>
               <li class="nav-group-task">
@@ -362,10 +374,10 @@
                 <a href="../Constants.html#/c:@SDWebImageProgressUnitCountUnknown">SDWebImageProgressUnitCountUnknown</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionNumber">WebImageVersionNumber</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionNumber">SDWebImageVersionNumber</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionString">WebImageVersionString</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionString">SDWebImageVersionString</a>
               </li>
             </ul>
           </li>
@@ -497,6 +509,9 @@
                 <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryDataCompletionBlock">SDImageCacheQueryDataCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderMutableOptions">SDImageCoderMutableOptions</a>
               </li>
               <li class="nav-group-task">
@@ -616,6 +631,9 @@
                 <a href="../Functions.html#/c:@F@SDScaledImageForScaleFactor">SDScaledImageForScaleFactor</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDThumbnailedKeyForKey">SDThumbnailedKeyForKey</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/c:@F@SDTransformedKeyForKey">SDTransformedKeyForKey</a>
               </li>
             </ul>
@@ -641,9 +659,11 @@ Image process is based on Core Graphics and vImage.</p>
               <div class="task-name-container">
                 <a name="/Image%20Geometry"></a>
                 <a name="//apple_ref/objc/Section/Image Geometry" class="dashAnchor"></a>
-                <a href="#/Image%20Geometry">
-                  <h3 class="section-name">Image Geometry</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Image%20Geometry"></a>
+                  <h3 class="section-name"><p>Image Geometry</p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
@@ -651,7 +671,7 @@ Image process is based on Core Graphics and vImage.</p>
                     <code>
                     <a name="/c:objc(cs)UIImage(im)sd_resizedImageWithSize:scaleMode:"></a>
                     <a name="//apple_ref/objc/Method/-sd_resizedImageWithSize:scaleMode:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_resizedImageWithSize:scaleMode:">-sd_resizedImageWithSize:scaleMode:</a>
+                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_resizedImageWithSize:scaleMode:">-sd_resizedImageWithSize:<wbr>scaleMode:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -713,7 +733,7 @@ You can specify a larger or smaller size than the image size. The image content 
                         <p>The new image with the given size.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIImage+Transform.h#L45">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -723,7 +743,7 @@ You can specify a larger or smaller size than the image size. The image content 
                     <code>
                     <a name="/c:objc(cs)UIImage(im)sd_croppedImageWithRect:"></a>
                     <a name="//apple_ref/objc/Method/-sd_croppedImageWithRect:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_croppedImageWithRect:">-sd_croppedImageWithRect:</a>
+                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_croppedImageWithRect:">-sd_croppedImageWithRect:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -771,7 +791,7 @@ You can specify a larger or smaller size than the image size. The image content 
                         <p>The new image with the cropping rect.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIImage+Transform.h#L53">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L53">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -781,7 +801,7 @@ You can specify a larger or smaller size than the image size. The image content 
                     <code>
                     <a name="/c:objc(cs)UIImage(im)sd_roundedCornerImageWithRadius:corners:borderWidth:borderColor:"></a>
                     <a name="//apple_ref/objc/Method/-sd_roundedCornerImageWithRadius:corners:borderWidth:borderColor:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_roundedCornerImageWithRadius:corners:borderWidth:borderColor:">-sd_roundedCornerImageWithRadius:corners:borderWidth:borderColor:</a>
+                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_roundedCornerImageWithRadius:corners:borderWidth:borderColor:">-sd_roundedCornerImageWithRadius:<wbr>corners:<wbr>borderWidth:<wbr>borderColor:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -875,7 +895,7 @@ or height.</p>
                         <p>The new image with the round corner.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIImage+Transform.h#L70-L73">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L70-L73">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -885,7 +905,7 @@ or height.</p>
                     <code>
                     <a name="/c:objc(cs)UIImage(im)sd_rotatedImageWithAngle:fitSize:"></a>
                     <a name="//apple_ref/objc/Method/-sd_rotatedImageWithAngle:fitSize:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_rotatedImageWithAngle:fitSize:">-sd_rotatedImageWithAngle:fitSize:</a>
+                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_rotatedImageWithAngle:fitSize:">-sd_rotatedImageWithAngle:<wbr>fitSize:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -947,7 +967,7 @@ or height.</p>
                         <p>The new image with the rotation.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIImage+Transform.h#L83">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L83">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -957,7 +977,7 @@ or height.</p>
                     <code>
                     <a name="/c:objc(cs)UIImage(im)sd_flippedImageWithHorizontal:vertical:"></a>
                     <a name="//apple_ref/objc/Method/-sd_flippedImageWithHorizontal:vertical:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_flippedImageWithHorizontal:vertical:">-sd_flippedImageWithHorizontal:vertical:</a>
+                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_flippedImageWithHorizontal:vertical:">-sd_flippedImageWithHorizontal:<wbr>vertical:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1018,7 +1038,7 @@ or height.</p>
                         <p>The new image with the flipping.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIImage+Transform.h#L92">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L92">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1029,9 +1049,11 @@ or height.</p>
               <div class="task-name-container">
                 <a name="/Image%20Blending"></a>
                 <a name="//apple_ref/objc/Section/Image Blending" class="dashAnchor"></a>
-                <a href="#/Image%20Blending">
-                  <h3 class="section-name">Image Blending</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Image%20Blending"></a>
+                  <h3 class="section-name"><p>Image Blending</p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
@@ -1039,7 +1061,7 @@ or height.</p>
                     <code>
                     <a name="/c:objc(cs)UIImage(im)sd_tintedImageWithColor:"></a>
                     <a name="//apple_ref/objc/Method/-sd_tintedImageWithColor:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_tintedImageWithColor:">-sd_tintedImageWithColor:</a>
+                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_tintedImageWithColor:">-sd_tintedImageWithColor:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1087,7 +1109,7 @@ or height.</p>
                         <p>The new image with the tint color.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIImage+Transform.h#L102">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L102">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1097,7 +1119,7 @@ or height.</p>
                     <code>
                     <a name="/c:objc(cs)UIImage(im)sd_colorAtPoint:"></a>
                     <a name="//apple_ref/objc/Method/-sd_colorAtPoint:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_colorAtPoint:">-sd_colorAtPoint:</a>
+                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_colorAtPoint:">-sd_colorAtPoint:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1110,8 +1132,7 @@ or height.</p>
     <p class="aside-title">Note</p>
     The point&rsquo;s x/y should not be smaller than 0, or greater than or equal to width/height.
 
-</div>
-<div class="aside aside-note">
+</div><div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>The overhead of object creation means this method is best suited for infrequent color sampling. For heavy image processing, grab the raw bitmap data and process yourself.</p>
 
@@ -1155,7 +1176,7 @@ or height.</p>
                         <p>The color for specify pixel, or nil if any error occur</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIImage+Transform.h#L112">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L112">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1165,7 +1186,7 @@ or height.</p>
                     <code>
                     <a name="/c:objc(cs)UIImage(im)sd_colorsWithRect:"></a>
                     <a name="//apple_ref/objc/Method/-sd_colorsWithRect:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_colorsWithRect:">-sd_colorsWithRect:</a>
+                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_colorsWithRect:">-sd_colorsWithRect:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1178,8 +1199,7 @@ or height.</p>
     <p class="aside-title">Note</p>
     The rect&rsquo;s width/height should not be smaller than or equal to 0. The minX/minY should not be smaller than 0. The maxX/maxY should not be greater than width/height. Attention this limit is different from <code>sd_colorAtPoint:</code> (point: (0, 0) like rect: (0, 0, 1, 1))
 
-</div>
-<div class="aside aside-note">
+</div><div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>The overhead of object creation means this method is best suited for infrequent color sampling. For heavy image processing, grab the raw bitmap data and process yourself.</p>
 
@@ -1223,7 +1243,7 @@ or height.</p>
                         <p>The color array for specify pixels, or nil if any error occur</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIImage+Transform.h#L122">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L122">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1234,9 +1254,11 @@ or height.</p>
               <div class="task-name-container">
                 <a name="/Image%20Effect"></a>
                 <a name="//apple_ref/objc/Section/Image Effect" class="dashAnchor"></a>
-                <a href="#/Image%20Effect">
-                  <h3 class="section-name">Image Effect</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Image%20Effect"></a>
+                  <h3 class="section-name"><p>Image Effect</p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
@@ -1244,7 +1266,7 @@ or height.</p>
                     <code>
                     <a name="/c:objc(cs)UIImage(im)sd_blurredImageWithRadius:"></a>
                     <a name="//apple_ref/objc/Method/-sd_blurredImageWithRadius:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_blurredImageWithRadius:">-sd_blurredImageWithRadius:</a>
+                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_blurredImageWithRadius:">-sd_blurredImageWithRadius:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1292,7 +1314,7 @@ or height.</p>
                         <p>The new image with blur effect, or nil if an error occurs (e.g. no enough memory).</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIImage+Transform.h#L133">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L133">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1302,7 +1324,7 @@ or height.</p>
                     <code>
                     <a name="/c:objc(cs)UIImage(im)sd_filteredImageWithFilter:"></a>
                     <a name="//apple_ref/objc/Method/-sd_filteredImageWithFilter:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_filteredImageWithFilter:">-sd_filteredImageWithFilter:</a>
+                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_filteredImageWithFilter:">-sd_filteredImageWithFilter:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1351,7 +1373,7 @@ or height.</p>
 enough memory).</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIImage+Transform.h#L143">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L143">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1361,8 +1383,8 @@ enough memory).</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

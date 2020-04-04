@@ -14,7 +14,7 @@
     <a title="SDImageCoder Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.6.0 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.7.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -248,10 +248,19 @@
                 <a href="../Constants.html#/c:@SDImageCoderDecodeThumbnailPixelSize">SDImageCoderDecodeThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeBackgroundColor">SDImageCoderEncodeBackgroundColor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxFileSize">SDImageCoderEncodeMaxFileSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxPixelSize">SDImageCoderEncodeMaxPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderWebImageContext">SDImageCoderWebImageContext</a>
@@ -335,6 +344,9 @@
                 <a href="../Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextQueryCacheType">SDWebImageContextQueryCacheType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a>
               </li>
               <li class="nav-group-task">
@@ -362,10 +374,10 @@
                 <a href="../Constants.html#/c:@SDWebImageProgressUnitCountUnknown">SDWebImageProgressUnitCountUnknown</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionNumber">WebImageVersionNumber</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionNumber">SDWebImageVersionNumber</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionString">WebImageVersionString</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionString">SDWebImageVersionString</a>
               </li>
             </ul>
           </li>
@@ -497,6 +509,9 @@
                 <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryDataCompletionBlock">SDImageCacheQueryDataCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderMutableOptions">SDImageCoderMutableOptions</a>
               </li>
               <li class="nav-group-task">
@@ -616,6 +631,9 @@
                 <a href="../Functions.html#/c:@F@SDScaledImageForScaleFactor">SDScaledImageForScaleFactor</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDThumbnailedKeyForKey">SDThumbnailedKeyForKey</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/c:@F@SDTransformedKeyForKey">SDTransformedKeyForKey</a>
               </li>
             </ul>
@@ -646,9 +664,11 @@ These methods are all required to implement.</p>
               <div class="task-name-container">
                 <a name="/Decoding"></a>
                 <a name="//apple_ref/objc/Section/Decoding" class="dashAnchor"></a>
-                <a href="#/Decoding">
-                  <h3 class="section-name">Decoding</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Decoding"></a>
+                  <h3 class="section-name"><p>Decoding</p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
@@ -656,7 +676,7 @@ These methods are all required to implement.</p>
                     <code>
                     <a name="/c:objc(pl)SDImageCoder(im)canDecodeFromData:"></a>
                     <a name="//apple_ref/objc/Method/-canDecodeFromData:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDImageCoder(im)canDecodeFromData:">-canDecodeFromData:</a>
+                    <a class="token" href="#/c:objc(pl)SDImageCoder(im)canDecodeFromData:">-canDecodeFromData:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -704,7 +724,7 @@ These methods are all required to implement.</p>
                         <p>YES if this coder can decode the data, NO otherwise</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDImageCoder.h#L82">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h#L105">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -714,7 +734,7 @@ These methods are all required to implement.</p>
                     <code>
                     <a name="/c:objc(pl)SDImageCoder(im)decodedImageWithData:options:"></a>
                     <a name="//apple_ref/objc/Method/-decodedImageWithData:options:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDImageCoder(im)decodedImageWithData:options:">-decodedImageWithData:options:</a>
+                    <a class="token" href="#/c:objc(pl)SDImageCoder(im)decodedImageWithData:options:">-decodedImageWithData:<wbr>options:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -781,7 +801,7 @@ These methods are all required to implement.</p>
                         <p>The decoded image from data</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDImageCoder.h#L92-L93">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h#L115-L116">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -792,9 +812,11 @@ These methods are all required to implement.</p>
               <div class="task-name-container">
                 <a name="/Encoding"></a>
                 <a name="//apple_ref/objc/Section/Encoding" class="dashAnchor"></a>
-                <a href="#/Encoding">
-                  <h3 class="section-name">Encoding</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Encoding"></a>
+                  <h3 class="section-name"><p>Encoding</p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
@@ -802,7 +824,7 @@ These methods are all required to implement.</p>
                     <code>
                     <a name="/c:objc(pl)SDImageCoder(im)canEncodeToFormat:"></a>
                     <a name="//apple_ref/objc/Method/-canEncodeToFormat:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDImageCoder(im)canEncodeToFormat:">-canEncodeToFormat:</a>
+                    <a class="token" href="#/c:objc(pl)SDImageCoder(im)canEncodeToFormat:">-canEncodeToFormat:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -814,9 +836,9 @@ These methods are all required to implement.</p>
 For custom coder which introduce new image format, you&rsquo;d better define a new <code><a href="../Type%20Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></code> using like this. If you&rsquo;re creating public coder plugin for new image format, also update <code>https://github.com/rs/SDWebImage/wiki/Coder-Plugin-List</code> to avoid same value been defined twice.</p>
 
 <ul>
-<li>@code
+<li>&ldquo;`
 static const SDImageFormat SDImageFormatHEIF = 10;</li>
-<li><p>@endcode</p></li>
+<li><pre class="highlight objective_c"><code></code></pre></li>
 </ul>
 
                       </div>
@@ -857,7 +879,7 @@ static const SDImageFormat SDImageFormatHEIF = 10;</li>
                         <p>YES if this coder can encode the image, NO otherwise</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDImageCoder.h#L107">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h#L130">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -867,7 +889,7 @@ static const SDImageFormat SDImageFormatHEIF = 10;</li>
                     <code>
                     <a name="/c:objc(pl)SDImageCoder(im)encodedDataWithImage:format:options:"></a>
                     <a name="//apple_ref/objc/Method/-encodedDataWithImage:format:options:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDImageCoder(im)encodedDataWithImage:format:options:">-encodedDataWithImage:format:options:</a>
+                    <a class="token" href="#/c:objc(pl)SDImageCoder(im)encodedDataWithImage:format:options:">-encodedDataWithImage:<wbr>format:<wbr>options:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -947,7 +969,7 @@ static const SDImageFormat SDImageFormatHEIF = 10;</li>
                         <p>The encoded image data</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDImageCoder.h#L118-L120">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h#L141-L143">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -957,8 +979,8 @@ static const SDImageFormat SDImageFormatHEIF = 10;</li>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

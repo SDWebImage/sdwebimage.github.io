@@ -14,7 +14,7 @@
     <a title="SDWebImageManager Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.6.0 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.7.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -248,10 +248,19 @@
                 <a href="../Constants.html#/c:@SDImageCoderDecodeThumbnailPixelSize">SDImageCoderDecodeThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeBackgroundColor">SDImageCoderEncodeBackgroundColor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxFileSize">SDImageCoderEncodeMaxFileSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxPixelSize">SDImageCoderEncodeMaxPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderWebImageContext">SDImageCoderWebImageContext</a>
@@ -335,6 +344,9 @@
                 <a href="../Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextQueryCacheType">SDWebImageContextQueryCacheType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a>
               </li>
               <li class="nav-group-task">
@@ -362,10 +374,10 @@
                 <a href="../Constants.html#/c:@SDWebImageProgressUnitCountUnknown">SDWebImageProgressUnitCountUnknown</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionNumber">WebImageVersionNumber</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionNumber">SDWebImageVersionNumber</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionString">WebImageVersionString</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionString">SDWebImageVersionString</a>
               </li>
             </ul>
           </li>
@@ -497,6 +509,9 @@
                 <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryDataCompletionBlock">SDImageCacheQueryDataCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderMutableOptions">SDImageCoderMutableOptions</a>
               </li>
               <li class="nav-group-task">
@@ -616,6 +631,9 @@
                 <a href="../Functions.html#/c:@F@SDScaledImageForScaleFactor">SDScaledImageForScaleFactor</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDThumbnailedKeyForKey">SDThumbnailedKeyForKey</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/c:@F@SDTransformedKeyForKey">SDTransformedKeyForKey</a>
               </li>
             </ul>
@@ -641,7 +659,7 @@
 *</li>
 <li>Here is a simple example of how to use SDWebImageManager:
 *</li>
-<li>@code</li>
+<li>&ldquo;`</li>
 </ul>
 
 <p>SDWebImageManager *manager = [SDWebImageManager sharedManager];
@@ -655,7 +673,7 @@
                 }];</p>
 
 <ul>
-<li>@endcode</li>
+<li>&rdquo;`</li>
 </ul>
 
           </section>
@@ -682,8 +700,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageManagerDelegate.html">SDWebImageManagerDelegate</a></span><span class="o">&gt;</span>
-    <span class="n">delegate</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">weak</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageManagerDelegate.html">SDWebImageManagerDelegate</a></span><span class="o">&gt;</span> <span class="n">delegate</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -693,7 +710,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L103">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L103">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -718,7 +735,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDImageCache.html">SDImageCache</a></span><span class="o">&gt;</span> <span class="n">imageCache</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDImageCache.html">SDImageCache</a></span><span class="o">&gt;</span> <span class="n">imageCache</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -728,7 +745,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L108">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L108">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -753,7 +770,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDImageLoader.html">SDImageLoader</a></span><span class="o">&gt;</span> <span class="n">imageLoader</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDImageLoader.html">SDImageLoader</a></span><span class="o">&gt;</span> <span class="n">imageLoader</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -763,7 +780,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L113">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L113">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -794,8 +811,7 @@ Defaults to nil, which means no transform is applied.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span>
-    <span class="n">transformer</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDImageTransformer.html">SDImageTransformer</a></span><span class="o">&gt;</span> <span class="n">transformer</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -805,7 +821,7 @@ Defaults to nil, which means no transform is applied.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L120">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L120">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -830,12 +846,12 @@ Defaults to nil, which means no transform is applied.</p>
 <li>The following example sets a filter in the application delegate that will remove any query-string from the</li>
 <li>URL before to use it as a cache key:
 *</li>
-<li>@code
+<li>&ldquo;`
 SDWebImageManager.sharedManager.cacheKeyFilter =[SDWebImageCacheKeyFilter cacheKeyFilterWithBlock:^NSString * _Nullable(NSURL * _Nonnull url) {
 url = [[NSURL alloc] initWithScheme:url.scheme host:url.host path:url.path];
 return [url absoluteString];
 }];</li>
-<li>@endcode</li>
+<li>&rdquo;`</li>
 </ul>
 
                       </div>
@@ -843,8 +859,7 @@ return [url absoluteString];
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageCacheKeyFilter.html">SDWebImageCacheKeyFilter</a></span><span class="o">&gt;</span>
-    <span class="n">cacheKeyFilter</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageCacheKeyFilter.html">SDWebImageCacheKeyFilter</a></span><span class="o">&gt;</span> <span class="n">cacheKeyFilter</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -854,7 +869,7 @@ return [url absoluteString];
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L135">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L135">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -878,7 +893,7 @@ return [url absoluteString];
 <li>For example, if you are using WebP images and facing the slow decoding time issue when later retriving from disk cache again. You can try to encode the decoded image to JPEG/PNG format to disk cache instead of source downloaded data.</li>
 <li>- note: The <code>image</code> arg is nonnull, but when you also provide a image transformer and the image is transformed, the <code>data</code> arg may be nil, take attention to this case.</li>
 <li>- note: This method is called from a global queue in order to not to block the main thread.</li>
-<li>@code
+<li>&ldquo;`
 SDWebImageManager.sharedManager.cacheSerializer = [SDWebImageCacheSerializer cacheSerializerWithBlock:^NSData * _Nullable(UIImage * _Nonnull image, NSData * _Nullable data, NSURL * _Nullable imageURL) {
 SDImageFormat format = [NSData sd_imageFormatForImageData:data];
 switch (format) {
@@ -888,7 +903,7 @@ switch (format) {
         return data;
 }
 }];</li>
-<li>@endcode</li>
+<li>&rdquo;`</li>
 <li>The default value is nil. Means we just store the source downloaded data to disk cache.</li>
 </ul>
 
@@ -897,8 +912,7 @@ switch (format) {
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageCacheSerializer.html">SDWebImageCacheSerializer</a></span><span class="o">&gt;</span>
-    <span class="n">cacheSerializer</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageCacheSerializer.html">SDWebImageCacheSerializer</a></span><span class="o">&gt;</span> <span class="n">cacheSerializer</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -908,7 +922,7 @@ switch (format) {
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L155">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L155">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -933,34 +947,30 @@ switch (format) {
 For example, you can control the global options, based on the URL or original context option like the below code.
 
 </div>
+<pre class="highlight objective_c"><code><span class="n">SDWebImageManager</span><span class="p">.</span><span class="n">sharedManager</span><span class="p">.</span><span class="n">optionsProcessor</span> <span class="o">=</span> <span class="p">[</span><span class="n">SDWebImageOptionsProcessor</span> <span class="nf">optionsProcessorWithBlock</span><span class="p">:</span><span class="o">^</span><span class="n">SDWebImageOptionsResult</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">(</span><span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">url</span><span class="p">,</span> <span class="n">SDWebImageOptions</span> <span class="n">options</span><span class="p">,</span> <span class="n">SDWebImageContext</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">context</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Only do animation on `SDAnimatedImageView`</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">context</span><span class="p">[</span><span class="nf">SDWebImageContextAnimatedImageClass</span><span class="p">])</span> <span class="p">{</span>
+       <span class="n">options</span> <span class="o">|=</span> <span class="n">SDWebImageDecodeFirstFrameOnly</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// Do not force decode for png url</span>
+    <span class="k">if</span> <span class="p">([</span><span class="n">url</span><span class="p">.</span><span class="n">lastPathComponent</span> <span class="nf">isEqualToString</span><span class="p">:</span><span class="s">@"png"</span><span class="p">])</span> <span class="p">{</span>
+       <span class="n">options</span> <span class="o">|=</span> <span class="n">SDWebImageAvoidDecodeImage</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// Always use screen scale factor</span>
+    <span class="n">SDWebImageMutableContext</span> <span class="o">*</span><span class="n">mutableContext</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSDictionary</span> <span class="nf">dictionaryWithDictionary</span><span class="p">:</span><span class="n">context</span><span class="p">];</span>
+    <span class="n">mutableContext</span><span class="p">[</span><span class="nf">SDWebImageContextImageScaleFactor</span><span class="p">]</span> <span class="o">=</span> <span class="err">@</span><span class="p">(</span><span class="n">UIScreen</span><span class="p">.</span><span class="n">mainScreen</span><span class="p">.</span><span class="n">scale</span><span class="p">);</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">[</span><span class="n">mutableContext</span> <span class="nf">copy</span><span class="p">];</span>
 
-<p>@code
-SDWebImageManager.sharedManager.optionsProcessor = [SDWebImageOptionsProcessor optionsProcessorWithBlock:^SDWebImageOptionsResult * _Nullable(NSURL * _Nullable url, SDWebImageOptions options, SDWebImageContext * _Nullable context) {
-    // Only do animation on <code><a href="../Classes/SDAnimatedImageView.html">SDAnimatedImageView</a></code>
-    if (!context[SDWebImageContextAnimatedImageClass]) {
-       options |= SDWebImageDecodeFirstFrameOnly;
-    }
-    // Do not force decode for png url
-    if ([url.lastPathComponent isEqualToString:@<q>png</q>]) {
-       options |= SDWebImageAvoidDecodeImage;
-    }
-    // Always use screen scale factor
-    SDWebImageMutableContext *mutableContext = [NSDictionary dictionaryWithDictionary:context];
-    mutableContext[SDWebImageContextImageScaleFactor] = @(UIScreen.mainScreen.scale);
-    context = [mutableContext copy];</p>
-<pre class="highlight objective_c"><code><span class="k">return</span> <span class="p">[[</span><span class="n">SDWebImageOptionsResult</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithOptions</span><span class="p">:</span><span class="n">options</span> <span class="nf">context</span><span class="p">:</span><span class="n">context</span><span class="p">];</span>
+    <span class="k">return</span> <span class="p">[[</span><span class="n">SDWebImageOptionsResult</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithOptions</span><span class="p">:</span><span class="n">options</span> <span class="nf">context</span><span class="p">:</span><span class="n">context</span><span class="p">];</span>
+<span class="p">}];</span>
 </code></pre>
-
-<p>}];
-@endcode</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageOptionsProcessor.html">SDWebImageOptionsProcessor</a></span><span class="o">&gt;</span>
-    <span class="n">optionsProcessor</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageOptionsProcessor.html">SDWebImageOptionsProcessor</a></span><span class="o">&gt;</span> <span class="n">optionsProcessor</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -970,7 +980,7 @@ SDWebImageManager.sharedManager.optionsProcessor = [SDWebImageOptionsProcessor o
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L181">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L181">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -995,7 +1005,7 @@ SDWebImageManager.sharedManager.optionsProcessor = [SDWebImageOptionsProcessor o
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isRunning</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">running</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isRunning</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">running</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1005,7 +1015,7 @@ SDWebImageManager.sharedManager.optionsProcessor = [SDWebImageOptionsProcessor o
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L186">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L186">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1031,8 +1041,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDImageCache.html#/c:objc
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">,</span> <span class="n">class</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDImageCache.html">SDImageCache</a></span><span class="o">&gt;</span>
-    <span class="n">defaultImageCache</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">class</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDImageCache.html">SDImageCache</a></span><span class="o">&gt;</span> <span class="n">defaultImageCache</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1042,7 +1051,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDImageCache.html#/c:objc
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L192">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L192">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1068,8 +1077,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">,</span> <span class="n">class</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDImageLoader.html">SDImageLoader</a></span><span class="o">&gt;</span>
-    <span class="n">defaultImageLoader</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">class</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDImageLoader.html">SDImageLoader</a></span><span class="o">&gt;</span> <span class="n">defaultImageLoader</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1079,7 +1087,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L198">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L198">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1104,7 +1112,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">,</span> <span class="n">class</span><span class="p">)</span> <span class="n">SDWebImageManager</span> <span class="o">*</span><span class="n">sharedManager</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">class</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">SDWebImageManager</span> <span class="o">*</span><span class="n">sharedManager</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1114,7 +1122,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L203">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L203">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1124,7 +1132,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                     <code>
                     <a name="/c:objc(cs)SDWebImageManager(im)initWithCache:loader:"></a>
                     <a name="//apple_ref/objc/Method/-initWithCache:loader:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDWebImageManager(im)initWithCache:loader:">-initWithCache:loader:</a>
+                    <a class="token" href="#/c:objc(cs)SDWebImageManager(im)initWithCache:loader:">-initWithCache:<wbr>loader:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1154,7 +1162,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         <p>new instance of <code>SDWebImageManager</code> with specified cache and loader.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L209">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L209">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1164,7 +1172,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                     <code>
                     <a name="/c:objc(cs)SDWebImageManager(im)loadImageWithURL:options:progress:completed:"></a>
                     <a name="//apple_ref/objc/Method/-loadImageWithURL:options:progress:completed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDWebImageManager(im)loadImageWithURL:options:progress:completed:">-loadImageWithURL:options:progress:completed:</a>
+                    <a class="token" href="#/c:objc(cs)SDWebImageManager(im)loadImageWithURL:options:progress:completed:">-loadImageWithURL:<wbr>options:<wbr>progress:<wbr>completed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1267,7 +1275,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         <p>Returns an instance of SDWebImageCombinedOperation, which you can cancel the loading process.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L236-L239">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L236-L239">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1277,7 +1285,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                     <code>
                     <a name="/c:objc(cs)SDWebImageManager(im)loadImageWithURL:options:context:progress:completed:"></a>
                     <a name="//apple_ref/objc/Method/-loadImageWithURL:options:context:progress:completed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDWebImageManager(im)loadImageWithURL:options:context:progress:completed:">-loadImageWithURL:options:context:progress:completed:</a>
+                    <a class="token" href="#/c:objc(cs)SDWebImageManager(im)loadImageWithURL:options:context:progress:completed:">-loadImageWithURL:<wbr>options:<wbr>context:<wbr>progress:<wbr>completed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1379,7 +1387,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         <p>Returns an instance of SDWebImageCombinedOperation, which you can cancel the loading process.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L253-L257">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L253-L257">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1414,7 +1422,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L262">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L262">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1424,7 +1432,7 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                     <code>
                     <a name="/c:objc(cs)SDWebImageManager(im)cacheKeyForURL:"></a>
                     <a name="//apple_ref/objc/Method/-cacheKeyForURL:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDWebImageManager(im)cacheKeyForURL:">-cacheKeyForURL:</a>
+                    <a class="token" href="#/c:objc(cs)SDWebImageManager(im)cacheKeyForURL:">-cacheKeyForURL:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1432,7 +1440,12 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Return the cache key for a given URL</p>
+                        <p>Return the cache key for a given URL, does not considerate transformer or thumbnail.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This method does not have context option, only use the url and manager level cacheKeyFilter to generate the cache key.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1449,7 +1462,48 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDWebImageManager.h#L267">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L268">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDWebImageManager(im)cacheKeyForURL:context:"></a>
+                    <a name="//apple_ref/objc/Method/-cacheKeyForURL:context:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDWebImageManager(im)cacheKeyForURL:context:">-cacheKeyForURL:<wbr>context:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return the cache key for a given URL and context option.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The context option like <code>.thumbnailPixelSize</code> and <code>.imageTransformer</code> will effect the generated cache key, using this if you have those context associated.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nf">cacheKeyForURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
+                              <span class="nf">context</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">context</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">cacheKey</span><span class="p">(</span><span class="k">for</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="nv">context</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContextOption">SDWebImageContextOption</a></span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L274">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1459,8 +1513,8 @@ Defaults to nil. Means using <code><a href="../Classes/SDWebImageDownloader.html
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

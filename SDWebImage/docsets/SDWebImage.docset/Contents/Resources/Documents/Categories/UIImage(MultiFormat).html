@@ -14,7 +14,7 @@
     <a title="UIImage(MultiFormat) Category Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.6.0 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.7.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -248,10 +248,19 @@
                 <a href="../Constants.html#/c:@SDImageCoderDecodeThumbnailPixelSize">SDImageCoderDecodeThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeBackgroundColor">SDImageCoderEncodeBackgroundColor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxFileSize">SDImageCoderEncodeMaxFileSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxPixelSize">SDImageCoderEncodeMaxPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderWebImageContext">SDImageCoderWebImageContext</a>
@@ -335,6 +344,9 @@
                 <a href="../Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextQueryCacheType">SDWebImageContextQueryCacheType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a>
               </li>
               <li class="nav-group-task">
@@ -362,10 +374,10 @@
                 <a href="../Constants.html#/c:@SDWebImageProgressUnitCountUnknown">SDWebImageProgressUnitCountUnknown</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionNumber">WebImageVersionNumber</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionNumber">SDWebImageVersionNumber</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionString">WebImageVersionString</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionString">SDWebImageVersionString</a>
               </li>
             </ul>
           </li>
@@ -497,6 +509,9 @@
                 <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryDataCompletionBlock">SDImageCacheQueryDataCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderMutableOptions">SDImageCoderMutableOptions</a>
               </li>
               <li class="nav-group-task">
@@ -616,6 +631,9 @@
                 <a href="../Functions.html#/c:@F@SDScaledImageForScaleFactor">SDScaledImageForScaleFactor</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDThumbnailedKeyForKey">SDThumbnailedKeyForKey</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/c:@F@SDTransformedKeyForKey">SDTransformedKeyForKey</a>
               </li>
             </ul>
@@ -640,9 +658,11 @@
               <div class="task-name-container">
                 <a name="/Decode"></a>
                 <a name="//apple_ref/objc/Section/Decode" class="dashAnchor"></a>
-                <a href="#/Decode">
-                  <h3 class="section-name">Decode</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Decode"></a>
+                  <h3 class="section-name"><p>Decode</p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
@@ -650,7 +670,7 @@
                     <code>
                     <a name="/c:objc(cs)UIImage(cm)sd_imageWithData:"></a>
                     <a name="//apple_ref/objc/Method/+sd_imageWithData:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIImage(cm)sd_imageWithData:">+sd_imageWithData:</a>
+                    <a class="token" href="#/c:objc(cs)UIImage(cm)sd_imageWithData:">+sd_imageWithData:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -698,7 +718,7 @@
                         <p>The created image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIImage+MultiFormat.h#L23">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+MultiFormat.h#L23">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -708,7 +728,7 @@
                     <code>
                     <a name="/c:objc(cs)UIImage(cm)sd_imageWithData:scale:"></a>
                     <a name="//apple_ref/objc/Method/+sd_imageWithData:scale:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIImage(cm)sd_imageWithData:scale:">+sd_imageWithData:scale:</a>
+                    <a class="token" href="#/c:objc(cs)UIImage(cm)sd_imageWithData:scale:">+sd_imageWithData:<wbr>scale:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -769,7 +789,7 @@
                         <p>The created image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIImage+MultiFormat.h#L32">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+MultiFormat.h#L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -779,7 +799,7 @@
                     <code>
                     <a name="/c:objc(cs)UIImage(cm)sd_imageWithData:scale:firstFrameOnly:"></a>
                     <a name="//apple_ref/objc/Method/+sd_imageWithData:scale:firstFrameOnly:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIImage(cm)sd_imageWithData:scale:firstFrameOnly:">+sd_imageWithData:scale:firstFrameOnly:</a>
+                    <a class="token" href="#/c:objc(cs)UIImage(cm)sd_imageWithData:scale:firstFrameOnly:">+sd_imageWithData:<wbr>scale:<wbr>firstFrameOnly:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -853,7 +873,7 @@
                         <p>The created image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIImage+MultiFormat.h#L42">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+MultiFormat.h#L42">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -864,9 +884,11 @@
               <div class="task-name-container">
                 <a name="/Encode"></a>
                 <a name="//apple_ref/objc/Section/Encode" class="dashAnchor"></a>
-                <a href="#/Encode">
-                  <h3 class="section-name">Encode</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Encode"></a>
+                  <h3 class="section-name"><p>Encode</p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
@@ -903,7 +925,7 @@
                         <p>The encoded data. If can&rsquo;t encode, return nil</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIImage+MultiFormat.h#L50">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+MultiFormat.h#L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -913,7 +935,7 @@
                     <code>
                     <a name="/c:objc(cs)UIImage(im)sd_imageDataAsFormat:"></a>
                     <a name="//apple_ref/objc/Method/-sd_imageDataAsFormat:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_imageDataAsFormat:">-sd_imageDataAsFormat:</a>
+                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_imageDataAsFormat:">-sd_imageDataAsFormat:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -961,7 +983,7 @@
                         <p>The encoded data. If can&rsquo;t encode, return nil</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIImage+MultiFormat.h#L58">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+MultiFormat.h#L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -971,7 +993,7 @@
                     <code>
                     <a name="/c:objc(cs)UIImage(im)sd_imageDataAsFormat:compressionQuality:"></a>
                     <a name="//apple_ref/objc/Method/-sd_imageDataAsFormat:compressionQuality:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_imageDataAsFormat:compressionQuality:">-sd_imageDataAsFormat:compressionQuality:</a>
+                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_imageDataAsFormat:compressionQuality:">-sd_imageDataAsFormat:<wbr>compressionQuality:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1032,7 +1054,7 @@
                         <p>The encoded data. If can&rsquo;t encode, return nil</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIImage+MultiFormat.h#L67">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+MultiFormat.h#L67">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1042,7 +1064,7 @@
                     <code>
                     <a name="/c:objc(cs)UIImage(im)sd_imageDataAsFormat:compressionQuality:firstFrameOnly:"></a>
                     <a name="//apple_ref/objc/Method/-sd_imageDataAsFormat:compressionQuality:firstFrameOnly:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_imageDataAsFormat:compressionQuality:firstFrameOnly:">-sd_imageDataAsFormat:compressionQuality:firstFrameOnly:</a>
+                    <a class="token" href="#/c:objc(cs)UIImage(im)sd_imageDataAsFormat:compressionQuality:firstFrameOnly:">-sd_imageDataAsFormat:<wbr>compressionQuality:<wbr>firstFrameOnly:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1116,7 +1138,7 @@
                         <p>The encoded data. If can&rsquo;t encode, return nil</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIImage+MultiFormat.h#L77">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+MultiFormat.h#L77">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1126,8 +1148,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

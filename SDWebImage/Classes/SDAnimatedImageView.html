@@ -14,7 +14,7 @@
     <a title="SDAnimatedImageView Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.6.0 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.7.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -248,10 +248,19 @@
                 <a href="../Constants.html#/c:@SDImageCoderDecodeThumbnailPixelSize">SDImageCoderDecodeThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeBackgroundColor">SDImageCoderEncodeBackgroundColor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxFileSize">SDImageCoderEncodeMaxFileSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxPixelSize">SDImageCoderEncodeMaxPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderWebImageContext">SDImageCoderWebImageContext</a>
@@ -335,6 +344,9 @@
                 <a href="../Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextQueryCacheType">SDWebImageContextQueryCacheType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a>
               </li>
               <li class="nav-group-task">
@@ -362,10 +374,10 @@
                 <a href="../Constants.html#/c:@SDWebImageProgressUnitCountUnknown">SDWebImageProgressUnitCountUnknown</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionNumber">WebImageVersionNumber</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionNumber">SDWebImageVersionNumber</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionString">WebImageVersionString</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionString">SDWebImageVersionString</a>
               </li>
             </ul>
           </li>
@@ -497,6 +509,9 @@
                 <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryDataCompletionBlock">SDImageCacheQueryDataCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderMutableOptions">SDImageCoderMutableOptions</a>
               </li>
               <li class="nav-group-task">
@@ -616,6 +631,9 @@
                 <a href="../Functions.html#/c:@F@SDScaledImageForScaleFactor">SDScaledImageForScaleFactor</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDThumbnailedKeyForKey">SDThumbnailedKeyForKey</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/c:@F@SDTransformedKeyForKey">SDTransformedKeyForKey</a>
               </li>
             </ul>
@@ -661,7 +679,7 @@ For AppKit: use <code>-setAnimates:</code> to control animating, <code>animates<
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIImage</span> <span class="o">*</span><span class="n">currentFrame</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIImage</span> <span class="o">*</span><span class="n">currentFrame</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -671,7 +689,7 @@ For AppKit: use <code>-setAnimates:</code> to control animating, <code>animates<
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView.h#L26">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView.h#L26">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -696,7 +714,7 @@ For AppKit: use <code>-setAnimates:</code> to control animating, <code>animates<
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">currentFrameIndex</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">currentFrameIndex</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -706,7 +724,7 @@ For AppKit: use <code>-setAnimates:</code> to control animating, <code>animates<
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView.h#L30">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView.h#L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -731,7 +749,7 @@ For AppKit: use <code>-setAnimates:</code> to control animating, <code>animates<
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">currentLoopCount</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">currentLoopCount</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -741,7 +759,7 @@ For AppKit: use <code>-setAnimates:</code> to control animating, <code>animates<
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView.h#L34">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView.h#L34">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -767,7 +785,7 @@ Default is NO.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">shouldCustomLoopCount</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">shouldCustomLoopCount</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -777,7 +795,7 @@ Default is NO.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView.h#L39">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView.h#L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -804,7 +822,7 @@ This class override UIImageView&rsquo;s <code>animationRepeatCount</code> proper
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">animationRepeatCount</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">animationRepeatCount</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -814,7 +832,7 @@ This class override UIImageView&rsquo;s <code>animationRepeatCount</code> proper
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView.h#L45">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView.h#L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -844,7 +862,7 @@ This class override UIImageView&rsquo;s <code>animationRepeatCount</code> proper
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">double</span> <span class="n">playbackRate</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="kt">double</span> <span class="n">playbackRate</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -854,7 +872,7 @@ This class override UIImageView&rsquo;s <code>animationRepeatCount</code> proper
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView.h#L54">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView.h#L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -882,7 +900,7 @@ This class override UIImageView&rsquo;s <code>animationRepeatCount</code> proper
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">maxBufferSize</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">maxBufferSize</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -892,7 +910,7 @@ This class override UIImageView&rsquo;s <code>animationRepeatCount</code> proper
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView.h#L61">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView.h#L61">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -915,8 +933,7 @@ This class override UIImageView&rsquo;s <code>animationRepeatCount</code> proper
     <p class="aside-title">Note</p>
     If you are confused about this description, open Chrome browser to view some large GIF images with low network speed to see the animation behavior.
 
-</div>
-<div class="aside aside-note">
+</div><div class="aside aside-note">
     <p class="aside-title">Note</p>
     The best practice to use incremental load is using <code>initWithAnimatedCoder:scale:</code> in <code><a href="../Protocols/SDAnimatedImage.html">SDAnimatedImage</a></code> with animated coder which conform to <code><a href="../Protocols/SDProgressiveImageCoder.html">SDProgressiveImageCoder</a></code> as well. Then call incremental update and incremental decode method to produce the image.
 Default is YES. Set to NO to only render the static poster for incremental animated image.
@@ -928,7 +945,7 @@ Default is YES. Set to NO to only render the static poster for incremental anima
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">shouldIncrementalLoad</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">shouldIncrementalLoad</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -938,7 +955,7 @@ Default is YES. Set to NO to only render the static poster for incremental anima
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView.h#L68">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView.h#L68">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -965,7 +982,7 @@ Default is NO.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">clearBufferWhenStopped</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">clearBufferWhenStopped</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -975,7 +992,7 @@ Default is NO.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView.h#L75">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView.h#L75">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1002,7 +1019,7 @@ Default is NO.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">resetFrameIndexWhenStopped</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">resetFrameIndexWhenStopped</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1012,7 +1029,7 @@ Default is NO.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView.h#L82">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView.h#L82">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1043,7 +1060,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSRunLoopMode</span> <span class="n">runLoopMode</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSRunLoopMode</span> <span class="n">runLoopMode</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1053,7 +1070,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView.h#L89">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView.h#L89">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1064,9 +1081,11 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
               <div class="task-name-container">
                 <a name="/WebCache"></a>
                 <a name="//apple_ref/objc/Section/WebCache" class="dashAnchor"></a>
-                <a href="#/WebCache">
-                  <h3 class="section-name">WebCache</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/WebCache"></a>
+                  <h3 class="section-name"><p>WebCache</p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
@@ -1074,7 +1093,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                     <code>
                     <a name="/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setImageWithURL:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:">-sd_setImageWithURL:</a>
+                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:">-sd_setImageWithURL:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1120,7 +1139,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView+WebCache.h#L27">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView+WebCache.h#L27">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1130,7 +1149,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                     <code>
                     <a name="/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setImageWithURL:placeholderImage:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:">-sd_setImageWithURL:placeholderImage:</a>
+                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:">-sd_setImageWithURL:<wbr>placeholderImage:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1194,7 +1213,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView+WebCache.h#L38-L39">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView+WebCache.h#L38-L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1204,7 +1223,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                     <code>
                     <a name="/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:options:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setImageWithURL:placeholderImage:options:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:options:">-sd_setImageWithURL:placeholderImage:options:</a>
+                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:options:">-sd_setImageWithURL:<wbr>placeholderImage:<wbr>options:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1276,7 +1295,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView+WebCache.h#L50-L52">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView+WebCache.h#L50-L52">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1286,7 +1305,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                     <code>
                     <a name="/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:options:context:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setImageWithURL:placeholderImage:options:context:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:options:context:">-sd_setImageWithURL:placeholderImage:options:context:</a>
+                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:options:context:">-sd_setImageWithURL:<wbr>placeholderImage:<wbr>options:<wbr>context:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1371,7 +1390,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView+WebCache.h#L64-L67">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView+WebCache.h#L64-L67">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1381,7 +1400,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                     <code>
                     <a name="/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:completed:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setImageWithURL:completed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:completed:">-sd_setImageWithURL:completed:</a>
+                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:completed:">-sd_setImageWithURL:<wbr>completed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1444,7 +1463,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView+WebCache.h#L81-L82">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView+WebCache.h#L81-L82">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1454,7 +1473,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                     <code>
                     <a name="/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:completed:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setImageWithURL:placeholderImage:completed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:completed:">-sd_setImageWithURL:placeholderImage:completed:</a>
+                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:completed:">-sd_setImageWithURL:<wbr>placeholderImage:<wbr>completed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1530,7 +1549,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView+WebCache.h#L97-L99">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView+WebCache.h#L97-L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1540,7 +1559,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                     <code>
                     <a name="/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:options:completed:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setImageWithURL:placeholderImage:options:completed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:options:completed:">-sd_setImageWithURL:placeholderImage:options:completed:</a>
+                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:options:completed:">-sd_setImageWithURL:<wbr>placeholderImage:<wbr>options:<wbr>completed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1629,7 +1648,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView+WebCache.h#L115-L118">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView+WebCache.h#L115-L118">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1639,7 +1658,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                     <code>
                     <a name="/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:options:progress:completed:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setImageWithURL:placeholderImage:options:progress:completed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:options:progress:completed:">-sd_setImageWithURL:placeholderImage:options:progress:completed:</a>
+                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:options:progress:completed:">-sd_setImageWithURL:<wbr>placeholderImage:<wbr>options:<wbr>progress:<wbr>completed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1742,7 +1761,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView+WebCache.h#L136-L140">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView+WebCache.h#L136-L140">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1752,7 +1771,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                     <code>
                     <a name="/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:options:context:progress:completed:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setImageWithURL:placeholderImage:options:context:progress:completed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:options:context:progress:completed:">-sd_setImageWithURL:placeholderImage:options:context:progress:completed:</a>
+                    <a class="token" href="#/c:objc(cs)SDAnimatedImageView(im)sd_setImageWithURL:placeholderImage:options:context:progress:completed:">-sd_setImageWithURL:<wbr>placeholderImage:<wbr>options:<wbr>context:<wbr>progress:<wbr>completed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1868,7 +1887,7 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDAnimatedImageView+WebCache.h#L159-L164">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImageView+WebCache.h#L159-L164">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1878,8 +1897,8 @@ Default is NSRunLoopCommonModes on multi-core device, NSDefaultRunLoopMode on si
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

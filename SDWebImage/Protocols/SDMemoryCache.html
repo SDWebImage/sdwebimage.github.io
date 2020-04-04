@@ -14,7 +14,7 @@
     <a title="SDMemoryCache Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.6.0 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.7.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -248,10 +248,19 @@
                 <a href="../Constants.html#/c:@SDImageCoderDecodeThumbnailPixelSize">SDImageCoderDecodeThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeBackgroundColor">SDImageCoderEncodeBackgroundColor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxFileSize">SDImageCoderEncodeMaxFileSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxPixelSize">SDImageCoderEncodeMaxPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderWebImageContext">SDImageCoderWebImageContext</a>
@@ -335,6 +344,9 @@
                 <a href="../Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextQueryCacheType">SDWebImageContextQueryCacheType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a>
               </li>
               <li class="nav-group-task">
@@ -362,10 +374,10 @@
                 <a href="../Constants.html#/c:@SDWebImageProgressUnitCountUnknown">SDWebImageProgressUnitCountUnknown</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionNumber">WebImageVersionNumber</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionNumber">SDWebImageVersionNumber</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionString">WebImageVersionString</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionString">SDWebImageVersionString</a>
               </li>
             </ul>
           </li>
@@ -497,6 +509,9 @@
                 <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryDataCompletionBlock">SDImageCacheQueryDataCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderMutableOptions">SDImageCoderMutableOptions</a>
               </li>
               <li class="nav-group-task">
@@ -616,6 +631,9 @@
                 <a href="../Functions.html#/c:@F@SDScaledImageForScaleFactor">SDScaledImageForScaleFactor</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDThumbnailedKeyForKey">SDThumbnailedKeyForKey</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/c:@F@SDTransformedKeyForKey">SDTransformedKeyForKey</a>
               </li>
             </ul>
@@ -643,7 +661,7 @@
                     <code>
                     <a name="/c:objc(pl)SDMemoryCache(im)initWithConfig:"></a>
                     <a name="//apple_ref/objc/Method/-initWithConfig:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDMemoryCache(im)initWithConfig:">-initWithConfig:</a>
+                    <a class="token" href="#/c:objc(pl)SDMemoryCache(im)initWithConfig:">-initWithConfig:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -691,7 +709,7 @@
                         <p>The new memory cache instance.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDMemoryCache.h#L25">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDMemoryCache.h#L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -701,7 +719,7 @@
                     <code>
                     <a name="/c:objc(pl)SDMemoryCache(im)objectForKey:"></a>
                     <a name="//apple_ref/objc/Method/-objectForKey:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDMemoryCache(im)objectForKey:">-objectForKey:</a>
+                    <a class="token" href="#/c:objc(pl)SDMemoryCache(im)objectForKey:">-objectForKey:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -749,7 +767,7 @@
                         <p>The value associated with key, or nil if no value is associated with key.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDMemoryCache.h#L33">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDMemoryCache.h#L33">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -759,7 +777,7 @@
                     <code>
                     <a name="/c:objc(pl)SDMemoryCache(im)setObject:forKey:"></a>
                     <a name="//apple_ref/objc/Method/-setObject:forKey:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDMemoryCache(im)setObject:forKey:">-setObject:forKey:</a>
+                    <a class="token" href="#/c:objc(pl)SDMemoryCache(im)setObject:forKey:">-setObject:<wbr>forKey:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -817,7 +835,7 @@ objects that are put into it.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDMemoryCache.h#L43">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDMemoryCache.h#L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -827,7 +845,7 @@ objects that are put into it.</p>
                     <code>
                     <a name="/c:objc(pl)SDMemoryCache(im)setObject:forKey:cost:"></a>
                     <a name="//apple_ref/objc/Method/-setObject:forKey:cost:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDMemoryCache(im)setObject:forKey:cost:">-setObject:forKey:cost:</a>
+                    <a class="token" href="#/c:objc(pl)SDMemoryCache(im)setObject:forKey:cost:">-setObject:<wbr>forKey:<wbr>cost:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -900,7 +918,7 @@ objects that are put into it.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDMemoryCache.h#L55">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDMemoryCache.h#L55">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -910,7 +928,7 @@ objects that are put into it.</p>
                     <code>
                     <a name="/c:objc(pl)SDMemoryCache(im)removeObjectForKey:"></a>
                     <a name="//apple_ref/objc/Method/-removeObjectForKey:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDMemoryCache(im)removeObjectForKey:">-removeObjectForKey:</a>
+                    <a class="token" href="#/c:objc(pl)SDMemoryCache(im)removeObjectForKey:">-removeObjectForKey:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -954,7 +972,7 @@ objects that are put into it.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDMemoryCache.h#L62">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDMemoryCache.h#L62">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -989,7 +1007,7 @@ objects that are put into it.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDMemoryCache.h#L67">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDMemoryCache.h#L67">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -999,8 +1017,8 @@ objects that are put into it.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

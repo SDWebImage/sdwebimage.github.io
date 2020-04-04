@@ -14,7 +14,7 @@
     <a title="UIButton(WebCache) Category Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.6.0 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.7.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -248,10 +248,19 @@
                 <a href="../Constants.html#/c:@SDImageCoderDecodeThumbnailPixelSize">SDImageCoderDecodeThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeBackgroundColor">SDImageCoderEncodeBackgroundColor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxFileSize">SDImageCoderEncodeMaxFileSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxPixelSize">SDImageCoderEncodeMaxPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderWebImageContext">SDImageCoderWebImageContext</a>
@@ -335,6 +344,9 @@
                 <a href="../Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextQueryCacheType">SDWebImageContextQueryCacheType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a>
               </li>
               <li class="nav-group-task">
@@ -362,10 +374,10 @@
                 <a href="../Constants.html#/c:@SDWebImageProgressUnitCountUnknown">SDWebImageProgressUnitCountUnknown</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionNumber">WebImageVersionNumber</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionNumber">SDWebImageVersionNumber</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionString">WebImageVersionString</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionString">SDWebImageVersionString</a>
               </li>
             </ul>
           </li>
@@ -497,6 +509,9 @@
                 <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryDataCompletionBlock">SDImageCacheQueryDataCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderMutableOptions">SDImageCoderMutableOptions</a>
               </li>
               <li class="nav-group-task">
@@ -616,6 +631,9 @@
                 <a href="../Functions.html#/c:@F@SDScaledImageForScaleFactor">SDScaledImageForScaleFactor</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDThumbnailedKeyForKey">SDThumbnailedKeyForKey</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/c:@F@SDTransformedKeyForKey">SDTransformedKeyForKey</a>
               </li>
             </ul>
@@ -640,9 +658,11 @@
               <div class="task-name-container">
                 <a name="/Image"></a>
                 <a name="//apple_ref/objc/Section/Image" class="dashAnchor"></a>
-                <a href="#/Image">
-                  <h3 class="section-name">Image</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Image"></a>
+                  <h3 class="section-name"><p>Image</p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
@@ -665,7 +685,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">sd_currentImageURL</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">sd_currentImageURL</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -675,7 +695,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L25">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -685,7 +705,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_imageURLForState:"></a>
                     <a name="//apple_ref/objc/Method/-sd_imageURLForState:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_imageURLForState:">-sd_imageURLForState:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_imageURLForState:">-sd_imageURLForState:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -729,7 +749,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L32">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -739,7 +759,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setImageWithURL:forState:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:">-sd_setImageWithURL:forState:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:">-sd_setImageWithURL:<wbr>forState:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -797,7 +817,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L42-L43">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L42-L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -807,7 +827,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setImageWithURL:forState:placeholderImage:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:">-sd_setImageWithURL:forState:placeholderImage:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:">-sd_setImageWithURL:<wbr>forState:<wbr>placeholderImage:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -884,7 +904,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L55-L57">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L55-L57">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -894,7 +914,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:options:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setImageWithURL:forState:placeholderImage:options:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:options:">-sd_setImageWithURL:forState:placeholderImage:options:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:options:">-sd_setImageWithURL:<wbr>forState:<wbr>placeholderImage:<wbr>options:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -979,7 +999,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L69-L72">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L69-L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -989,7 +1009,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:options:context:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setImageWithURL:forState:placeholderImage:options:context:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:options:context:">-sd_setImageWithURL:forState:placeholderImage:options:context:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:options:context:">-sd_setImageWithURL:<wbr>forState:<wbr>placeholderImage:<wbr>options:<wbr>context:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1087,7 +1107,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L85-L89">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L85-L89">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1097,7 +1117,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:completed:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setImageWithURL:forState:completed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:completed:">-sd_setImageWithURL:forState:completed:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:completed:">-sd_setImageWithURL:<wbr>forState:<wbr>completed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1173,7 +1193,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L104-L106">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L104-L106">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1183,7 +1203,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:completed:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setImageWithURL:forState:placeholderImage:completed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:completed:">-sd_setImageWithURL:forState:placeholderImage:completed:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:completed:">-sd_setImageWithURL:<wbr>forState:<wbr>placeholderImage:<wbr>completed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1272,7 +1292,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L122-L125">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L122-L125">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1282,7 +1302,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:options:completed:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setImageWithURL:forState:placeholderImage:options:completed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:options:completed:">-sd_setImageWithURL:forState:placeholderImage:options:completed:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:options:completed:">-sd_setImageWithURL:<wbr>forState:<wbr>placeholderImage:<wbr>options:<wbr>completed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1384,7 +1404,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L142-L146">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L142-L146">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1394,7 +1414,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:options:progress:completed:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setImageWithURL:forState:placeholderImage:options:progress:completed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:options:progress:completed:">-sd_setImageWithURL:forState:placeholderImage:options:progress:completed:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:options:progress:completed:">-sd_setImageWithURL:<wbr>forState:<wbr>placeholderImage:<wbr>options:<wbr>progress:<wbr>completed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1510,7 +1530,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L165-L170">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L165-L170">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1520,7 +1540,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:options:context:progress:completed:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setImageWithURL:forState:placeholderImage:options:context:progress:completed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:options:context:progress:completed:">-sd_setImageWithURL:forState:placeholderImage:options:context:progress:completed:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setImageWithURL:forState:placeholderImage:options:context:progress:completed:">-sd_setImageWithURL:<wbr>forState:<wbr>placeholderImage:<wbr>options:<wbr>context:<wbr>progress:<wbr>completed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1649,7 +1669,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L190-L196">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L190-L196">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1660,9 +1680,11 @@
               <div class="task-name-container">
                 <a name="/Background%20Image"></a>
                 <a name="//apple_ref/objc/Section/Background Image" class="dashAnchor"></a>
-                <a href="#/Background%20Image">
-                  <h3 class="section-name">Background Image</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Background%20Image"></a>
+                  <h3 class="section-name"><p>Background Image</p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
@@ -1685,8 +1707,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
-    <span class="n">NSURL</span> <span class="o">*</span><span class="n">sd_currentBackgroundImageURL</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">sd_currentBackgroundImageURL</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1696,7 +1717,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L203">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L203">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1706,7 +1727,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_backgroundImageURLForState:"></a>
                     <a name="//apple_ref/objc/Method/-sd_backgroundImageURLForState:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_backgroundImageURLForState:">-sd_backgroundImageURLForState:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_backgroundImageURLForState:">-sd_backgroundImageURLForState:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1750,7 +1771,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L210">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L210">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1760,7 +1781,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setBackgroundImageWithURL:forState:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:">-sd_setBackgroundImageWithURL:forState:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:">-sd_setBackgroundImageWithURL:<wbr>forState:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1819,7 +1840,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L220-L221">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L220-L221">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1829,7 +1850,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setBackgroundImageWithURL:forState:placeholderImage:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:">-sd_setBackgroundImageWithURL:forState:placeholderImage:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:">-sd_setBackgroundImageWithURL:<wbr>forState:<wbr>placeholderImage:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1906,7 +1927,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L233-L235">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L233-L235">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1916,7 +1937,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:options:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setBackgroundImageWithURL:forState:placeholderImage:options:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:options:">-sd_setBackgroundImageWithURL:forState:placeholderImage:options:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:options:">-sd_setBackgroundImageWithURL:<wbr>forState:<wbr>placeholderImage:<wbr>options:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2001,7 +2022,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L247-L250">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L247-L250">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2011,7 +2032,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:options:context:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setBackgroundImageWithURL:forState:placeholderImage:options:context:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:options:context:">-sd_setBackgroundImageWithURL:forState:placeholderImage:options:context:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:options:context:">-sd_setBackgroundImageWithURL:<wbr>forState:<wbr>placeholderImage:<wbr>options:<wbr>context:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2109,7 +2130,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L263-L267">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L263-L267">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2119,7 +2140,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:completed:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setBackgroundImageWithURL:forState:completed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:completed:">-sd_setBackgroundImageWithURL:forState:completed:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:completed:">-sd_setBackgroundImageWithURL:<wbr>forState:<wbr>completed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2196,7 +2217,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L282-L284">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L282-L284">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2206,7 +2227,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:completed:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setBackgroundImageWithURL:forState:placeholderImage:completed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:completed:">-sd_setBackgroundImageWithURL:forState:placeholderImage:completed:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:completed:">-sd_setBackgroundImageWithURL:<wbr>forState:<wbr>placeholderImage:<wbr>completed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2296,7 +2317,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L300-L303">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L300-L303">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2306,7 +2327,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:options:completed:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setBackgroundImageWithURL:forState:placeholderImage:options:completed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:options:completed:">-sd_setBackgroundImageWithURL:forState:placeholderImage:options:completed:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:options:completed:">-sd_setBackgroundImageWithURL:<wbr>forState:<wbr>placeholderImage:<wbr>options:<wbr>completed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2397,7 +2418,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L319-L323">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L319-L323">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2407,7 +2428,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:options:progress:completed:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setBackgroundImageWithURL:forState:placeholderImage:options:progress:completed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:options:progress:completed:">-sd_setBackgroundImageWithURL:forState:placeholderImage:options:progress:completed:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:options:progress:completed:">-sd_setBackgroundImageWithURL:<wbr>forState:<wbr>placeholderImage:<wbr>options:<wbr>progress:<wbr>completed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2513,7 +2534,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L341-L346">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L341-L346">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2523,7 +2544,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:options:context:progress:completed:"></a>
                     <a name="//apple_ref/objc/Method/-sd_setBackgroundImageWithURL:forState:placeholderImage:options:context:progress:completed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:options:context:progress:completed:">-sd_setBackgroundImageWithURL:forState:placeholderImage:options:context:progress:completed:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_setBackgroundImageWithURL:forState:placeholderImage:options:context:progress:completed:">-sd_setBackgroundImageWithURL:<wbr>forState:<wbr>placeholderImage:<wbr>options:<wbr>context:<wbr>progress:<wbr>completed:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2642,7 +2663,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L365-L371">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L365-L371">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2653,9 +2674,11 @@
               <div class="task-name-container">
                 <a name="/Cancel"></a>
                 <a name="//apple_ref/objc/Section/Cancel" class="dashAnchor"></a>
-                <a href="#/Cancel">
-                  <h3 class="section-name">Cancel</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Cancel"></a>
+                  <h3 class="section-name"><p>Cancel</p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
@@ -2663,7 +2686,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_cancelImageLoadForState:"></a>
                     <a name="//apple_ref/objc/Method/-sd_cancelImageLoadForState:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_cancelImageLoadForState:">-sd_cancelImageLoadForState:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_cancelImageLoadForState:">-sd_cancelImageLoadForState:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2688,7 +2711,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L378">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L378">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2698,7 +2721,7 @@
                     <code>
                     <a name="/c:objc(cs)UIButton(im)sd_cancelBackgroundImageLoadForState:"></a>
                     <a name="//apple_ref/objc/Method/-sd_cancelBackgroundImageLoadForState:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_cancelBackgroundImageLoadForState:">-sd_cancelBackgroundImageLoadForState:</a>
+                    <a class="token" href="#/c:objc(cs)UIButton(im)sd_cancelBackgroundImageLoadForState:">-sd_cancelBackgroundImageLoadForState:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2723,7 +2746,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/UIButton+WebCache.h#L383">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIButton+WebCache.h#L383">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2733,8 +2756,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

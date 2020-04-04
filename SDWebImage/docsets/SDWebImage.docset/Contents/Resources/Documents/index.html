@@ -13,7 +13,7 @@
     <a title="SDWebImage  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImage 5.6.0 Docs</a> (81% documented)</p>
+        <p><a href="index.html">SDWebImage 5.7.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -247,10 +247,19 @@
                 <a href="Constants.html#/c:@SDImageCoderDecodeThumbnailPixelSize">SDImageCoderDecodeThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDImageCoderEncodeBackgroundColor">SDImageCoderEncodeBackgroundColor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDImageCoderEncodeMaxFileSize">SDImageCoderEncodeMaxFileSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDImageCoderEncodeMaxPixelSize">SDImageCoderEncodeMaxPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDImageCoderWebImageContext">SDImageCoderWebImageContext</a>
@@ -334,6 +343,9 @@
                 <a href="Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
               </li>
               <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextQueryCacheType">SDWebImageContextQueryCacheType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a>
               </li>
               <li class="nav-group-task">
@@ -361,10 +373,10 @@
                 <a href="Constants.html#/c:@SDWebImageProgressUnitCountUnknown">SDWebImageProgressUnitCountUnknown</a>
               </li>
               <li class="nav-group-task">
-                <a href="Constants.html#/c:@WebImageVersionNumber">WebImageVersionNumber</a>
+                <a href="Constants.html#/c:@SDWebImageVersionNumber">SDWebImageVersionNumber</a>
               </li>
               <li class="nav-group-task">
-                <a href="Constants.html#/c:@WebImageVersionString">WebImageVersionString</a>
+                <a href="Constants.html#/c:@SDWebImageVersionString">SDWebImageVersionString</a>
               </li>
             </ul>
           </li>
@@ -496,6 +508,9 @@
                 <a href="Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryDataCompletionBlock">SDImageCacheQueryDataCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderMutableOptions">SDImageCoderMutableOptions</a>
               </li>
               <li class="nav-group-task">
@@ -615,6 +630,9 @@
                 <a href="Functions.html#/c:@F@SDScaledImageForScaleFactor">SDScaledImageForScaleFactor</a>
               </li>
               <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDThumbnailedKeyForKey">SDThumbnailedKeyForKey</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Functions.html#/c:@F@SDTransformedKeyForKey">SDTransformedKeyForKey</a>
               </li>
             </ul>
@@ -680,13 +698,14 @@ As such, we have moved/built new modules to <a href="https://github.com/SDWebIma
 <h4 id='coders-for-additional-image-formats' class='heading'>Coders for additional image formats</h4>
 
 <ul>
-<li><a href="https://github.com/SDWebImage/SDWebImageWebPCoder">SDWebImageWebPCoder</a> - coder for WebP image format. Based on <a href="https://chromium.googlesource.com/webm/libwebp">libwebp</a></li>
-<li><a href="https://github.com/SDWebImage/SDWebImageHEIFCoder">SDWebImageHEIFCoder</a> - coder to support HEIF image without Apple&rsquo;s <code>Image/IO framework</code>, iOS 8+/macOS 10.10+ support.</li>
-<li><a href="https://github.com/SDWebImage/SDWebImageBPGCoder">SDWebImageBPGCoder</a> - coder for BPG format</li>
-<li><a href="https://github.com/SDWebImage/SDWebImageFLIFCoder">SDWebImageFLIFCoder</a> - coder for FLIF format</li>
-<li><a href="https://github.com/SDWebImage/SDWebImageAVIFCoder">SDWebImageAVIFCoder</a> - coder for AVIF (AV1-based) format</li>
-<li><a href="https://github.com/SDWebImage/SDWebImagePDFCoder">SDWebImagePDFCoder</a> - coder for PDF vector format image</li>
-<li><a href="https://github.com/SDWebImage/SDWebImageSVGCoder">SDWebImageSVGCoder</a> - coder for SVG vector format image</li>
+<li><a href="https://github.com/SDWebImage/SDWebImageWebPCoder">SDWebImageWebPCoder</a> - coder for WebP format. Based on <a href="https://chromium.googlesource.com/webm/libwebp">libwebp</a></li>
+<li><a href="https://github.com/SDWebImage/SDWebImageHEIFCoder">SDWebImageHEIFCoder</a> - coder for HEIF format, iOS 8+/macOS 10.10+ support. Based on <a href="https://github.com/strukturag/libheif">libheif</a></li>
+<li><a href="https://github.com/SDWebImage/SDWebImageBPGCoder">SDWebImageBPGCoder</a> - coder for BPG format. Based on <a href="https://github.com/mirrorer/libbpg">libbpg</a></li>
+<li><a href="https://github.com/SDWebImage/SDWebImageFLIFCoder">SDWebImageFLIFCoder</a> - coder for FLIF format. Based on <a href="https://github.com/FLIF-hub/FLIF">libflif</a></li>
+<li><a href="https://github.com/SDWebImage/SDWebImageAVIFCoder">SDWebImageAVIFCoder</a> - coder for AVIF (AV1-based) format. Based on <a href="https://github.com/AOMediaCodec/libavif">libavif</a></li>
+<li><a href="https://github.com/SDWebImage/SDWebImagePDFCoder">SDWebImagePDFCoder</a> - coder for PDF vector format. Using built-in frameworks</li>
+<li><a href="https://github.com/SDWebImage/SDWebImageSVGCoder">SDWebImageSVGCoder</a> - coder for SVG vector format. Using built-in frameworks</li>
+<li><a href="https://github.com/SDWebImage/SDWebImageLottieCoder">SDWebImageLottieCoder</a> - coder for Lottie animation format. Based on <a href="https://github.com/Samsung/rlottie">rlottie</a></li>
 <li>and more from community!</li>
 </ul>
 <h4 id='loaders' class='heading'>Loaders</h4>
@@ -698,7 +717,8 @@ As such, we have moved/built new modules to <a href="https://github.com/SDWebIma
 <h4 id='integration-with-3rd-party-libraries' class='heading'>Integration with 3rd party libraries</h4>
 
 <ul>
-<li><a href="https://github.com/SDWebImage/SDWebImageLottiePlugin">SDWebImageLottiePlugin</a> - plugin to support <a href="https://github.com/airbnb/lottie-ios">Lottie</a> animation with remote JSON files</li>
+<li><a href="https://github.com/SDWebImage/SDWebImageLottiePlugin">SDWebImageLottiePlugin</a> - plugin to support <a href="https://github.com/airbnb/lottie-ios">Lottie-iOS</a>, vector animation rending with remote JSON files</li>
+<li><a href="https://github.com/SDWebImage/SDWebImageLottiePlugin">SDWebImageSVGKitPlugin</a> - plugin to support <a href="https://github.com/SVGKit/SVGKit">SVGKit</a>, SVG rendering using Core Animation, iOS 8+/macOS 10.10+ support</li>
 <li><a href="https://github.com/SDWebImage/SDWebImageFLPlugin">SDWebImageFLPlugin</a> - plugin to support <a href="https://github.com/Flipboard/FLAnimatedImage">FLAnimatedImage</a> as the engine for animated GIFs</li>
 <li><a href="https://github.com/SDWebImage/SDWebImageYYPlugin">SDWebImageYYPlugin</a> - plugin to integrate <a href="https://github.com/ibireme/YYImage">YYImage</a> &amp; <a href="https://github.com/ibireme/YYCache">YYCache</a> for image rendering &amp; caching</li>
 </ul>
@@ -707,7 +727,8 @@ As such, we have moved/built new modules to <a href="https://github.com/SDWebIma
 <ul>
 <li><a href="https://github.com/SDWebImage/libwebp-Xcode">libwebp-Xcode</a> - A wrapper for <a href="https://chromium.googlesource.com/webm/libwebp">libwebp</a> + an Xcode project.</li>
 <li><a href="https://github.com/SDWebImage/libheif-Xcode">libheif-Xcode</a> - A wrapper for <a href="https://github.com/strukturag/libheif">libheif</a> + an Xcode project.</li>
-<li>and more third-party C/C++ image codec libraries with CocoaPods/Carthage support.</li>
+<li><a href="https://github.com/SDWebImage/libavif-Xcode">libavif-Xcode</a> - A wrapper for <a href="https://github.com/AOMediaCodec/libavif">libavif</a> + an Xcode project.</li>
+<li>and more third-party C/C++ image codec libraries with CocoaPods/Carthage/SwiftPM support.</li>
 </ul>
 
 <p>You can use those directly, or create similar components of your own.</p>
@@ -786,6 +807,22 @@ As such, we have moved/built new modules to <a href="https://github.com/SDWebIma
 
 <p>In 5.0, we introduced a brand new mechanism for supporting animated images. This includes animated image loading, rendering, decoding, and also supports customizations (for advanced users).
 This animated image solution is available for <code>iOS</code>/<code>tvOS</code>/<code>macOS</code>. The <code><a href="Protocols/SDAnimatedImage.html">SDAnimatedImage</a></code> is subclass of <code>UIImage/NSImage</code>, and <code><a href="Classes/SDAnimatedImageView.html">SDAnimatedImageView</a></code> is subclass of <code>UIImageView/NSImageView</code>, to make them compatible with the common frameworks APIs. See <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#animated-image-50">Animated Image</a> for more detailed information.</p>
+
+<ul>
+<li>Objective-C</li>
+</ul>
+<pre class="highlight plaintext"><code>SDAnimatedImageView *imageView = [SDAnimatedImageView new];
+SDAnimatedImage *animatedImage = [SDAnimatedImage imageNamed:@"image.gif"];
+imageView.image = animatedImage;
+</code></pre>
+
+<ul>
+<li>Swift</li>
+</ul>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">imageView</span> <span class="o">=</span> <span class="kt">SDAnimatedImageView</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">animatedImage</span> <span class="o">=</span> <span class="kt">SDAnimatedImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"image.gif"</span><span class="p">)</span>
+<span class="n">imageView</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">animatedImage</span>
+</code></pre>
 <h4 id='flanimatedimage-integration-has-its-own-dedicated-repo' class='heading'>FLAnimatedImage integration has its own dedicated repo</h4>
 
 <p>In order to clean up things and make our core project do less things, we decided that the <code>FLAnimatedImage</code> integration does not belong here. From 5.0, this will still be available, but under a dedicated repo <a href="https://github.com/SDWebImage/SDWebImageFLPlugin">SDWebImageFLPlugin</a>.</p>
@@ -930,8 +967,8 @@ community can help you solve it.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

@@ -14,7 +14,7 @@
     <a title="SDImageCache Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.6.0 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.7.0 Docs</a> (81% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -248,10 +248,19 @@
                 <a href="../Constants.html#/c:@SDImageCoderDecodeThumbnailPixelSize">SDImageCoderDecodeThumbnailPixelSize</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeBackgroundColor">SDImageCoderEncodeBackgroundColor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxFileSize">SDImageCoderEncodeMaxFileSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeMaxPixelSize">SDImageCoderEncodeMaxPixelSize</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderWebImageContext">SDImageCoderWebImageContext</a>
@@ -335,6 +344,9 @@
                 <a href="../Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextQueryCacheType">SDWebImageContextQueryCacheType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a>
               </li>
               <li class="nav-group-task">
@@ -362,10 +374,10 @@
                 <a href="../Constants.html#/c:@SDWebImageProgressUnitCountUnknown">SDWebImageProgressUnitCountUnknown</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionNumber">WebImageVersionNumber</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionNumber">SDWebImageVersionNumber</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Constants.html#/c:@WebImageVersionString">WebImageVersionString</a>
+                <a href="../Constants.html#/c:@SDWebImageVersionString">SDWebImageVersionString</a>
               </li>
             </ul>
           </li>
@@ -497,6 +509,9 @@
                 <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryDataCompletionBlock">SDImageCacheQueryDataCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Type%20Definitions.html#/c:SDImageCoder.h@T@SDImageCoderMutableOptions">SDImageCoderMutableOptions</a>
               </li>
               <li class="nav-group-task">
@@ -616,6 +631,9 @@
                 <a href="../Functions.html#/c:@F@SDScaledImageForScaleFactor">SDScaledImageForScaleFactor</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDThumbnailedKeyForKey">SDThumbnailedKeyForKey</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/c:@F@SDTransformedKeyForKey">SDTransformedKeyForKey</a>
               </li>
             </ul>
@@ -645,7 +663,7 @@ However, if your own cache implementation contains more advanced feature beyond 
                     <code>
                     <a name="/c:objc(pl)SDImageCache(im)queryImageForKey:options:context:completion:"></a>
                     <a name="//apple_ref/objc/Method/-queryImageForKey:options:context:completion:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDImageCache(im)queryImageForKey:options:context:completion:">-queryImageForKey:options:context:completion:</a>
+                    <a class="token" href="#/c:objc(pl)SDImageCache(im)queryImageForKey:options:context:completion:">-queryImageForKey:<wbr>options:<wbr>context:<wbr>completion:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -734,7 +752,119 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                         <p>The operation for this query</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDImageCacheDefine.h#L74-L77">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h#L75-L78">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SDImageCache(im)queryImageForKey:options:context:cacheType:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-queryImageForKey:options:context:cacheType:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDImageCache(im)queryImageForKey:options:context:cacheType:completion:">-queryImageForKey:<wbr>options:<wbr>context:<wbr>cacheType:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Query the cached image from image cache for given key. The operation can be used to cancel the query.
+If image is cached in memory, completion is called synchronously, else aynchronously and depends on the options arg (See <code>SDWebImageQueryDiskSync</code>)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageOperation.html">SDWebImageOperation</a></span><span class="o">&gt;</span><span class="p">)</span>
+    <span class="nf">queryImageForKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span>
+             <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span><span class="p">)</span><span class="nv">options</span>
+             <span class="nf">context</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">context</span>
+           <span class="nf">cacheType</span><span class="p">:(</span><span class="n"><a href="../Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">)</span><span class="nv">cacheType</span>
+          <span class="nf">completion</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a></span><span class="p">)</span><span class="nv">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">queryImage</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">context</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContextOption">SDWebImageContextOption</a></span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="nv">cacheType</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/SDWebImageOperation.html">SDWebImageOperation</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image cache key</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A mask to specify options to use for this query</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>context</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A context contains different options to perform specify changes or processes, see <code><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContextOption">SDWebImageContextOption</a></code>. This hold the extra objects which <code>options</code> enum can not hold.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cacheType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Specify where to query the cache from. By default we use <code>.all</code>, which means both memory cache and disk cache. You can choose to query memory only or disk only as well. Pass <code>.none</code> is invalid and callback with nil immediatelly.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion block. Will not get called if the operation is cancelled</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The operation for this query</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h#L91-L95">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -744,7 +874,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                     <code>
                     <a name="/c:objc(pl)SDImageCache(im)storeImage:imageData:forKey:cacheType:completion:"></a>
                     <a name="//apple_ref/objc/Method/-storeImage:imageData:forKey:cacheType:completion:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDImageCache(im)storeImage:imageData:forKey:cacheType:completion:">-storeImage:imageData:forKey:cacheType:completion:</a>
+                    <a class="token" href="#/c:objc(pl)SDImageCache(im)storeImage:imageData:forKey:cacheType:completion:">-storeImage:<wbr>imageData:<wbr>forKey:<wbr>cacheType:<wbr>completion:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -840,7 +970,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDImageCacheDefine.h#L88-L92">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h#L106-L110">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -850,7 +980,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                     <code>
                     <a name="/c:objc(pl)SDImageCache(im)removeImageForKey:cacheType:completion:"></a>
                     <a name="//apple_ref/objc/Method/-removeImageForKey:cacheType:completion:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDImageCache(im)removeImageForKey:cacheType:completion:">-removeImageForKey:cacheType:completion:</a>
+                    <a class="token" href="#/c:objc(pl)SDImageCache(im)removeImageForKey:cacheType:completion:">-removeImageForKey:<wbr>cacheType:<wbr>completion:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -920,7 +1050,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDImageCacheDefine.h#L101-L103">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h#L119-L121">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -930,7 +1060,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                     <code>
                     <a name="/c:objc(pl)SDImageCache(im)containsImageForKey:cacheType:completion:"></a>
                     <a name="//apple_ref/objc/Method/-containsImageForKey:cacheType:completion:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDImageCache(im)containsImageForKey:cacheType:completion:">-containsImageForKey:cacheType:completion:</a>
+                    <a class="token" href="#/c:objc(pl)SDImageCache(im)containsImageForKey:cacheType:completion:">-containsImageForKey:<wbr>cacheType:<wbr>completion:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1001,7 +1131,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDImageCacheDefine.h#L112-L114">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h#L130-L132">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1011,7 +1141,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                     <code>
                     <a name="/c:objc(pl)SDImageCache(im)clearWithCacheType:completion:"></a>
                     <a name="//apple_ref/objc/Method/-clearWithCacheType:completion:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDImageCache(im)clearWithCacheType:completion:">-clearWithCacheType:completion:</a>
+                    <a class="token" href="#/c:objc(pl)SDImageCache(im)clearWithCacheType:completion:">-clearWithCacheType:<wbr>completion:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1068,7 +1198,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.6.0/build/Release/include/SDWebImage/SDImageCacheDefine.h#L122-L123">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h#L140-L141">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1078,8 +1208,8 @@ If image is cached in memory, completion is called synchronously, else aynchrono
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
