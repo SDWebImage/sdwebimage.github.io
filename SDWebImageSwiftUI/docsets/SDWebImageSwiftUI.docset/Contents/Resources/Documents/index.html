@@ -13,7 +13,7 @@
     <a title="SDWebImageSwiftUI  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImageSwiftUI 1.1.0 Docs</a> (88% documented)</p>
+        <p><a href="index.html">SDWebImageSwiftUI 1.3.0 Docs</a> (88% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImageSwiftUI"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -166,17 +166,6 @@
 <li>Swift 5.1+</li>
 </ul>
 <h2 id='installation' class='heading'>Installation</h2>
-<h4 id='cocoapods' class='heading'>CocoaPods</h4>
-
-<p>SDWebImageSwiftUI is available through <a href="https://cocoapods.org">CocoaPods</a>. To install
-it, simply add the following line to your Podfile:</p>
-<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'SDWebImageSwiftUI'</span>
-</code></pre>
-<h4 id='carthage' class='heading'>Carthage</h4>
-
-<p>SDWebImageSwiftUI is available through <a href="https://github.com/Carthage/Carthage">Carthage</a>.</p>
-<pre class="highlight plaintext"><code>github "SDWebImage/SDWebImageSwiftUI"
-</code></pre>
 <h4 id='swift-package-manager' class='heading'>Swift Package Manager</h4>
 
 <p>SDWebImageSwiftUI is available through <a href="https://swift.org/package-manager/">Swift Package Manager</a>.</p>
@@ -198,6 +187,17 @@ it, simply add the following line to your Podfile:</p>
     <span class="p">],</span>
 <span class="p">)</span>
 </code></pre>
+<h4 id='cocoapods' class='heading'>CocoaPods</h4>
+
+<p>SDWebImageSwiftUI is available through <a href="https://cocoapods.org">CocoaPods</a>. To install
+it, simply add the following line to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'SDWebImageSwiftUI'</span>
+</code></pre>
+<h4 id='carthage' class='heading'>Carthage</h4>
+
+<p>SDWebImageSwiftUI is available through <a href="https://github.com/Carthage/Carthage">Carthage</a>.</p>
+<pre class="highlight plaintext"><code>github "SDWebImage/SDWebImageSwiftUI"
+</code></pre>
 <h2 id='usage' class='heading'>Usage</h2>
 <h3 id='using-code-webimage-code-to-load-network-image' class='heading'>Using <code><a href="Structs/WebImage.html">WebImage</a></code> to load network image</h3>
 
@@ -211,20 +211,21 @@ it, simply add the following line to your Podfile:</p>
 </ul>
 <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
     <span class="kt">WebImage</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://nokiatech.github.io/heif/content/images/ski_jump_1440x960.heic"</span><span class="p">))</span>
-        <span class="o">.</span><span class="n">onSuccess</span> <span class="p">{</span> <span class="n">image</span><span class="p">,</span> <span class="n">cacheType</span> <span class="k">in</span>
-            <span class="c1">// Success</span>
-        <span class="p">}</span>
-        <span class="o">.</span><span class="nf">resizable</span><span class="p">()</span> <span class="c1">// Resizable like SwiftUI.Image, you must use this modifier or the view will use the image bitmap size</span>
-        <span class="o">.</span><span class="nf">placeholder</span><span class="p">(</span><span class="kt">Image</span><span class="p">(</span><span class="nv">systemName</span><span class="p">:</span> <span class="s">"photo"</span><span class="p">))</span> <span class="c1">// Placeholder Image</span>
-        <span class="c1">// Supports ViewBuilder as well</span>
-        <span class="o">.</span><span class="n">placeholder</span> <span class="p">{</span>
-            <span class="kt">Rectangle</span><span class="p">()</span><span class="o">.</span><span class="nf">foregroundColor</span><span class="p">(</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
-        <span class="p">}</span>
-        <span class="o">.</span><span class="nf">indicator</span><span class="p">(</span><span class="o">.</span><span class="n">activity</span><span class="p">)</span> <span class="c1">// Activity Indicator</span>
-        <span class="o">.</span><span class="nf">animation</span><span class="p">(</span><span class="o">.</span><span class="nf">easeInOut</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">))</span> <span class="c1">// Animation Duration</span>
-        <span class="o">.</span><span class="nf">transition</span><span class="p">(</span><span class="o">.</span><span class="n">fade</span><span class="p">)</span> <span class="c1">// Fade Transition</span>
-        <span class="o">.</span><span class="nf">scaledToFit</span><span class="p">()</span>
-        <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nv">alignment</span><span class="p">:</span> <span class="o">.</span><span class="n">center</span><span class="p">)</span>
+    <span class="c1">// Supports options and context, like `.delayPlaceholder` to show placeholder only when error</span>
+    <span class="o">.</span><span class="n">onSuccess</span> <span class="p">{</span> <span class="n">image</span><span class="p">,</span> <span class="n">cacheType</span> <span class="k">in</span>
+        <span class="c1">// Success</span>
+    <span class="p">}</span>
+    <span class="o">.</span><span class="nf">resizable</span><span class="p">()</span> <span class="c1">// Resizable like SwiftUI.Image, you must use this modifier or the view will use the image bitmap size</span>
+    <span class="o">.</span><span class="nf">placeholder</span><span class="p">(</span><span class="kt">Image</span><span class="p">(</span><span class="nv">systemName</span><span class="p">:</span> <span class="s">"photo"</span><span class="p">))</span> <span class="c1">// Placeholder Image</span>
+    <span class="c1">// Supports ViewBuilder as well</span>
+    <span class="o">.</span><span class="n">placeholder</span> <span class="p">{</span>
+        <span class="kt">Rectangle</span><span class="p">()</span><span class="o">.</span><span class="nf">foregroundColor</span><span class="p">(</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="o">.</span><span class="nf">indicator</span><span class="p">(</span><span class="o">.</span><span class="n">activity</span><span class="p">)</span> <span class="c1">// Activity Indicator</span>
+    <span class="o">.</span><span class="nf">animation</span><span class="p">(</span><span class="o">.</span><span class="nf">easeInOut</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">))</span> <span class="c1">// Animation Duration</span>
+    <span class="o">.</span><span class="nf">transition</span><span class="p">(</span><span class="o">.</span><span class="n">fade</span><span class="p">)</span> <span class="c1">// Fade Transition</span>
+    <span class="o">.</span><span class="nf">scaledToFit</span><span class="p">()</span>
+    <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nv">alignment</span><span class="p">:</span> <span class="o">.</span><span class="n">center</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
 
@@ -253,13 +254,17 @@ it, simply add the following line to your Podfile:</p>
 </ul>
 <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
     <span class="kt">Group</span> <span class="p">{</span>
-        <span class="c1">// Network</span>
-        <span class="kt">AnimatedImage</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://raw.githubusercontent.com/liyong03/YLGIFImage/master/YLGIFImageDemo/YLGIFImageDemo/joy.gif"</span><span class="p">),</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">progressiveLoad</span><span class="p">])</span> <span class="c1">// Progressive Load</span>
+        <span class="kt">AnimatedImage</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://raw.githubusercontent.com/liyong03/YLGIFImage/master/YLGIFImageDemo/YLGIFImageDemo/joy.gif"</span><span class="p">))</span>
+        <span class="c1">// Supports options and context, like `.progressiveLoad` for progressive animation loading</span>
         <span class="o">.</span><span class="n">onFailure</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
             <span class="c1">// Error</span>
         <span class="p">}</span>
         <span class="o">.</span><span class="nf">resizable</span><span class="p">()</span> <span class="c1">// Resizable like SwiftUI.Image, you must use this modifier or the view will use the image bitmap size</span>
         <span class="o">.</span><span class="nf">placeholder</span><span class="p">(</span><span class="kt">UIImage</span><span class="p">(</span><span class="nv">systemName</span><span class="p">:</span> <span class="s">"photo"</span><span class="p">))</span> <span class="c1">// Placeholder Image</span>
+        <span class="c1">// Supports ViewBuilder as well</span>
+        <span class="o">.</span><span class="n">placeholder</span> <span class="p">{</span>
+            <span class="kt">Circle</span><span class="p">()</span><span class="o">.</span><span class="nf">foregroundColor</span><span class="p">(</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
+        <span class="p">}</span>
         <span class="o">.</span><span class="nf">indicator</span><span class="p">(</span><span class="kt">SDWebImageActivityIndicator</span><span class="o">.</span><span class="n">medium</span><span class="p">)</span> <span class="c1">// Activity Indicator</span>
         <span class="o">.</span><span class="nf">transition</span><span class="p">(</span><span class="o">.</span><span class="n">fade</span><span class="p">)</span> <span class="c1">// Fade Transition</span>
         <span class="o">.</span><span class="nf">scaledToFit</span><span class="p">()</span> <span class="c1">// Attention to call it on AnimatedImage, but not `some View` after View Modifier (Swift Protocol Extension method is static dispatched)</span>
@@ -273,7 +278,11 @@ it, simply add the following line to your Podfile:</p>
         <span class="kt">AnimatedImage</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"animation1"</span><span class="p">,</span> <span class="nv">isAnimating</span><span class="p">:</span> <span class="err">$</span><span class="n">isAnimating</span><span class="p">))</span> <span class="c1">// Animation control binding</span>
         <span class="o">.</span><span class="nf">maxBufferSize</span><span class="p">(</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
         <span class="o">.</span><span class="n">onViewUpdate</span> <span class="p">{</span> <span class="n">view</span><span class="p">,</span> <span class="n">context</span> <span class="k">in</span> <span class="c1">// Advanced native view coordinate</span>
+            <span class="c1">// AppKit tooltip for mouse hover</span>
             <span class="n">view</span><span class="o">.</span><span class="n">toolTip</span> <span class="o">=</span> <span class="s">"Mouseover Tip"</span>
+            <span class="c1">// UIKit advanced content mode</span>
+            <span class="n">view</span><span class="o">.</span><span class="n">contentMode</span> <span class="o">=</span> <span class="o">.</span><span class="n">topLeft</span>
+            <span class="c1">// Coordinator, used for Cocoa Binding or Delegate method</span>
             <span class="k">let</span> <span class="nv">coordinator</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">coordinator</span>
         <span class="p">}</span>
     <span class="p">}</span>
@@ -283,11 +292,15 @@ it, simply add the following line to your Podfile:</p>
 <p>Note: <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> supports both image url or image data for animated image format. Which use the SDWebImage&rsquo;s <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#animated-image-50">Animated ImageView</a> for internal implementation. Pay attention that since this base on UIKit/AppKit representable, some advanced SwiftUI layout and animation system may not work as expected. You may need UIKit/AppKit and Core Animation to modify the native view.</p>
 
 <p>Note: <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> some methods like <code>.transition</code>, <code>.indicator</code> and <code>.aspectRatio</code> have the same naming as <code>SwiftUI.View</code> protocol methods. But the args receive the different type. This is because <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> supports to be used with UIKit/AppKit component and animation. If you find ambiguity, use full type declaration instead of the dot expression syntax.</p>
-<pre class="highlight swift"><code><span class="kt">AnimatedImage</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"animation2"</span><span class="p">)</span> <span class="c1">// Just for showcase, don't mix them at the same time</span>
-  <span class="o">.</span><span class="nf">indicator</span><span class="p">(</span><span class="kt">SDWebImageProgressIndicator</span><span class="o">.</span><span class="k">default</span><span class="p">)</span> <span class="c1">// UIKit indicator component</span>
-  <span class="o">.</span><span class="nf">indicator</span><span class="p">(</span><span class="kt">Indicator</span><span class="o">.</span><span class="n">progress</span><span class="p">)</span> <span class="c1">// SwiftUI indicator component</span>
-  <span class="o">.</span><span class="nf">transition</span><span class="p">(</span><span class="kt">SDWebImageTransition</span><span class="o">.</span><span class="n">flipFromLeft</span><span class="p">)</span> <span class="c1">// UIKit animation transition</span>
-  <span class="o">.</span><span class="nf">transition</span><span class="p">(</span><span class="kt">AnyTransition</span><span class="o">.</span><span class="n">flipFromLeft</span><span class="p">)</span> <span class="c1">// SwiftUI animation transition</span>
+
+<p>Note: some of methods on <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> will return <code>some View</code>, a new Modified Content. You&rsquo;ll lose the type related modifier method. For this case, you can either reorder the method call, or use Native View in <code>.onViewUpdate</code> for rescue.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="kt">AnimatedImage</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"animation2"</span><span class="p">)</span> <span class="c1">// Just for showcase, don't mix them at the same time</span>
+    <span class="o">.</span><span class="nf">indicator</span><span class="p">(</span><span class="kt">SDWebImageProgressIndicator</span><span class="o">.</span><span class="k">default</span><span class="p">)</span> <span class="c1">// UIKit indicator component</span>
+    <span class="o">.</span><span class="nf">indicator</span><span class="p">(</span><span class="kt">Indicator</span><span class="o">.</span><span class="n">progress</span><span class="p">)</span> <span class="c1">// SwiftUI indicator component</span>
+    <span class="o">.</span><span class="nf">transition</span><span class="p">(</span><span class="kt">SDWebImageTransition</span><span class="o">.</span><span class="n">flipFromLeft</span><span class="p">)</span> <span class="c1">// UIKit animation transition</span>
+    <span class="o">.</span><span class="nf">transition</span><span class="p">(</span><span class="kt">AnyTransition</span><span class="o">.</span><span class="n">flipFromLeft</span><span class="p">)</span> <span class="c1">// SwiftUI animation transition</span>
+<span class="p">}</span>
 </code></pre>
 <h3 id='which-view-to-choose' class='heading'>Which View to choose</h3>
 
@@ -590,8 +603,8 @@ pod install
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImageSwiftUI" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-03-24)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImageSwiftUI" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-05)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
