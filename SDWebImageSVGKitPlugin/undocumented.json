@@ -1,0 +1,89 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSVGKitPlugin/SDWebImageSVGKitPlugin/Classes/SDImageSVGKCoder.h",
+      "line": 17,
+      "symbol": "SDImageSVGKCoder.sharedCoder",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSVGKitPlugin/SDWebImageSVGKitPlugin/Classes/SDSVGKImage.h",
+      "line": 13,
+      "symbol": "SDSVGKImage",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSVGKitPlugin/SDWebImageSVGKitPlugin/Classes/SDSVGKImage.h",
+      "line": 15,
+      "symbol": "SDSVGKImage.SVGKImage",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSVGKitPlugin/SDWebImageSVGKitPlugin/Classes/SDSVGKImage.h",
+      "line": 28,
+      "symbol": "SDSVGKImage.+imageWithContentsOfFile:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSVGKitPlugin/SDWebImageSVGKitPlugin/Classes/SDSVGKImage.h",
+      "line": 29,
+      "symbol": "SDSVGKImage.+imageWithData:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSVGKitPlugin/SDWebImageSVGKitPlugin/Classes/SDSVGKImage.h",
+      "line": 30,
+      "symbol": "SDSVGKImage.+imageWithData:scale:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSVGKitPlugin/SDWebImageSVGKitPlugin/Classes/SDSVGKImage.h",
+      "line": 31,
+      "symbol": "SDSVGKImage.-initWithContentsOfFile:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSVGKitPlugin/SDWebImageSVGKitPlugin/Classes/SDSVGKImage.h",
+      "line": 32,
+      "symbol": "SDSVGKImage.-initWithData:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSVGKitPlugin/SDWebImageSVGKitPlugin/Classes/SDSVGKImage.h",
+      "line": 33,
+      "symbol": "SDSVGKImage.-initWithData:scale:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSVGKitPlugin/SDWebImageSVGKitPlugin/Classes/SDWebImageSVGKitPlugin.h",
+      "line": 17,
+      "symbol": "SDWebImageSVGKitPluginVersionNumber",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSVGKitPlugin/SDWebImageSVGKitPlugin/Classes/SDWebImageSVGKitPlugin.h",
+      "line": 18,
+      "symbol": "SDWebImageSVGKitPluginVersionString",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSVGKitPlugin/SDWebImageSVGKitPlugin/Classes/SVGKImageView+WebCache.h",
+      "line": 13,
+      "symbol": "SVGKImageView(WebCache)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/lizhuoli/Documents/GitHub/SDWebImageSVGKitPlugin"
+}

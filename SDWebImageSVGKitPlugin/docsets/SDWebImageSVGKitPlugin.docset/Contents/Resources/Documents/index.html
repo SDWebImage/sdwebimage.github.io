@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SDWebImageSVGKitPlugin  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="SDWebImageSVGKitPlugin  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SDWebImageSVGKitPlugin 0.2.0 Docs</a> (55% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImageSVGKitPlugin"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">SDWebImageSVGKitPlugin Reference</a>
+        <img id="carat" src="img/carat.png" />
+        SDWebImageSVGKitPlugin  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Categories/SVGKImageView%28WebCache%29.html">SVGKImageView(WebCache)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/SDImageSVGKCoder.html">SDImageSVGKCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDSVGKImage.html">SDSVGKImage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextSVGKImagePreserveAspectRatio">SDWebImageContextSVGKImagePreserveAspectRatio</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextSVGKImageSize">SDWebImageContextSVGKImageSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageSVGKitPluginVersionNumber">SDWebImageSVGKitPluginVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageSVGKitPluginVersionString">SDWebImageSVGKitPluginVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDAdjustSVGContentMode">SDAdjustSVGContentMode</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='sdwebimagesvgkitplugin' class='heading'>SDWebImageSVGKitPlugin</h1>
+
+<p><a href="https://travis-ci.org/SDWebImage/SDWebImageSVGKitPlugin"><img src="https://img.shields.io/travis/SDWebImage/SDWebImageSVGKitPlugin.svg?style=flat" alt="CI Status"></a>
+<a href="https://cocoapods.org/pods/SDWebImageSVGKitPlugin"><img src="https://img.shields.io/cocoapods/v/SDWebImageSVGKitPlugin.svg?style=flat" alt="Version"></a>
+<a href="https://cocoapods.org/pods/SDWebImageSVGKitPlugin"><img src="https://img.shields.io/cocoapods/l/SDWebImageSVGKitPlugin.svg?style=flat" alt="License"></a>
+<a href="https://cocoapods.org/pods/SDWebImageSVGKitPlugin"><img src="https://img.shields.io/cocoapods/p/SDWebImageSVGKitPlugin.svg?style=flat" alt="Platform"></a>
+<a href="https://github.com/SDWebImage/SDWebImageSVGKitPlugin"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a></p>
+<h2 id='what-39-s-for' class='heading'>What&rsquo;s for</h2>
+
+<p>SDWebImageSVGKitPlugin is a SVG coder plugin for <a href="https://github.com/rs/SDWebImage/">SDWebImage</a> framework, which provide the image loading support for <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a> using <a href="https://github.com/SVGKit/SVGKit">SVGKit</a> SVG engine.</p>
+
+<p>Note: iOS 13+/macOS 10.15+ supports native SVG rendering (called <a href="https://developer.apple.com/documentation/uikit/uiimage/configuring_and_displaying_symbol_images_in_your_ui/">Symbol Image</a>), with system framework to load SVG. Check <a href="https://github.com/SDWebImage/SDWebImageSVGCoder">SDWebImageSVGCoder</a> for more information.</p>
+<h2 id='example' class='heading'>Example</h2>
+
+<p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.</p>
+
+<p>You can modify the code or use some other SVG files to check the compatibility.</p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 8+</li>
+<li>tvOS 9+</li>
+<li>macOS 10.10+</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+<h4 id='cocoapods' class='heading'>CocoaPods</h4>
+
+<p>SDWebImageSVGKitPlugin is available through <a href="https://cocoapods.org">CocoaPods</a>. To install
+it, simply add the following line to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'SDWebImageSVGKitPlugin'</span>
+</code></pre>
+
+<p>Note: The <a href="https://github.com/SVGKit/SVGKit">SVGKit</a> dependency seems does not follow sem-version and didn&rsquo;t not release versions frequently. You can manually specify a branch or CID dependency for it. Like below:</p>
+<pre class="highlight plaintext"><code>pod 'SVGKit', :git =&gt; 'https://github.com/SVGKit/SVGKit.git', :branch =&gt; '3.x'
+</code></pre>
+<h4 id='carthage' class='heading'>Carthage</h4>
+
+<p>SDWebImageSVGKitPlugin is available through <a href="https://github.com/Carthage/Carthage">Carthage</a>.</p>
+<pre class="highlight plaintext"><code>github "SDWebImage/SDWebImageSVGKitPlugin"
+</code></pre>
+<h2 id='usage' class='heading'>Usage</h2>
+<h3 id='use-uiimageview-render-svg-as-bitmap-image' class='heading'>Use UIImageView (render SVG as bitmap image)</h3>
+
+<p>To use SVG coder, you should firstly add the <code><a href="Classes/SDImageSVGKCoder.html">SDImageSVGKCoder</a></code> to the coders manager. Then you can call the View Category method to start load SVG images.</p>
+
+<p>Because SVG is a <a href="https://en.wikipedia.org/wiki/Vector_graphics">vector image</a> format, which means it does not have a fixed bitmap size. However, <code>UIImage</code> or <code>CGImage</code> are all <a href="https://en.wikipedia.org/wiki/Raster_graphics">bitmap image</a>. For <code>UIImageView</code>, we will only parse SVG with a fixed image size (from the SVG viewPort information). But we also support you to specify a desired size during image loading using <code>SDWebImageContextThumbnailPixelSize</code> context option. And you can specify whether or not to keep aspect ratio during scale using <code>SDWebImageContextImagePreserveAspectRatio</code> context option.</p>
+
+<ul>
+<li>Objective-C</li>
+</ul>
+<pre class="highlight objective_c"><code><span class="n">SDImageSVGKCoder</span> <span class="o">*</span><span class="n">svgCoder</span> <span class="o">=</span> <span class="p">[</span><span class="n">SDImageSVGKCoder</span> <span class="nf">sharedCoder</span><span class="p">];</span>
+<span class="p">[[</span><span class="n">SDImageCodersManager</span> <span class="nf">sharedManager</span><span class="p">]</span> <span class="nf">addCoder</span><span class="p">:</span><span class="n">svgCoder</span><span class="p">];</span>
+<span class="n">UIImageView</span> <span class="o">*</span><span class="n">imageView</span><span class="p">;</span>
+<span class="c1">// this arg is optional, if don't provide, use the viewport size instead</span>
+<span class="n">CGSize</span> <span class="n">svgImageSize</span> <span class="o">=</span> <span class="n">CGSizeMake</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+<span class="p">[</span><span class="n">imageView</span> <span class="nf">sd_setImageWithURL</span><span class="p">:</span><span class="n">url</span> <span class="nf">placeholderImage</span><span class="p">:</span><span class="nb">nil</span> <span class="n">options</span><span class="o">:</span><span class="mi">0</span> <span class="n">context</span><span class="o">:</span><span class="p">@{</span><span class="n">SDWebImageContextThumbnailPixelSize</span> <span class="o">:</span> <span class="err">@</span><span class="p">(</span><span class="n">svgImageSize</span><span class="p">)];</span>
+</code></pre>
+
+<ul>
+<li>Swift</li>
+</ul>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">svgCoder</span> <span class="o">=</span> <span class="kt">SDImageSVGKCoder</span><span class="o">.</span><span class="n">shared</span>
+<span class="kt">SDImageCodersManager</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">addCoder</span><span class="p">(</span><span class="n">svgCoder</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">imageView</span><span class="p">:</span> <span class="kt">UIImageView</span>
+<span class="n">imageView</span><span class="o">.</span><span class="nf">sd_setImage</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+<span class="c1">// this arg is optional, if don't provide, use the viewport size instead</span>
+<span class="k">let</span> <span class="nv">svgImageSize</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">imageView</span><span class="o">.</span><span class="nf">sd_setImage</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="nv">placeholderImage</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[],</span> <span class="nv">context</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="nv">imageThumbnailPixelSize</span> <span class="p">:</span> <span class="n">svgImageSize</span><span class="p">])</span>
+</code></pre>
+<h3 id='use-svgkimageview-render-svg-as-vector-image' class='heading'>Use SVGKImageView (render SVG as vector image)</h3>
+
+<p><a href="https://github.com/SVGKit/SVGKit">SVGKit</a> also provide some built-in image view class for vector image loading (scale to any size without losing detail). The <code>SVGKLayeredImageView</code> &amp;&amp; <code>SVGKFastImageView</code> are the subclass of <code>SVGKImageView</code> base class. We supports these image view class as well. You can just use the same API like normal <code>UIImageView</code>.</p>
+
+<p>For the documentation about <code>SVGKLayeredImageView</code>, <code>SVGKFastImageView</code> or <code>SVGKImageView</code>, check <a href="https://github.com/SVGKit/SVGKit">SVGKit</a> repo for more information.</p>
+
+<p><strong>Note</strong>: If you only use these image view class and don&rsquo;t use SVG on <code>UIImageView</code>, you don&rsquo;t need to register the SVG coder to coders manager. These image view loading was using the <a href="https://github.com/rs/SDWebImage/wiki/Advanced-Usage#customization">Custom Image Class</a> feature of SDWebImage.</p>
+
+<p><strong>Attention</strong>: These built-in image view class does not works well on <code>UIView.contentMode</code> property, you need to re-scale the layer tree after image was loaded. We provide a simple out-of-box solution to support it. Set the <code>sd_adjustContentMode</code> property to <code>YES</code> then all things done.</p>
+
+<ul>
+<li>Objective-C</li>
+</ul>
+<pre class="highlight objective_c"><code><span class="n">SVGKImageView</span> <span class="o">*</span><span class="n">imageView</span><span class="p">;</span> <span class="c1">// can be either `SVGKLayeredImageView` or `SVGKFastImageView`</span>
+<span class="n">imageView</span><span class="p">.</span><span class="n">contentMode</span> <span class="o">=</span> <span class="n">UIViewContentModeScaleAspectFill</span><span class="p">;</span>
+<span class="n">imageView</span><span class="p">.</span><span class="n">sd_adjustContentMode</span> <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span> <span class="c1">// make `contentMode` works</span>
+<span class="p">[</span><span class="n">imageView</span> <span class="nf">sd_setImageWithURL</span><span class="p">:</span><span class="n">url</span><span class="p">];</span>
+</code></pre>
+
+<ul>
+<li>Swift:</li>
+</ul>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">imageView</span><span class="p">:</span> <span class="kt">SVGKImageView</span> <span class="c1">// can be either `SVGKLayeredImageView` or `SVGKFastImageView`</span>
+<span class="n">imageView</span><span class="o">.</span><span class="n">contentMode</span> <span class="o">=</span> <span class="o">.</span><span class="n">aspectFill</span>
+<span class="n">imageView</span><span class="o">.</span><span class="n">sd_adjustContentMode</span> <span class="o">=</span> <span class="kc">true</span> <span class="c1">// make `contentMode` works</span>
+<span class="n">imageView</span><span class="o">.</span><span class="nf">sd_setImage</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+</code></pre>
+<h2 id='export-svg-data' class='heading'>Export SVG data</h2>
+
+<p><code>SDWebImageSVGKitPlugin</code> provide an easy way to export the SVG image generated from framework, to the original SVG data.</p>
+
+<ul>
+<li>Objective-C</li>
+</ul>
+<pre class="highlight objective_c"><code><span class="n">UIImage</span> <span class="o">*</span><span class="n">image</span><span class="p">;</span> <span class="c1">// Image generated from SDWebImage framework, actually a `SDSVGKImage` instance.</span>
+<span class="n">NSData</span> <span class="o">*</span><span class="n">imageData</span> <span class="o">=</span> <span class="p">[</span><span class="n">image</span> <span class="nf">sd_imageDataAsFormat</span><span class="p">:</span><span class="n">SDImageFormatSVG</span><span class="p">];</span>
+</code></pre>
+
+<ul>
+<li>Swift</li>
+</ul>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span> <span class="c1">// Image generated from SDWebImage framework, actually a `SDSVGKImage` instance.</span>
+<span class="k">let</span> <span class="nv">imageData</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="nf">sd_imageData</span><span class="p">(</span><span class="nv">as</span><span class="p">:</span> <span class="o">.</span><span class="kt">SVG</span><span class="p">)</span>
+</code></pre>
+<h2 id='screenshot' class='heading'>Screenshot</h2>
+
+<p><img src="https://raw.githubusercontent.com/SDWebImage/SDWebImageSVGKitPlugin/master/Example/Screenshot/SVGDemo.png" width="300" />
+<img src="https://raw.githubusercontent.com/SDWebImage/SDWebImageSVGKitPlugin/master/Example/Screenshot/SVGDemo-macOS.png" width="600" /></p>
+
+<p>These SVG images are from <a href="https://commons.wikimedia.org/wiki/Main_Page">wikimedia</a>, you can try the demo with your own SVG image as well.</p>
+<h2 id='author' class='heading'>Author</h2>
+
+<p>DreamPiggy</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>SDWebImageSVGKitPlugin is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImageSVGKitPlugin" target="_blank" rel="external">SDWebImageSVGKitPlugin</a>. All rights reserved. (Last updated: 2020-04-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

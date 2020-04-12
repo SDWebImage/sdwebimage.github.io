@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Constants  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Section/Constants" class="dashAnchor"></a>
+    <a title="Constants  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SDWebImageSVGKitPlugin 0.2.0 Docs</a> (55% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImageSVGKitPlugin"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">SDWebImageSVGKitPlugin Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Constants  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Categories/SVGKImageView%28WebCache%29.html">SVGKImageView(WebCache)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/SDImageSVGKCoder.html">SDImageSVGKCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SDSVGKImage.html">SDSVGKImage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextSVGKImagePreserveAspectRatio">SDWebImageContextSVGKImagePreserveAspectRatio</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextSVGKImageSize">SDWebImageContextSVGKImageSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageSVGKitPluginVersionNumber">SDWebImageSVGKitPluginVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageSVGKitPluginVersionString">SDWebImageSVGKitPluginVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDAdjustSVGContentMode">SDAdjustSVGContentMode</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Constants</h1>
+            <p>The following constants are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@SDWebImageContextSVGKImageSize"></a>
+                    <a name="//apple_ref/objc/Constant/SDWebImageContextSVGKImageSize" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:@SDWebImageContextSVGKImageSize">SDWebImageContextSVGKImageSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Use the new context option (for WebCache category), or coder option (for SDImageCoder protocol) instead</p>
+
+                      </div>
+                      <div class="abstract">
+                        <p>A CGSize raw value which specify the desired SVG image size during image loading. Because vector image like SVG format, may not contains a fixed size, or you want to get a larger size bitmap representation UIImage. (NSValue)
+If you don&rsquo;t provide this value, use viewBox size of SVG for default value;</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="n">SDWebImageContextOption</span> <span class="n">_Nonnull</span> <span class="k">const</span> <span class="n">SDWebImageContextSVGKImageSize</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">svgkImageSize</span><span class="p">:</span> <span class="kt">SDWebImageContextOption</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSVGKitPlugin/tree/0.2.0/SDWebImageSVGKitPlugin/Classes/SDWebImageSVGKitDefine.h#L28">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@SDWebImageContextSVGKImagePreserveAspectRatio"></a>
+                    <a name="//apple_ref/objc/Constant/SDWebImageContextSVGKImagePreserveAspectRatio" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:@SDWebImageContextSVGKImagePreserveAspectRatio">SDWebImageContextSVGKImagePreserveAspectRatio</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Use the new context option (for WebCache category), or coder option (for SDImageCoder protocol) instead</p>
+
+                      </div>
+                      <div class="abstract">
+                        <p>A BOOL value which specify the whether SVG image should keep aspect ratio during image loading. Because when you specify image size via <code><a href="Constants.html#/c:@SDWebImageContextSVGKImageSize">SDWebImageContextSVGKImageSize</a></code>, we need to know whether to keep aspect ratio or not when image size aspect ratio is not equal to SVG viewBox size aspect ratio. (NSNumber)
+If you don&rsquo;t provide this value, use YES for default value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="n">SDWebImageContextOption</span> <span class="n">_Nonnull</span> <span class="k">const</span> <span class="n">SDWebImageContextSVGKImagePreserveAspectRatio</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">svgkImagePreserveAspectRatio</span><span class="p">:</span> <span class="kt">SDWebImageContextOption</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSVGKitPlugin/tree/0.2.0/SDWebImageSVGKitPlugin/Classes/SDWebImageSVGKitDefine.h#L34">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@SDWebImageSVGKitPluginVersionNumber"></a>
+                    <a name="//apple_ref/objc/Constant/SDWebImageSVGKitPluginVersionNumber" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@SDWebImageSVGKitPluginVersionNumber">SDWebImageSVGKitPluginVersionNumber</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXPORT</span> <span class="kt">double</span> <span class="n">SDWebImageSVGKitPluginVersionNumber</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">SDWebImageSVGKitPluginVersionNumber</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSVGKitPlugin/tree/0.2.0/SDWebImageSVGKitPlugin/Classes/SDWebImageSVGKitPlugin.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@SDWebImageSVGKitPluginVersionString"></a>
+                    <a name="//apple_ref/objc/Constant/SDWebImageSVGKitPluginVersionString" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@SDWebImageSVGKitPluginVersionString">SDWebImageSVGKitPluginVersionString</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXPORT</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">SDWebImageSVGKitPluginVersionString</span><span class="p">[]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSVGKitPlugin/tree/0.2.0/SDWebImageSVGKitPlugin/Classes/SDWebImageSVGKitPlugin.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImageSVGKitPlugin" target="_blank" rel="external">SDWebImageSVGKitPlugin</a>. All rights reserved. (Last updated: 2020-04-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
