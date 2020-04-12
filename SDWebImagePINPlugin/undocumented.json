@@ -1,0 +1,19 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImagePINPlugin/SDWebImagePINPlugin/Classes/SDWebImagePINPlugin.h",
+      "line": 14,
+      "symbol": "SDWebImagePINPluginVersionNumber",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImagePINPlugin/SDWebImagePINPlugin/Classes/SDWebImagePINPlugin.h",
+      "line": 15,
+      "symbol": "SDWebImagePINPluginVersionString",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/lizhuoli/Documents/GitHub/SDWebImagePINPlugin"
+}

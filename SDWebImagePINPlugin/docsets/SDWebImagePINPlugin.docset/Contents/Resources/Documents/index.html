@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SDWebImagePINPlugin  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="SDWebImagePINPlugin  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SDWebImagePINPlugin 0.1.0 Docs</a> (60% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImagePINPlugin"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">SDWebImagePINPlugin Reference</a>
+        <img id="carat" src="img/carat.png" />
+        SDWebImagePINPlugin  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImagePINPluginVersionNumber">SDWebImagePINPluginVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImagePINPluginVersionString">SDWebImagePINPluginVersionString</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='sdwebimagepinplugin' class='heading'>SDWebImagePINPlugin</h1>
+
+<p><a href="https://travis-ci.org/SDWebImage/SDWebImagePINPlugin"><img src="https://img.shields.io/travis/SDWebImage/SDWebImagePINPlugin.svg?style=flat" alt="CI Status"></a>
+<a href="https://cocoapods.org/pods/SDWebImagePINPlugin"><img src="https://img.shields.io/cocoapods/v/SDWebImagePINPlugin.svg?style=flat" alt="Version"></a>
+<a href="https://cocoapods.org/pods/SDWebImagePINPlugin"><img src="https://img.shields.io/cocoapods/l/SDWebImagePINPlugin.svg?style=flat" alt="License"></a>
+<a href="https://cocoapods.org/pods/SDWebImagePINPlugin"><img src="https://img.shields.io/cocoapods/p/SDWebImagePINPlugin.svg?style=flat" alt="Platform"></a>
+<a href="https://github.com/SDWebImage/SDWebImagePINPlugin"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+<a href="https://codecov.io/gh/SDWebImage/SDWebImagePINPlugin"><img src="https://codecov.io/gh/SDWebImage/SDWebImagePINPlugin/branch/master/graph/badge.svg" alt="codecov"></a></p>
+<h2 id='what-39-s-for' class='heading'>What&rsquo;s for</h2>
+
+<p>SDWebImagePINPlugin is a plugin for <a href="https://github.com/rs/SDWebImage/">SDWebImage</a> framework, which provide the image loading support for <a href="https://github.com/pinterest/PINCache">PINCache</a> cache system.</p>
+
+<p>You use <code>PINCache</code> instead of <code>SDImageCache</code> for image cache system, which may better memory cache performance (By taking advanced of LRU algorithm), and disk cache performance (By taking advanced of queue management and age/bytes LRU algorithm)</p>
+<h2 id='usage' class='heading'>Usage</h2>
+<h4 id='pincache' class='heading'>PINCache</h4>
+
+<p>To enable <code>PINCache</code> instead of <code>SDImageCache</code>, you can bind the cache for shared manager, or create a custom manager instead.</p>
+
+<ul>
+<li>Objective-C</li>
+</ul>
+<pre class="highlight objective_c"><code><span class="c1">// Use `PINCache` for shared manager</span>
+<span class="n">SDWebImageManger</span><span class="p">.</span><span class="n">defaultImageCache</span> <span class="o">=</span> <span class="p">[</span><span class="n">PINCache</span> <span class="nf">cacheWithName</span><span class="p">:</span><span class="s">@"name"</span><span class="p">];</span>
+</code></pre>
+
+<ul>
+<li>Swift</li>
+</ul>
+<pre class="highlight swift"><code><span class="c1">// Use `PINCache` for shared manager</span>
+<span class="kt">SDWebImageManger</span><span class="o">.</span><span class="n">defaultImageCache</span> <span class="o">=</span> <span class="kt">PINCache</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"name"</span><span class="p">)</span>
+</code></pre>
+
+<p>You can also attach the custom cache for individual image requests via <code>.imageCache</code> context option.</p>
+
+<ul>
+<li>Objective-C</li>
+</ul>
+<pre class="highlight objective_c"><code><span class="c1">// Use `PINCache` for single URL request</span>
+<span class="p">[</span><span class="n">imageView</span> <span class="nf">sd_setImageWithURL</span><span class="p">:</span><span class="n">url</span> <span class="nf">placeholderImage</span><span class="p">:</span><span class="nb">nil</span> <span class="n">options</span><span class="o">:</span><span class="mi">0</span> <span class="n">context</span><span class="o">:</span><span class="p">@{</span><span class="n">SDWebImageContextImageCache</span><span class="o">:</span> <span class="err">@</span><span class="p">(</span><span class="n">pinCache</span><span class="p">)}</span> <span class="n">progress</span><span class="o">:</span><span class="nb">nil</span> <span class="n">completion</span><span class="o">:</span><span class="n">completion</span><span class="p">];</span>
+</code></pre>
+
+<ul>
+<li>Swift</li>
+</ul>
+<pre class="highlight swift"><code><span class="c1">// Use `PINCache` for single URL request</span>
+<span class="n">imageView</span><span class="o">.</span><span class="nf">sd_setImage</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="nv">placeholderImage</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="nv">imageCache</span> <span class="p">:</span> <span class="n">pinCache</span><span class="p">],</span> <span class="nv">progress</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="n">completion</span><span class="p">);</span>
+</code></pre>
+<h3 id='pindiskcache-amp-amp-pinmemorycache' class='heading'>PINDiskCache &amp;&amp; PINMemoryCache</h3>
+
+<p>You can also use <code>PINMemoryCache</code> or <code>PINDiskcache</code> to customize memory cache / disk cache only. See <a href="https://github.com/rs/SDWebImage/wiki/Advanced-Usage#custom-cache-50">Custom Cache</a> wiki in SDWebImage.</p>
+
+<ul>
+<li>Objective-C</li>
+</ul>
+<pre class="highlight objective_c"><code><span class="c1">// Use `PINMemoryCache` for shared `SDImageCache` memory cache implementation</span>
+<span class="n">SDImageCacheConfig</span><span class="p">.</span><span class="n">defaultCacheConfig</span><span class="p">.</span><span class="n">memoryCacheClass</span> <span class="o">=</span> <span class="n">PINMemoryCache</span><span class="p">.</span><span class="n">class</span><span class="p">;</span>
+<span class="c1">// Use `PINDiskcache` for shared `SDImageCache` disk cache implementation</span>
+<span class="n">SDImageCacheConfig</span><span class="p">.</span><span class="n">defaultCacheConfig</span><span class="p">.</span><span class="n">diskCacheClass</span> <span class="o">=</span> <span class="n">PINDiskcache</span><span class="p">.</span><span class="n">class</span><span class="p">;</span>
+</code></pre>
+
+<ul>
+<li>Swift</li>
+</ul>
+<pre class="highlight swift"><code><span class="c1">// Use `PINMemoryCache` for `SDImageCache` memory cache implementation</span>
+<span class="kt">SDImageCacheConfig</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="n">memoryCacheClass</span> <span class="o">=</span> <span class="kt">PINMemoryCache</span><span class="o">.</span><span class="k">self</span>
+<span class="c1">// Use `PINDiskcache` for `SDImageCache` disk cache implementation</span>
+<span class="kt">SDImageCacheConfig</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="n">diskCacheClass</span> <span class="o">=</span> <span class="kt">PINDiskcache</span><span class="o">.</span><span class="k">self</span>
+</code></pre>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 8+</li>
+<li>tvOS 9+</li>
+<li>macOS 10.11+</li>
+<li>watchOS 2.0+</li>
+<li>Xcode 11+</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+<h4 id='cocoapods' class='heading'>CocoaPods</h4>
+
+<p>SDWebImagePINPlugin is available through <a href="https://cocoapods.org">CocoaPods</a>. To install
+it, simply add the following line to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'SDWebImagePINPlugin'</span>
+</code></pre>
+<h4 id='carthage' class='heading'>Carthage</h4>
+
+<p>SDWebImageFLPlugin is available through <a href="https://github.com/Carthage/Carthage">Carthage</a>.</p>
+<pre class="highlight plaintext"><code>github "SDWebImage/SDWebImagePINPlugin"
+</code></pre>
+
+<p>Note: Carthage integration does not support watchOS platform. If you need watchOS, use CocoaPods instead.</p>
+
+<p>See tracked issue: <a href="https://github.com/pinterest/PINCache/issues/268">PINCache#268</a></p>
+<h2 id='author' class='heading'>Author</h2>
+
+<p>DreamPiggy, <a href="mailto:lizhuoli1126@126.com">lizhuoli1126@126.com</a></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>SDWebImagePINPlugin is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImagePINPlugin" target="_blank" rel="external">SDWebImagePINPlugin</a>. All rights reserved. (Last updated: 2020-04-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
