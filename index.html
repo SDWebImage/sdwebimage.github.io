@@ -80,15 +80,22 @@
 <h4 id='coders-for-additional-image-formats' class='heading'>Coders for additional image formats</h4>
 
 <ul>
-<li><a href="https://github.com/SDWebImage/SDWebImageWebPCoder">SDWebImageWebPCoder</a> - coder for WebP image format. Based on <a href="https://chromium.googlesource.com/webm/libwebp">libwebp</a></li>
-<li><a href="https://github.com/SDWebImage/SDWebImageHEIFCoder">SDWebImageHEIFCoder</a> - coder to support HEIF image without Apple&rsquo;s <code>Image/IO framework</code>, iOS 8+/macOS 10.10+ support.</li>
-<li><a href="https://github.com/SDWebImage/SDWebImageBPGCoder">SDWebImageBPGCoder</a> - coder for BPG format</li>
-<li><a href="https://github.com/SDWebImage/SDWebImageFLIFCoder">SDWebImageFLIFCoder</a> - coder for FLIF format</li>
-<li><a href="https://github.com/SDWebImage/SDWebImageAVIFCoder">SDWebImageAVIFCoder</a> - coder for AVIF (AV1-based) format</li>
-<li><a href="https://github.com/SDWebImage/SDWebImagePDFCoder">SDWebImagePDFCoder</a> - coder for PDF vector format image</li>
-<li><a href="https://github.com/SDWebImage/SDWebImageSVGCoder">SDWebImageSVGCoder</a> - coder for SVG vector format image</li>
+<li><a href="https://github.com/SDWebImage/SDWebImageWebPCoder">SDWebImageWebPCoder</a> - coder for WebP format. Based on <a href="https://chromium.googlesource.com/webm/libwebp">libwebp</a></li>
+<li><a href="https://github.com/SDWebImage/SDWebImageHEIFCoder">SDWebImageHEIFCoder</a> - coder for HEIF format, iOS 8+/macOS 10.10+ support. Based on <a href="https://github.com/strukturag/libheif">libheif</a></li>
+<li><a href="https://github.com/SDWebImage/SDWebImageBPGCoder">SDWebImageBPGCoder</a> - coder for BPG format. Based on <a href="https://github.com/mirrorer/libbpg">libbpg</a></li>
+<li><a href="https://github.com/SDWebImage/SDWebImageFLIFCoder">SDWebImageFLIFCoder</a> - coder for FLIF format. Based on <a href="https://github.com/FLIF-hub/FLIF">libflif</a></li>
+<li><a href="https://github.com/SDWebImage/SDWebImageAVIFCoder">SDWebImageAVIFCoder</a> - coder for AVIF (AV1-based) format. Based on <a href="https://github.com/AOMediaCodec/libavif">libavif</a></li>
+<li><a href="https://github.com/SDWebImage/SDWebImagePDFCoder">SDWebImagePDFCoder</a> - coder for PDF vector format. Using built-in frameworks</li>
+<li><a href="https://github.com/SDWebImage/SDWebImageSVGCoder">SDWebImageSVGCoder</a> - coder for SVG vector format. Using built-in frameworks</li>
+<li><a href="https://github.com/SDWebImage/SDWebImageLottieCoder">SDWebImageLottieCoder</a> - coder for Lottie animation format. Based on <a href="https://github.com/Samsung/rlottie">rlottie</a></li>
 </ul>
-<h4 id='loaders' class='heading'>Loaders</h4>
+<h4 id='custom-caches' class='heading'>Custom Caches</h4>
+
+<ul>
+<li><a href="https://github.com/SDWebImage/SDWebImageYYPlugin">SDWebImageYYPlugin</a> - plugin to support caching images with <a href="https://github.com/ibireme/YYCache">YYCache</a></li>
+<li><a href="https://github.com/SDWebImage/SDWebImagePINPlugin">SDWebImagePINPlugin</a> - plugin to support caching images with <a href="https://github.com/pinterest/PINCache">PINCache</a></li>
+</ul>
+<h4 id='custom-loaders' class='heading'>Custom Loaders</h4>
 
 <ul>
 <li><a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin">SDWebImagePhotosPlugin</a> - plugin to support loading images from Photos (using <code>Photos.framework</code>)</li>
@@ -97,7 +104,8 @@
 <h4 id='integration-with-3rd-party-libraries' class='heading'>Integration with 3rd party libraries</h4>
 
 <ul>
-<li><a href="https://github.com/SDWebImage/SDWebImageLottiePlugin">SDWebImageLottiePlugin</a> - plugin to support <a href="https://github.com/airbnb/lottie-ios">Lottie</a> animation with remote JSON files</li>
+<li><a href="https://github.com/SDWebImage/SDWebImageLottiePlugin">SDWebImageLottiePlugin</a> - plugin to support <a href="https://github.com/airbnb/lottie-ios">Lottie-iOS</a>, vector animation rending with remote JSON files</li>
+<li><a href="https://github.com/SDWebImage/SDWebImageLottiePlugin">SDWebImageSVGKitPlugin</a> - plugin to support <a href="https://github.com/SVGKit/SVGKit">SVGKit</a>, SVG rendering using Core Animation, iOS 8+/macOS 10.10+ support</li>
 <li><a href="https://github.com/SDWebImage/SDWebImageFLPlugin">SDWebImageFLPlugin</a> - plugin to support <a href="https://github.com/Flipboard/FLAnimatedImage">FLAnimatedImage</a> as the engine for animated GIFs</li>
 <li><a href="https://github.com/SDWebImage/SDWebImageYYPlugin">SDWebImageYYPlugin</a> - plugin to integrate <a href="https://github.com/ibireme/YYImage">YYImage</a> &amp; <a href="https://github.com/ibireme/YYCache">YYCache</a> for image rendering &amp; caching</li>
 </ul>
