@@ -100,21 +100,21 @@
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/SDWebImageSwiftUI.swift",
-      "line": 17,
+      "line": 18,
       "symbol": "PlatformImage",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/SDWebImageSwiftUI.swift",
-      "line": 39,
+      "line": 27,
       "symbol": "PlatformView",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/SDWebImageSwiftUI.swift",
-      "line": 52,
+      "line": 40,
       "symbol": "PlatformViewRepresentable",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"

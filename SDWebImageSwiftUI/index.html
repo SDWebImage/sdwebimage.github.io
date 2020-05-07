@@ -13,7 +13,7 @@
     <a title="SDWebImageSwiftUI  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImageSwiftUI 1.3.0 Docs</a> (88% documented)</p>
+        <p><a href="index.html">SDWebImageSwiftUI 1.4.0 Docs</a> (88% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImageSwiftUI"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -212,8 +212,9 @@ it, simply add the following line to your Podfile:</p>
 <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
     <span class="kt">WebImage</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://nokiatech.github.io/heif/content/images/ski_jump_1440x960.heic"</span><span class="p">))</span>
     <span class="c1">// Supports options and context, like `.delayPlaceholder` to show placeholder only when error</span>
-    <span class="o">.</span><span class="n">onSuccess</span> <span class="p">{</span> <span class="n">image</span><span class="p">,</span> <span class="n">cacheType</span> <span class="k">in</span>
+    <span class="o">.</span><span class="n">onSuccess</span> <span class="p">{</span> <span class="n">image</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">cacheType</span> <span class="k">in</span>
         <span class="c1">// Success</span>
+        <span class="c1">// Note: Data exist only when queried from disk cache or network. Use `.queryMemoryData` if you really need data</span>
     <span class="p">}</span>
     <span class="o">.</span><span class="nf">resizable</span><span class="p">()</span> <span class="c1">// Resizable like SwiftUI.Image, you must use this modifier or the view will use the image bitmap size</span>
     <span class="o">.</span><span class="nf">placeholder</span><span class="p">(</span><span class="kt">Image</span><span class="p">(</span><span class="nv">systemName</span><span class="p">:</span> <span class="s">"photo"</span><span class="p">))</span> <span class="c1">// Placeholder Image</span>
@@ -306,11 +307,11 @@ it, simply add the following line to your Podfile:</p>
 
 <p>Why we have two different View types here, is because of current SwiftUI limit. But we&rsquo;re aimed to provide best solution for all use cases.</p>
 
-<p>If you don&rsquo;t need animated image, prefer to use <code><a href="Structs/WebImage.html">WebImage</a></code> firstly. Which behaves the seamless as built-in SwiftUI View. If SwiftUI works, it works.</p>
+<p>If you don&rsquo;t need animated image, prefer to use <code><a href="Structs/WebImage.html">WebImage</a></code> firstly. Which behaves the seamless as built-in SwiftUI View. If SwiftUI works, it works. If SwiftUI doesn&rsquo;t work, it either :)</p>
 
-<p>If you need simple animated image, use <code><a href="Structs/WebImage.html">WebImage</a></code>. Which provide the basic animated image support. But it does not support progressive animation rendering, if you don&rsquo;t care about this.</p>
+<p>If you need simple animated image, use <code><a href="Structs/WebImage.html">WebImage</a></code>. Which provide the basic animated image support. But it does not support progressive animation rendering, nor vector image, if you don&rsquo;t care about this.</p>
 
-<p>If you need powerful animated image, <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> is the one to choose. Remember it supports static image as well, you don&rsquo;t need to check the format, just use as it.</p>
+<p>If you need powerful animated image, <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> is the one to choose. Remember it supports static image as well, you don&rsquo;t need to check the format, just use as it. Also, some powerful feature like UIKit/AppKit tint color, vector image, symbol image configuration, tvOS layered image, only available in <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> but not currently in SwfitUI.</p>
 
 <p>But, because <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> use <code>UIViewRepresentable</code> and driven by UIKit, currently there may be some small incompatible issues between UIKit and SwiftUI layout and animation system, or bugs related to SwiftUI itself. We try our best to match SwiftUI behavior, and provide the same API as <code><a href="Structs/WebImage.html">WebImage</a></code>, which make it easy to switch between these two types if needed.</p>
 <h3 id='use-code-imagemanager-code-for-your-own-view-type' class='heading'>Use <code><a href="Classes/ImageManager.html">ImageManager</a></code> for your own View type</h3>
@@ -603,7 +604,7 @@ pod install
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImageSwiftUI" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-05)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImageSwiftUI" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-05-07)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
