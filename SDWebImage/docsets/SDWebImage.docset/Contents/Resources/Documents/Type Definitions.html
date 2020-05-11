@@ -14,7 +14,7 @@
     <a title="Type Definitions  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImage 5.7.0 Docs</a> (81% documented)</p>
+        <p><a href="index.html">SDWebImage 5.8.0 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -254,6 +254,9 @@
                 <a href="Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
               </li>
               <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDImageCoderEncodeEmbedThumbnail">SDImageCoderEncodeEmbedThumbnail</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
               </li>
               <li class="nav-group-task">
@@ -339,6 +342,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextLoaderCachedImage">SDWebImageContextLoaderCachedImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextOriginalQueryCacheType">SDWebImageContextOriginalQueryCacheType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
@@ -674,14 +680,9 @@ For custom coder plugin, it can also extern the enum for supported format. See <
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSInteger</span> <span class="n">SDImageFormat</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">SDImageFormat</span> <span class="p">:</span> <span class="n">_ObjectiveCBridgeable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="n">_SwiftNewtypeWrapper</span><span class="p">,</span> <span class="kt">RawRepresentable</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/NSData+ImageContentType.h#L17">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/NSData+ImageContentType.h#L17">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -714,14 +715,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">SDGraphicsImageDrawingActions</span><span class="p">)(</span><span class="n">CGContextRef</span> <span class="n">_Nonnull</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDGraphicsImageDrawingActions</span> <span class="o">=</span> <span class="p">(</span><span class="kt">CGContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDGraphicsImageRenderer.h#L20">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDGraphicsImageRenderer.h#L20">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -748,14 +744,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDImageCacheCheckCompletionBlock</span><span class="p">)(</span><span class="n">BOOL</span> <span class="n">isInCache</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDImageCacheCheckCompletionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCacheDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -782,14 +773,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDImageCacheQueryDataCompletionBlock</span><span class="p">)(</span><span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">data</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDImageCacheQueryDataCompletionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Data</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCacheDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -816,14 +802,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDImageCacheCalculateSizeBlock</span><span class="p">)(</span><span class="n">NSUInteger</span> <span class="n">fileCount</span><span class="p">,</span> <span class="n">NSUInteger</span> <span class="n">totalSize</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDImageCacheCalculateSizeBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">UInt</span><span class="p">,</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCacheDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -850,14 +831,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSString</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="p">(</span><span class="o">^</span><span class="n">SDImageCacheAdditionalCachePathBlock</span><span class="p">)(</span><span class="n">NSString</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">key</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDImageCacheAdditionalCachePathBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCacheDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -884,14 +860,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDImageCacheQueryCompletionBlock</span><span class="p">)(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">image</span><span class="p">,</span> <span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">data</span><span class="p">,</span> <span class="n"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span> <span class="n">cacheType</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDImageCacheQueryCompletionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">UIImage</span><span class="p">?,</span> <span class="kt">Data</span><span class="p">?,</span> <span class="kt"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCacheDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -918,14 +889,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDImageCacheContainsCompletionBlock</span><span class="p">)(</span><span class="n"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span> <span class="n">containsCacheType</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDImageCacheContainsCompletionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCacheDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -952,14 +918,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSString</span> <span class="o">*</span> <span class="n">SDImageCoderOption</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">SDImageCoderOption</span> <span class="p">:</span> <span class="n">_ObjectiveCBridgeable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="n">_SwiftNewtypeWrapper</span><span class="p">,</span> <span class="kt">RawRepresentable</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoder.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -988,7 +949,7 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoder.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1017,7 +978,7 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoder.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1044,14 +1005,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDImageLoaderProgressBlock</span><span class="p">)(</span><span class="n">NSInteger</span> <span class="n">receivedSize</span><span class="p">,</span> <span class="n">NSInteger</span> <span class="n">expectedSize</span><span class="p">,</span> <span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">targetURL</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDImageLoaderProgressBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">URL</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageLoader.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageLoader.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1078,14 +1034,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDImageLoaderCompletedBlock</span><span class="p">)(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">image</span><span class="p">,</span> <span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">data</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">error</span><span class="p">,</span> <span class="n">BOOL</span> <span class="n">finished</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDImageLoaderCompletedBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">UIImage</span><span class="p">?,</span> <span class="kt">Data</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?,</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageLoader.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageLoader.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1112,14 +1063,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSString</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">(</span><span class="o">^</span><span class="n">SDWebImageCacheKeyFilterBlock</span><span class="p">)(</span><span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">url</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageCacheKeyFilterBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">URL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageCacheKeyFilter.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageCacheKeyFilter.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1146,14 +1092,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">(</span><span class="o">^</span><span class="n">SDWebImageCacheSerializerBlock</span><span class="p">)(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">image</span><span class="p">,</span> <span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">data</span><span class="p">,</span> <span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">imageURL</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageCacheSerializerBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">UIImage</span><span class="p">,</span> <span class="kt">Data</span><span class="p">?,</span> <span class="kt">URL</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageCacheSerializer.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageCacheSerializer.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1180,14 +1121,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDWebImageNoParamsBlock</span><span class="p">)(</span><span class="kt">void</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageNoParamsBlock</span> <span class="o">=</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1214,14 +1150,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSString</span> <span class="o">*</span> <span class="n">SDWebImageContextOption</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">SDWebImageContextOption</span> <span class="p">:</span> <span class="n">_ObjectiveCBridgeable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="n">_SwiftNewtypeWrapper</span><span class="p">,</span> <span class="kt">RawRepresentable</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1250,7 +1181,7 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1279,7 +1210,7 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDefine.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageDefine.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1306,14 +1237,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n"><a href="Type%20Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderProgressBlock">SDImageLoaderProgressBlock</a></span> <span class="n">SDWebImageDownloaderProgressBlock</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageDownloaderProgressBlock</span> <span class="o">=</span> <span class="kt"><a href="Type%20Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderProgressBlock">SDImageLoaderProgressBlock</a></span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloader.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageDownloader.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1340,14 +1266,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n"><a href="Type%20Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderCompletedBlock">SDImageLoaderCompletedBlock</a></span> <span class="n">SDWebImageDownloaderCompletedBlock</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageDownloaderCompletedBlock</span> <span class="o">=</span> <span class="kt"><a href="Type%20Definitions.html#/c:SDImageLoader.h@T@SDImageLoaderCompletedBlock">SDImageLoaderCompletedBlock</a></span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloader.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageDownloader.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1374,14 +1295,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="p">(</span><span class="o">^</span><span class="n">SDWebImageDownloaderDecryptorBlock</span><span class="p">)(</span><span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">data</span><span class="p">,</span> <span class="n">NSURLResponse</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">response</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageDownloaderDecryptorBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Data</span><span class="p">,</span> <span class="kt">URLResponse</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderDecryptor.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageDownloaderDecryptor.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1408,14 +1324,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSURLRequest</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="p">(</span><span class="o">^</span><span class="n">SDWebImageDownloaderRequestModifierBlock</span><span class="p">)(</span><span class="n">NSURLRequest</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">request</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageDownloaderRequestModifierBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">URLRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span><span class="p">?</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderRequestModifier.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageDownloaderRequestModifier.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1442,14 +1353,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSURLResponse</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="p">(</span><span class="o">^</span><span class="n">SDWebImageDownloaderResponseModifierBlock</span><span class="p">)(</span><span class="n">NSURLResponse</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">response</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageDownloaderResponseModifierBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">URLResponse</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URLResponse</span><span class="p">?</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderResponseModifier.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageDownloaderResponseModifier.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1476,14 +1382,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDExternalCompletionBlock</span><span class="p">)(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">image</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">error</span><span class="p">,</span> <span class="n"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span> <span class="n">cacheType</span><span class="p">,</span> <span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">imageURL</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDExternalCompletionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">UIImage</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?,</span> <span class="kt"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">,</span> <span class="kt">URL</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1510,14 +1411,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDInternalCompletionBlock</span><span class="p">)(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">image</span><span class="p">,</span> <span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">data</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">error</span><span class="p">,</span> <span class="n"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span> <span class="n">cacheType</span><span class="p">,</span> <span class="n">BOOL</span> <span class="n">finished</span><span class="p">,</span> <span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">imageURL</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDInternalCompletionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">UIImage</span><span class="p">?,</span> <span class="kt">Data</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?,</span> <span class="kt"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">,</span> <span class="kt">Bool</span><span class="p">,</span> <span class="kt">URL</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1544,14 +1440,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n"><a href="Classes/SDWebImageOptionsResult.html">SDWebImageOptionsResult</a></span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">(</span><span class="o">^</span><span class="n">SDWebImageOptionsProcessorBlock</span><span class="p">)(</span><span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">url</span><span class="p">,</span> <span class="n"><a href="Enums/SDWebImageOptions.html">SDWebImageOptions</a></span> <span class="n">options</span><span class="p">,</span> <span class="n"><a href="Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">context</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageOptionsProcessorBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">URL</span><span class="p">?,</span> <span class="kt"><a href="Enums/SDWebImageOptions.html">SDWebImageOptions</a></span><span class="p">,</span> <span class="p">[</span><span class="kt"><a href="Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContextOption">SDWebImageContextOption</a></span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes/SDWebImageOptionsResult.html">SDWebImageOptionsResult</a></span><span class="p">?</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageOptionsProcessor.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageOptionsProcessor.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1578,14 +1469,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDWebImagePrefetcherProgressBlock</span><span class="p">)(</span><span class="n">NSUInteger</span> <span class="n">noOfFinishedUrls</span><span class="p">,</span> <span class="n">NSUInteger</span> <span class="n">noOfTotalUrls</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImagePrefetcherProgressBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">UInt</span><span class="p">,</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImagePrefetcher.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImagePrefetcher.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1612,14 +1498,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDWebImagePrefetcherCompletionBlock</span><span class="p">)(</span><span class="n">NSUInteger</span> <span class="n">noOfFinishedUrls</span><span class="p">,</span> <span class="n">NSUInteger</span> <span class="n">noOfSkippedUrls</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImagePrefetcherCompletionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">UInt</span><span class="p">,</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImagePrefetcher.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImagePrefetcher.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1646,14 +1527,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">UIViewAnimationOptions</span> <span class="n">SDWebImageAnimationOptions</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageAnimationOptions</span> <span class="o">=</span> <span class="kt">UIView</span><span class="o">.</span><span class="kt">AnimationOptions</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageTransition.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageTransition.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1680,14 +1556,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">SDWebImageTransitionPreparesBlock</span><span class="p">)(</span><span class="n">__kindof</span> <span class="n">UIView</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">view</span><span class="p">,</span> <span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">image</span><span class="p">,</span> <span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">imageData</span><span class="p">,</span> <span class="n"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span> <span class="n">cacheType</span><span class="p">,</span> <span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">imageURL</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageTransitionPreparesBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">UIView</span><span class="p">,</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="kt">Data</span><span class="p">?,</span> <span class="kt"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">,</span> <span class="kt">URL</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageTransition.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageTransition.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1714,14 +1585,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">SDWebImageTransitionAnimationsBlock</span><span class="p">)(</span><span class="n">__kindof</span> <span class="n">UIView</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">view</span><span class="p">,</span> <span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">image</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageTransitionAnimationsBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">UIView</span><span class="p">,</span> <span class="kt">UIImage</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageTransition.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageTransition.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1748,14 +1614,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">SDWebImageTransitionCompletionBlock</span><span class="p">)(</span><span class="n">BOOL</span> <span class="n">finished</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDWebImageTransitionCompletionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageTransition.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageTransition.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1782,14 +1643,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">UIRectCorner</span> <span class="n">SDRectCorner</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDRectCorner</span> <span class="o">=</span> <span class="kt">UIRectCorner</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/UIImage+Transform.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1816,14 +1672,9 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">SDSetImageBlock</span><span class="p">)(</span><span class="n">UIImage</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">image</span><span class="p">,</span> <span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">imageData</span><span class="p">,</span> <span class="n"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span> <span class="n">cacheType</span><span class="p">,</span> <span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">imageURL</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SDSetImageBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">UIImage</span><span class="p">?,</span> <span class="kt">Data</span><span class="p">?,</span> <span class="kt"><a href="Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">,</span> <span class="kt">URL</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIView+WebCache.h#L">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/UIView+WebCache.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1833,7 +1684,7 @@ For others (macOS/watchOS or iOS/tvOS 10-), these method use the <code>SDImageGr
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-04)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-05-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

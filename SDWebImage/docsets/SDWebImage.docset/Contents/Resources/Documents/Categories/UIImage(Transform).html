@@ -14,7 +14,7 @@
     <a title="UIImage(Transform) Category Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.7.0 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.8.0 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -254,6 +254,9 @@
                 <a href="../Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDImageCoderEncodeEmbedThumbnail">SDImageCoderEncodeEmbedThumbnail</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
               </li>
               <li class="nav-group-task">
@@ -339,6 +342,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextLoaderCachedImage">SDWebImageContextLoaderCachedImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextOriginalQueryCacheType">SDWebImageContextOriginalQueryCacheType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
@@ -691,11 +697,6 @@ You can specify a larger or smaller size than the image size. The image content 
                                     <span class="nf">scaleMode</span><span class="p">:(</span><span class="n"><a href="../Enums/SDImageScaleMode.html">SDImageScaleMode</a></span><span class="p">)</span><span class="nv">scaleMode</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sd_resizedImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">,</span> <span class="nv">scaleMode</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDImageScaleMode.html">SDImageScaleMode</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -733,7 +734,7 @@ You can specify a larger or smaller size than the image size. The image content 
                         <p>The new image with the given size.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L45">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/UIImage+Transform.h#L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -761,11 +762,6 @@ You can specify a larger or smaller size than the image size. The image content 
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nf">sd_croppedImageWithRect</span><span class="p">:(</span><span class="n">CGRect</span><span class="p">)</span><span class="nv">rect</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sd_croppedImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -791,7 +787,7 @@ You can specify a larger or smaller size than the image size. The image content 
                         <p>The new image with the cropping rect.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L53">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/UIImage+Transform.h#L53">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -821,11 +817,6 @@ You can specify a larger or smaller size than the image size. The image content 
                                           <span class="nf">borderWidth</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">borderWidth</span>
                                           <span class="nf">borderColor</span><span class="p">:</span>
                                               <span class="p">(</span><span class="n">nullable</span> <span class="n">UIColor</span> <span class="o">*</span><span class="p">)</span><span class="nv">borderColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sd_roundedCornerImage</span><span class="p">(</span><span class="n">withRadius</span> <span class="nv">cornerRadius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">corners</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:UIImage+Transform.h@T@SDRectCorner">SDRectCorner</a></span><span class="p">,</span> <span class="nv">borderWidth</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">borderColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -895,7 +886,7 @@ or height.</p>
                         <p>The new image with the round corner.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L70-L73">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/UIImage+Transform.h#L70-L73">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -922,11 +913,6 @@ or height.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nf">sd_rotatedImageWithAngle</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">angle</span>
                                        <span class="nf">fitSize</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">fitSize</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sd_rotatedImage</span><span class="p">(</span><span class="n">withAngle</span> <span class="nv">angle</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">fitSize</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -967,7 +953,7 @@ or height.</p>
                         <p>The new image with the rotation.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L83">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/UIImage+Transform.h#L83">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -994,11 +980,6 @@ or height.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nf">sd_flippedImageWithHorizontal</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">horizontal</span>
                                            <span class="nf">vertical</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">vertical</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sd_flippedImage</span><span class="p">(</span><span class="n">withHorizontal</span> <span class="nv">horizontal</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">vertical</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1038,7 +1019,7 @@ or height.</p>
                         <p>The new image with the flipping.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L92">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/UIImage+Transform.h#L92">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1079,11 +1060,6 @@ or height.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nf">sd_tintedImageWithColor</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIColor</span> <span class="o">*</span><span class="p">)</span><span class="nv">tintColor</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sd_tintedImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">tintColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1109,7 +1085,7 @@ or height.</p>
                         <p>The new image with the tint color.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L102">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/UIImage+Transform.h#L102">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1146,11 +1122,6 @@ or height.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIColor</span> <span class="o">*</span><span class="p">)</span><span class="nf">sd_colorAtPoint</span><span class="p">:(</span><span class="n">CGPoint</span><span class="p">)</span><span class="nv">point</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sd_color</span><span class="p">(</span><span class="n">at</span> <span class="nv">point</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIColor</span><span class="p">?</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1176,7 +1147,7 @@ or height.</p>
                         <p>The color for specify pixel, or nil if any error occur</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L112">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/UIImage+Transform.h#L112">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1213,11 +1184,6 @@ or height.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">UIColor</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">sd_colorsWithRect</span><span class="p">:(</span><span class="n">CGRect</span><span class="p">)</span><span class="nv">rect</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sd_colors</span><span class="p">(</span><span class="n">with</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">UIColor</span><span class="p">]?</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1243,7 +1209,7 @@ or height.</p>
                         <p>The color array for specify pixels, or nil if any error occur</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L122">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/UIImage+Transform.h#L122">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1284,11 +1250,6 @@ or height.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nf">sd_blurredImageWithRadius</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">blurRadius</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sd_blurredImage</span><span class="p">(</span><span class="n">withRadius</span> <span class="nv">blurRadius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1314,7 +1275,7 @@ or height.</p>
                         <p>The new image with blur effect, or nil if an error occurs (e.g. no enough memory).</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L133">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/UIImage+Transform.h#L133">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1340,11 +1301,6 @@ or height.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nf">sd_filteredImageWithFilter</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">CIFilter</span> <span class="o">*</span><span class="p">)</span><span class="nv">filter</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sd_filteredImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">filter</span><span class="p">:</span> <span class="kt">CIFilter</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1373,7 +1329,7 @@ or height.</p>
 enough memory).</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/UIImage+Transform.h#L143">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/UIImage+Transform.h#L143">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1383,7 +1339,7 @@ enough memory).</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-04)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-05-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

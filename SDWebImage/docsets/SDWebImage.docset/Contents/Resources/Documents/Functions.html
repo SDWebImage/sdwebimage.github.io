@@ -14,7 +14,7 @@
     <a title="Functions  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImage 5.7.0 Docs</a> (81% documented)</p>
+        <p><a href="index.html">SDWebImage 5.8.0 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -254,6 +254,9 @@
                 <a href="Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
               </li>
               <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDImageCoderEncodeEmbedThumbnail">SDImageCoderEncodeEmbedThumbnail</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
               </li>
               <li class="nav-group-task">
@@ -339,6 +342,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextLoaderCachedImage">SDWebImageContextLoaderCachedImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextOriginalQueryCacheType">SDWebImageContextOriginalQueryCacheType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
@@ -680,11 +686,6 @@
     <span class="n"><a href="Enums/SDWebImageOptions.html">SDWebImageOptions</a></span> <span class="n">options</span><span class="p">,</span> <span class="n"><a href="Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">context</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">SDImageCacheDecodeImageData</span><span class="p">(</span><span class="n">_</span> <span class="nv">imageData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="n">_</span> <span class="nv">cacheKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="Enums/SDWebImageOptions.html">SDWebImageOptions</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">context</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContextOption">SDWebImageContextOption</a></span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -746,7 +747,7 @@
                         <p>The decoded image for current image data query from cache</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h#L55">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCacheDefine.h#L55">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -774,14 +775,9 @@
                           <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="n">CGContextRef</span> <span class="n">_Nullable</span> <span class="n">SDGraphicsGetCurrentContext</span><span class="p">()</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">SDGraphicsGetCurrentContext</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">CGContext</span><span class="p">?</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageGraphics.h#L20">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageGraphics.h#L20">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -809,14 +805,9 @@
                           <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="kt">void</span> <span class="n">SDGraphicsBeginImageContext</span><span class="p">(</span><span class="n">CGSize</span> <span class="n">size</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">SDGraphicsBeginImageContext</span><span class="p">(</span><span class="n">_</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageGraphics.h#L22">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageGraphics.h#L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -845,14 +836,9 @@
                                                    <span class="n">CGFloat</span> <span class="n">scale</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">SDGraphicsBeginImageContextWithOptions</span><span class="p">(</span><span class="n">_</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">,</span> <span class="n">_</span> <span class="nv">opaque</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">scale</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageGraphics.h#L24">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageGraphics.h#L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -880,14 +866,9 @@
                           <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="kt">void</span> <span class="n">SDGraphicsEndImageContext</span><span class="p">()</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">SDGraphicsEndImageContext</span><span class="p">()</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageGraphics.h#L26">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageGraphics.h#L26">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -915,14 +896,9 @@
                           <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="n">UIImage</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">SDGraphicsGetImageFromCurrentImageContext</span><span class="p">()</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">SDGraphicsGetImageFromCurrentImageContext</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageGraphics.h#L28">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageGraphics.h#L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -968,11 +944,6 @@
                           <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="n">UIImage</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">SDImageLoaderDecodeImageData</span><span class="p">(</span>
     <span class="n">NSData</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">imageData</span><span class="p">,</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">imageURL</span><span class="p">,</span>
     <span class="n"><a href="Enums/SDWebImageOptions.html">SDWebImageOptions</a></span> <span class="n">options</span><span class="p">,</span> <span class="n"><a href="Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">context</span><span class="p">)</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">SDImageLoaderDecodeImageData</span><span class="p">(</span><span class="n">_</span> <span class="nv">imageData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="n">_</span> <span class="nv">imageURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="n">_</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="Enums/SDWebImageOptions.html">SDWebImageOptions</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">context</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContextOption">SDWebImageContextOption</a></span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1036,7 +1007,7 @@
                         <p>The decoded image for current image data load from the network</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageLoader.h#L37">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageLoader.h#L37">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1070,11 +1041,6 @@
     <span class="n">NSData</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">imageData</span><span class="p">,</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">imageURL</span><span class="p">,</span> <span class="n">BOOL</span> <span class="n">finished</span><span class="p">,</span>
     <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/SDWebImageOperation.html">SDWebImageOperation</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span> <span class="n">operation</span><span class="p">,</span> <span class="n"><a href="Enums/SDWebImageOptions.html">SDWebImageOptions</a></span> <span class="n">options</span><span class="p">,</span>
     <span class="n"><a href="Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">context</span><span class="p">)</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">SDImageLoaderDecodeProgressiveImageData</span><span class="p">(</span><span class="n">_</span> <span class="nv">imageData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="n">_</span> <span class="nv">imageURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="n">_</span> <span class="nv">finished</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">operation</span><span class="p">:</span> <span class="kt"><a href="Protocols/SDWebImageOperation.html">SDWebImageOperation</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="Enums/SDWebImageOptions.html">SDWebImageOptions</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">context</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContextOption">SDWebImageContextOption</a></span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1162,7 +1128,7 @@
                         <p>The decoded progressive image for current image data load from the network</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageLoader.h#L51">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageLoader.h#L51">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1189,11 +1155,6 @@
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">SDTransformedKeyForKey</span><span class="p">(</span>
     <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">key</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">transformerKey</span><span class="p">)</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">SDTransformedKeyForKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">transformerKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1233,7 +1194,7 @@
                         <p>The transformed cache key</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h#L19">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageTransformer.h#L19">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1266,11 +1227,6 @@
                           <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">SDThumbnailedKeyForKey</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">key</span><span class="p">,</span>
                                                   <span class="n">CGSize</span> <span class="n">thumbnailPixelSize</span><span class="p">,</span>
                                                   <span class="n">BOOL</span> <span class="n">preserveAspectRatio</span><span class="p">)</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">SDThumbnailedKeyForKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">thumbnailPixelSize</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">,</span> <span class="n">_</span> <span class="nv">preserveAspectRatio</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1322,7 +1278,7 @@
                         <p>The thumbnailed cache key</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h#L29">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageTransformer.h#L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1365,11 +1321,6 @@ However, you can also provide custom scale factor as well, see <code><a href="Co
                           <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="n">CGFloat</span> <span class="n">SDImageScaleFactorForKey</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">key</span><span class="p">)</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">SDImageScaleFactorForKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1395,7 +1346,7 @@ However, you can also provide custom scale factor as well, see <code><a href="Co
                         <p>The scale factor for image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDefine.h#L26">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageDefine.h#L26">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1428,11 +1379,6 @@ This works for <code>UIImage</code>(UIKit) or <code>NSImage</code>(AppKit). And 
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="n">UIImage</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">SDScaledImageForKey</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">key</span><span class="p">,</span>
                                               <span class="n">UIImage</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">image</span><span class="p">)</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">SDScaledImageForKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1472,7 +1418,7 @@ This works for <code>UIImage</code>(UIKit) or <code>NSImage</code>(AppKit). And 
                         <p>The scaled image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDefine.h#L37">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageDefine.h#L37">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1500,11 +1446,6 @@ This works for <code>UIImage</code>(UIKit) or <code>NSImage</code>(AppKit). And 
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="n">UIImage</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">SDScaledImageForScaleFactor</span><span class="p">(</span><span class="n">CGFloat</span> <span class="n">scale</span><span class="p">,</span>
                                                       <span class="n">UIImage</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">image</span><span class="p">)</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">SDScaledImageForScaleFactor</span><span class="p">(</span><span class="n">_</span> <span class="nv">scale</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1544,7 +1485,7 @@ This works for <code>UIImage</code>(UIKit) or <code>NSImage</code>(AppKit). And 
                         <p>The scaled image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDefine.h#L47">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageDefine.h#L47">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1554,7 +1495,7 @@ This works for <code>UIImage</code>(UIKit) or <code>NSImage</code>(AppKit). And 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-04)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-05-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

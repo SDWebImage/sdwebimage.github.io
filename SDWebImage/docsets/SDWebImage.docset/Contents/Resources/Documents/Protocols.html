@@ -14,7 +14,7 @@
     <a title="Protocols  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImage 5.7.0 Docs</a> (81% documented)</p>
+        <p><a href="index.html">SDWebImage 5.8.0 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -254,6 +254,9 @@
                 <a href="Constants.html#/c:@SDImageCoderEncodeCompressionQuality">SDImageCoderEncodeCompressionQuality</a>
               </li>
               <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDImageCoderEncodeEmbedThumbnail">SDImageCoderEncodeEmbedThumbnail</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDImageCoderEncodeFirstFrameOnly">SDImageCoderEncodeFirstFrameOnly</a>
               </li>
               <li class="nav-group-task">
@@ -339,6 +342,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextLoaderCachedImage">SDWebImageContextLoaderCachedImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextOriginalQueryCacheType">SDWebImageContextOriginalQueryCacheType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextOriginalStoreCacheType">SDWebImageContextOriginalStoreCacheType</a>
@@ -674,14 +680,9 @@
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDAnimatedImage</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDAnimatedImageProvider.html">SDAnimatedImageProvider</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDAnimatedImageProtocol</span> <span class="p">:</span> <span class="kt"><a href="Protocols/SDAnimatedImageProvider.html">SDAnimatedImageProvider</a></span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDAnimatedImage.h#L16-L66">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDAnimatedImage.h#L16-L66">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -710,14 +711,9 @@
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDDiskCache</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDDiskCacheProtocol</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDDiskCache.h#L15-L120">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDDiskCache.h#L15-L120">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -748,14 +744,9 @@ However, if your own cache implementation contains more advanced feature beyond 
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc"><a href="Classes/SDImageCache.html">SDImageCache</a></span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt"><a href="Classes/SDImageCache.html">SDImageCache</a></span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCacheDefine.h#L62-L143">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCacheDefine.h#L62-L143">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -803,14 +794,9 @@ These methods are all required to implement.</p>
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDImageCoder</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDImageCoder</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h#L95-L145">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoder.h#L104-L154">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -858,14 +844,9 @@ These methods are all required to implement.</p>
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDProgressiveImageCoder</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageCoder.html">SDImageCoder</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDProgressiveImageCoder</span> <span class="p">:</span> <span class="kt"><a href="Protocols/SDImageCoder.html">SDImageCoder</a></span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h#L153-L190">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoder.h#L162-L199">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -907,14 +888,9 @@ These methods are all required to implement.</p>
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDAnimatedImageProvider</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDAnimatedImageProvider</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h#L196-L237">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoder.h#L205-L246">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -956,14 +932,9 @@ These methods are all required to implement.</p>
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDAnimatedImageCoder</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SDImageCoder.html">SDImageCoder</a></span><span class="p">,</span> <span class="n"><a href="Protocols/SDAnimatedImageProvider.html">SDAnimatedImageProvider</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDAnimatedImageCoder</span> <span class="p">:</span> <span class="kt"><a href="Protocols/SDAnimatedImageProvider.html">SDAnimatedImageProvider</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/SDImageCoder.html">SDImageCoder</a></span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageCoder.h#L243-L257">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoder.h#L252-L266">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1012,14 +983,9 @@ If you directlly get the image instance using some third-party SDKs, such as ima
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDImageLoader</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDImageLoader</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageLoader.h#L61-L101">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageLoader.h#L61-L101">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1054,14 +1020,9 @@ You can provide transformer to cache and manager (Through the <code>transformer<
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDImageTransformer</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDImageTransformer</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDImageTransformer.h#L37-L56">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageTransformer.h#L37-L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1090,14 +1051,9 @@ You can provide transformer to cache and manager (Through the <code>transformer<
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDMemoryCache</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDMemoryCacheProtocol</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDMemoryCache.h#L15-L69">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDMemoryCache.h#L15-L69">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1127,14 +1083,9 @@ We can use a block to specify the cache key filter. But Using protocol can make 
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDWebImageCacheKeyFilter</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDWebImageCacheKeyFilterProtocol</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageCacheKeyFilter.h#L18-L22">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageCacheKeyFilter.h#L18-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1164,14 +1115,9 @@ We can use a block to specify the cache serializer. But Using protocol can make 
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDWebImageCacheSerializer</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDWebImageCacheSerializerProtocol</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageCacheSerializer.h#L18-L26">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageCacheSerializer.h#L18-L26">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1201,14 +1147,9 @@ We can use a block to specify the downloader decryptor. But Using protocol can m
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDWebImageDownloaderDecryptor</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDWebImageDownloaderDecryptorProtocol</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderDecryptor.h#L18-L26">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageDownloaderDecryptor.h#L18-L26">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1244,14 +1185,9 @@ For the description about these methods, see <code>SDWebImageDownloaderOperation
                                          <span class="n">NSURLSessionDataDelegate</span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDWebImageDownloaderOperationProtocol</span> <span class="p">:</span> <span class="kt">URLSessionDataDelegate</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderOperation.h#L18-L43">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L18-L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1281,14 +1217,9 @@ We can use a block to specify the downloader request modifier. But Using protoco
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDWebImageDownloaderRequestModifier</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDWebImageDownloaderRequestModifierProtocol</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderRequestModifier.h#L18-L25">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageDownloaderRequestModifier.h#L18-L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1318,14 +1249,9 @@ We can use a block to specify the downloader response modifier. But Using protoc
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDWebImageDownloaderResponseModifier</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDWebImageDownloaderResponseModifierProtocol</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageDownloaderResponseModifier.h#L18-L25">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageDownloaderResponseModifier.h#L18-L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1355,14 +1281,9 @@ All of these methods are called from main queue.</p>
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDWebImageIndicator</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDWebImageIndicator</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageIndicator.h#L17-L45">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageIndicator.h#L17-L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1391,14 +1312,9 @@ All of these methods are called from main queue.</p>
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDWebImageManagerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDWebImageManagerDelegate</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageManager.h#L50-L74">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageManager.h#L50-L74">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1427,14 +1343,9 @@ All of these methods are called from main queue.</p>
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDWebImageOperation</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDWebImageOperation</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageOperation.h#L12-L16">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageOperation.h#L12-L16">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1465,14 +1376,9 @@ Implements the protocol to have a global control for each indivadual image reque
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDWebImageOptionsProcessor</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDWebImageOptionsProcessorProtocol</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImageOptionsProcessor.h#L48-L62">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageOptionsProcessor.h#L48-L62">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1501,14 +1407,9 @@ Implements the protocol to have a global control for each indivadual image reque
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDWebImagePrefetcherDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SDWebImagePrefetcherDelegate</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.7.0/build/Release-iphonesimulator/include/SDWebImage/SDWebImagePrefetcher.h#L34-L56">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImagePrefetcher.h#L34-L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1518,7 +1419,7 @@ Implements the protocol to have a global control for each indivadual image reque
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-04-04)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-05-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
