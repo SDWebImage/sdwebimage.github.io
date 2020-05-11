@@ -22,7 +22,12 @@ This documentation page now hosting both Core repo and other related framework's
 + Clone both SDWebImage and this repo
 + Place them in the same folder
 + Go the SDWebImage folder
-+ Firstly, run `jazzy` command once, it will run `xcodebuild`, ignore the error output (Seems jazzy's issue)
++ Firstly, run the following command, it will run `xcodebuild`, ignore the error output (Seems jazzy's issue)
+
+```
+jazzy -x -scheme,SDWebImage
+```
+
 + Next, run the following command, remember to change the version string:
 
 ```
@@ -30,8 +35,8 @@ jazzy \
   --objc \
   --author SDWebImage \
   --github_url https://github.com/SDWebImage/SDWebImage \
-  --github-file-prefix https://github.com/SDWebImage/SDWebImage/tree/5.2.0 \
-  --module-version 5.2.0 \
+  --github-file-prefix https://github.com/SDWebImage/SDWebImage/tree/5.8.0 \
+  --module-version 5.8.0 \
   --umbrella-header WebImage/SDWebImage.h \
   --documentation=Docs/\*.md \
   --undocumented-text "" \
