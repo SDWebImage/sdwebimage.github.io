@@ -14,7 +14,7 @@
     <a title="SDImageCache Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.8.0 Docs</a> (82% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.8.3 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -678,7 +678,7 @@ However, if your own cache implementation contains more advanced feature beyond 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Query the cached image from image cache for given key. The operation can be used to cancel the query.
-If image is cached in memory, completion is called synchronously, else aynchronously and depends on the options arg (See <code>SDWebImageQueryDiskSync</code>)</p>
+If image is cached in memory, completion is called synchronously, else asynchronously and depends on the options arg (See <code>SDWebImageQueryDiskSync</code>)</p>
 
                       </div>
                       <div class="declaration">
@@ -690,6 +690,11 @@ If image is cached in memory, completion is called synchronously, else aynchrono
              <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span><span class="p">)</span><span class="nv">options</span>
              <span class="nf">context</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">context</span>
           <span class="nf">completion</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a></span><span class="p">)</span><span class="nv">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">queryImage</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">context</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContextOption">SDWebImageContextOption</a></span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/SDWebImageOperation.html">SDWebImageOperation</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -753,7 +758,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                         <p>The operation for this query</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCacheDefine.h#L75-L78">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCacheDefine.h#L75-L78">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -772,7 +777,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Query the cached image from image cache for given key. The operation can be used to cancel the query.
-If image is cached in memory, completion is called synchronously, else aynchronously and depends on the options arg (See <code>SDWebImageQueryDiskSync</code>)</p>
+If image is cached in memory, completion is called synchronously, else asynchronously and depends on the options arg (See <code>SDWebImageQueryDiskSync</code>)</p>
 
                       </div>
                       <div class="declaration">
@@ -785,6 +790,11 @@ If image is cached in memory, completion is called synchronously, else aynchrono
              <span class="nf">context</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContext">SDWebImageContext</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">context</span>
            <span class="nf">cacheType</span><span class="p">:(</span><span class="n"><a href="../Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">)</span><span class="nv">cacheType</span>
           <span class="nf">completion</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a></span><span class="p">)</span><span class="nv">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">queryImage</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDWebImageOptions.html">SDWebImageOptions</a></span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">context</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageContextOption">SDWebImageContextOption</a></span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="nv">cacheType</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheQueryCompletionBlock">SDImageCacheQueryCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/SDWebImageOperation.html">SDWebImageOperation</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -836,7 +846,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                               </td>
                               <td>
                                 <div>
-                                  <p>Specify where to query the cache from. By default we use <code>.all</code>, which means both memory cache and disk cache. You can choose to query memory only or disk only as well. Pass <code>.none</code> is invalid and callback with nil immediatelly.</p>
+                                  <p>Specify where to query the cache from. By default we use <code>.all</code>, which means both memory cache and disk cache. You can choose to query memory only or disk only as well. Pass <code>.none</code> is invalid and callback with nil immediately.</p>
                                 </div>
                               </td>
                             </tr>
@@ -860,7 +870,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                         <p>The operation for this query</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCacheDefine.h#L91-L95">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCacheDefine.h#L91-L95">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -878,7 +888,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Store the image into image cache for the given key. If cache type is memory only, completion is called synchronously, else aynchronously.</p>
+                        <p>Store the image into image cache for the given key. If cache type is memory only, completion is called synchronously, else asynchronously.</p>
 
                       </div>
                       <div class="declaration">
@@ -890,6 +900,11 @@ If image is cached in memory, completion is called synchronously, else aynchrono
             <span class="nf">forKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span>
          <span class="nf">cacheType</span><span class="p">:(</span><span class="n"><a href="../Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">)</span><span class="nv">cacheType</span>
         <span class="nf">completion</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">)</span><span class="nv">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">store</span><span class="p">(</span><span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="nv">imageData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span> <span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">cacheType</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -961,7 +976,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCacheDefine.h#L106-L110">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCacheDefine.h#L106-L110">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -979,7 +994,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Remove the image from image cache for the given key. If cache type is memory only, completion is called synchronously, else aynchronously.</p>
+                        <p>Remove the image from image cache for the given key. If cache type is memory only, completion is called synchronously, else asynchronously.</p>
 
                       </div>
                       <div class="declaration">
@@ -989,6 +1004,11 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeImageForKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span>
                 <span class="nf">cacheType</span><span class="p">:(</span><span class="n"><a href="../Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">)</span><span class="nv">cacheType</span>
                <span class="nf">completion</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">)</span><span class="nv">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removeImage</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">cacheType</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1036,7 +1056,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCacheDefine.h#L119-L121">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCacheDefine.h#L119-L121">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1054,7 +1074,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Check if image cache contains the image for the given key (does not load the image). If image is cached in memory, completion is called synchronously, else aynchronously.</p>
+                        <p>Check if image cache contains the image for the given key (does not load the image). If image is cached in memory, completion is called synchronously, else asynchronously.</p>
 
                       </div>
                       <div class="declaration">
@@ -1065,6 +1085,11 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                   <span class="nf">cacheType</span><span class="p">:(</span><span class="n"><a href="../Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">)</span><span class="nv">cacheType</span>
                  <span class="nf">completion</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheContainsCompletionBlock">SDImageCacheContainsCompletionBlock</a></span><span class="p">)</span>
                                 <span class="n">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">containsImage</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">cacheType</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDImageCacheDefine.h@T@SDImageCacheContainsCompletionBlock">SDImageCacheContainsCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1112,7 +1137,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCacheDefine.h#L130-L132">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCacheDefine.h#L130-L132">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1130,7 +1155,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Clear all the cached images for image cache. If cache type is memory only, completion is called synchronously, else aynchronously.</p>
+                        <p>Clear all the cached images for image cache. If cache type is memory only, completion is called synchronously, else asynchronously.</p>
 
                       </div>
                       <div class="declaration">
@@ -1139,6 +1164,11 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">clearWithCacheType</span><span class="p">:(</span><span class="n"><a href="../Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">)</span><span class="nv">cacheType</span>
                 <span class="nf">completion</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">)</span><span class="nv">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">clear</span><span class="p">(</span><span class="n">with</span> <span class="nv">cacheType</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDImageCacheType.html">SDImageCacheType</a></span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDWebImageDefine.h@T@SDWebImageNoParamsBlock">SDWebImageNoParamsBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1174,7 +1204,7 @@ If image is cached in memory, completion is called synchronously, else aynchrono
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCacheDefine.h#L140-L141">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCacheDefine.h#L140-L141">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1184,8 +1214,8 @@ If image is cached in memory, completion is called synchronously, else aynchrono
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-05-11)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-07-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

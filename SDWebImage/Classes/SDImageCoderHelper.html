@@ -14,7 +14,7 @@
     <a title="SDImageCoderHelper Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.8.0 Docs</a> (82% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.8.3 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -688,6 +688,11 @@ For AppKit, NSImage does not support animates other than GIF. This will try to e
     <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDImageFrame.html">SDImageFrame</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">frames</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">animatedImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">frames</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDImageFrame.html">SDImageFrame</a></span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -713,7 +718,7 @@ For AppKit, NSImage does not support animates other than GIF. This will try to e
                         <p>A animated image for rendering on UIImageView(UIKit) or NSImageView(AppKit)</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoderHelper.h#L26">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L26">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -744,6 +749,11 @@ For AppKit, NSImage does not support animates other than GIF. This will try to d
     <span class="p">(</span><span class="n">UIImage</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">animatedImage</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">frames</span><span class="p">(</span><span class="n">from</span> <span class="nv">animatedImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDImageFrame.html">SDImageFrame</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -769,7 +779,7 @@ For AppKit, NSImage does not support animates other than GIF. This will try to d
                         <p>The frames array</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoderHelper.h#L36">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -800,13 +810,18 @@ Because it&rsquo;s shared, you should not retain or release this object.</p>
                           <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">CGColorSpaceRef</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">colorSpaceGetDeviceRGB</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">colorSpaceGetDeviceRGB</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">CGColorSpace</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
                         <p>The device-dependent RGB color space</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoderHelper.h#L46">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -834,6 +849,11 @@ Because it&rsquo;s shared, you should not retain or release this object.</p>
                           <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">CGImageContainsAlpha</span><span class="p">:(</span><span class="n">CGImageRef</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">cgImage</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">cgImageContainsAlpha</span><span class="p">(</span><span class="n">_</span> <span class="nv">cgImage</span><span class="p">:</span> <span class="kt">CGImage</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -859,7 +879,7 @@ Because it&rsquo;s shared, you should not retain or release this object.</p>
                         <p>Return YES if CGImage contains alpha channel, otherwise return NO</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoderHelper.h#L54">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -893,6 +913,11 @@ It will detect whether image contains alpha channel, then create a new bitmap co
                           <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">CGImageRef</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">CGImageCreateDecoded</span><span class="p">:(</span><span class="n">CGImageRef</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">cgImage</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">cgImageCreateDecoded</span><span class="p">(</span><span class="n">_</span> <span class="nv">cgImage</span><span class="p">:</span> <span class="kt">CGImage</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGImage</span><span class="p">?</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -918,7 +943,7 @@ It will detect whether image contains alpha channel, then create a new bitmap co
                         <p>A new created decoded image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoderHelper.h#L64">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -947,6 +972,11 @@ It will detect whether image contains alpha channel, then create a new bitmap co
                           <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">CGImageRef</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">CGImageCreateDecoded</span><span class="p">:(</span><span class="n">CGImageRef</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">cgImage</span>
                                  <span class="nf">orientation</span><span class="p">:</span>
                                      <span class="p">(</span><span class="n">CGImagePropertyOrientation</span><span class="p">)</span><span class="nv">orientation</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">cgImageCreateDecoded</span><span class="p">(</span><span class="n">_</span> <span class="nv">cgImage</span><span class="p">:</span> <span class="kt">CGImage</span><span class="p">,</span> <span class="nv">orientation</span><span class="p">:</span> <span class="kt">CGImagePropertyOrientation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGImage</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -986,7 +1016,7 @@ It will detect whether image contains alpha channel, then create a new bitmap co
                         <p>A new created decoded image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoderHelper.h#L74">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L74">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1014,6 +1044,11 @@ It will detect whether the image size matching the scale size, if not, stretch t
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">CGImageRef</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">CGImageCreateScaled</span><span class="p">:(</span><span class="n">CGImageRef</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">cgImage</span>
                                        <span class="nf">size</span><span class="p">:(</span><span class="n">CGSize</span><span class="p">)</span><span class="nv">size</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">cgImageCreateScaled</span><span class="p">(</span><span class="n">_</span> <span class="nv">cgImage</span><span class="p">:</span> <span class="kt">CGImage</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGImage</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1053,7 +1088,7 @@ It will detect whether the image size matching the scale size, if not, stretch t
                         <p>A new created scaled image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoderHelper.h#L84">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L84">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1081,6 +1116,11 @@ It will detect whether the image size matching the scale size, if not, stretch t
                           <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">UIImage</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nf">decodedImageWithImage</span><span class="p">:(</span><span class="n">UIImage</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">image</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">decodedImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1106,7 +1146,7 @@ It will detect whether the image size matching the scale size, if not, stretch t
                         <p>The decoded image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoderHelper.h#L91">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L91">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1134,6 +1174,11 @@ It will detect whether the image size matching the scale size, if not, stretch t
                           <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">UIImage</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nf">decodedAndScaledDownImageWithImage</span><span class="p">:</span>
                           <span class="p">(</span><span class="n">UIImage</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">image</span>
                                               <span class="nf">limitBytes</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">bytes</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">decodedAndScaledDownImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="n">limitBytes</span> <span class="nv">bytes</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1173,7 +1218,7 @@ It will detect whether the image size matching the scale size, if not, stretch t
                         <p>The decoded and probably scaled down image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoderHelper.h#L100">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L100">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1191,7 +1236,7 @@ It will detect whether the image size matching the scale size, if not, stretch t
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Control the default limit bytes to scale down larget images.
+                        <p>Control the default limit bytes to scale down largest images.
 This value must be larger than or equal to 1MB. Defaults to 60MB on iOS/tvOS, 90MB on macOS, 30MB on watchOS.</p>
 
                       </div>
@@ -1202,9 +1247,14 @@ This value must be larger than or equal to 1MB. Defaults to 60MB on iOS/tvOS, 90
                           <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">class</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">defaultScaleDownLimitBytes</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="k">var</span> <span class="nv">defaultScaleDownLimitBytes</span><span class="p">:</span> <span class="kt">UInt</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoderHelper.h#L106">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L106">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1233,6 +1283,11 @@ This value must be larger than or equal to 1MB. Defaults to 60MB on iOS/tvOS, 90
     <span class="p">(</span><span class="n">CGImagePropertyOrientation</span><span class="p">)</span><span class="nv">exifOrientation</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">imageOrientation</span><span class="p">(</span><span class="n">from</span> <span class="nv">exifOrientation</span><span class="p">:</span> <span class="kt">CGImagePropertyOrientation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="o">.</span><span class="kt">Orientation</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1258,7 +1313,7 @@ This value must be larger than or equal to 1MB. Defaults to 60MB on iOS/tvOS, 90
                         <p>iOS orientation</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoderHelper.h#L115">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L115">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1287,6 +1342,11 @@ This value must be larger than or equal to 1MB. Defaults to 60MB on iOS/tvOS, 90
     <span class="p">(</span><span class="n">UIImageOrientation</span><span class="p">)</span><span class="nv">imageOrientation</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">exifOrientation</span><span class="p">(</span><span class="n">from</span> <span class="nv">imageOrientation</span><span class="p">:</span> <span class="kt">UIImage</span><span class="o">.</span><span class="kt">Orientation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGImagePropertyOrientation</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1312,7 +1372,7 @@ This value must be larger than or equal to 1MB. Defaults to 60MB on iOS/tvOS, 90
                         <p>EXIF orientation</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDImageCoderHelper.h#L123">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L123">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1322,8 +1382,8 @@ This value must be larger than or equal to 1MB. Defaults to 60MB on iOS/tvOS, 90
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-05-11)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-07-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

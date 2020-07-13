@@ -14,7 +14,7 @@
     <a title="SDWebImageManagerDelegate Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.8.0 Docs</a> (82% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.8.3 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -686,6 +686,11 @@
     <span class="nf">shouldDownloadImageForURL</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">imageURL</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">imageManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">imageManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDWebImageManager.html">SDWebImageManager</a></span><span class="p">,</span> <span class="n">shouldDownloadImageFor</span> <span class="nv">imageURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -723,7 +728,7 @@
                         <p>Return NO to prevent the downloading of the image on cache misses. If not implemented, YES is implied.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageManager.h#L62">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDWebImageManager.h#L62">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -755,6 +760,11 @@
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">imageManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDWebImageManager.html">SDWebImageManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">imageManager</span>
     <span class="nf">shouldBlockFailedURL</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">imageURL</span>
                <span class="nf">withError</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">imageManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">imageManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDWebImageManager.html">SDWebImageManager</a></span><span class="p">,</span> <span class="n">shouldBlockFailedURL</span> <span class="nv">imageURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="n">withError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -806,7 +816,7 @@
                         <p>Whether to block this url or not. Return YES to mark this URL as failed.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/SDWebImageManager.h#L72">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDWebImageManager.h#L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -816,8 +826,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-05-11)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-07-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

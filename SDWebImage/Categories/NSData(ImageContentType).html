@@ -14,7 +14,7 @@
     <a title="NSData(ImageContentType) Category Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.8.0 Docs</a> (82% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.8.3 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -685,6 +685,11 @@
                           <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n"><a href="../Type%20Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></span><span class="p">)</span><span class="nf">sd_imageFormatForImageData</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">sd_imageFormat</span><span class="p">(</span><span class="n">forImageData</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Type%20Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -710,7 +715,7 @@
                         <p>the image format as <code><a href="../Type%20Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></code> (enum)</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/NSData+ImageContentType.h#L41">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/NSData+ImageContentType.h#L41">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -743,6 +748,11 @@
                           <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">CFStringRef</span><span class="p">)</span><span class="nf">sd_UTTypeFromImageFormat</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></span><span class="p">)</span><span class="nv">format</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">sd_UTType</span><span class="p">(</span><span class="n">from</span> <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CFString</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -768,7 +778,7 @@
                         <p>The UTType as CFStringRef</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/NSData+ImageContentType.h#L50">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/NSData+ImageContentType.h#L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -786,7 +796,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Convert UTTyppe to SDImageFormat</p>
+                        <p>Convert UTType to SDImageFormat</p>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     For unknown type, <code><a href="../Constants.html#/c:NSData+ImageContentType.h@SDImageFormatUndefined">SDImageFormatUndefined</a></code> will return
@@ -799,6 +809,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n"><a href="../Type%20Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></span><span class="p">)</span><span class="nf">sd_imageFormatFromUTType</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">CFStringRef</span><span class="p">)</span><span class="nv">uttype</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">sd_imageFormat</span><span class="p">(</span><span class="n">fromUTType</span> <span class="nv">uttype</span><span class="p">:</span> <span class="kt">CFString</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Type%20Definitions.html#/c:NSData+ImageContentType.h@T@SDImageFormat">SDImageFormat</a></span></code></pre>
 
                         </div>
                       </div>
@@ -826,7 +841,7 @@
                         <p>The Format as SDImageFormat</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.0/SDWebImage/Core/NSData+ImageContentType.h#L59">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/NSData+ImageContentType.h#L59">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -836,8 +851,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-05-11)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-07-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
