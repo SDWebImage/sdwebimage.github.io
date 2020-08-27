@@ -14,7 +14,7 @@
     <a title="UIView(WebCache) Category Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.8.3 Docs</a> (82% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.9.0 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -112,6 +112,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/SDImageAPNGCoder.html">SDImageAPNGCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageAWebPCoder.html">SDImageAWebPCoder</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/SDImageBlurTransformer.html">SDImageBlurTransformer</a>
@@ -697,7 +700,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/UIView+WebCache.h#L32">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/UIView+WebCache.h#L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -716,7 +719,8 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Get the current image operation key. Operation key is used to identify the different queries for one view instance (like UIButton).
-See more about this in <code><a href="../Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a></code>.</p>
+See more about this in <code><a href="../Constants.html#/c:@SDWebImageContextSetImageOperationKey">SDWebImageContextSetImageOperationKey</a></code>.
+If you cancel current image load, the key will be set to nil.</p>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     You can use method <code>UIView+WebCacheOperation</code> to investigate different queries&rsquo; operation.
@@ -738,7 +742,7 @@ See more about this in <code><a href="../Constants.html#/c:@SDWebImageContextSet
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/UIView+WebCache.h#L39">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/UIView+WebCache.h#L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -787,7 +791,7 @@ The <code>totalUnitCount</code> and <code>completedUnitCount</code> will be rese
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/UIView+WebCache.h#L48">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/UIView+WebCache.h#L49">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -934,7 +938,7 @@ In case of error the image parameter is nil and the third parameter may contain 
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/UIView+WebCache.h#L74-L80">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/UIView+WebCache.h#L75-L81">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -969,7 +973,7 @@ In case of error the image parameter is nil and the third parameter may contain 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/UIView+WebCache.h#L85">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/UIView+WebCache.h#L86">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1018,7 +1022,7 @@ If you specify nil, do not do transition. Defaults to nil.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/UIView+WebCache.h#L95">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/UIView+WebCache.h#L96">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1072,7 +1076,7 @@ The setter will remove the old indicator view and add new indicator view to curr
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/UIView+WebCache.h#L104">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/UIView+WebCache.h#L105">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1082,7 +1086,7 @@ The setter will remove the old indicator view and add new indicator view to curr
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-07-13)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-08-27)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

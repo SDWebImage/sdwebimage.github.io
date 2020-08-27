@@ -204,6 +204,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDImageAWebPCoder.h",
+      "line": 21,
+      "symbol": "SDImageAWebPCoder.sharedCoder",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDImageCacheConfig.h",
       "line": 62,
       "symbol": "SDImageCacheConfig.shouldUseWeakMemoryCache",
@@ -324,7 +331,7 @@
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDImageHEICCoder.h",
-      "line": 22,
+      "line": 23,
       "symbol": "SDImageHEICCoder.sharedCoder",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"

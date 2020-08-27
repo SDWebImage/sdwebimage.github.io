@@ -14,7 +14,7 @@
     <a title="SDImageCoderHelper Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.8.3 Docs</a> (82% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.9.0 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -112,6 +112,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/SDImageAPNGCoder.html">SDImageAPNGCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDImageAWebPCoder.html">SDImageAWebPCoder</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/SDImageBlurTransformer.html">SDImageBlurTransformer</a>
@@ -718,7 +721,7 @@ For AppKit, NSImage does not support animates other than GIF. This will try to e
                         <p>A animated image for rendering on UIImageView(UIKit) or NSImageView(AppKit)</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L26">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCoderHelper.h#L26">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -779,7 +782,7 @@ For AppKit, NSImage does not support animates other than GIF. This will try to d
                         <p>The frames array</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L36">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCoderHelper.h#L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -821,7 +824,7 @@ Because it&rsquo;s shared, you should not retain or release this object.</p>
                         <p>The device-dependent RGB color space</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L46">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCoderHelper.h#L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -879,7 +882,7 @@ Because it&rsquo;s shared, you should not retain or release this object.</p>
                         <p>Return YES if CGImage contains alpha channel, otherwise return NO</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L54">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCoderHelper.h#L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -943,7 +946,7 @@ It will detect whether image contains alpha channel, then create a new bitmap co
                         <p>A new created decoded image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L64">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCoderHelper.h#L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1016,7 +1019,7 @@ It will detect whether image contains alpha channel, then create a new bitmap co
                         <p>A new created decoded image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L74">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCoderHelper.h#L74">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1088,7 +1091,7 @@ It will detect whether the image size matching the scale size, if not, stretch t
                         <p>A new created scaled image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L84">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCoderHelper.h#L84">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1146,7 +1149,7 @@ It will detect whether the image size matching the scale size, if not, stretch t
                         <p>The decoded image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L91">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCoderHelper.h#L91">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1164,7 +1167,12 @@ It will detect whether the image size matching the scale size, if not, stretch t
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Return the decoded and probably scaled down image by the provided image. If the image is large than the limit size, will try to scale down. Or just works as <code>decodedImageWithImage:</code></p>
+                        <p>Return the decoded and probably scaled down image by the provided image. If the image pixels bytes size large than the limit bytes, will try to scale down. Or just works as <code>decodedImageWithImage:</code>, never scale up.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>You should not pass too small bytes, the suggestion value should be larger than 1MB. Even we use Tile Decoding to avoid OOM, however, small bytes will consume much more CPU time because we need to iterate more times to draw each tile.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1218,7 +1226,7 @@ It will detect whether the image size matching the scale size, if not, stretch t
                         <p>The decoded and probably scaled down image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L100">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCoderHelper.h#L101">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1237,7 +1245,7 @@ It will detect whether the image size matching the scale size, if not, stretch t
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Control the default limit bytes to scale down largest images.
-This value must be larger than or equal to 1MB. Defaults to 60MB on iOS/tvOS, 90MB on macOS, 30MB on watchOS.</p>
+This value must be larger than 4 Bytes (at least 1x1 pixel). Defaults to 60MB on iOS/tvOS, 90MB on macOS, 30MB on watchOS.</p>
 
                       </div>
                       <div class="declaration">
@@ -1254,7 +1262,7 @@ This value must be larger than or equal to 1MB. Defaults to 60MB on iOS/tvOS, 90
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L106">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCoderHelper.h#L107">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1313,7 +1321,7 @@ This value must be larger than or equal to 1MB. Defaults to 60MB on iOS/tvOS, 90
                         <p>iOS orientation</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L115">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCoderHelper.h#L116">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1372,7 +1380,7 @@ This value must be larger than or equal to 1MB. Defaults to 60MB on iOS/tvOS, 90
                         <p>EXIF orientation</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.8.3/SDWebImage/Core/SDImageCoderHelper.h#L123">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCoderHelper.h#L124">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1382,7 +1390,7 @@ This value must be larger than or equal to 1MB. Defaults to 60MB on iOS/tvOS, 90
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-07-13)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-08-27)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>SDImageCachesManager Class Reference</title>
+    <title>SDImageAWebPCoder Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/objc/Class/SDImageCachesManager" class="dashAnchor"></a>
-    <a title="SDImageCachesManager Class Reference"></a>
+    <a name="//apple_ref/objc/Class/SDImageAWebPCoder" class="dashAnchor"></a>
+    <a title="SDImageAWebPCoder Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">SDWebImage 5.9.0 Docs</a> (82% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">SDWebImage Reference</a>
         <img id="carat" src="../img/carat.png" />
-        SDImageCachesManager Class Reference
+        SDImageAWebPCoder Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -652,14 +652,26 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>SDImageCachesManager</h1>
+            <h1>SDImageAWebPCoder</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDImageCachesManager</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="../Classes/SDImageCache.html">SDImageCache</a></span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight objective_c"><code>
+<span class="k">@interface</span> <span class="nc">SDImageAWebPCoder</span>
+    <span class="p">:</span> <span class="nc"><a href="../Classes/SDImageIOAnimatedCoder.html">SDImageIOAnimatedCoder</a></span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/SDProgressiveImageCoder.html">SDProgressiveImageCoder</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/SDAnimatedImageCoder.html">SDAnimatedImageCoder</a></span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            <p>A caches manager to manage multiple caches.</p>
+            <p>This coder is used for Google WebP and Animated WebP(AWebP) image format.
+Image/IO provide the WebP decoding support in iOS 14/macOS 11/tvOS 14/watchOS 7+.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Currently Image/IO seems does not supports WebP encoding, if you need WebP encoding, use the custom codec below.
+
+</div><div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    If you need to support lower firmware version for WebP, you can have a try at <a href="https://github.com/SDWebImage/SDWebImageWebPCoder">https://github.com/SDWebImage/SDWebImageWebPCoder</a>
+
+</div>
 
           </section>
           <section class="section task-group-section">
@@ -668,9 +680,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)SDImageCachesManager(cpy)sharedManager"></a>
-                    <a name="//apple_ref/objc/Property/sharedManager" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDImageCachesManager(cpy)sharedManager">sharedManager</a>
+                    <a name="/c:objc(cs)SDImageAWebPCoder(cpy)sharedCoder"></a>
+                    <a name="//apple_ref/objc/Property/sharedCoder" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDImageAWebPCoder(cpy)sharedCoder">sharedCoder</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -678,347 +690,23 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the global shared caches manager instance. By default we will set [<code><a href="../Classes/SDImageCache.html#/c:objc(cs)SDImageCache(cpy)sharedImageCache">SDImageCache.sharedImageCache</a></code>] into the caches array.</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">,</span> <span class="n">class</span><span class="p">)</span> <span class="n">SDImageCachesManager</span> <span class="o">*</span><span class="n">sharedManager</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">class</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">SDImageAWebPCoder</span> <span class="o">*</span><span class="n">sharedCoder</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="k">var</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">SDImageCachesManager</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="k">var</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">SDImageAWebPCoder</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCachesManager.h#L28">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SDImageCachesManager(py)queryOperationPolicy"></a>
-                    <a name="//apple_ref/objc/Property/queryOperationPolicy" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDImageCachesManager(py)queryOperationPolicy">queryOperationPolicy</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Operation policy for query op.
-Defaults to <code>Serial</code>, means query all caches serially (one completion called then next begin) until one cache query success (<code>image</code> != nil).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="n">queryOperationPolicy</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">queryOperationPolicy</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCachesManager.h#L36">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SDImageCachesManager(py)storeOperationPolicy"></a>
-                    <a name="//apple_ref/objc/Property/storeOperationPolicy" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDImageCachesManager(py)storeOperationPolicy">storeOperationPolicy</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Operation policy for store op.
-Defaults to <code>HighestOnly</code>, means store to the highest priority cache only.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="n">storeOperationPolicy</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">storeOperationPolicy</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCachesManager.h#L42">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SDImageCachesManager(py)removeOperationPolicy"></a>
-                    <a name="//apple_ref/objc/Property/removeOperationPolicy" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDImageCachesManager(py)removeOperationPolicy">removeOperationPolicy</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Operation policy for remove op.
-Defaults to <code>Concurrent</code>, means remove all caches concurrently.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="n">removeOperationPolicy</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">removeOperationPolicy</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCachesManager.h#L48">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SDImageCachesManager(py)containsOperationPolicy"></a>
-                    <a name="//apple_ref/objc/Property/containsOperationPolicy" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDImageCachesManager(py)containsOperationPolicy">containsOperationPolicy</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Operation policy for contains op.
-Defaults to <code>Serial</code>, means check all caches serially (one completion called then next begin) until one cache check success (<code>containsCacheType</code> != None).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="n">containsOperationPolicy</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">containsOperationPolicy</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCachesManager.h#L54">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SDImageCachesManager(py)clearOperationPolicy"></a>
-                    <a name="//apple_ref/objc/Property/clearOperationPolicy" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDImageCachesManager(py)clearOperationPolicy">clearOperationPolicy</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Operation policy for clear op.
-Defaults to <code>Concurrent</code>, means clear all caches concurrently.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="n">clearOperationPolicy</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">clearOperationPolicy</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDImageCachesManagerOperationPolicy.html">SDImageCachesManagerOperationPolicy</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCachesManager.h#L60">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SDImageCachesManager(py)caches"></a>
-                    <a name="//apple_ref/objc/Property/caches" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDImageCachesManager(py)caches">caches</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>All caches in caches manager. The caches array is a priority queue, which means the later added cache will have the highest priority</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDImageCache.html">SDImageCache</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">caches</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">caches</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDImageCache.html">SDImageCache</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCachesManager.h#L65">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SDImageCachesManager(im)addCache:"></a>
-                    <a name="//apple_ref/objc/Method/-addCache:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDImageCachesManager(im)addCache:">-addCache:<wbr></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Add a new cache to the end of caches array. Which has the highest priority.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addCache</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDImageCache.html">SDImageCache</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">cache</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addCache</span><span class="p">(</span><span class="n">_</span> <span class="nv">cache</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDImageCache.html">SDImageCache</a></span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>cache</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>cache</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCachesManager.h#L72">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SDImageCachesManager(im)removeCache:"></a>
-                    <a name="//apple_ref/objc/Method/-removeCache:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDImageCachesManager(im)removeCache:">-removeCache:<wbr></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Remove a cache in the caches array.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeCache</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDImageCache.html">SDImageCache</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">cache</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removeCache</span><span class="p">(</span><span class="n">_</span> <span class="nv">cache</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDImageCache.html">SDImageCache</a></span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>cache</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>cache</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCachesManager.h#L79">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageAWebPCoder.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
