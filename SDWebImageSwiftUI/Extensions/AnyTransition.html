@@ -8,14 +8,22 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Extension/AnyTransition" class="dashAnchor"></a>
     <a title="AnyTransition Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImageSwiftUI 1.4.0 Docs</a> (88% documented)</p>
+        <p><a href="../index.html">SDWebImageSwiftUI 1.5.0 Docs</a> (89% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImageSwiftUI"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -112,6 +120,7 @@
             <h1>AnyTransition</h1>
               <div class="declaration">
                 <div class="language">
+                  
                   <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">AnyTransition</span></code></pre>
 
                 </div>
@@ -146,7 +155,60 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.4.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L15-L19">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.5.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L15-L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E4fade8durationACSd_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/fade(duration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E4fade8durationACSd_tFZ">fade(duration:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fade-in transition with duration</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fade</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyTransition</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>transition duration, use ease-in-out</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A transition with duration</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.5.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L24-L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -176,7 +238,60 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.4.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L22-L26">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.5.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L31-L35">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E12flipFromLeft8durationACSd_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/flipFromLeft(duration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E12flipFromLeft8durationACSd_tFZ">flipFromLeft(duration:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flip from left transition with duration</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">flipFromLeft</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyTransition</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>transition duration, use ease-in-out</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A transition with duration</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.5.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L40-L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -206,7 +321,60 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.4.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L29-L33">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.5.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L47-L51">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E13flipFromRight8durationACSd_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/flipFromRight(duration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E13flipFromRight8durationACSd_tFZ">flipFromRight(duration:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flip from right transition with duration</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">flipFromRight</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyTransition</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>transition duration, use ease-in-out</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A transition with duration</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.5.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L56-L60">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -236,7 +404,60 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.4.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L36-L40">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.5.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L63-L67">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E11flipFromTop8durationACSd_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/flipFromTop(duration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E11flipFromTop8durationACSd_tFZ">flipFromTop(duration:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flip from top transition with duration</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">flipFromTop</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyTransition</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>transition duration, use ease-in-out</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A transition with duration</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.5.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L72-L76">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -266,7 +487,60 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.4.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L43-L47">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.5.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L79-L83">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E14flipFromBottom8durationACSd_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/flipFromBottom(duration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E14flipFromBottom8durationACSd_tFZ">flipFromBottom(duration:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flip from bottom transition with duration</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">flipFromBottom</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyTransition</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>transition duration, use ease-in-out</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A transition with duration</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.5.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L88-L92">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -276,8 +550,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImageSwiftUI" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-05-07)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImageSwiftUI" target="_blank" rel="external">SDWebImageSwiftUI</a>. All rights reserved. (Last updated: 2020-09-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
