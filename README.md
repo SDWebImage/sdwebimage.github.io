@@ -19,31 +19,26 @@ This documentation page now hosting both Core repo and other related framework's
 
 #### Generate the SDWebImage documentation
 
-+ Clone both SDWebImage and this repo
++ Clone both [SDWebImage](https://github.com/SDWebImage/SDWebImage.git), [jazzy-theme](https://github.com/SDWebImage/jazzy-theme.git) and this repo
 + Place them in the same folder
 + Go the SDWebImage folder
-+ Firstly, run the following command, it will run `xcodebuild`, ignore the error output (Seems jazzy's issue)
-
-```
-jazzy -x -scheme,SDWebImage
-```
-
-+ Next, run the following command, remember to change the version string:
++ Run the following command, remember to change the version string:
 
 ```
 jazzy \
   --objc \
   --author SDWebImage \
   --github_url https://github.com/SDWebImage/SDWebImage \
-  --github-file-prefix https://github.com/SDWebImage/SDWebImage/tree/5.8.0 \
-  --module-version 5.8.0 \
+  --github-file-prefix https://github.com/SDWebImage/SDWebImage/tree/5.9.0 \
+  --module-version 5.9.0 \
   --umbrella-header WebImage/SDWebImage.h \
   --documentation=Docs/\*.md \
   --undocumented-text "" \
   --module SDWebImage \
   --framework-root . \
   --sdk iphonesimulator \
-  --output ../sdwebimage.github.io/SDWebImage
+  --output ../sdwebimage.github.io/SDWebImage \
+  --theme ../jazzy-theme/themes/apple
 ```
 
 #### Generate SDWebImage related project documentation
@@ -58,15 +53,16 @@ For Swift project, take SDWebImageSwiftUI for example:
 
 ```
 jazzy \
-  --author SDWebImage \
+  --author SDWebImageSwiftUI \
   --github_url https://github.com/SDWebImage/SDWebImageSwiftUI \
-  --github-file-prefix https://github.com/SDWebImage/SDWebImageSwiftUI/tree/0.8.3 \
-  --module-version 0.8.3 \
+  --github-file-prefix https://github.com/SDWebImage/SDWebImageSwiftUI/tree/1.5.0 \
+  --module-version 1.5.0 \
   --undocumented-text "" \
   --module SDWebImageSwiftUI \
   --framework-root . \
   --sdk iphonesimulator \
-  --output ../sdwebimage.github.io/SDWebImageSwiftUI
+  --output ../sdwebimage.github.io/SDWebImageSwiftUI \
+  --theme ../jazzy-theme/themes/apple
 ```
 
 ##### Objective-C
@@ -100,5 +96,6 @@ jazzy \
   --module SDWebImagePhotosPlugin \
   --framework-root . \
   --sdk iphonesimulator \
-  --output ../sdwebimage.github.io/SDWebImagePhotosPlugin
+  --output ../sdwebimage.github.io/SDWebImagePhotosPlugin \
+  --theme ../jazzy-theme/themes/apple
 ```
