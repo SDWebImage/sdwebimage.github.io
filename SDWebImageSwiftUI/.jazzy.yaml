@@ -1,0 +1,7 @@
+clean: true
+author: SDWebImageSwiftUI
+module: SDWebImageSwiftUI
+theme: "./jazzy-theme/themes/apple"
+xcodebuild_arguments:
+  ["-project", "SDWebImageSwiftUI.xcodeproj", "-scheme", "SDWebImageSwiftUI", "-sdk", "iphonesimulator"]
+podspec: SDWebImageSwiftUI.podspec
