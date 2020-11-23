@@ -17,7 +17,7 @@
     <a title="Enumerations  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImage 5.9.0 Docs</a> (82% documented)</p>
+        <p><a href="index.html">SDWebImage 5.10.0 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="search.json">
@@ -402,6 +402,9 @@
             <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Enums/SDAnimatedImagePlaybackMode.html">SDAnimatedImagePlaybackMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/SDGraphicsImageRendererFormatRange.html">SDGraphicsImageRendererFormatRange</a>
               </li>
               <li class="nav-group-task">
@@ -670,6 +673,58 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:@E@SDAnimatedImagePlaybackMode"></a>
+                    <a name="//apple_ref/objc/Enum/SDAnimatedImagePlaybackMode" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SDAnimatedImagePlaybackMode">SDAnimatedImagePlaybackMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Enums/SDAnimatedImagePlaybackMode.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">SDAnimatedImagePlaybackMode</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/**
+     * From first to last frame and stop or next loop.
+     */</span>
+    <span class="n">SDAnimatedImagePlaybackModeNormal</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="cm">/**
+     * From last frame to first frame and stop or next loop.
+     */</span>
+    <span class="n">SDAnimatedImagePlaybackModeReverse</span><span class="p">,</span>
+    <span class="cm">/**
+     * From first frame to last frame and reverse again, like reciprocating.
+     */</span>
+    <span class="n">SDAnimatedImagePlaybackModeBounce</span><span class="p">,</span>
+    <span class="cm">/**
+     * From last frame to first frame and reverse again, like reversed reciprocating.
+     */</span>
+    <span class="n">SDAnimatedImagePlaybackModeReversedBounce</span><span class="p">,</span>
+<span class="p">}</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">SDAnimatedImagePlaybackMode</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDAnimatedImagePlayer.h#L13-L30">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:@E@SDGraphicsImageRendererFormatRange"></a>
                     <a name="//apple_ref/objc/Enum/SDGraphicsImageRendererFormatRange" class="dashAnchor"></a>
                     <a class="token" href="#/c:@E@SDGraphicsImageRendererFormatRange">SDGraphicsImageRendererFormatRange</a>
@@ -702,7 +757,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDGraphicsImageRenderer.h#L21-L26">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDGraphicsImageRenderer.h#L21-L26">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -738,7 +793,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCache.h#L18-L56">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDImageCache.h#L18-L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -774,7 +829,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCacheConfig.h#L13-L30">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDImageCacheConfig.h#L13-L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -810,7 +865,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCacheDefine.h#L15-L36">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDImageCacheDefine.h#L15-L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -846,7 +901,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCachesManager.h#L13-L18">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDImageCachesManager.h#L13-L18">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -895,7 +950,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDefine.h#L52-L205">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDefine.h#L52-L205">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -931,7 +986,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloader.h#L20-L96">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloader.h#L20-L96">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -967,7 +1022,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloaderConfig.h#L13-L23">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloaderConfig.h#L13-L23">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1003,7 +1058,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageError.h#L18-L27">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageError.h#L18-L27">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1042,7 +1097,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/UIImage+Transform.h#L11-L15">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/UIImage+Transform.h#L11-L15">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1052,7 +1107,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-08-31)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-11-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

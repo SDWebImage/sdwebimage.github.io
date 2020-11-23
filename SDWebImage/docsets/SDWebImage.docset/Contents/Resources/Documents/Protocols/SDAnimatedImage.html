@@ -17,7 +17,7 @@
     <a title="SDAnimatedImage Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.9.0 Docs</a> (82% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.10.0 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="../search.json">
@@ -402,6 +402,9 @@
             <a href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Enums/SDAnimatedImagePlaybackMode.html">SDAnimatedImagePlaybackMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/SDGraphicsImageRendererFormatRange.html">SDGraphicsImageRendererFormatRange</a>
               </li>
               <li class="nav-group-task">
@@ -676,7 +679,7 @@
             <p>This is the protocol for SDAnimatedImage class only but not for SDAnimatedImageCoder. If you want to provide a custom animated image class with full advanced function, you can conform to this instead of the base protocol.</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDAnimatedImage.h#L16-L66">Show on GitHub</a>
+                <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDAnimatedImage.h#L16-L66">Show on GitHub</a>
               </div>
           </section>
           <section class="section task-group-section">
@@ -766,7 +769,7 @@
                         <p>An initialized object</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDAnimatedImage.h#L28">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDAnimatedImage.h#L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -843,7 +846,7 @@
                         <p>An initialized object</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDAnimatedImage.h#L38">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDAnimatedImage.h#L38">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -884,7 +887,7 @@ This method may be called on background thread.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDAnimatedImage.h#L48">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDAnimatedImage.h#L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -919,7 +922,7 @@ This method may be called on background thread.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDAnimatedImage.h#L53">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDAnimatedImage.h#L53">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -945,8 +948,8 @@ This method may be called on background thread.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@optional</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isAllFramesLoaded</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
-    <span class="n">BOOL</span> <span class="n">allFramesLoaded</span><span class="p">;</span></code></pre>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span>
+          <span class="n">getter</span><span class="o">=</span><span class="n">isAllFramesLoaded</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">allFramesLoaded</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -956,7 +959,7 @@ This method may be called on background thread.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDAnimatedImage.h#L58">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDAnimatedImage.h#L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -987,7 +990,7 @@ This method may be called on background thread.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@optional</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDAnimatedImageCoder.html">SDAnimatedImageCoder</a></span><span class="o">&gt;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDAnimatedImageCoder.html">SDAnimatedImageCoder</a></span><span class="o">&gt;</span>
     <span class="n">animatedCoder</span><span class="p">;</span></code></pre>
 
                         </div>
@@ -998,7 +1001,7 @@ This method may be called on background thread.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDAnimatedImage.h#L64">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDAnimatedImage.h#L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1008,7 +1011,7 @@ This method may be called on background thread.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-08-31)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-11-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

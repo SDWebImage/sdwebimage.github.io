@@ -17,7 +17,7 @@
     <a title="SDAnimatedImageProvider Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.9.0 Docs</a> (82% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.10.0 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="../search.json">
@@ -402,6 +402,9 @@
             <a href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Enums/SDAnimatedImagePlaybackMode.html">SDAnimatedImagePlaybackMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/SDGraphicsImageRendererFormatRange.html">SDGraphicsImageRendererFormatRange</a>
               </li>
               <li class="nav-group-task">
@@ -676,7 +679,7 @@
             <p>This is the animated image protocol to provide the basic function for animated image rendering. It&rsquo;s adopted by <code><a href="../Protocols/SDAnimatedImage.html">SDAnimatedImage</a></code> and <code><a href="../Protocols/SDAnimatedImageCoder.html">SDAnimatedImageCoder</a></code></p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCoder.h#L205-L246">Show on GitHub</a>
+                <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDImageCoder.h#L205-L246">Show on GitHub</a>
               </div>
           </section>
           <section class="section task-group-section">
@@ -704,7 +707,7 @@ We may use this method to grab back the original image data if need, such as NSC
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="err">@required</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSData</span> <span class="o">*</span><span class="n">animatedImageData</span><span class="p">;</span></code></pre>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSData</span> <span class="o">*</span><span class="n">animatedImageData</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -718,7 +721,7 @@ We may use this method to grab back the original image data if need, such as NSC
                         <p>The animated image data</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCoder.h#L214">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDImageCoder.h#L214">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -745,7 +748,8 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="err">@required</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">animatedImageFrameCount</span><span class="p">;</span></code></pre>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span>
+    <span class="n">NSUInteger</span> <span class="n">animatedImageFrameCount</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -759,7 +763,7 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
                         <p>Total animated frame count.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCoder.h#L222">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDImageCoder.h#L222">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -785,7 +789,8 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="err">@required</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">animatedImageLoopCount</span><span class="p">;</span></code></pre>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span>
+    <span class="n">NSUInteger</span> <span class="n">animatedImageLoopCount</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -799,7 +804,7 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
                         <p>Animation loop count</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCoder.h#L228">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDImageCoder.h#L228">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -862,7 +867,7 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
                         <p>Frame&rsquo;s image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCoder.h#L236">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDImageCoder.h#L236">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -925,7 +930,7 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
                         <p>Frame&rsquo;s duration</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDImageCoder.h#L244">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDImageCoder.h#L244">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -935,7 +940,7 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-08-31)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-11-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

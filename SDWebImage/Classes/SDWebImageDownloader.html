@@ -17,7 +17,7 @@
     <a title="SDWebImageDownloader Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.9.0 Docs</a> (82% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.10.0 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="../search.json">
@@ -402,6 +402,9 @@
             <a href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Enums/SDAnimatedImagePlaybackMode.html">SDAnimatedImagePlaybackMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/SDGraphicsImageRendererFormatRange.html">SDGraphicsImageRendererFormatRange</a>
               </li>
               <li class="nav-group-task">
@@ -676,7 +679,7 @@
             <p>Asynchronous downloader dedicated and optimized for image loading.</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloader.h#L142-L304">Show on GitHub</a>
+                <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloader.h#L142-L304">Show on GitHub</a>
               </div>
           </section>
           <section class="section task-group-section">
@@ -703,7 +706,7 @@ Most config properties support dynamic changes during download, except something
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="../Classes/SDWebImageDownloaderConfig.html">SDWebImageDownloaderConfig</a></span> <span class="o">*</span><span class="n">config</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="../Classes/SDWebImageDownloaderConfig.html">SDWebImageDownloaderConfig</a></span> <span class="o">*</span><span class="n">config</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -713,7 +716,7 @@ Most config properties support dynamic changes during download, except something
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloader.h#L148">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloader.h#L148">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -745,7 +748,7 @@ Defaults to nil, means does not modify the original download request.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageDownloaderRequestModifier.html">SDWebImageDownloaderRequestModifier</a></span><span class="o">&gt;</span> <span class="n">requestModifier</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageDownloaderRequestModifier.html">SDWebImageDownloaderRequestModifier</a></span><span class="o">&gt;</span> <span class="n">requestModifier</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -755,7 +758,7 @@ Defaults to nil, means does not modify the original download request.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloader.h#L156">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloader.h#L156">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -787,7 +790,7 @@ Defaults to nil, means does not modify the original download response.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageDownloaderResponseModifier.html">SDWebImageDownloaderResponseModifier</a></span><span class="o">&gt;</span> <span class="n">responseModifier</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageDownloaderResponseModifier.html">SDWebImageDownloaderResponseModifier</a></span><span class="o">&gt;</span> <span class="n">responseModifier</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -797,7 +800,7 @@ Defaults to nil, means does not modify the original download response.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloader.h#L164">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloader.h#L164">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -833,7 +836,7 @@ Defaults to nil, means does not modify the original download data.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageDownloaderDecryptor.html">SDWebImageDownloaderDecryptor</a></span><span class="o">&gt;</span> <span class="n">decryptor</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDWebImageDownloaderDecryptor.html">SDWebImageDownloaderDecryptor</a></span><span class="o">&gt;</span> <span class="n">decryptor</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -843,7 +846,7 @@ Defaults to nil, means does not modify the original download data.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloader.h#L173">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloader.h#L173">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -875,7 +878,7 @@ Defaults to nil, means does not modify the original download data.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSURLSessionConfiguration</span> <span class="o">*</span><span class="n">sessionConfiguration</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSURLSessionConfiguration</span> <span class="o">*</span><span class="n">sessionConfiguration</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -885,7 +888,7 @@ Defaults to nil, means does not modify the original download data.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloader.h#L179">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloader.h#L179">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -910,7 +913,7 @@ Defaults to nil, means does not modify the original download data.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">getter</span><span class="o">=</span><span class="n">isSuspended</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">suspended</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isSuspended</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">suspended</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -920,7 +923,7 @@ Defaults to nil, means does not modify the original download data.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloader.h#L184">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloader.h#L184">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -945,7 +948,7 @@ Defaults to nil, means does not modify the original download data.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">currentDownloadCount</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">currentDownloadCount</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -955,7 +958,7 @@ Defaults to nil, means does not modify the original download data.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloader.h#L189">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloader.h#L189">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -980,7 +983,7 @@ Defaults to nil, means does not modify the original download data.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">,</span> <span class="n">class</span><span class="p">)</span> <span class="n">SDWebImageDownloader</span> <span class="o">*</span><span class="n">sharedDownloader</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">class</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">SDWebImageDownloader</span> <span class="o">*</span><span class="n">sharedDownloader</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -990,7 +993,7 @@ Defaults to nil, means does not modify the original download data.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloader.h#L194">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloader.h#L194">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1050,7 +1053,7 @@ You can specify session configuration, timeout or operation class through downlo
                         <p>new instance of downloader class</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloader.h#L203">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloader.h#L203">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1117,7 +1120,7 @@ You can specify session configuration, timeout or operation class through downlo
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloader.h#L211">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloader.h#L211">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1156,7 +1159,7 @@ You can specify session configuration, timeout or operation class through downlo
                         <p>The value associated with the header field field, or <code>nil</code> if there is no corresponding header field.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloader.h#L218">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloader.h#L218">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1243,7 +1246,7 @@ You can specify session configuration, timeout or operation class through downlo
                         <p>A token (SDWebImageDownloadToken) that can be used to cancel this operation</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloader.h#L239-L240">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloader.h#L239-L240">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1358,7 +1361,7 @@ You can specify session configuration, timeout or operation class through downlo
                         <p>A token (SDWebImageDownloadToken) that can be used to cancel this operation</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloader.h#L264-L267">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloader.h#L264-L267">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1479,7 +1482,7 @@ You can specify session configuration, timeout or operation class through downlo
                         <p>A token (SDWebImageDownloadToken) that can be used to cancel this operation</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloader.h#L285-L289">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloader.h#L285-L289">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1514,7 +1517,7 @@ You can specify session configuration, timeout or operation class through downlo
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloader.h#L294">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloader.h#L294">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1577,7 +1580,7 @@ You can specify session configuration, timeout or operation class through downlo
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.9.0/SDWebImage/Core/SDWebImageDownloader.h#L302">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloader.h#L302">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1587,7 +1590,7 @@ You can specify session configuration, timeout or operation class through downlo
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-08-31)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-11-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
