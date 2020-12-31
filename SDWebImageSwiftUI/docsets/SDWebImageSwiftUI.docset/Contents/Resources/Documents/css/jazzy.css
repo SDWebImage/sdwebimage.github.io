@@ -129,7 +129,8 @@ header {
 .nav-groups {
   list-style-type: none;
   background: #fff;
-  padding-left: 0; }
+  padding-left: 0;
+  overflow-x: scroll; }
 
 .nav-group-name {
   border-bottom: 1px solid #e2e2e2;
