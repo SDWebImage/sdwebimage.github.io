@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AnyTransition Extension Reference</title>
+    <title>ImagePlayer Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Extension/AnyTransition" class="dashAnchor"></a>
-    <a title="AnyTransition Extension Reference"></a>
+    <a name="//apple_ref/swift/Class/ImagePlayer" class="dashAnchor"></a>
+    <a title="ImagePlayer Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">SDWebImageSwiftUI 2.0.0 Docs</a> (89% documented)</p>
@@ -30,7 +30,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">SDWebImageSwiftUI Reference</a>
         <img id="carat" src="../img/carat.png" />
-        AnyTransition Extension Reference
+        ImagePlayer Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -120,15 +120,20 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>AnyTransition</h1>
+            <h1>ImagePlayer</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">AnyTransition</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">13.0</span><span class="p">,</span> <span class="n">macOS</span> <span class="mf">10.15</span><span class="p">,</span> <span class="n">tvOS</span> <span class="mf">13.0</span><span class="p">,</span> <span class="n">watchOS</span> <span class="mf">6.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ImagePlayer</span> <span class="p">:</span> <span class="kt">ObservableObject</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>A Image observable object for handle aniamted image playback. This is used to avoid <code>@State</code> update may capture the View struct type and cause memory leak.</p>
+
+              <div class="slightly-smaller">
+                <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/ImagePlayer.swift#L14-L94">Show on GitHub</a>
+              </div>
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -136,9 +141,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E4fadeACvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/fade" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E4fadeACvpZ">fade</a>
+                    <a name="/s:17SDWebImageSwiftUI0B6PlayerC13maxBufferSizeSuSgvp"></a>
+                    <a name="//apple_ref/swift/Property/maxBufferSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI0B6PlayerC13maxBufferSizeSuSgvp">maxBufferSize</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -146,19 +151,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Fade-in transition</p>
+                        <p>Max buffer size</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">fade</span><span class="p">:</span> <span class="kt">AnyTransition</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">maxBufferSize</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L15-L19">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/ImagePlayer.swift#L18">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -166,9 +171,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E4fade8durationACSd_tFZ"></a>
-                    <a name="//apple_ref/swift/Method/fade(duration:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E4fade8durationACSd_tFZ">fade(duration:<wbr>)</a>
+                    <a name="/s:17SDWebImageSwiftUI0B6PlayerC15customLoopCountSuSgvp"></a>
+                    <a name="//apple_ref/swift/Property/customLoopCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI0B6PlayerC15customLoopCountSuSgvp">customLoopCount</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -176,14 +181,285 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Fade-in transition with duration</p>
+                        <p>Custom loop count</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fade</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyTransition</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">customLoopCount</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/ImagePlayer.swift#L21">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SDWebImageSwiftUI0B6PlayerC11runLoopModeSo05NSRungH0avp"></a>
+                    <a name="//apple_ref/swift/Property/runLoopMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI0B6PlayerC11runLoopModeSo05NSRungH0avp">runLoopMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Animation runloop mode</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">runLoopMode</span><span class="p">:</span> <span class="kt">RunLoop</span><span class="o">.</span><span class="kt">Mode</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/ImagePlayer.swift#L24">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SDWebImageSwiftUI0B6PlayerC12playbackRateSdvp"></a>
+                    <a name="//apple_ref/swift/Property/playbackRate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI0B6PlayerC12playbackRateSdvp">playbackRate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Animation playback rate</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">playbackRate</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/ImagePlayer.swift#L27">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SDWebImageSwiftUI0B6PlayerC12playbackModeSo010SDAnimatedb8PlaybackG0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/playbackMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI0B6PlayerC12playbackModeSo010SDAnimatedb8PlaybackG0Vvp">playbackMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Animation playback mode</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">playbackMode</span><span class="p">:</span> <span class="kt">SDAnimatedImagePlaybackMode</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/ImagePlayer.swift#L30">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SDWebImageSwiftUI0B6PlayerC12currentFrameSo7UIImageCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/currentFrame" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI0B6PlayerC12currentFrameSo7UIImageCSgvp">currentFrame</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Current playing frame image</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@Published</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">currentFrame</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:17SDWebImageSwiftUI08PlatformB0a">PlatformImage</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/ImagePlayer.swift#L38">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SDWebImageSwiftUI0B6PlayerC12startPlayingyyF"></a>
+                    <a name="//apple_ref/swift/Method/startPlaying()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI0B6PlayerC12startPlayingyyF">startPlaying()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start the animation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startPlaying</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/ImagePlayer.swift#L41-L43">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SDWebImageSwiftUI0B6PlayerC12pausePlayingyyF"></a>
+                    <a name="//apple_ref/swift/Method/pausePlaying()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI0B6PlayerC12pausePlayingyyF">pausePlaying()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pause the animation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">pausePlaying</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/ImagePlayer.swift#L46-L48">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SDWebImageSwiftUI0B6PlayerC11stopPlayingyyF"></a>
+                    <a name="//apple_ref/swift/Method/stopPlaying()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI0B6PlayerC11stopPlayingyyF">stopPlaying()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stop the animation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopPlaying</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/ImagePlayer.swift#L51-L53">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SDWebImageSwiftUI0B6PlayerC16clearFrameBufferyyF"></a>
+                    <a name="//apple_ref/swift/Method/clearFrameBuffer()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI0B6PlayerC16clearFrameBufferyyF">clearFrameBuffer()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Clear the frame buffer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearFrameBuffer</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/ImagePlayer.swift#L56-L58">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SDWebImageSwiftUI0B6PlayerC05setupE05imageySo7UIImageCSg_tF"></a>
+                    <a name="//apple_ref/swift/Method/setupPlayer(image:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SDWebImageSwiftUI0B6PlayerC05setupE05imageySo7UIImageCSg_tF">setupPlayer(image:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Setup the player using Animated Image</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setupPlayer</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:17SDWebImageSwiftUI08PlatformB0a">PlatformImage</a></span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -194,356 +470,20 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>duration</em>
+                                <em>image</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>transition duration, use ease-in-out</p>
+                                  <p>animated image</p>
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A transition with duration</p>
-                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L24-L28">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E12flipFromLeftACvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/flipFromLeft" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E12flipFromLeftACvpZ">flipFromLeft</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Flip from left transition</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">flipFromLeft</span><span class="p">:</span> <span class="kt">AnyTransition</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L31-L35">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E12flipFromLeft8durationACSd_tFZ"></a>
-                    <a name="//apple_ref/swift/Method/flipFromLeft(duration:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E12flipFromLeft8durationACSd_tFZ">flipFromLeft(duration:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Flip from left transition with duration</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">flipFromLeft</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyTransition</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>duration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>transition duration, use ease-in-out</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A transition with duration</p>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L40-L44">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E13flipFromRightACvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/flipFromRight" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E13flipFromRightACvpZ">flipFromRight</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Flip from right transition</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">flipFromRight</span><span class="p">:</span> <span class="kt">AnyTransition</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L47-L51">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E13flipFromRight8durationACSd_tFZ"></a>
-                    <a name="//apple_ref/swift/Method/flipFromRight(duration:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E13flipFromRight8durationACSd_tFZ">flipFromRight(duration:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Flip from right transition with duration</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">flipFromRight</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyTransition</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>duration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>transition duration, use ease-in-out</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A transition with duration</p>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L56-L60">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E11flipFromTopACvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/flipFromTop" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E11flipFromTopACvpZ">flipFromTop</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Flip from top transition</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">flipFromTop</span><span class="p">:</span> <span class="kt">AnyTransition</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L63-L67">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E11flipFromTop8durationACSd_tFZ"></a>
-                    <a name="//apple_ref/swift/Method/flipFromTop(duration:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E11flipFromTop8durationACSd_tFZ">flipFromTop(duration:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Flip from top transition with duration</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">flipFromTop</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyTransition</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>duration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>transition duration, use ease-in-out</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A transition with duration</p>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L72-L76">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E14flipFromBottomACvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/flipFromBottom" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E14flipFromBottomACvpZ">flipFromBottom</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Flip from bottom transition</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">flipFromBottom</span><span class="p">:</span> <span class="kt">AnyTransition</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L79-L83">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E14flipFromBottom8durationACSd_tFZ"></a>
-                    <a name="//apple_ref/swift/Method/flipFromBottom(duration:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SwiftUI13AnyTransitionV010SDWebImageaB0E14flipFromBottom8durationACSd_tFZ">flipFromBottom(duration:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Flip from bottom transition with duration</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">flipFromBottom</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyTransition</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>duration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>transition duration, use ease-in-out</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A transition with duration</p>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/Transition/Transition.swift#L88-L92">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/tree/2.0.0/SDWebImageSwiftUI/Classes/ImagePlayer.swift#L63-L93">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

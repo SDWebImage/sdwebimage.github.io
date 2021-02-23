@@ -37,21 +37,21 @@
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
-      "line": 109,
+      "line": 84,
       "symbol": "ProgressIndicatorWrapper.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
-      "line": 115,
+      "line": 90,
       "symbol": "ProgressIndicatorWrapper.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImageSwiftUI/SDWebImageSwiftUI/Classes/ImageViewWrapper.swift",
-      "line": 120,
+      "line": 95,
       "symbol": "ProgressIndicatorWrapper.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

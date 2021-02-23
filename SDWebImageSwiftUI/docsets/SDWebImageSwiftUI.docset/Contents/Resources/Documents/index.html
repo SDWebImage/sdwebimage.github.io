@@ -16,7 +16,7 @@
     <a title="SDWebImageSwiftUI  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImageSwiftUI 1.5.0 Docs</a> (89% documented)</p>
+        <p><a href="index.html">SDWebImageSwiftUI 2.0.0 Docs</a> (89% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImageSwiftUI"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="search.json">
@@ -46,6 +46,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ImageManager.html">ImageManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ImagePlayer.html">ImagePlayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ProgressIndicatorWrapper.html">ProgressIndicatorWrapper</a>
@@ -154,8 +157,6 @@
 
 <p>This framework is under heavily development, it&rsquo;s recommended to use <a href="https://github.com/SDWebImage/SDWebImageSwiftUI/releases">the latest release</a> as much as possible (including SDWebImage dependency).</p>
 
-<p>The v1.0.0 version is now <strong>released</strong>, which provide all the function above, with the stable API, fully documentation and unit test.</p>
-
 <p>This framework follows <a href="https://semver.org/">Semantic Versioning</a>. Each source-break API changes will bump to a major version.</p>
 <h2 id='changelog' class='heading'>Changelog</h2>
 
@@ -166,13 +167,30 @@
 <h2 id='requirements' class='heading'>Requirements</h2>
 
 <ul>
-<li>Xcode 11+</li>
+<li>Xcode 12+</li>
 <li>iOS 13+</li>
 <li>macOS 10.15+</li>
 <li>tvOS 13+</li>
 <li>watchOS 6+</li>
 <li>Swift 5.1+</li>
 </ul>
+<h2 id='swiftui-2-0-compatibility' class='heading'>SwiftUI 2.0 Compatibility</h2>
+
+<p>iOS 14(macOS 11) introduce the SwiftUI 2.0, which keep the most API compatible, but changes many internal behaviors, which breaks the SDWebImageSwiftUI&rsquo;s function.</p>
+
+<p>From v2.0.0, we adopt SwiftUI 2.0 and iOS 14(macOS 11)&lsquo;s behavior.You can use <code><a href="Structs/WebImage.html">WebImage</a></code> and <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> inside the new <code>LazyVStack</code>.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="kt">ScrollView</span> <span class="p">{</span>
+        <span class="kt">LazyVStack</span> <span class="p">{</span>
+            <span class="kt">ForEach</span><span class="p">(</span><span class="n">urls</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="p">\</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="n">url</span> <span class="k">in</span>
+                <span class="kt">AnimatedImage</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Note: However, many differences behavior between iOS 13/14&rsquo;s is hard to fixup. Due to maintain issue, in the future release, we will drop the iOS 13 supports and always match SwiftUI 2.0&rsquo;s behavior.</p>
 <h2 id='installation' class='heading'>Installation</h2>
 <h4 id='swift-package-manager' class='heading'>Swift Package Manager</h4>
 
@@ -182,7 +200,7 @@
 <li>For App integration</li>
 </ul>
 
-<p>For App integration, you should using Xcode 11 or higher, to add this package to your App target. To do this, check <a href="https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app?language=objc">Adding Package Dependencies to Your App</a> about the step by step tutorial using Xcode.</p>
+<p>For App integration, you should using Xcode 12 or higher, to add this package to your App target. To do this, check <a href="https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app?language=objc">Adding Package Dependencies to Your App</a> about the step by step tutorial using Xcode.</p>
 
 <ul>
 <li>For downstream framework</li>
@@ -191,7 +209,7 @@
 <p>For downstream framework author, you should create a <code>Package.swift</code> file into your git repo, then add the following line to mark your framework dependent our SDWebImageSwiftUI.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
     <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/SDWebImage/SDWebImageSwiftUI.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"1.0"</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/SDWebImage/SDWebImageSwiftUI.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"2.0.0"</span><span class="p">)</span>
     <span class="p">],</span>
 <span class="p">)</span>
 </code></pre>
@@ -237,16 +255,26 @@ it, simply add the following line to your Podfile:</p>
 <span class="p">}</span>
 </code></pre>
 
-<p>Note: This <code><a href="Structs/WebImage.html">WebImage</a></code> using <code>Image</code> for internal implementation, which is the best compatible for SwiftUI layout and animation system. But unlike SwiftUI&rsquo;s <code>Image</code> which does not support animated image or vector image, <code><a href="Structs/WebImage.html">WebImage</a></code> supports animated image as well.</p>
+<p>Note: This <code><a href="Structs/WebImage.html">WebImage</a></code> using <code>Image</code> for internal implementation, which is the best compatible for SwiftUI layout and animation system. But unlike SwiftUI&rsquo;s <code>Image</code> which does not support animated image or vector image, <code><a href="Structs/WebImage.html">WebImage</a></code> supports animated image as well (by defaults from v2.0.0).</p>
 
-<p>Note: The <code><a href="Structs/WebImage.html">WebImage</a></code> animation provide common use case, so it&rsquo;s still recommend to use <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> for advanced controls like progressive animation rendering.</p>
+<p>However, The <code><a href="Structs/WebImage.html">WebImage</a></code> animation provide simple common use case, so it&rsquo;s still recommend to use <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> for advanced controls like progressive animation rendering, or vector image rendering.</p>
 <pre class="highlight swift"><code><span class="kd">@State</span> <span class="k">var</span> <span class="nv">isAnimating</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span>
 <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
     <span class="kt">WebImage</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://raw.githubusercontent.com/liyong03/YLGIFImage/master/YLGIFImageDemo/YLGIFImageDemo/joy.gif"</span><span class="p">),</span> <span class="nv">isAnimating</span><span class="p">:</span> <span class="err">$</span><span class="n">isAnimating</span><span class="p">))</span> <span class="c1">// Animation Control, supports dynamic changes</span>
     <span class="c1">// The initial value of binding should be true</span>
     <span class="o">.</span><span class="nf">customLoopCount</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// Custom loop count</span>
     <span class="o">.</span><span class="nf">playbackRate</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span> <span class="c1">// Playback speed rate</span>
+    <span class="o">.</span><span class="nf">playbackMode</span><span class="p">(</span><span class="o">.</span><span class="n">bounce</span><span class="p">)</span> <span class="c1">// Playback normally to the end, then reversely back to the start</span>
     <span class="c1">// `WebImage` supports advanced control just like `AnimatedImage`, but without the progressive animation support</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Note: For indicator, you can custom your own as well. For example, iOS 14/watchOS 7 introduce the new <code>ProgressView</code>, which can replace our built-in <code>ProgressIndicator/ActivityIndicator</code> (where watchOS does not provide).</p>
+<pre class="highlight swift"><code><span class="kt">WebImage</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+<span class="o">.</span><span class="n">indicator</span> <span class="p">{</span>
+    <span class="kt">Indicator</span> <span class="p">{</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="k">in</span>
+        <span class="kt">ProgressView</span><span class="p">()</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
 <h3 id='using-code-animatedimage-code-to-play-animation' class='heading'>Using <code><a href="Structs/AnimatedImage.html">AnimatedImage</a></code> to play animation</h3>
@@ -611,7 +639,7 @@ pod install
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImageSwiftUI" target="_blank" rel="external">SDWebImageSwiftUI</a>. All rights reserved. (Last updated: 2020-12-31)</p>
+          <p>&copy; 2021 <a class="link" href="https://github.com/SDWebImage/SDWebImageSwiftUI" target="_blank" rel="external">SDWebImageSwiftUI</a>. All rights reserved. (Last updated: 2021-02-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
