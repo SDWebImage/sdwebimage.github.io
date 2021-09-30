@@ -17,7 +17,7 @@
     <a title="SDAnimatedImageProvider Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.10.0 Docs</a> (82% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.12.0 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="../search.json">
@@ -355,6 +355,9 @@
                 <a href="../Constants.html#/c:@SDWebImageContextLoaderCachedImage">SDWebImageContextLoaderCachedImage</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextOriginalImageCache">SDWebImageContextOriginalImageCache</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextOriginalQueryCacheType">SDWebImageContextOriginalQueryCacheType</a>
               </li>
               <li class="nav-group-task">
@@ -383,6 +386,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageErrorDomain">SDWebImageErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageErrorDownloadContentTypeKey">SDWebImageErrorDownloadContentTypeKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageErrorDownloadResponseKey">SDWebImageErrorDownloadResponseKey</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageErrorDownloadStatusCodeKey">SDWebImageErrorDownloadStatusCodeKey</a>
@@ -642,6 +651,12 @@
                 <a href="../Functions.html#/c:@F@SDImageLoaderDecodeProgressiveImageData">SDImageLoaderDecodeProgressiveImageData</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDImageLoaderGetProgressiveCoder">SDImageLoaderGetProgressiveCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDImageLoaderSetProgressiveCoder">SDImageLoaderSetProgressiveCoder</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/c:@F@SDImageScaleFactorForKey">SDImageScaleFactorForKey</a>
               </li>
               <li class="nav-group-task">
@@ -679,7 +694,7 @@
             <p>This is the animated image protocol to provide the basic function for animated image rendering. It&rsquo;s adopted by <code><a href="../Protocols/SDAnimatedImage.html">SDAnimatedImage</a></code> and <code><a href="../Protocols/SDAnimatedImageCoder.html">SDAnimatedImageCoder</a></code></p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDImageCoder.h#L205-L246">Show on GitHub</a>
+                <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDImageCoder.h#L205-L246">Show on GitHub</a>
               </div>
           </section>
           <section class="section task-group-section">
@@ -721,7 +736,7 @@ We may use this method to grab back the original image data if need, such as NSC
                         <p>The animated image data</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDImageCoder.h#L214">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDImageCoder.h#L214">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -763,7 +778,7 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
                         <p>Total animated frame count.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDImageCoder.h#L222">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDImageCoder.h#L222">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -804,7 +819,7 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
                         <p>Animation loop count</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDImageCoder.h#L228">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDImageCoder.h#L228">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -867,7 +882,7 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
                         <p>Frame&rsquo;s image</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDImageCoder.h#L236">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDImageCoder.h#L236">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -930,7 +945,7 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
                         <p>Frame&rsquo;s duration</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDImageCoder.h#L244">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDImageCoder.h#L244">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -940,8 +955,8 @@ If the frame count is less than 1, then the methods below will be ignored.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-11-23)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2021 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="noopener" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2021-09-30)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.14.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

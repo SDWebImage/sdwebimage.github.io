@@ -148,6 +148,20 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDAnimatedImagePlayer.h",
+      "line": 13,
+      "symbol": "SDAnimatedImagePlaybackMode",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDAnimatedImagePlayer.h",
+      "line": 13,
+      "symbol": "SDAnimatedImagePlaybackMode",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDDiskCache.h",
       "line": 131,
       "symbol": "SDDiskCache.-init",
@@ -313,13 +327,6 @@
       "line": 15,
       "symbol": "SDImageCoderMutableOptions",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDImageCoder.h",
-      "line": 96,
-      "symbol": "",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.unexposed",
       "warning": "undocumented"
     },
     {

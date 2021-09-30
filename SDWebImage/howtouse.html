@@ -16,7 +16,7 @@
     <a title="HowToUse  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImage 5.10.0 Docs</a> (82% documented)</p>
+        <p><a href="index.html">SDWebImage 5.12.0 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="search.json">
@@ -354,6 +354,9 @@
                 <a href="Constants.html#/c:@SDWebImageContextLoaderCachedImage">SDWebImageContextLoaderCachedImage</a>
               </li>
               <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextOriginalImageCache">SDWebImageContextOriginalImageCache</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextOriginalQueryCacheType">SDWebImageContextOriginalQueryCacheType</a>
               </li>
               <li class="nav-group-task">
@@ -382,6 +385,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageErrorDomain">SDWebImageErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageErrorDownloadContentTypeKey">SDWebImageErrorDownloadContentTypeKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageErrorDownloadResponseKey">SDWebImageErrorDownloadResponseKey</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageErrorDownloadStatusCodeKey">SDWebImageErrorDownloadStatusCodeKey</a>
@@ -641,6 +650,12 @@
                 <a href="Functions.html#/c:@F@SDImageLoaderDecodeProgressiveImageData">SDImageLoaderDecodeProgressiveImageData</a>
               </li>
               <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDImageLoaderGetProgressiveCoder">SDImageLoaderGetProgressiveCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDImageLoaderSetProgressiveCoder">SDImageLoaderSetProgressiveCoder</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Functions.html#/c:@F@SDImageScaleFactorForKey">SDImageScaleFactorForKey</a>
               </li>
               <li class="nav-group-task">
@@ -714,7 +729,7 @@ handled for you, from async downloads to caching management.</p>
 
 <p>The <code><a href="Classes/SDWebImageManager.html">SDWebImageManager</a></code> is the class behind the <code>UIImageView(WebCache)</code> category. It ties the asynchronous downloader with the image cache store. You can use this class directly to benefit from web image downloading with caching in another context than a <code>UIView</code> (ie: with Cocoa).</p>
 
-<p>Note: When the image is from memory cache, it will not contains any <code>NSData</code> by default. However, if you need image data, you can pass <code>SDWebImageQueryDataWhenInMemory</code> in options arg.</p>
+<p>Note: When the image is from memory cache, it will not contain any <code>NSData</code> by default. However, if you need image data, you can pass <code>SDWebImageQueryDataWhenInMemory</code> in options arg.</p>
 
 <p>Here is a simple example of how to use <code><a href="Classes/SDWebImageManager.html">SDWebImageManager</a></code>:</p>
 <pre class="highlight plaintext"><code>SDWebImageManager *manager = [SDWebImageManager sharedManager];
@@ -746,11 +761,11 @@ handled for you, from async downloads to caching management.</p>
 </code></pre>
 <h3 id='using-asynchronous-image-caching-independently' class='heading'>Using Asynchronous Image Caching Independently</h3>
 
-<p>It is also possible to use the async based image cache store independently. SDImageCache
+<p>It is also possible to use the async based image cache store independently. <code><a href="Classes/SDImageCache.html">SDImageCache</a></code>
 maintains a memory cache and an optional disk cache. Disk cache write operations are performed
 asynchronous so it doesn&rsquo;t add unnecessary latency to the UI.</p>
 
-<p>The SDImageCache class provides a singleton instance for convenience but you can create your own
+<p>The <code><a href="Classes/SDImageCache.html">SDImageCache</a></code> class provides a singleton instance for convenience but you can create your own
 instance if you want to create separated cache namespace.</p>
 
 <p>To lookup the cache, you use the <code>queryDiskCacheForKey:done:</code> method. If the method returns nil, it means the cache
@@ -763,23 +778,23 @@ the image.</p>
 }];
 </code></pre>
 
-<p>By default SDImageCache will lookup the disk cache if an image can&rsquo;t be found in the memory cache.
+<p>By default <code><a href="Classes/SDImageCache.html">SDImageCache</a></code> will lookup the disk cache if an image can&rsquo;t be found in the memory cache.
 You can prevent this from happening by calling the alternative method <code>imageFromMemoryCacheForKey:</code>.</p>
 
-<p>To store an image into the cache, you use the storeImage:forKey:completion: method:</p>
+<p>To store an image into the cache, you use the <code>storeImage:forKey:completion:</code> method:</p>
 <pre class="highlight plaintext"><code>[[SDImageCache sharedImageCache] storeImage:myImage forKey:myCacheKey completion:^{
     // image stored
 }];
 </code></pre>
 
 <p>By default, the image will be stored in memory cache as well as on disk cache (asynchronously). If
-you want only the memory cache, use the alternative method storeImage:forKey:toDisk:completion: with a negative
+you want only the memory cache, use the alternative method <code>storeImage:forKey:toDisk:completion:</code> with a negative
 third argument.</p>
 <h3 id='using-cache-key-filter' class='heading'>Using cache key filter</h3>
 
 <p>Sometime, you may not want to use the image URL as cache key because part of the URL is dynamic
-(i.e.: for access control purpose). SDWebImageManager provides a way to set a cache key filter that
-takes the NSURL as input, and output a cache key NSString.</p>
+(i.e.: for access control purpose). <code><a href="Classes/SDWebImageManager.html">SDWebImageManager</a></code> provides a way to set a cache key filter that
+takes the <code>NSURL</code> as input, and output a cache key <code>NSString</code>.</p>
 
 <p>The following example sets a filter in the application delegate that will remove any query-string from
 the URL before to use it as a cache key:</p>
@@ -797,8 +812,8 @@ the URL before to use it as a cache key:</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-11-23)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2021 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="noopener" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2021-09-30)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.14.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

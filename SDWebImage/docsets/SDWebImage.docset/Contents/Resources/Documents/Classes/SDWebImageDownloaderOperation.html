@@ -17,7 +17,7 @@
     <a title="SDWebImageDownloaderOperation Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.10.0 Docs</a> (82% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.12.0 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="../search.json">
@@ -355,6 +355,9 @@
                 <a href="../Constants.html#/c:@SDWebImageContextLoaderCachedImage">SDWebImageContextLoaderCachedImage</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextOriginalImageCache">SDWebImageContextOriginalImageCache</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextOriginalQueryCacheType">SDWebImageContextOriginalQueryCacheType</a>
               </li>
               <li class="nav-group-task">
@@ -383,6 +386,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageErrorDomain">SDWebImageErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageErrorDownloadContentTypeKey">SDWebImageErrorDownloadContentTypeKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageErrorDownloadResponseKey">SDWebImageErrorDownloadResponseKey</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageErrorDownloadStatusCodeKey">SDWebImageErrorDownloadStatusCodeKey</a>
@@ -642,6 +651,12 @@
                 <a href="../Functions.html#/c:@F@SDImageLoaderDecodeProgressiveImageData">SDImageLoaderDecodeProgressiveImageData</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDImageLoaderGetProgressiveCoder">SDImageLoaderGetProgressiveCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDImageLoaderSetProgressiveCoder">SDImageLoaderSetProgressiveCoder</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/c:@F@SDImageScaleFactorForKey">SDImageScaleFactorForKey</a>
               </li>
               <li class="nav-group-task">
@@ -680,7 +695,7 @@
             <p>The download operation class for SDWebImageDownloader.</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L49-L153">Show on GitHub</a>
+                <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L53-L172">Show on GitHub</a>
               </div>
           </section>
           <section class="section task-group-section">
@@ -716,7 +731,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L54">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -751,7 +766,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L59">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L63">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -786,7 +801,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L64">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L68">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -822,7 +837,7 @@ This can be used to collect the network metrics like download duration, DNS look
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L70">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L74">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -859,7 +874,7 @@ This can be used to collect the network metrics like download duration, DNS look
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L77">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L81">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -905,7 +920,82 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L86">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L90">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDWebImageDownloaderOperation(py)acceptableStatusCodes"></a>
+                    <a name="//apple_ref/objc/Property/acceptableStatusCodes" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDWebImageDownloaderOperation(py)acceptableStatusCodes">acceptableStatusCodes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set the acceptable HTTP Response status code. The status code which beyond the range will mark the download operation failed.
+For example, if we config [200, 400) but server response is 503, the download will fail with error code <code>SDWebImageErrorInvalidDownloadStatusCode</code>.
+Defaults to [200,400). Nil means no validation at all.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSIndexSet</span> <span class="o">*</span><span class="n">acceptableStatusCodes</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">acceptableStatusCodes</span><span class="p">:</span> <span class="kt">IndexSet</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L97">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDWebImageDownloaderOperation(py)acceptableContentTypes"></a>
+                    <a name="//apple_ref/objc/Property/acceptableContentTypes" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDWebImageDownloaderOperation(py)acceptableContentTypes">acceptableContentTypes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set the acceptable HTTP Response content type. The content type beyond the set will mark the download operation failed.
+For example, if we config [&ldquo;image/png&rdquo;] but server response is &ldquo;application/json&rdquo;, the download will fail with error code <code>SDWebImageErrorInvalidDownloadContentType</code>.
+Normally you don&rsquo;t need this for image format detection because we use image&rsquo;s data file signature magic bytes: <a href="https://en.wikipedia.org/wiki/List_of_file_signatures">https://en.wikipedia.org/wiki/List_of_file_signatures</a>
+Defaults to nil. Nil means no validation at all.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSSet</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">acceptableContentTypes</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">acceptableContentTypes</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L105">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -940,7 +1030,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L91">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L110">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -975,7 +1065,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L96">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L115">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1064,7 +1154,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         <p>the initialized instance</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L109-L111">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L128-L130">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1166,7 +1256,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         <p>the initialized instance</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L125-L128">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L144-L147">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1184,7 +1274,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Adds handlers for progress and completion. Returns a tokent that can be passed to -cancel: to cancel this set of
+                        <p>Adds handlers for progress and completion. Returns a token that can be passed to -cancel: to cancel this set of
   callbacks.</p>
 
                       </div>
@@ -1243,7 +1333,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         <p>the token to use to cancel this set of handlers</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L141-L142">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L160-L161">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1301,7 +1391,7 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
                         <p>YES if the operation was stopped because this was the last token to be canceled. NO otherwise.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L151">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/SDWebImageDownloaderOperation.h#L170">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1311,8 +1401,8 @@ Defaults to 0, which means each time we receive the new data from URLSession, we
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-11-23)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2021 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="noopener" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2021-09-30)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.14.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

@@ -17,7 +17,7 @@
     <a title="UIImage(Transform) Category Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.10.0 Docs</a> (82% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.12.0 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="../search.json">
@@ -355,6 +355,9 @@
                 <a href="../Constants.html#/c:@SDWebImageContextLoaderCachedImage">SDWebImageContextLoaderCachedImage</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextOriginalImageCache">SDWebImageContextOriginalImageCache</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextOriginalQueryCacheType">SDWebImageContextOriginalQueryCacheType</a>
               </li>
               <li class="nav-group-task">
@@ -383,6 +386,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageErrorDomain">SDWebImageErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageErrorDownloadContentTypeKey">SDWebImageErrorDownloadContentTypeKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageErrorDownloadResponseKey">SDWebImageErrorDownloadResponseKey</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageErrorDownloadStatusCodeKey">SDWebImageErrorDownloadStatusCodeKey</a>
@@ -642,6 +651,12 @@
                 <a href="../Functions.html#/c:@F@SDImageLoaderDecodeProgressiveImageData">SDImageLoaderDecodeProgressiveImageData</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDImageLoaderGetProgressiveCoder">SDImageLoaderGetProgressiveCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDImageLoaderSetProgressiveCoder">SDImageLoaderSetProgressiveCoder</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/c:@F@SDImageScaleFactorForKey">SDImageScaleFactorForKey</a>
               </li>
               <li class="nav-group-task">
@@ -675,7 +690,7 @@
 Image process is based on Core Graphics and vImage.</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/UIImage+Transform.h#L33-L146">Show on GitHub</a>
+                <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/UIImage+Transform.h#L33-L146">Show on GitHub</a>
               </div>
           </section>
           <section class="section task-group-section">
@@ -757,7 +772,7 @@ You can specify a larger or smaller size than the image size. The image content 
                         <p>The new image with the given size.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/UIImage+Transform.h#L45">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/UIImage+Transform.h#L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -815,7 +830,7 @@ You can specify a larger or smaller size than the image size. The image content 
                         <p>The new image with the cropping rect.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/UIImage+Transform.h#L53">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/UIImage+Transform.h#L53">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -919,7 +934,7 @@ or height.</p>
                         <p>The new image with the round corner.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/UIImage+Transform.h#L70-L73">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/UIImage+Transform.h#L70-L73">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -991,7 +1006,7 @@ or height.</p>
                         <p>The new image with the rotation.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/UIImage+Transform.h#L83">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/UIImage+Transform.h#L83">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1062,7 +1077,7 @@ or height.</p>
                         <p>The new image with the flipping.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/UIImage+Transform.h#L92">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/UIImage+Transform.h#L92">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1133,7 +1148,7 @@ or height.</p>
                         <p>The new image with the tint color.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/UIImage+Transform.h#L102">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/UIImage+Transform.h#L102">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1200,7 +1215,7 @@ or height.</p>
                         <p>The color for specify pixel, or nil if any error occur</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/UIImage+Transform.h#L112">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/UIImage+Transform.h#L112">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1267,7 +1282,7 @@ or height.</p>
                         <p>The color array for specify pixels, or nil if any error occur</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/UIImage+Transform.h#L122">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/UIImage+Transform.h#L122">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1338,7 +1353,7 @@ or height.</p>
                         <p>The new image with blur effect, or nil if an error occurs (e.g. no enough memory).</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/UIImage+Transform.h#L133">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/UIImage+Transform.h#L133">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1397,7 +1412,7 @@ or height.</p>
 enough memory).</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/UIImage+Transform.h#L143">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/UIImage+Transform.h#L143">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1407,8 +1422,8 @@ enough memory).</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-11-23)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2021 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="noopener" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2021-09-30)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.14.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

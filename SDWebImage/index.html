@@ -16,7 +16,7 @@
     <a title="SDWebImage  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SDWebImage 5.10.0 Docs</a> (82% documented)</p>
+        <p><a href="index.html">SDWebImage 5.12.0 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="search.json">
@@ -354,6 +354,9 @@
                 <a href="Constants.html#/c:@SDWebImageContextLoaderCachedImage">SDWebImageContextLoaderCachedImage</a>
               </li>
               <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageContextOriginalImageCache">SDWebImageContextOriginalImageCache</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageContextOriginalQueryCacheType">SDWebImageContextOriginalQueryCacheType</a>
               </li>
               <li class="nav-group-task">
@@ -382,6 +385,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageErrorDomain">SDWebImageErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageErrorDownloadContentTypeKey">SDWebImageErrorDownloadContentTypeKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@SDWebImageErrorDownloadResponseKey">SDWebImageErrorDownloadResponseKey</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDWebImageErrorDownloadStatusCodeKey">SDWebImageErrorDownloadStatusCodeKey</a>
@@ -641,6 +650,12 @@
                 <a href="Functions.html#/c:@F@SDImageLoaderDecodeProgressiveImageData">SDImageLoaderDecodeProgressiveImageData</a>
               </li>
               <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDImageLoaderGetProgressiveCoder">SDImageLoaderGetProgressiveCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@SDImageLoaderSetProgressiveCoder">SDImageLoaderSetProgressiveCoder</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Functions.html#/c:@F@SDImageScaleFactorForKey">SDImageScaleFactorForKey</a>
               </li>
               <li class="nav-group-task">
@@ -702,8 +717,9 @@
 <h2 id='supported-image-formats' class='heading'>Supported Image Formats</h2>
 
 <ul>
-<li>Image formats supported by Apple system (JPEG, PNG, TIFF, HEIC, &hellip;), including GIF/APNG/HEIC animation</li>
-<li>WebP format, including animated WebP (use the <a href="https://github.com/SDWebImage/SDWebImageWebPCoder">SDWebImageWebPCoder</a> project). Note iOS 14/macOS 11.0 supports built-in WebP decoding (no encoding).</li>
+<li>Image formats supported by Apple system (JPEG, PNG, TIFF, BMP, &hellip;), including <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#gif-coder">GIF</a>/<a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#apng-coder">APNG</a> animated image</li>
+<li>HEIC format from iOS 11/macOS 10.13, including animated HEIC from iOS 13/macOS 10.15 via <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#heic-coder">SDWebImageHEICCoder</a>. For lower firmware, use coder plugin <a href="https://github.com/SDWebImage/SDWebImageHEIFCoder">SDWebImageHEIFCoder</a></li>
+<li>WebP format from iOS 14/macOS 11.0 via <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#awebp-coder">SDWebImageAWebPCoder</a>. For lower firmware, use coder plugin <a href="https://github.com/SDWebImage/SDWebImageWebPCoder">SDWebImageWebPCoder</a></li>
 <li>Support extendable coder plugins for new image formats like BPG, AVIF. And vector format like PDF, SVG. See all the list in <a href="https://github.com/SDWebImage/SDWebImage/wiki/Coder-Plugin-List">Image coder plugin List</a></li>
 </ul>
 <h2 id='additional-modules-and-ecosystem' class='heading'>Additional modules and Ecosystem</h2>
@@ -782,7 +798,7 @@ As such, we have moved/built new modules to <a href="https://github.com/SDWebIma
 <li>For iOS 8, macOS 10.10 or Xcode &lt; 11, use <a href="https://github.com/SDWebImage/SDWebImage/releases/tag/5.9.5">any 5.x version up to 5.9.5</a></li>
 <li>For iOS 7, macOS 10.9 or Xcode &lt; 8, use <a href="https://github.com/SDWebImage/SDWebImage/releases/tag/4.4.6">any 4.x version up to 4.4.6</a></li>
 <li>For macOS 10.8, use <a href="https://github.com/SDWebImage/SDWebImage/releases/tag/4.3.0">any 4.x version up to 4.3.0</a></li>
-<li>For iOS 5 and 6, use <a href="https://github.com/SDWebImage/SDWebImage/tag/3.7.6">any 3.x version up to 3.7.6</a></li>
+<li>For iOS 5 and 6, use <a href="https://github.com/SDWebImage/SDWebImage/releases/tag/3.7.6">any 3.x version up to 3.7.6</a></li>
 <li>For iOS &lt; 5.0, please use the last <a href="https://github.com/SDWebImage/SDWebImage/tree/2.0-compat">2.0 version</a>.</li>
 </ul>
 <h2 id='getting-started' class='heading'>Getting Started</h2>
@@ -849,7 +865,7 @@ As such, we have moved/built new modules to <a href="https://github.com/SDWebIma
 
 <p>The <code><a href="Classes/SDAnimatedImageView.html">SDAnimatedImageView</a></code> supports the familiar image loading category methods, works like drop-in replacement for <code>UIImageView/NSImageView</code>.</p>
 
-<p>Don&rsquo;t have UIView (like WatchKit or CALayer)? you can still use <code>SDAnimatedPlayer</code> the player engine for advanced playback and rendering.</p>
+<p>Don&rsquo;t have <code>UIView</code> (like <code>WatchKit</code> or <code>CALayer</code>)? you can still use <code>SDAnimatedPlayer</code> the player engine for advanced playback and rendering.</p>
 
 <p>See <a href="https://github.com/SDWebImage/SDWebImage/wiki/Advanced-Usage#animated-image-50">Animated Image</a> for more detailed information.</p>
 
@@ -890,9 +906,9 @@ pod 'SDWebImage', '~&gt; 5.0'
 </code></pre>
 <h5 id='swift-and-static-framework' class='heading'>Swift and static framework</h5>
 
-<p>Swift project previously have to use <code>use_frameworks!</code> to make all Pods into dynamic framework to let CocoaPods works.</p>
+<p>Swift project previously had to use <code>use_frameworks!</code> to make all Pods into dynamic framework to let CocoaPods work.</p>
 
-<p>However, start with <code>CocoaPods 1.5.0+</code> (with <code>Xcode 9+</code>), which supports to build both Objective-C &amp;&amp; Swift code into static framework. You can use modular headers to use SDWebImage as static framework, without the need of <code>use_frameworks!</code>:</p>
+<p>However, starting with <code>CocoaPods 1.5.0+</code> (with <code>Xcode 9+</code>), which supports to build both Objective-C &amp;&amp; Swift code into static framework. You can use modular headers to use SDWebImage as static framework, without the need of <code>use_frameworks!</code>:</p>
 <pre class="highlight plaintext"><code>platform :ios, '8.0'
 # Uncomment the next line when you want all Pods as static framework
 # use_modular_headers!
@@ -924,10 +940,11 @@ pod 'SDWebImage'
 <p>Make the following entry in your Cartfile: <code>github &quot;SDWebImage/SDWebImage&quot;</code>
 Then run <code>carthage update</code>
 If this is your first time using Carthage in the project, you&rsquo;ll need to go through some additional steps as explained <a href="https://github.com/Carthage/Carthage#adding-frameworks-to-an-application">over at Carthage</a>.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>At this time, Carthage does not provide a way to build only specific repository subcomponents (or equivalent of CocoaPods&rsquo;s subspecs). All components and their dependencies will be built with the above command. However, you don&rsquo;t need to copy frameworks you aren&rsquo;t using into your project. For instance, if you aren&rsquo;t using <code>SDWebImageMapKit</code>, feel free to delete that framework from the Carthage Build directory after <code>carthage update</code> completes.</p>
 
-<blockquote>
-<p>NOTE: At this time, Carthage does not provide a way to build only specific repository subcomponents (or equivalent of CocoaPods&rsquo;s subspecs). All components and their dependencies will be built with the above command. However, you don&rsquo;t need to copy frameworks you aren&rsquo;t using into your project. For instance, if you aren&rsquo;t using <code>SDWebImageMapKit</code>, feel free to delete that framework from the Carthage Build directory after <code>carthage update</code> completes.</p>
-</blockquote>
+</div>
 <h3 id='installation-with-swift-package-manager-xcode-11' class='heading'>Installation with Swift Package Manager (Xcode 11+)</h3>
 
 <p><a href="https://swift.org/package-manager/">Swift Package Manager</a> (SwiftPM) is a tool for managing the distribution of Swift code as well as C-family dependency. From Xcode 11, SwiftPM got natively integrated with Xcode.</p>
@@ -1021,8 +1038,8 @@ community can help you solve it.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-11-23)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2021 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="noopener" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2021-09-30)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.14.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

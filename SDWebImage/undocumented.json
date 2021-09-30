@@ -226,14 +226,14 @@
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDImageCacheConfig.h",
-      "line": 62,
+      "line": 63,
       "symbol": "SDImageCacheConfig.shouldUseWeakMemoryCache",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDImageCacheConfig.h",
-      "line": 113,
+      "line": 120,
       "symbol": "SDImageCacheConfig.diskCacheExpireType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
@@ -352,14 +352,14 @@
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDImageLoader.h",
-      "line": 13,
+      "line": 14,
       "symbol": "SDImageLoaderProgressBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDImageLoader.h",
-      "line": 14,
+      "line": 15,
       "symbol": "SDImageLoaderCompletedBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
@@ -681,15 +681,29 @@
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDWebImageDownloaderOperation.h",
-      "line": 40,
+      "line": 42,
       "symbol": "SDWebImageDownloaderOperation.credential",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDWebImageDownloaderOperation.h",
-      "line": 41,
+      "line": 43,
       "symbol": "SDWebImageDownloaderOperation.minimumProgressInterval",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDWebImageDownloaderOperation.h",
+      "line": 44,
+      "symbol": "SDWebImageDownloaderOperation.acceptableStatusCodes",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDWebImageDownloaderOperation.h",
+      "line": 45,
+      "symbol": "SDWebImageDownloaderOperation.acceptableContentTypes",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
@@ -716,57 +730,64 @@
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDWebImageError.h",
-      "line": 19,
+      "line": 23,
       "symbol": "SDWebImageError.SDWebImageErrorInvalidURL",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDWebImageError.h",
-      "line": 20,
+      "line": 24,
       "symbol": "SDWebImageError.SDWebImageErrorBadImageData",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDWebImageError.h",
-      "line": 21,
+      "line": 25,
       "symbol": "SDWebImageError.SDWebImageErrorCacheNotModified",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDWebImageError.h",
-      "line": 22,
+      "line": 26,
       "symbol": "SDWebImageError.SDWebImageErrorBlackListed",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDWebImageError.h",
-      "line": 23,
+      "line": 27,
       "symbol": "SDWebImageError.SDWebImageErrorInvalidDownloadOperation",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDWebImageError.h",
-      "line": 24,
+      "line": 28,
       "symbol": "SDWebImageError.SDWebImageErrorInvalidDownloadStatusCode",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDWebImageError.h",
-      "line": 25,
+      "line": 29,
       "symbol": "SDWebImageError.SDWebImageErrorCancelled",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDWebImageError.h",
-      "line": 26,
+      "line": 30,
       "symbol": "SDWebImageError.SDWebImageErrorInvalidDownloadResponse",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lizhuoli/Documents/GitHub/SDWebImage/SDWebImage/include/SDWebImage/SDWebImageError.h",
+      "line": 31,
+      "symbol": "SDWebImageError.SDWebImageErrorInvalidDownloadContentType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },

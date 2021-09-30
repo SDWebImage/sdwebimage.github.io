@@ -17,7 +17,7 @@
     <a title="UIImage(Metadata) Category Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SDWebImage 5.10.0 Docs</a> (82% documented)</p>
+        <p><a href="../index.html">SDWebImage 5.12.0 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/SDWebImage/SDWebImage"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="../search.json">
@@ -355,6 +355,9 @@
                 <a href="../Constants.html#/c:@SDWebImageContextLoaderCachedImage">SDWebImageContextLoaderCachedImage</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageContextOriginalImageCache">SDWebImageContextOriginalImageCache</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageContextOriginalQueryCacheType">SDWebImageContextOriginalQueryCacheType</a>
               </li>
               <li class="nav-group-task">
@@ -383,6 +386,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageErrorDomain">SDWebImageErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageErrorDownloadContentTypeKey">SDWebImageErrorDownloadContentTypeKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDWebImageErrorDownloadResponseKey">SDWebImageErrorDownloadResponseKey</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDWebImageErrorDownloadStatusCodeKey">SDWebImageErrorDownloadStatusCodeKey</a>
@@ -642,6 +651,12 @@
                 <a href="../Functions.html#/c:@F@SDImageLoaderDecodeProgressiveImageData">SDImageLoaderDecodeProgressiveImageData</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDImageLoaderGetProgressiveCoder">SDImageLoaderGetProgressiveCoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDImageLoaderSetProgressiveCoder">SDImageLoaderSetProgressiveCoder</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/c:@F@SDImageScaleFactorForKey">SDImageScaleFactorForKey</a>
               </li>
               <li class="nav-group-task">
@@ -674,7 +689,7 @@
             <p>UIImage category for image metadata, including animation, loop count, format, incremental, etc.</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/UIImage+Metadata.h#L15-L57">Show on GitHub</a>
+                <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/UIImage+Metadata.h#L15-L68">Show on GitHub</a>
               </div>
           </section>
           <section class="section task-group-section">
@@ -698,9 +713,9 @@ For static image format, this value is always 0.
 For animated image format, 0 means infinite looping.
 Note that because of the limitations of categories this property can get out of sync if you create another instance with CGImage or other methods.
 AppKit:
-NSImage currently only support animated via GIF imageRep unlike UIImage.
-The getter of this property will get the loop count from GIF imageRep
-The setter of this property will set the loop count from GIF imageRep</p>
+NSImage currently only support animated via <code>NSBitmapImageRep</code>(GIF) or <code>SDAnimatedImageRep</code>(APNG/GIF/WebP) unlike UIImage.
+The getter of this property will get the loop count from animated imageRep
+The setter of this property will set the loop count from animated imageRep</p>
 
                       </div>
                       <div class="declaration">
@@ -717,7 +732,48 @@ The setter of this property will set the loop count from GIF imageRep</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/UIImage+Metadata.h#L27">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/UIImage+Metadata.h#L27">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)UIImage(py)sd_imageFrameCount"></a>
+                    <a name="//apple_ref/objc/Property/sd_imageFrameCount" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)UIImage(py)sd_imageFrameCount">sd_imageFrameCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>UIKit:
+Returns the <code>images</code>&lsquo;s count by unapply the patch for the different frame durations. Which matches the real visible frame count when displaying on UIImageView.
+See more in <code>SDImageCoderHelper.animatedImageWithFrames</code>.
+Returns 1 for static image.
+AppKit:
+Returns the underlaying <code>NSBitmapImageRep</code> or <code>SDAnimatedImageRep</code> frame count.
+Returns 1 for static image.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">sd_imageFrameCount</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sd_imageFrameCount</span><span class="p">:</span> <span class="kt">UInt</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/UIImage+Metadata.h#L38">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -755,7 +811,7 @@ NSImage currently only support animated via GIF imageRep unlike UIImage. It will
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/UIImage+Metadata.h#L35">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/UIImage+Metadata.h#L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -793,7 +849,7 @@ NSImage supports PDF &amp;&amp; SVG &amp;&amp; EPS imageRep, check the imageRep 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/UIImage+Metadata.h#L43">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/UIImage+Metadata.h#L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -834,7 +890,7 @@ If you don&rsquo;t manually specify a format, this information is retrieve from 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/UIImage+Metadata.h#L50">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/UIImage+Metadata.h#L61">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -869,7 +925,7 @@ If you don&rsquo;t manually specify a format, this information is retrieve from 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.10.0/SDWebImage/Core/UIImage+Metadata.h#L55">Show on GitHub</a>
+                        <a href="https://github.com/SDWebImage/SDWebImage/tree/5.12.0/SDWebImage/Core/UIImage+Metadata.h#L66">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -879,8 +935,8 @@ If you don&rsquo;t manually specify a format, this information is retrieve from 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2020-11-23)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2021 <a class="link" href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="noopener" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2021-09-30)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.14.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
