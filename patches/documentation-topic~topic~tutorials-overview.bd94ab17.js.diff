@@ -1,0 +1,4 @@
+--- a/js/documentation-topic~topic~tutorials-overview.bd94ab17.js
+"index/index.json"
++++ a/js/documentation-topic~topic~tutorials-overview.bd94ab17.js
+"index/"+window.location.pathname.split('/')[2]+"/index.json"

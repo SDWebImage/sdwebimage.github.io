@@ -1,137 +1,280 @@
+<!--
+  This source file is part of the Swift.org open source project
+
+  Copyright (c) 2021 Apple Inc. and the Swift project authors
+  Licensed under Apache License v2.0 with Runtime Library Exception
+
+  See https://swift.org/LICENSE.txt for license information
+  See https://swift.org/CONTRIBUTORS.txt for Swift project authors
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="--code-indentationWidth:4;">
   <head>
-    <title>SDWebImage</title>
-    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
-    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
-    <meta charset='utf-8'>
-    <script src="js/jquery.min.js" defer></script>
-    <script src="js/jazzy.js" defer></script>
-    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="mask-icon" href="/favicon.svg" color="#333333">
+    <title>SDWebImage Documentation</title>
+    <script>
+      var baseUrl = "/"
+    </script>
+    <link href="/css/documentation-topic.a7be2880.css" rel="prefetch">
+    <link href="/css/documentation-topic~topic~tutorials-overview.5d19221e.css" rel="prefetch">
+    <link href="/css/topic.fdc1ac71.css" rel="prefetch">
+    <link href="/css/tutorials-overview.36413021.css" rel="prefetch">
+    <link href="/js/chunk-2d0d3105.cd72cc8e.js" rel="prefetch">
+    <link href="/js/documentation-topic.3bc2eb6f.js" rel="prefetch">
+    <link href="/js/documentation-topic~topic~tutorials-overview.bd94ab17.js" rel="prefetch">
+    <link href="/js/highlight-js-bash.1b52852f.js" rel="prefetch">
+    <link href="/js/highlight-js-c.d1db3f17.js" rel="prefetch">
+    <link href="/js/highlight-js-cpp.eaddddbe.js" rel="prefetch">
+    <link href="/js/highlight-js-css.75eab1fe.js" rel="prefetch">
+    <link href="/js/highlight-js-custom-markdown.7cffc4b3.js" rel="prefetch">
+    <link href="/js/highlight-js-custom-swift.a62dfec9.js" rel="prefetch">
+    <link href="/js/highlight-js-diff.62d66733.js" rel="prefetch">
+    <link href="/js/highlight-js-http.163e45b6.js" rel="prefetch">
+    <link href="/js/highlight-js-java.8326d9d8.js" rel="prefetch">
+    <link href="/js/highlight-js-javascript.acb8a8eb.js" rel="prefetch">
+    <link href="/js/highlight-js-json.471128d2.js" rel="prefetch">
+    <link href="/js/highlight-js-llvm.6100b125.js" rel="prefetch">
+    <link href="/js/highlight-js-markdown.90077643.js" rel="prefetch">
+    <link href="/js/highlight-js-objectivec.bcdf5156.js" rel="prefetch">
+    <link href="/js/highlight-js-perl.757d7b6f.js" rel="prefetch">
+    <link href="/js/highlight-js-php.cc8d6c27.js" rel="prefetch">
+    <link href="/js/highlight-js-python.c214ed92.js" rel="prefetch">
+    <link href="/js/highlight-js-ruby.f889d392.js" rel="prefetch">
+    <link href="/js/highlight-js-scss.62ee18da.js" rel="prefetch">
+    <link href="/js/highlight-js-shell.dd7f411f.js" rel="prefetch">
+    <link href="/js/highlight-js-swift.84f3e88c.js" rel="prefetch">
+    <link href="/js/highlight-js-xml.9c3688c7.js" rel="prefetch">
+    <link href="/js/topic.897e6b8e.js" rel="prefetch">
+    <link href="/js/tutorials-overview.abddae14.js" rel="prefetch">
+    <link href="/css/index.dcc9e6fb.css" rel="preload" as="style">
+    <link href="/js/chunk-vendors.00bf82af.js" rel="preload" as="script">
+    <link href="/js/index.c37d1972.js" rel="preload" as="script">
+    <link href="/css/index.dcc9e6fb.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/documentation-topic~topic~tutorials-overview.5d19221e.css">
+    <script charset="utf-8" src="/js/documentation-topic~topic~tutorials-overview.bd94ab17.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/documentation-topic.a7be2880.css">
+    <script charset="utf-8" src="/js/documentation-topic.3bc2eb6f.js"></script>
+    <script charset="utf-8" src="/js/chunk-2d0d3105.cd72cc8e.js"></script>
+    <meta name="description" content="This page contains SDWebImage and its related projects documentation.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Documentation">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Documentation | Documentation">
+    <meta property="og:description" content="This page contains SDWebImage and its related projects documentation.">
+    <meta property="og:url" content="sdwebimage.github.io/">
+    <meta property="og:image" content="http://[::]:8000/developer-og.jpg">
+    <meta name="twitter:image" content="http://[::]:8000/developer-og-twitter.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="This page contains SDWebImage and its related projects documentation.">
+    <meta name="twitter:title" content="Documentation | Documentation">
+    <meta name="twitter:url" content="sdwebimage.github.io/">
   </head>
-  <body>
-    <a title="SDWebImage"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="index.html">SDWebImage
-        <p class="header-right"><a href="https://github.com/SDWebImage"><img src="img/gh.png"/>View on GitHub</a></p>
+  <body data-color-scheme="auto">
+    <noscript>
+      <style>
+        .noscript {
+          font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+          margin: 92px auto 140px auto;
+          text-align: center;
+          width: 980px
+        }
+
+        .noscript-title {
+          color: #111;
+          font-size: 48px;
+          font-weight: 600;
+          letter-spacing: -.003em;
+          line-height: 1.08365;
+          margin: 0 auto 54px auto;
+          width: 502px
+        }
+
+        @media only screen and (max-width:1068px) {
+          .noscript {
+            margin: 90px auto 120px auto;
+            width: 692px
+          }
+
+          .noscript-title {
+            font-size: 40px;
+            letter-spacing: 0;
+            line-height: 1.1;
+            margin: 0 auto 45px auto;
+            width: 420px
+          }
+        }
+
+        @media only screen and (max-width:735px) {
+          .noscript {
+            margin: 45px auto 60px auto;
+            width: 87.5%
+          }
+
+          .noscript-title {
+            font-size: 32px;
+            letter-spacing: .004em;
+            line-height: 1.125;
+            margin: 0 auto 35px auto;
+            max-width: 330px;
+            width: auto
+          }
+        }
+
+        #loading-placeholder {
+          display: none
+        }
+      </style>
+      <div class="noscript">
+        <h1 class="noscript-title">This page requires JavaScript.</h1>
+        <p>Please turn on JavaScript in your browser and refresh the page to view its content.</p>
       </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="/">SDWebImage Home</a>
-        <img id="carat" src="img/carat.png" />
-        Documentation Contents
-      </p>
-    </div>
-    <div class="content-wrapper">
-      <nav class="sidebar">
-        <ul class="nav-groups">
-          <li class="nav-group-name">
-            <a href="DataCollection/index.html">Data Collection Practices</a>
-          </li>
-          <li class="nav-group-name">
-            <a href="SDWebImage/index.html">SDWebImage Reference</a>
-          </li>
-          <li class="nav-group-name">
-            <a href="SDWebImageSwiftUI/index.html">SDWebImageSwiftUI Reference</a>
-          </li>
-          <li class="nav-group-name">
-            <a href="SDWebImageWebPCoder/index.html">SDWebImageWebPCoder Reference</a>
-          </li>
-          <li class="nav-group-name">
-            <a href="SDWebImagePhotosPlugin/index.html">SDWebImagePhotosPlugin Reference</a>
-          </li>
-          <li class="nav-group-name">
-            <a href="SDWebImageLinkPlugin/index.html">SDWebImageLinkPlugin Reference</a>
-          </li>
-          <li class="nav-group-name">
-            <a href="SDWebImageLottiePlugin/index.html">SDWebImageLottiePlugin Reference</a>
-          </li>
-          <li class="nav-group-name">
-            <a href="SDWebImageSVGKitPlugin/index.html">SDWebImageSVGKitPlugin Reference</a>
-          </li>
-          <li class="nav-group-name">
-            <a href="SDWebImageFLPlugin/index.html">SDWebImageFLPlugin Reference</a>
-          </li>
-          <li class="nav-group-name">
-            <a href="SDWebImageYYPlugin/index.html">SDWebImageYYPlugin Reference</a>
-          </li>
-          <li class="nav-group-name">
-            <a href="SDWebImagePINPlugin/index.html">SDWebImagePINPlugin Reference</a>
-          </li>
-        </ul>
-      </nav>
-      <article class="main-content">
-        <section>
-          <section class="section">
-            
-            <p align="center" >
-  <img src="https://raw.githubusercontent.com/SDWebImage/SDWebImage/master/SDWebImage_logo.png" title="SDWebImage logo" float=left>
-</p>
-
-<h2 id='additional-modules' class='heading'>Documentation Contents</h2>
-
-<p>This page contains <a href="https://github.com/SDWebImage/SDWebImage">SDWebImage</a> and its related projects documentation.</p>
-
-<h4 id='datacollection' class='heading'>Data Collection Practices</h4>
-
-<ul>
-<li>See a <a href="DataCollection/index.html">detailed list of our SDKs Data Collection Practices</a>, as required by the <a href="https://developer.apple.com/app-store/app-privacy-details/">App privacy details on the App Store</a></li>
-</ul>
-
-<h4 id='core' class='heading'>Core</h4>
-
-<ul>
-<li><a href="https://github.com/SDWebImage/SDWebImage">SDWebImage</a> - Asynchronous image downloader with cache support as a UIImageView category</li>
-</ul>
-
-<h4 id='swiftui' class='heading'>SwiftUI</h4>
-
-<ul>
-<li><a href="https://github.com/SDWebImage/SDWebImageSwiftUI">SDWebImageSwiftUI</a> - SwiftUI Image loading and Animation framework powered by SDWebImage</li>
-</ul>
-
-<h4 id='coders-for-additional-image-formats' class='heading'>Coders for additional image formats</h4>
-
-<ul>
-<li><a href="https://github.com/SDWebImage/SDWebImageWebPCoder">SDWebImageWebPCoder</a> - coder for WebP format. Based on <a href="https://chromium.googlesource.com/webm/libwebp">libwebp</a></li>
-<li><a href="https://github.com/SDWebImage/SDWebImageHEIFCoder">SDWebImageHEIFCoder</a> - coder for HEIF format, iOS 8+/macOS 10.10+ support. Based on <a href="https://github.com/strukturag/libheif">libheif</a></li>
-<li><a href="https://github.com/SDWebImage/SDWebImageBPGCoder">SDWebImageBPGCoder</a> - coder for BPG format. Based on <a href="https://github.com/mirrorer/libbpg">libbpg</a></li>
-<li><a href="https://github.com/SDWebImage/SDWebImageFLIFCoder">SDWebImageFLIFCoder</a> - coder for FLIF format. Based on <a href="https://github.com/FLIF-hub/FLIF">libflif</a></li>
-<li><a href="https://github.com/SDWebImage/SDWebImageAVIFCoder">SDWebImageAVIFCoder</a> - coder for AVIF (AV1-based) format. Based on <a href="https://github.com/AOMediaCodec/libavif">libavif</a></li>
-<li><a href="https://github.com/SDWebImage/SDWebImagePDFCoder">SDWebImagePDFCoder</a> - coder for PDF vector format. Using built-in frameworks</li>
-<li><a href="https://github.com/SDWebImage/SDWebImageSVGCoder">SDWebImageSVGCoder</a> - coder for SVG vector format. Using built-in frameworks</li>
-<li><a href="https://github.com/SDWebImage/SDWebImageLottieCoder">SDWebImageLottieCoder</a> - coder for Lottie animation format. Based on <a href="https://github.com/Samsung/rlottie">rlottie</a></li>
-</ul>
-<h4 id='custom-caches' class='heading'>Custom Caches</h4>
-
-<ul>
-<li><a href="https://github.com/SDWebImage/SDWebImageYYPlugin">SDWebImageYYPlugin</a> - plugin to support caching images with <a href="https://github.com/ibireme/YYCache">YYCache</a></li>
-<li><a href="https://github.com/SDWebImage/SDWebImagePINPlugin">SDWebImagePINPlugin</a> - plugin to support caching images with <a href="https://github.com/pinterest/PINCache">PINCache</a></li>
-</ul>
-<h4 id='custom-loaders' class='heading'>Custom Loaders</h4>
-
-<ul>
-<li><a href="https://github.com/SDWebImage/SDWebImagePhotosPlugin">SDWebImagePhotosPlugin</a> - plugin to support loading images from Photos (using <code>Photos.framework</code>)</li>
-<li><a href="https://github.com/SDWebImage/SDWebImageLinkPlugin">SDWebImageLinkPlugin</a> - plugin to support loading images from rich link url, as well as <code>LPLinkView</code> (using <code>LinkPresentation.framework</code>)</li>
-</ul>
-<h4 id='integration-with-3rd-party-libraries' class='heading'>Integration with 3rd party libraries</h4>
-
-<ul>
-<li><a href="https://github.com/SDWebImage/SDWebImageLottiePlugin">SDWebImageLottiePlugin</a> - plugin to support <a href="https://github.com/airbnb/lottie-ios">Lottie-iOS</a>, vector animation rending with remote JSON files</li>
-<li><a href="https://github.com/SDWebImage/SDWebImageLottiePlugin">SDWebImageSVGKitPlugin</a> - plugin to support <a href="https://github.com/SVGKit/SVGKit">SVGKit</a>, SVG rendering using Core Animation, iOS 8+/macOS 10.10+ support</li>
-<li><a href="https://github.com/SDWebImage/SDWebImageFLPlugin">SDWebImageFLPlugin</a> - plugin to support <a href="https://github.com/Flipboard/FLAnimatedImage">FLAnimatedImage</a> as the engine for animated GIFs</li>
-<li><a href="https://github.com/SDWebImage/SDWebImageYYPlugin">SDWebImageYYPlugin</a> - plugin to integrate <a href="https://github.com/ibireme/YYImage">YYImage</a> &amp; <a href="https://github.com/ibireme/YYCache">YYCache</a> for image rendering &amp; caching</li>
-</ul>
-          </section>
-        </section>
-        <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/SDWebImage" target="_blank" rel="external">SDWebImage</a>. All rights reserved. (Last updated: 2019-11-18)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
-      </article>
+    </noscript>
+    <div data-v-6f639c59="" id="app" class="">
+      <a data-v-6f639c59="" href="#main" id="skip-nav">Skip Navigation</a>
+      <!---->
+      <!---->
+      <div data-v-6f639c59="" id="nav-sticky-anchor"></div>
+      <div data-v-f01c2ff4="" data-v-6f639c59="" class="doc-topic-view">
+        <nav data-v-c3f87002="" data-v-d780ea8c="" data-v-f01c2ff4="" role="navigation" class="nav documentation-nav nav--is-sticking nav--solid-background nav--fullwidth-border nav--is-wide-format" aria-label="API Reference">
+          <div data-v-c3f87002="" class="nav__wrapper">
+            <div data-v-c3f87002="" class="nav__background"></div>
+            <!---->
+            <div data-v-c3f87002="" class="nav-content">
+              <div data-v-c3f87002="" class="pre-title">
+                <button data-v-d780ea8c="" data-v-c3f87002="" aria-label="Open documentation navigator" class="sidenav-toggle">
+                  <svg data-v-0137d411="" data-v-d780ea8c="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="svg-icon sidenav-icon icon-inline sidenav-icon" viewBox="0 0 14 14" height="14" data-v-c3f87002="">
+                    <path data-v-0137d411="" d="M6.533 1.867h-6.533v10.267h14v-10.267zM0.933 11.2v-8.4h4.667v8.4zM13.067 11.2h-6.533v-8.4h6.533z"></path>
+                    <path data-v-0137d411="" d="M1.867 5.133h2.8v0.933h-2.8z"></path>
+                    <path data-v-0137d411="" d="M1.867 7.933h2.8v0.933h-2.8z"></path>
+                  </svg>
+                </button>
+              </div>
+              <div data-v-c3f87002="" class="nav-title">
+                <span data-v-d780ea8c="" data-v-c3f87002="" class="nav-title-link inactive">Documentation</span>
+              </div>
+              <div data-v-c3f87002="" class="nav-menu">
+                <a data-v-c3f87002="" href="#" role="button" class="nav-ax-toggle">
+                  <span data-v-c3f87002="" class="visuallyhidden">Open Menu</span>
+                </a>
+                <div data-v-c3f87002="" class="nav-menu-tray">
+                  <ul data-v-67c1c0a5="" data-v-30132cb0="" data-v-d780ea8c="" data-previous-menu-children-count="0" class="nav-menu-items hierarchy" aria-label="Breadcrumbs" data-v-c3f87002="">
+                    <!---->
+                    <!---->
+                    <li data-v-66cbfe4c="" data-v-30132cb0="" class="nav-menu-item hierarchy-item nav-menu-item--animated" data-v-382bf39e="" data-v-67c1c0a5="">
+                      <span data-v-382bf39e="" data-v-66cbfe4c="" class="hierarchy-item-icon icon-inline">/</span>
+                      <span data-v-382bf39e="" data-v-66cbfe4c="" class="current item"> Index </span>
+                    </li>
+                  </ul>
+                  <ul data-v-67c1c0a5="" data-v-d780ea8c="" data-previous-menu-children-count="1" class="nav-menu-items nav-menu-settings" data-v-c3f87002="">
+                    <li data-v-66cbfe4c="" data-v-adfa009c="" data-v-d780ea8c="" class="nav-menu-item nav-menu-setting language-container nav-menu-item--animated" data-v-67c1c0a5="">
+                      <div data-v-adfa009c="" data-v-66cbfe4c="" class="">
+                        <select data-v-adfa009c="" data-v-66cbfe4c="" aria-hidden="true" tabindex="-1" class="language-dropdown language-sizer">
+                          <option data-v-adfa009c="" data-v-66cbfe4c="" selected="selected">Swift</option>
+                        </select>
+                        <label data-v-adfa009c="" data-v-66cbfe4c="" class="nav-menu-setting-label">Language:</label>
+                        <span data-v-adfa009c="" data-v-66cbfe4c="" aria-current="page" class="nav-menu-toggle-none current-language">Swift</span>
+                        <!---->
+                      </div>
+                      <!---->
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div data-v-c3f87002="" class="nav-actions">
+                <a data-v-c3f87002="" href="#" tabindex="-1" aria-hidden="true" class="nav-menucta">
+                  <span data-v-c3f87002="" class="nav-menucta-chevron"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!---->
+        </nav>
+        <div data-v-e6fc2588="" data-v-f01c2ff4="" class="adjustable-sidebar-width full-width-container topic-wrapper">
+          <div data-v-e6fc2588="" class="content">
+            <div data-v-b9ecd9d0="" data-v-f01c2ff4="" class="doc-topic" data-v-e6fc2588="">
+              <main data-v-b9ecd9d0="" id="main" role="main" tabindex="0" class="main">
+                <div data-v-14076498="" data-v-b9ecd9d0="" class="documentation-hero theme-dark" style="--accent-color:var(--color-type-icon-sky, var(--color-figure-gray-secondary));">
+                  <div data-v-14076498="" class="icon">
+                    <div data-v-031bfabc="" data-v-14076498="" class="NavigatorLeafIcon background-icon first-icon">
+                      <svg data-v-0137d411="" data-v-031bfabc="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="svg-icon technology-icon icon-inline" viewBox="0 0 14 14" style="color: var(--color-type-icon-sky);">
+                        <path data-v-0137d411="" d="M3.39,9l3.16,1.84.47.28.47-.28L10.61,9l.45.26,1.08.63L7,12.91l-5.16-3,1.08-.64L3.39,9M7,0,0,4.1,2.47,5.55,0,7,2.47,8.44,0,9.9,7,14l7-4.1L11.53,8.45,14,7,11.53,5.56,14,4.1ZM7,7.12,5.87,6.45l-1.54-.9L3.39,5,1.85,4.1,7,1.08l5.17,3L10.6,5l-.93.55-1.54.91ZM7,10,3.39,7.9,1.85,7,3.4,6.09,4.94,7,7,8.2,9.06,7,10.6,6.1,12.15,7l-1.55.9Z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div data-v-14076498="" class="documentation-hero__above-content"></div>
+                  <div data-v-14076498="" class="documentation-hero__content">
+                    <!---->
+                    <div data-v-2e777455="" data-v-b9ecd9d0="" class="topictitle" data-v-14076498="">
+                      <span data-v-2e777455="" class="eyebrow">Framework</span>
+                      <h1 data-v-2e777455="" class="title">
+                        <span data-v-b9ecd9d0="" data-v-2e777455="">SDWebImage</span>
+                        <!---->
+                      </h1>
+                    </div>
+                    <div data-v-002affcc="" data-v-702ec04e="" data-v-b9ecd9d0="" class="abstract content" data-v-14076498="">This page contains SDWebImage and its related projects documentation.</div>
+                    <!---->
+                    <!---->
+                  </div>
+                </div>
+                <div data-v-b9ecd9d0="" class="container">
+                  <div data-v-b9ecd9d0="" class="description after-enhanced-hero">
+                    <!---->
+                    <!---->
+                    <!---->
+                  </div>
+                  <div data-v-0e405a2d="" data-v-b9ecd9d0="" class="primary-content">
+                    <div data-v-002affcc="" data-v-0e405a2d="" class="content">
+                      <h2 id="Overview">Overview</h2>
+                      <p>This page contains SDWebImage and its related projects documentation.</p>
+                      <h3 id="Frameworks">Frameworks</h3>
+                      <ul>
+                        <li>
+                          <p>
+                            <a href="/documentation/sdwebimage">SDWebImage</a>
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            <a href="/documentation/sdwebimageswiftui">SDWebImageSwiftUI</a>
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            <a href="/documentation/sdwebimagewebpcoder">SDWebImageWebPCoder</a>
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            <a href="/documentation/sdwebimagephotosplugin">SDWebImagePhotosPlugin</a>
+                          </p>
+                        </li>
+                      </ul>
+                      <h3 id="Data Collection Practices">Data Collection Practices</h3>
+                      <ul>
+                        <li>
+                          <p>
+                            <a href="/DataCollection">The detailed list of our SDKs Data Collection Practices</a>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+              </main>
+            </div>
+          </div>
+          <!---->
+        </div>
+      </div>
     </div>
   </body>
-</div>
 </html>
