@@ -25,12 +25,18 @@ To build Static Hosting Documentation, which is the new feature talked in [Swift
 
 you need to pass `--transform-for-static-hosting` to docc command. However it's not available in Xcode's handy build settings, so you need:
 
-Change the framework Xcode Project's build settings like this (use XCConfig syntax)
+Change the framework Xcode Project's build settings like this (use XCConfig syntax). For example, modify `Module-Shared.xcconfig` in SDWebImage.
 
 ```
 RUN_DOCUMENTATION_COMPILER = YES
 DOCC_EXTRACT_SWIFT_INFO_FOR_OBJC_SYMBOLS = YES
 OTHER_DOCC_FLAGS = --transform-for-static-hosting
+```
+
+run with Xcodebuild:
+
+```
+xcodebuild build -sdk iphoneos -scheme SDWebImage -configuration Release -destination generic/platform=iOS
 ```
 
 #### Build and found the doccarchive
@@ -40,10 +46,10 @@ After building, you will found something like `SDWebImage.doccarchive` in the bu
 Copy the folling folder to this repo:
 
 ```
-cp -R SDWebImage.doccarchive/documentation/sdwebimage /path/to/sdwebimage.github.io/documentation/sdwebimage
-cp -R SDWebImage.doccarchive/data/sdwebimage /path/to/sdwebimage.github.io/data/sdwebimage
-cp -R SDWebImage.doccarchive/data/sdwebimage.json /path/to/sdwebimage.github.io/data/sdwebimage.json
-cp -R SDWebImage.doccarchive/index/index.json /path/to/sdwebimage.github.io/index/sdwebimage/index.json
+cp -R SDWebImage.doccarchive/documentation/sdwebimage GitHub/sdwebimage.github.io/documentation/sdwebimage
+cp -R SDWebImage.doccarchive/data/documentation/sdwebimage GitHub/sdwebimage.github.io/data/documentation/sdwebimage
+cp -R SDWebImage.doccarchive/data/documentation/sdwebimage.json GitHub/sdwebimage.github.io/data/documentation/sdwebimage.json
+cp -R SDWebImage.doccarchive/index/index.json GitHub/sdwebimage.github.io/index/sdwebimage/index.json
 ```
 
 #### Preview the documentation site
@@ -52,8 +58,9 @@ Launch the simple HTTP Server locally and see on Chrome/Safari browser.
 
 ```
 python3 -m http.server
-open localhost:8000
 ```
+
+Then use broswer to open `localhost:8000`
 
 #### TODO
 
