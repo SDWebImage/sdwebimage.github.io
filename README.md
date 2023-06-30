@@ -43,7 +43,7 @@ xcodebuild build -sdk iphoneos -scheme SDWebImage -configuration Release -destin
 
 After building, you will found something like `SDWebImage.doccarchive` in the build log (actually, the `BUILD_DIR` under Xcode DerivedData path)
 
-Copy the folling folder to this repo:
+Copy the following folder to this repo:
 
 ```
 cp -R SDWebImage.doccarchive/documentation/sdwebimage GitHub/sdwebimage.github.io/documentation/sdwebimage
@@ -60,7 +60,7 @@ Launch the simple HTTP Server locally and see on Chrome/Safari browser.
 python3 -m http.server
 ```
 
-Then use broswer to open `localhost:8000`
+Then use browser to open `localhost:8000`
 
 #### TODO
 
@@ -72,7 +72,7 @@ See related feature request here: [Support DocC references to symbols defined in
 
 2. SwiftDocC does not support cross-module reference symbol, unlike Apple's own documentation, like reference `Foundation.Data` symbol from `UIKit.UIImage`
 
-I check the generate js files, though we can merge the final `index.json` in to the large one. However, the `data/${module}.json` contains only the symbol USR for current module, when DocC generate for current module, it does not keep the outter symbol USR, so it can not refernce from each other.
+I check the generated js files, though we can merge the final `index.json` in to the large one. However, the `data/${module}.json` contains only the symbol USR for current module, when DocC generate for current module, it does not keep the outer symbol USR, so it can not reference from each other.
 
 Anyway, jazzy does not support this feature as well. Hoping for future support.
 
