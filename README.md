@@ -74,7 +74,7 @@ See related feature request here: [Support DocC references to symbols defined in
 
 I check the generate js files, though we can merge the final `index.json` in to the large one. However, the `data/${module}.json` contains only the symbol USR for current module, when DocC generate for current module, it does not keep the outter symbol USR, so it can not refernce from each other.
 
-Anyway, jazzy does not support this feature as well. Hopping for future support.
+Anyway, jazzy does not support this feature as well. Hoping for future support.
 
 ---
 
