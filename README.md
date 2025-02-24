@@ -12,20 +12,15 @@ See more:
 + [Meet DocC documentation in Xcode - WWDC21 - Videos](https://developer.apple.com/videos/play/wwdc2021/10166/)
 + [What's new in Swift-DocC - WWDC22 - Videos](https://developer.apple.com/videos/play/wwdc2022/110368/)
 
-#### Install Xcode (14.0 is required for Objective-C)
+#### Install Xcode (16 is required for Objective-C)
 
-The Swift-DocC need Swift 5.5+, which is bundled in Xcode 13.0.
-
-However, if you need generate Objective-C API documentation, need Swift 5.7+, which is bundled in Xcode 14.0
-
+The Swift-DocC merge tool need Swift 5.10+, which is bundled in Xcode 15.2.0+
 
 #### Modify build setting and build each framwework
 
 To build Static Hosting Documentation, which is the new feature talked in [SwiftForum](https://forums.swift.org/t/support-hosting-docc-archives-in-static-hosting-environments/53572)
 
-you need to pass `--transform-for-static-hosting` to docc command. However it's not available in Xcode's handy build settings, so you need:
-
-Change the framework Xcode Project's build settings like this (use XCConfig syntax). For example, modify `Module-Shared.xcconfig` in SDWebImage.
+you need to pass `--transform-for-static-hosting` to docc command. However it's not available in Xcode's handy build settings, so you need to pass extra options during `xcodebuild`
 
 You can find a `Configs/Docc.xcconfig` under this repo root path:
 
@@ -68,18 +63,19 @@ Then, git reset the `index.html` under repo's root path (this is our home page, 
 
 ```
 git reset HEAD index.html
-```f
+```
 
-#### Upgrade/Hack the home page (rarely do)
+#### Upgrade/Hack the home page (rarely do this)
 
 We has some markdown written home page, but it requires to sync the CSS/JS resources from the docc tools.
 
-If you upgrade the toolchain, be sure to update `index.html` following the steps:
+If you upgrade the toolchain, or change anything for that `Home.md` markdown, you need to re-generate the `index.html` following the steps:
 
 1. `xcrun docc convert --fallback-display-name Documentation --fallback-bundle-identifier com.dailymodtion.documentation --fallback-bundle-version 1 --output-dir Home.doccarchive Home.docc`
 2. Preview at `Home.doccarchive` and using Chrome to rendering `localhost://8000/documentation/home`
-3. Copy all the rendered HTML into the new `index.html` file, remove all the `<script>` label (or added `type="application/json"` to disable its function)
-4. Override this repo's `index.html` file
+3. Copy all the rendered HTML and override this repo root patg `index.html` file
+4. Remove all the `<script>` label inside HTML (or added `type="application/json"` to script tag to disable its function)
+5. Preview and check the home page render correctly, see blow
 
 #### Preview the documentation site
 
