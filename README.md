@@ -19,7 +19,7 @@ The Swift-DocC need Swift 5.5+, which is bundled in Xcode 13.0.
 However, if you need generate Objective-C API documentation, need Swift 5.7+, which is bundled in Xcode 14.0
 
 
-#### Modify build setting
+#### Modify build setting and build each framwework
 
 To build Static Hosting Documentation, which is the new feature talked in [SwiftForum](https://forums.swift.org/t/support-hosting-docc-archives-in-static-hosting-environments/53572)
 
@@ -27,30 +27,59 @@ you need to pass `--transform-for-static-hosting` to docc command. However it's 
 
 Change the framework Xcode Project's build settings like this (use XCConfig syntax). For example, modify `Module-Shared.xcconfig` in SDWebImage.
 
+You can find a `Configs/Docc.xcconfig` under this repo root path:
+
 ```
 RUN_DOCUMENTATION_COMPILER = YES
 DOCC_EXTRACT_SWIFT_INFO_FOR_OBJC_SYMBOLS = YES
-OTHER_DOCC_FLAGS = --transform-for-static-hosting
+DOCC_ENABLE_CXX_SUPPORT = YES
+DOCC_EXTRACT_EXTENSION_SYMBOLS = YES
+OTHER_DOCC_FLAGS= --transform-for-static-hosting
 ```
 
 run with Xcodebuild:
 
 ```
-xcodebuild build -sdk iphoneos -scheme SDWebImage -configuration Release -destination generic/platform=iOS
+xcodebuild build -sdk iphoneos -scheme SDWebImage -configuration Release -destination generic/platform=iOS -xcconfig Docc.xcconfig
 ```
 
-#### Build and found the doccarchive
+#### Merge the Docc Archive
 
 After building, you will found something like `SDWebImage.doccarchive` in the build log (actually, the `BUILD_DIR` under Xcode DerivedData path)
 
-Copy the following folder to this repo:
+Then, repeat until all of frameworks doccarchive built.
+
+
+Merge them into single one
 
 ```
-cp -R SDWebImage.doccarchive/documentation/sdwebimage GitHub/sdwebimage.github.io/documentation/sdwebimage
-cp -R SDWebImage.doccarchive/data/documentation/sdwebimage GitHub/sdwebimage.github.io/data/documentation/sdwebimage
-cp -R SDWebImage.doccarchive/data/documentation/sdwebimage.json GitHub/sdwebimage.github.io/data/documentation/sdwebimage.json
-cp -R SDWebImage.doccarchive/index/index.json GitHub/sdwebimage.github.io/index/sdwebimage/index.json
+xcrun docc merge SDWebImage.doccarchive SDWebImageSwiftUI.doccarchive XXX.doccarchive -o Output.doccarchive
 ```
+
+#### Upgrade the documentation
+
+After the `Output.doccarchive` generated, copy and override all the contents of `Output.doccarchive` to this repo's root path
+
+```
+cp -R Output.doccarchive/* $current_repo_path/
+```
+
+Then, git reset the `index.html` under repo's root path (this is our home page, see below)
+
+```
+git reset HEAD index.html
+```f
+
+#### Upgrade/Hack the home page (rarely do)
+
+We has some markdown written home page, but it requires to sync the CSS/JS resources from the docc tools.
+
+If you upgrade the toolchain, be sure to update `index.html` following the steps:
+
+1. `xcrun docc convert --fallback-display-name Documentation --fallback-bundle-identifier com.dailymodtion.documentation --fallback-bundle-version 1 --output-dir Home.doccarchive Home.docc`
+2. Preview at `Home.doccarchive` and using Chrome to rendering `localhost://8000/documentation/home`
+3. Copy all the rendered HTML into the new `index.html` file, remove all the `<script>` label (or added `type="application/json"` to disable its function)
+4. Override this repo's `index.html` file
 
 #### Preview the documentation site
 
@@ -62,8 +91,9 @@ python3 -m http.server
 
 Then use browser to open `localhost:8000`
 
-#### TODO
+#### Done
 
+~~~
 1. SwiftDocC does not support multiple documentations hosting on the same site.
 
 I modify the original generated js files, and let that `index.json` support the framework namespace structure. See `patches/`.
@@ -73,8 +103,7 @@ See related feature request here: [Support DocC references to symbols defined in
 2. SwiftDocC does not support cross-module reference symbol, unlike Apple's own documentation, like reference `Foundation.Data` symbol from `UIKit.UIImage`
 
 I check the generated js files, though we can merge the final `index.json` in to the large one. However, the `data/${module}.json` contains only the symbol USR for current module, when DocC generate for current module, it does not keep the outer symbol USR, so it can not reference from each other.
-
-Anyway, jazzy does not support this feature as well. Hoping for future support.
+~~~
 
 ---
 
